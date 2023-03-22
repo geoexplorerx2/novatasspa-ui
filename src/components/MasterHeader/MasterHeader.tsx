@@ -2,8 +2,8 @@ import React from 'react';
 
 const MasterHeader = () => {
   return (
-    <div className='sticky h-[123px] top-0'>
-        <div className="container py-5 relative flex justify-between items-center overflow-hidden">
+    <div className='sticky top-0 '>
+        <div className="h-[123px] container py-5 relative flex justify-between items-center overflow-hidden">
             <div className="flex justify-start">
                 Menu
             </div>
