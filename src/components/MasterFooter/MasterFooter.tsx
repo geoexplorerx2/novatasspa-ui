@@ -2,7 +2,9 @@ import React from 'react';
 
 const MasterFooter = () => {
   return (
-    <div>MasterFooter</div>
+    <div className='container'>
+        MasterFooter
+    </div>
   )
 };
 
