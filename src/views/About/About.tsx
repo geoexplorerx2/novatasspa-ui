@@ -2,8 +2,8 @@ import React from 'react'
 
 const About = () => {
   return (
-    <div className='h-screen'>
-
+    <div className='container h-screen'>
+        this is about..
     </div>
   )
 };
