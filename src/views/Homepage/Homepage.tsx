@@ -2,10 +2,10 @@ import React from 'react';
 
 const Homepage = () => {
   return (
-    <div className='container'>
-        Homepage
+    <div className='container h-screen'>
+        
     </div>
   )
 };
 
-export default Homepage
+export default Homepage;
