@@ -7,7 +7,7 @@ import twelve from '../../assets/icons/twelve.svg'
 const ExperienceSection = () => {
   return (
     <div>
-        <SectionBackground wrapperClassNames='h-[1050px] my-10'>
+        <SectionBackground wrapperClassNames='h-[1050px] my-20 border-4 border-orange-400'>
             <div className='container grid grid-cols-2'>
                 <div className='h-full w-full max-w-[600px] flex flex-col space-y-[30px] items-start justify-center'>
                     <h2 className='text-white text-[64px] leading-[74px] tracking-tighter'>Beauty and Success Start Here</h2>

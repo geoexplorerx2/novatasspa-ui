@@ -10,9 +10,9 @@ interface SectionBackgroundType {
 const SectionBackground: FC<SectionBackgroundType> = (props) => {
     const { children, wrapperClassNames, backgroundDivClassNames } = props
     return (
-        <div className={`${wrapperClassNames} relative flex justify-center border border-orange-400` }>
+        <div className={`${wrapperClassNames} relative` }>
             {children}
-            <div className={`${backgroundDivClassNames} absolute z-[-1] top-[-15px] left-0 bg-[#9FAF91] h-full w-[300vw]  -rotate-[1deg] flex justify-center`}>
+            <div className={`${backgroundDivClassNames} absolute z-[-1] top-4 left-0 bg-[#9FAF91] h-[calc(100%_-_32px)] w-full  flex justify-center -skew-y-1`}>
             </div>
         </div>
     )
