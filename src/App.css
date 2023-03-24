@@ -38,6 +38,10 @@
   }
 }
 
+.owl-carousel {
+  position: relative;
+}
+
 .owl-theme .owl-dots {
   display: flex !important;
   position: absolute;
@@ -60,4 +64,24 @@
 .owl-theme .owl-nav.disabled+.owl-dots {
   position: absolute !important;
   bottom: 20px !important;
+}
+
+.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel .owl-nav button.owl-next {
+  width: 60px !important;
+  height: 60px !important;
+  border: 2px solid #FFFFFF !important;
+  background-color: #fff !important;
+}
+
+.owl-next {
+  position: absolute !important;
+  right: -25px !important;
+  top: 12rem !important;
+}
+
+.owl-prev {
+  position: absolute !important;
+  left: -25px !important;
+  top: 12rem !important;
 }

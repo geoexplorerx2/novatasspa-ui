@@ -4,7 +4,7 @@ import HistorySection from '../../components/HistorySection/HistorySection';
 
 const Homepage = () => {
   return (
-    <div className='container h-screen'>
+    <div className=''>
         <HeroCarousel />
         <HistorySection />
     </div>

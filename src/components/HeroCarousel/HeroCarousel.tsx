@@ -51,7 +51,7 @@ const HeroCarousel = () => {
                             <img src={leaf} alt='' className='rotate-[175deg] ml-[15.6px]' />
                         </div>
 
-                        <h1 className='font-normal text-[#B2A285] text-[64px]'>{header}</h1>
+                        <h1 className='font-normal text-[#B2A285] text-[64px] leading-[74px]'>{header}</h1>
                         <p className='text-[#423930] text-[18px] mt-[30px]'>{body}</p>
                         <button className='border-2 border-[#423930] mt-[30px]'>
                             <div className='py-[16px] px-[31px] text-[#423930] text-[22px]'>
@@ -66,13 +66,13 @@ const HeroCarousel = () => {
     })
 
     return (
-        <div className='relative'>
+        <div className='container relative'>
             <OwlCarousel className='owl-theme'
                 // nav
+                margin={15}
                 mouseDrag={false}
                 touchDrag={true}
-                stagePadding={0}
-                margin={0}
+                stagePadding={15}
                 autoplay={false}
                 merge={true}
                 dots={true}
