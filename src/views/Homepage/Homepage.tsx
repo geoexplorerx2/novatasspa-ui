@@ -1,11 +1,14 @@
 import React from 'react';
+import ExperienceSection from './ExperienceSection';
+import OurServices from './OurServices';
 
 const Homepage = () => {
   return (
-    <div className='container h-screen'>
-        this is homepage..
+    <div className=''>
+      <ExperienceSection />
+      <OurServices />
     </div>
   )
 };
 
-export default Homepage;
+export default Homepage; 
