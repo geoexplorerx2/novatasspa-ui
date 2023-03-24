@@ -1,10 +1,12 @@
 import React from 'react';
 import ExperienceSection from './ExperienceSection';
+import OurServices from './OurServices';
 
 const Homepage = () => {
   return (
-    <div className='h-screen'>
+    <div className=''>
       <ExperienceSection />
+      <OurServices />
     </div>
   )
 };

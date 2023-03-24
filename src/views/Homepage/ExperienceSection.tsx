@@ -10,7 +10,7 @@ const ExperienceSection = () => {
         <SectionBackground wrapperClassNames='h-[1050px] my-20'>
             <div className='container grid grid-cols-2'>
                 <div className='h-full w-full max-w-[600px] flex flex-col space-y-[30px] items-start justify-center'>
-                    <h2 className='text-white text-[64px] leading-[74px] tracking-tighter'>Beauty and Success Start Here</h2>
+                    <h2 className='text-white text-[64px] font-gotu leading-[74px] tracking-tighter'>Beauty and Success Start Here</h2>
                     <p className='text-white text-lg '>From its medieval origins to the digital era, learn everything there is to know about the ubiquitous lorem ipsum passage.</p>
                     <button className='flex justify-between border border-white text-white px-8 py-4'>Learn More <ArrowRight className='ml-[30px]'/> </button>
                 </div>
