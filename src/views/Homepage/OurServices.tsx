@@ -1,5 +1,6 @@
 import React, { FC, useState } from 'react'
 import { ReactComponent as CaldleAndFlower } from '../../assets/icons/candleFlower.svg'
+import { ReactComponent as Wave } from '../../assets/icons/wave.svg'
 
 
 const OurServices: FC = () => {
@@ -29,7 +30,10 @@ const ServiceCard: FC<ServiceCardProps> = (props) => {
     const { service: { description, Icon, id, price, title } } = props
     const [ isHovered, setIsHovered ] = useState(false)
     return (
-        <div className={`border border-[#EEEEEE] py-[42px] px-[35px] space-y-[30px] transition-all ${isHovered ? 'bg-[#423930]' : 'bg-white'}`} key={id} onMouseEnter={() => {setIsHovered(true)}} onMouseLeave={() => {setIsHovered(false)} }>
+        <div className={`relative border border-[#EEEEEE] py-[42px] px-[35px] space-y-[30px] transition-all ${isHovered ? 'bg-[#423930]' : 'bg-white'}`} key={id} onMouseEnter={() => {setIsHovered(true)}} onMouseLeave={() => {setIsHovered(false)} }>
+            {
+             isHovered && <Wave className='absolute top-0 right-0' />            
+            } 
             <div className='flex justify-between'>
                 <Icon className={`${isHovered ? 'text-white' : ''}`}/>
                 <div>
