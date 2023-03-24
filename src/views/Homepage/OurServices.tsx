@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React, { FC, useState } from 'react'
 import { ReactComponent as CaldleAndFlower } from '../../assets/icons/candleFlower.svg'
 
 
@@ -27,20 +27,27 @@ interface ServiceCardProps {
 
 const ServiceCard: FC<ServiceCardProps> = (props) => {
     const { service: { description, Icon, id, price, title } } = props
+    const [ isHovered, setIsHovered ] = useState(false)
     return (
-        <div className='border border-[#EEEEEE] py-[42px] px-[35px] space-y-[30px] bg-white' key={id}>
+        <div className={`border border-[#EEEEEE] py-[42px] px-[35px] space-y-[30px] transition-all ${isHovered ? 'bg-[#423930]' : 'bg-white'}`} key={id} onMouseEnter={() => {setIsHovered(true)}} onMouseLeave={() => {setIsHovered(false)} }>
             <div className='flex justify-between'>
-                <Icon />
+                <Icon className={`${isHovered ? 'text-white' : ''}`}/>
                 <div>
-                    <span className='font-medium text-2xl mr-1'>
-                        {price}
-                    </span>
-                    <span className='text-xs inline-block -translate-y-1/2 font-medium'>$</span>
+                    <div className={`flex justify-end ${isHovered ? 'text-white' : ''}`}>
+                        <span className='font-medium text-2xl mr-1'>
+                            {price}
+                        </span>
+                        <span className='text-xs inline-block font-medium'>$</span>
+                    </div>
+                    <div className='flex space-x-4'>
+                        <span className='text-white flex items-center cursor-pointer font-gotu'>Book Now</span>
+                        <span className='text-white'> &gt;</span>
+                    </div>
                 </div>
             </div>
 
-            <h3 className='font-gotu text-[34px] leading-[34px] tracking-tighter w-1/2'>{title}</h3>
-            <p>{description}</p>
+            <h3 className={`font-gotu text-[34px] leading-[34px] tracking-tighter w-1/2 ${isHovered ? 'text-white' : ''}`}>{title}</h3>
+            <p className={`${isHovered ? 'text-white' : ''}`}>{description}</p>
 
         </div>
     )
