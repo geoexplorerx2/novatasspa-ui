@@ -24,7 +24,7 @@ const Logo: FC<LogoProps> = ({
           alt="Logo"
         />
       ) : (
-        "Novacarcare"
+        ""
       )}
     </Link>
   );

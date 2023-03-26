@@ -7,7 +7,7 @@ import languageIcon from "../../assets/icons/languageIcon.svg";
 const MasterHeader = () => {
   return (
     <div className='sticky top-0 z-1000'>
-        <div className="h-[123px] container py-5 relative flex justify-between items-center overflow-hidden">
+        <div className="h-[123px] container py-5 relative bg-white flex justify-between items-center overflow-hidden">
             <div className="flex justify-start">
                 <div className='flex space-x-[20px] cursor-pointer'>
                     <div className=''>
