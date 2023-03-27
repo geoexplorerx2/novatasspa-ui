@@ -13,7 +13,7 @@ const ExperienceSection = () => {
                 <div className='h-full w-full max-w-[600px] flex flex-col space-y-[30px] items-start justify-center'>
                     <div className='flex space-x-4'>
                         <Leaf className='text-white'/>
-                        <Leaf className='text-white rotate-180'/>
+                        <Leaf className='text-white rotate-[175deg]'/>
                     </div>
                     <h2 className='text-white text-[64px] font-gotu leading-[74px] tracking-tighter'>Beauty and Success Start Here</h2>
                     <p className='text-white text-lg '>From its medieval origins to the digital era, learn everything there is to know about the ubiquitous lorem ipsum passage.</p>

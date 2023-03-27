@@ -4,7 +4,7 @@ import 'owl.carousel/dist/assets/owl.theme.default.css';
 import img_1 from '../../assets/images/image_1.png';
 import img_2 from '../../assets/images/image_2.png';
 import img_3 from '../../assets/images/image_3.png';
-import leaf from '../../assets/icons/leaf.svg';
+import {ReactComponent as Leaf} from '../../assets/icons/leaf.svg';
 import arrow from '../../assets/icons/right-arrow.png';
 
 const HeroCarousel = () => {
@@ -47,8 +47,10 @@ const HeroCarousel = () => {
 
                     <div className='ml-[99px] z-[2]'>
                         <div className='inline-flex'>
-                            <img src={leaf} alt='' className='' />
-                            <img src={leaf} alt='' className='rotate-[175deg] ml-[15.6px]' />
+                            {/* <img src={leaf} alt='' className='' />
+                            <img src={leaf} alt='' className='rotate-[175deg] ml-[15.6px]' /> */}
+                            <Leaf  className='text-[#B2A285]'/>
+                            <Leaf  className='rotate-[175deg] ml-[15.6px] text-[#B2A285]'/>
                         </div>
 
                         <h1 className='font-normal text-[#B2A285] text-[64px] leading-[74px]'>{header}</h1>
