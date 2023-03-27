@@ -3,14 +3,14 @@ import VideoPlayer from '../VideoPlayer/VideoPlayer';
 import arrow from '../../assets/icons/right-arrow-white.png';
 import HistorySectionCarousel from '../HistorySectionCarousel/HistorySectionCarousel';
 import LetterTape from '../LetterTape/LetterTape';
+import SectionBackground from '../SectionBackground/SectionBackground';
 
 const HistorySection = () => {
     return (
-        <>
-            <LetterTape />
-            <div className='bg-[#B2A285] pt-[142px]'>
+        <SectionBackground wrapperClassNames='h-[1050px] mt-[162px] mb-[252px]' backgroundDivClassNames='bg-[#B2A285]' >
+            <LetterTape wrapperClassName='absolute flex opacity-10 overflow-hidden top-[-62px] z-[-1]' />
                 <div className='grid grid-cols-2 container'>
-                    <div className='block'>
+                    <div className='block trasnlate-y-[-62px]'>
                         <VideoPlayer />
                     </div>
                     <div className='ml-[151px] mt-[142px]'>
@@ -26,8 +26,7 @@ const HistorySection = () => {
                 </div>
 
                 <HistorySectionCarousel />
-            </div>
-        </>
+        </SectionBackground>
 
     )
 }

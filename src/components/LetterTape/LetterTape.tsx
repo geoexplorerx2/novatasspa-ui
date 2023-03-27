@@ -1,4 +1,4 @@
-
+import { FC } from 'react';
 import t_letter from '../../assets/icons/T.svg';
 import a_letter from '../../assets/icons/A.svg';
 import s_letter from '../../assets/icons/S.svg';
@@ -6,9 +6,15 @@ import n_letter from '../../assets/icons/N.svg';
 import o_letter from '../../assets/icons/O.svg';
 import v_letter from '../../assets/icons/V.svg';
 
-const LetterTape = () => {
+interface LetterTapeProps {
+    wrapperClassName?: string;
+}
+
+const LetterTape: FC<LetterTapeProps> = (props) => {
+    const {wrapperClassName} = props;
+
     return (
-        <div className='flex opacity-10 overflow-hidden'>
+        <div className={`${wrapperClassName}`}>
             <img src={t_letter} alt='' className='mr-[32.7px] fill-[#666B45]' />
             <img src={a_letter} alt='' className='mr-[32.7px]' />
             <img src={s_letter} alt='' className='mr-[32.7px]' />
