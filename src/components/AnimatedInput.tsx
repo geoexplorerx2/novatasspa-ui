@@ -1,5 +1,4 @@
 import React, { FC, InputHTMLAttributes, useEffect, useState } from 'react'
-
 interface InfoProps extends InputHTMLAttributes<HTMLInputElement> {
   label: string;
   inputType: string;
@@ -7,11 +6,12 @@ interface InfoProps extends InputHTMLAttributes<HTMLInputElement> {
   onChange?: any;
   value?: any;
   wrapperClassName?: string;
+  Icon?: any
 };
 
 const AnimatedInput: FC<InfoProps> = (props) => {
 
-  const { label, inputType, name, onChange, value, wrapperClassName } = props
+  const { label, inputType, name, onChange, value, wrapperClassName, Icon } = props
 
   const [inputValue, setInputValue] = useState("");
   const [isFocused, setIsFocused] = useState(false);
@@ -33,10 +33,14 @@ const AnimatedInput: FC<InfoProps> = (props) => {
 
 
   return (
-    <div className={`${wrapperClassName} relative w-full h-[50px] lg:h-[70px] flex items-center rounded-[10px] ${isFocused ? ' border-black border-[1px]' : 'border-[#DDDDDD] border'}`}>
-
-      <label className={`absolute top-0 left-3 transition-all text-xs font-medium  px-2
-                        ${isFocused || value ? "-translate-y-[10px] bg-white text-sm z-[3]" : "translate-y-4 lg:translate-y-[27px] text-[22px] text-[#0D2C3B] text-opacity-50 z-[1]"}`}>
+    <div className={`${wrapperClassName} relative w-full h-[50px] lg:h-[70px] flex items-center rounded-[10px] px-[22px] ${isFocused ? ' border-black border-[1px]' : 'border-[#DDDDDD] border'}`}>
+        <div>
+            {Icon && Icon}
+        </div>
+      <label className={`absolute top-0 transition-all text-xs font-medium  px-2
+                        ${isFocused || value ? "translate-y-4 bg-white text-sm z-[3] font-normal" : "translate-y-4 lg:translate-y-[27px] text-[22px] text-[#0D2C3B] text-opacity-50 z-[1]"}
+                        ${Icon ? 'left-[53px]' : 'left-3'}
+                        `}>
         {label}
       </label>
       {
@@ -61,7 +65,7 @@ const AnimatedInput: FC<InfoProps> = (props) => {
             onBlur={() => onBlur()}
             type={inputType}
             name={name}
-            className={`border-none w-full h-full cursor-pointer transition ease-out bg-transparent focus:ring-0 relative z-[2]`
+            className={`border-none w-full h-full cursor-pointer transition ease-out bg-transparent focus:ring-0 relative z-[2] pt-7 text-lg font-semibold ${Icon ? 'px-4' : 'pl-0'}`
             }
             
           />

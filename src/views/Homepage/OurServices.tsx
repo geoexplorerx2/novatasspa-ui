@@ -1,4 +1,5 @@
 import React, { FC, useState } from 'react'
+import { servicesVersion } from 'typescript'
 import { ReactComponent as CaldleAndFlower } from '../../assets/icons/candleFlower.svg'
 import { ReactComponent as Wave } from '../../assets/icons/wave.svg'
 
@@ -8,7 +9,7 @@ const OurServices: FC = () => {
         <div className='container -mt-[430px]'>
             <h2 className='text-white text-[64px] font-gotu leading-[74px] tracking-tighter mb-12'>Our <br /> Services</h2>
             <div className='grid grid-cols-4 gap-[30px]'>
-                {ServicesData.map(service => <ServiceCard service={service} />)}
+                {ServicesData.map(service => <ServiceCard service={service}/>)}
             </div>
         </div>
     )
@@ -30,7 +31,7 @@ const ServiceCard: FC<ServiceCardProps> = (props) => {
     const { service: { description, Icon, id, price, title } } = props
     const [ isHovered, setIsHovered ] = useState(false)
     return (
-        <div className={`relative border border-[#EEEEEE] py-[42px] px-[35px] space-y-[30px] transition-all ${isHovered ? 'bg-[#423930]' : 'bg-white'}`} key={id} onMouseEnter={() => {setIsHovered(true)}} onMouseLeave={() => {setIsHovered(false)} }>
+        <div className={`relative border border-[#EEEEEE] py-[42px] px-[35px] space-y-[30px] transition-all ${isHovered ? 'bg-[#423930]' : 'bg-white'}`} key={id} onMouseEnter={() => {setIsHovered(true)}} onMouseLeave={() => {setIsHovered(false)} } >
             <div className='flex justify-between'>
                 <Icon className={`${isHovered ? 'text-white' : ''}`}/>
                 <div>
@@ -72,42 +73,49 @@ const ServicesData: ServiceType[] = [
         description: 'From its medieval origins to the digital era, learn everything there is to know about the ubiquitous lorem ipsum passage.',
         Icon: CaldleAndFlower,
         price: 38,
-        id: '1'
+        id: '2'
     },
     {
         title: 'Pasha Hammam',
         description: 'From its medieval origins to the digital era, learn everything there is to know about the ubiquitous lorem ipsum passage.',
         Icon: CaldleAndFlower,
         price: 38,
-        id: '1'
+        id: '3'
     },
     {
         title: 'Pasha Hammam',
         description: 'From its medieval origins to the digital era, learn everything there is to know about the ubiquitous lorem ipsum passage.',
         Icon: CaldleAndFlower,
         price: 38,
-        id: '1'
+        id: '4'
     },
     {
         title: 'Pasha Hammam',
         description: 'From its medieval origins to the digital era, learn everything there is to know about the ubiquitous lorem ipsum passage.',
         Icon: CaldleAndFlower,
         price: 38,
-        id: '1'
+        id: '5'
     },
     {
         title: 'Pasha Hammam',
         description: 'From its medieval origins to the digital era, learn everything there is to know about the ubiquitous lorem ipsum passage.',
         Icon: CaldleAndFlower,
         price: 38,
-        id: '1'
+        id: '6'
     },
     {
         title: 'Pasha Hammam',
         description: 'From its medieval origins to the digital era, learn everything there is to know about the ubiquitous lorem ipsum passage.',
         Icon: CaldleAndFlower,
         price: 38,
-        id: '1'
+        id: '7'
+    },
+    {
+        title: 'Pasha Hammam',
+        description: 'From its medieval origins to the digital era, learn everything there is to know about the ubiquitous lorem ipsum passage.',
+        Icon: CaldleAndFlower,
+        price: 38,
+        id: '8'
     },
 ]
 
