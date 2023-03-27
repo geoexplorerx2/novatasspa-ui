@@ -62,8 +62,8 @@ const MessageTypesSection = () => {
                     <Leaf className='rotate-[175deg] ml-[15.6px] text-[#B2A285]' />
                 </div>
 
-                <h1 className='font-normal text-[#B2A285] text-[64px] leading-[74px]'>Beauty and Success Start Here</h1>
-                <p className='text-[#423930] text-[18px] mt-[30px] mx-auto'>From its medieval origins to the digital era, learn everything there <br></br> is to know about the ubiquitous lorem ipsum passage.</p>
+                <h1 className='font-normal text-[#B2A285] text-[64px] leading-[74px] font-gotu'>Beauty and Success Start Here</h1>
+                <p className='text-[#423930] text-[18px] mt-[30px] mx-auto font-poppins'>From its medieval origins to the digital era, learn everything there <br></br> is to know about the ubiquitous lorem ipsum passage.</p>
             </div>
 
             <div className='grid grid-cols-4 grid-rows-2 gap-x-[30px] gap-y-[100px] mt-[100px] mb-[67px]'>
@@ -75,8 +75,8 @@ const MessageTypesSection = () => {
 
                             return (
                                 <div className=''>
-                                    <h6 className='text-[#423930] text-[24px] leading-[24px]'>{title}</h6>
-                                    <p className='text-[#666B45] font-semibold text-[16px] leading-[20px] mt-[10px]'>{price}</p>
+                                    <h6 className='text-[#423930] text-[24px] leading-[24px] font-gotu'>{title}</h6>
+                                    <p className='text-[#666B45] font-semibold text-[16px] leading-[20px] mt-[10px] font-poppins'>{price}</p>
                                     <img src={image} alt='' className='mt-[14px]' />
                                 </div>
                             )
@@ -84,8 +84,8 @@ const MessageTypesSection = () => {
                             return (
                                 <div className=''>
                                     <img src={image} alt='' className='mt-0' />
-                                    <h6 className='text-[#423930] text-[24px] leading-[24px] mt-[14px]'>{title}</h6>
-                                    <p className='text-[#666B45] font-semibold text-[16px] leading-[20px] mt-[10px]'>{price}</p>
+                                    <h6 className='text-[#423930] text-[24px] leading-[24px] mt-[14px] font-gotu'>{title}</h6>
+                                    <p className='text-[#666B45] font-semibold text-[16px] leading-[20px] mt-[10px] font-poppins'>{price}</p>
                                 </div>
                             )
                         }
