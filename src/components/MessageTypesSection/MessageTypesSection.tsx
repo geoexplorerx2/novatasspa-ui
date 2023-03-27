@@ -15,42 +15,42 @@ const MessageTypesSection = () => {
         {
             title: 'Aromatherapy Massage',
             price: 'Start from 38 $',
-            image: { message_1 }
+            image: message_1
         },
         {
             title: 'Aromatherapy Massage',
             price: 'Start from 38 $',
-            image: { message_2 }
+            image: message_2
         },
         {
             title: 'Aromatherapy Massage',
             price: 'Start from 38 $',
-            image: { message_3 }
+            image: message_3
         },
         {
             title: 'Aromatherapy Massage',
             price: 'Start from 38 $',
-            image: ''
+            image: message_4
         },
         {
             title: 'Aromatherapy Massage',
             price: 'Start from 38 $',
-            image: ''
+            image: message_5
         },
         {
             title: 'Aromatherapy Massage',
             price: 'Start from 38 $',
-            image: ''
+            image: message_6
         },
         {
             title: 'Aromatherapy Massage',
             price: 'Start from 38 $',
-            image: ''
+            image: message_7
         },
         {
             title: 'Aromatherapy Massage',
             price: 'Start from 38 $',
-            image: ''
+            image: message_8
         },
     ]
 
@@ -66,40 +66,32 @@ const MessageTypesSection = () => {
                 <p className='text-[#423930] text-[18px] mt-[30px] mx-auto'>From its medieval origins to the digital era, learn everything there <br></br> is to know about the ubiquitous lorem ipsum passage.</p>
             </div>
 
-            <div className='grid grid-cols-4 grid-rows-2 gap-x-[30px] gap-y-[100px]'>
+            <div className='grid grid-cols-4 grid-rows-2 gap-x-[30px] gap-y-[100px] mt-[100px] mb-[67px]'>
 
-                {messageTypesContent.map(card => {
+                {messageTypesContent.map((card, index) => {
                     const { title, price, image } = card;
 
-                    for (let x = 0; x <= 8; x++) {
-                        if (x % 2 === 0) {
-                            return (
-                                <div className='border'>
-                                    <h6 className='text-[#423930] text-[24px] leading-[24px]'>Aromatherapy Massage</h6>
-                                    <p className='text-[#666B45] font-semibold text-[16px] leading-[20px] mt-[10px]'>Start from 38 $</p>
-                                    <img src={message_1} alt='' className='mt-[14px]' />
-                                </div>
-                            ) 
-                    }
-                }
-                })}
+                    if (index % 2 === 0) {
 
-                <div className='border'>
-                    <h6 className='text-[#423930] text-[24px] leading-[24px]'>Aromatherapy Massage</h6>
-                    <p className='text-[#666B45] font-semibold text-[16px] leading-[20px] mt-[10px]'>Start from 38 $</p>
-                    <img src={message_1} alt='' className='mt-[14px]' />
-                </div>
-                <div className='border'>
-                    <img src={message_1} alt='' className='mt-0' />
-                    <h6 className='text-[#423930] text-[24px] leading-[24px] mt-[14px]'>Aromatherapy Massage</h6>
-                    <p className='text-[#666B45] font-semibold text-[16px] leading-[20px] mt-[10px]'>Start from 38 $</p>
-                </div>
-                <div className='border'>1</div>
-                <div className='border'>1</div>
-                <div className='border'>1</div>
-                <div className='border'>1</div>
-                <div className='border'>1</div>
-                <div className='border'>1</div>
+                            return (
+                                <div className=''>
+                                    <h6 className='text-[#423930] text-[24px] leading-[24px]'>{title}</h6>
+                                    <p className='text-[#666B45] font-semibold text-[16px] leading-[20px] mt-[10px]'>{price}</p>
+                                    <img src={image} alt='' className='mt-[14px]' />
+                                </div>
+                            )
+                        } else {
+                            return (
+                                <div className=''>
+                                    <img src={image} alt='' className='mt-0' />
+                                    <h6 className='text-[#423930] text-[24px] leading-[24px] mt-[14px]'>{title}</h6>
+                                    <p className='text-[#666B45] font-semibold text-[16px] leading-[20px] mt-[10px]'>{price}</p>
+                                </div>
+                            )
+                        }
+                    }
+                )}
+
             </div>
         </div>
     )
