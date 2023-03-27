@@ -3,7 +3,7 @@ import ButtonPrimary from '../../lib/Button/ButtonPrimary';
 
 const Service = ({ data }: any) => {
   return (
-    <div className='flex flex-row py-[100px] space-x-[151px]'>
+    <div className='container flex flex-row py-[100px] space-x-[151px]'>
       <div className='max-w-[690px]'>
         <img className='' src={data.image} />
       </div>

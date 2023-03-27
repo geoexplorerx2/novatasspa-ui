@@ -49,12 +49,12 @@ const VideoPlayer = () => {
     },)
 
     return (
-        <div className='relative'>
+        <div className='relative w-[690px] h-[690px]'>
             <video
                 onTimeUpdate={handleProgress}
                 ref={videoRef}
-                width="690px"
-                height="690px"
+                // width="690px"
+                // height="690px"
                 // controls
                 poster={vid_poster}
             >
