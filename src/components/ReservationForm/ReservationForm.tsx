@@ -33,7 +33,7 @@ const ReservationForm = () => {
         <form onSubmit={handleSubmit} className='space-y-[30px]'>
                 <AnimatedInput value={values.nameSurname} inputType='text' label='Name, Surname' name='nameSurname' onChange={(e: any) => handleChange(e)} Icon={<HumanAvatar />} />
                 <AnimatedInput value={values.email} inputType='text' label='E-Mail Address' name='email' onChange={(e: any) => handleChange(e)} Icon={<MailIcon />}/>
-                <AnimatedTelInput label={'label '} inputType={'type'} />
+                <AnimatedTelInput label={'Phone Number '} />
                 <button type='submit' className='w-full flex justify-between py-4 px-[31px] bg-[#423930] text-white text-[22px] -tracking-[0.02em] leading-[28px] font-gotu'>
                     <span>
                             Make Reservation

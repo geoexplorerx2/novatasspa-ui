@@ -6,7 +6,7 @@ import { ReactComponent as PhoneIcon } from '../../assets/icons/phone.svg'
 
 interface InfoProps extends InputHTMLAttributes<HTMLInputElement> {
     label: string;
-    inputType: string;
+    inputType?: string;
     name?: string;
     onChange?: any;
     value?: any;
