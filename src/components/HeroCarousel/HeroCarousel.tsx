@@ -47,8 +47,6 @@ const HeroCarousel = () => {
 
                     <div className='ml-[99px] z-[2]'>
                         <div className='inline-flex'>
-                            {/* <img src={leaf} alt='' className='' />
-                            <img src={leaf} alt='' className='rotate-[175deg] ml-[15.6px]' /> */}
                             <Leaf  className='text-[#B2A285]'/>
                             <Leaf  className='rotate-[175deg] ml-[15.6px] text-[#B2A285]'/>
                         </div>
