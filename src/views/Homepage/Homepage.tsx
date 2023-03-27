@@ -8,9 +8,9 @@ const Homepage = () => {
   return (
     <div className=''>
       <HeroCarousel />
-      <HistorySection />
       <ExperienceSection />
       <OurServices />
+      <HistorySection />
     </div>
   )
 };
