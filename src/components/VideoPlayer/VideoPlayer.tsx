@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import play from '../../assets/icons/play.svg';
 import pause from '../../assets/icons/pause.png';
 import vid_poster from '../../assets/images/vid_poster.png';
@@ -6,7 +6,7 @@ import vid_poster from '../../assets/images/vid_poster.png';
 const VideoPlayer = () => {
     const [isPlaying, setIsPlaying] = useState(false);
     const videoRef = useRef<HTMLVideoElement>(null);
-    const [progress, setProgress] = useState(0);
+    const [progress, setProgress] = useState('');
 
     const togglePlay = () => {
         if (isPlaying) {
@@ -17,29 +17,36 @@ const VideoPlayer = () => {
         setIsPlaying(!isPlaying);
     };
 
-    function millisToMinutesAndSeconds(millis: number) {
-        let minutes = Math.floor(millis / 60000);
-        let seconds = Number(((millis % 60000) / 1000).toFixed(0));
+    function secondsToMinutes(seconds: number) {
+        let minutes = Math.floor(seconds / 60);
+        let remaining_seconds = (seconds % 60).toFixed();
+
         return (
             seconds === 60 ?
-            (minutes+1) + ":00" :
-            minutes + ":" + (seconds < 10 ? "0" : "") + seconds
-          )
-      }
+                minutes + ":00"
+                :
+                (minutes < 10 ? "0" + minutes : minutes) + ":" + (seconds < 10 ? "0" : "") + remaining_seconds
+        )
+    }
+
 
     const handleProgress = () => {
         const length = videoRef?.current?.duration;
         const currentTime = videoRef?.current?.currentTime;
-        let progress: number = 0
+        // let progress_unformatted: number = 0
+        let progress_unformatted;
 
-        if(currentTime && length) {
-            progress = length - (currentTime  ? currentTime : 0 );
+        if (length) {
+            progress_unformatted = length - (currentTime ? currentTime : 0);
+            setProgress(secondsToMinutes(progress_unformatted))
         }
 
-        let progress_formatted = Number(millisToMinutesAndSeconds(progress))
-        // console.log('progress_formatted', progress_formatted)
-        setProgress(progress_formatted)
     }
+
+
+    useEffect(() => {
+        handleProgress()
+    },)
 
     return (
         <div className='relative'>
@@ -47,9 +54,9 @@ const VideoPlayer = () => {
                 onTimeUpdate={handleProgress}
                 ref={videoRef}
                 width="690px"
-                height= "690px"
+                height="690px"
                 // controls
-                // poster={vid_poster}
+                poster={vid_poster}
             >
                 <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4" />
             </video>
@@ -64,7 +71,7 @@ const VideoPlayer = () => {
                 </button>
 
                 <div className='ml-[30px]'>
-                    <p className='font-medium text-[16px] text-white'>{progress}</p>
+                    <p className='font-medium text-[16px] text-white'>{progress ? progress : '9:56'}</p>
                     <h1 className='text-white text-[34px]'>History, Purposeand <br></br> and Usage</h1>
                 </div>
             </div>
