@@ -41,7 +41,7 @@ const AnimatedTelInput: FC<InfoProps> = (props) => {
         <div className={`${wrapperClassName} relative px-[22px] w-full h-[50px] lg:h-[70px] flex items-center rounded-[10px] ${isFocused || inputValue || phone ? ' border-black border-[1px]' : 'border-[#DDDDDD] border'}`}>
             <PhoneIcon />
             <label className={`absolute top-0 left-[53px] transition-all text-xs font-medium  px-2
-                        ${isFocused || value ? "translate-y-4 bg-white text-sm z-[3] font-normal" : "translate-y-4 lg:translate-y-[27px] text-[22px] text-[#0D2C3B] text-opacity-50 z-[1]"}
+                        ${isFocused || inputValue ? "translate-y-4 bg-white text-sm z-[3] font-normal" : "translate-y-4 lg:translate-y-[27px] text-[22px] text-[#0D2C3B] text-opacity-50 z-[1]"}
                         `}>
         {label}
       </label>
@@ -58,7 +58,7 @@ const AnimatedTelInput: FC<InfoProps> = (props) => {
                     value={phone ?? value ?? inputValue}
                     onChange={(event) => onInputChange(event)}
                     inputClassName={`!border-none w-full h-full cursor-pointer transition ease-out !bg-transparent focus:ring-0 relative !text-lg !font-semibold !mt-[28px]`}
-                    className={`border-none w-full h-full cursor-pointer transition ease-out bg-transparent focus:ring-0 relative ${isFocused ? 'opacity-100' : 'opacity-0'}`}
+                    className={`border-none w-full h-full cursor-pointer transition ease-out bg-transparent focus:ring-0 relative ${isFocused || inputValue ? 'opacity-100' : 'opacity-0'}`}
                     countrySelectorStyleProps={{className: 'hidden'}}
                 />
             </div>
