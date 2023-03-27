@@ -4,6 +4,7 @@ import HistorySection from '../../components/HistorySection/HistorySection';
 import TrustedCompaniesSection from '../../components/TrustedCompanies/TrustedCompaniesSection';
 import ExperienceSection from './ExperienceSection';
 import OurServices from './OurServices';
+import ReservationSection from './ReservationSection';
 
 const Homepage = () => {
   return (
@@ -13,6 +14,7 @@ const Homepage = () => {
       <OurServices />
       <HistorySection />
       <TrustedCompaniesSection />
+      <ReservationSection />
     </div>
   )
 };
