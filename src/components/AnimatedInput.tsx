@@ -33,7 +33,7 @@ const AnimatedInput: FC<InfoProps> = (props) => {
 
 
   return (
-    <div className={`${wrapperClassName} relative w-full h-[50px] lg:h-[70px] flex items-center rounded-[10px] px-[22px] ${isFocused ? ' border-black border-[1px]' : 'border-[#DDDDDD] border'}`}>
+    <div className={`${wrapperClassName} relative w-full h-[50px] lg:h-[70px] flex items-center  px-[22px] ${isFocused ? ' border-black border-[1px]' : 'border-[#DDDDDD] border'}`}>
         <div>
             {Icon && Icon}
         </div>
