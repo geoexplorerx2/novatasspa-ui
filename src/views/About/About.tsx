@@ -4,7 +4,7 @@ import { SERVICES_DATA } from '../../data/services';
 
 const About = () => {
   return (
-    <div className='container'>
+    <div className='container min-h-screen'>
       <Service data={SERVICES_DATA[0]} />
     </div>
   )
