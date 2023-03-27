@@ -38,42 +38,42 @@ const HistorySectionCarousel = () => {
 
     return (
         <>
-        <div className='container relative mt-[123px] pb-[123px]'>
-            <div className='relative ' >
-                <OwlCarousel
-                    navText=
-                    {[`<img src=${arrow} class='rotate-180 w-[20px] mx-auto' />`, `<img src=${arrow} class='w-[20px] mx-auto' />`]}
-                    nav={true}
-                    mouseDrag={true} 
-                    touchDrag={true}
-                    stagePadding={0}
-                    margin={30} 
-                    autoplay={true} 
-                    merge={true} 
-                    dots={true} 
-                    dotsEach={1} 
-                    slideBy={1} 
-                    loop={true}
-                    responsive=
-                    {
+            <div className='container relative mt-[123px] pb-[123px]'>
+                <div className='relative ' >
+                    <OwlCarousel
+                        navText=
+                        {[`<img src=${arrow} class='rotate-180 w-[20px] mx-auto' />`, `<img src=${arrow} class='w-[20px] mx-auto' />`]}
+                        nav={true}
+                        mouseDrag={true}
+                        touchDrag={true}
+                        stagePadding={0}
+                        margin={30}
+                        autoplay={true}
+                        merge={true}
+                        dots={true}
+                        dotsEach={1}
+                        slideBy={1}
+                        loop={true}
+                        responsive=
                         {
-                            '1': {
-                                items: 1
-                            },
-                            '1025': {
-                                items: 3
-                            },
-                            '1919': {
-                                items: 3
+                            {
+                                '1': {
+                                    items: 1
+                                },
+                                '1025': {
+                                    items: 3
+                                },
+                                '1919': {
+                                    items: 3
+                                }
                             }
-                        }
 
-                    }
-                >
-                    {images}
-                </OwlCarousel>
+                        }
+                    >
+                        {images}
+                    </OwlCarousel>
+                </div>
             </div>
-        </div>
         </>
     )
 }
