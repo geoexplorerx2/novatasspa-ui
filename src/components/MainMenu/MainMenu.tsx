@@ -142,7 +142,7 @@ const MainMenu: FC = () => {
                 //     style={{top: `${window.pageYOffset + 88}px`}}
                 //     ref={drawerRef}
                 // >
-                    <div className={`main-menu absolute w-screen h-screen top-0 left-0 bg-white z-[100] transition-all ${isMenuOpen ? 'opacity-100 translate-x-0' : ' opacity-50 -translate-x-[100%]'}`}>
+                    <div className={`main-menu fixed w-screen h-screen top-0 left-0 bg-white z-[1001] transition-all ${isMenuOpen ? 'opacity-100 translate-x-0' : ' opacity-50 -translate-x-[100%]'}`}>
                         <div className='w-full h-full mobileMenuShadow container' ref={drawerRef} >   
                             <div className='container h-10 p-4 text-gray-600 my-14'>    
                                 <div className='flex space-x-5 ' onClick={handleCloseMenu}>
