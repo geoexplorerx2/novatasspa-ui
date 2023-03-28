@@ -15,10 +15,10 @@ const Homepage = () => {
       <ExperienceSection />
       <OurServices />
       <HistorySection />
-      <TrustedCompaniesSection />
-      <ReservationSection />
       <MessageTypesSection />
       <PricesListSection />
+      <TrustedCompaniesSection />
+      <ReservationSection />
     </div>
   )
 };
