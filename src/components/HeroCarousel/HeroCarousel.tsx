@@ -47,17 +47,15 @@ const HeroCarousel = () => {
 
                     <div className='ml-[99px] z-[2]'>
                         <div className='inline-flex'>
-                            {/* <img src={leaf} alt='' className='' />
-                            <img src={leaf} alt='' className='rotate-[175deg] ml-[15.6px]' /> */}
                             <Leaf  className='text-[#B2A285]'/>
                             <Leaf  className='rotate-[175deg] ml-[15.6px] text-[#B2A285]'/>
                         </div>
 
-                        <h1 className='font-normal text-[#B2A285] text-[64px] leading-[74px]'>{header}</h1>
-                        <p className='text-[#423930] text-[18px] mt-[30px]'>{body}</p>
+                        <h1 className='font-normal text-[#B2A285] text-[64px] leading-[74px] font-gotu'>{header}</h1>
+                        <p className='text-[#423930] text-[18px] mt-[30px] font-poppins'>{body}</p>
                         <button className='border-2 border-[#423930] mt-[30px]'>
                             <div className='py-[16px] px-[31px] text-[#423930] text-[22px]'>
-                                <span>Learn More </span>
+                                <span className='font-gotu'>Learn More </span>
                                 <img src={arrow} alt='' className='!inline !h-[25px] ml-[26.75px]' />
                             </div>
                         </button>
