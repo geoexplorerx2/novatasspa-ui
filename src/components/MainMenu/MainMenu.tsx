@@ -54,6 +54,9 @@ const MainMenu: FC = () => {
         setIsMenuOpen(prevState => !prevState)
     }
 
+    const handleCloseMenu = () => {
+      setIsMenuOpen(false)
+    } 
       
   const eventClickOutsideDrawer = (event: MouseEvent) => {
     if (!drawerRef.current) return;
@@ -142,9 +145,9 @@ const MainMenu: FC = () => {
                     <div className={`main-menu absolute w-screen h-screen top-0 left-0 bg-white z-[100] transition-all ${isMenuOpen ? 'opacity-100 translate-x-0' : ' opacity-50 -translate-x-[100%]'}`}>
                         <div className='w-full h-full mobileMenuShadow container' ref={drawerRef} >   
                             <div className='container h-10 p-4 text-gray-600 my-14'>    
-                                <div className='flex space-x-5 '>
+                                <div className='flex space-x-5 ' onClick={handleCloseMenu}>
                                   <CrossIcon />
-                                  <span className='h-9 text-xs font-poppins font-medium inline-block mt-1' > CLOSE </span>
+                                  <span className='h-9 text-xs font-poppins font-medium inline-block mt-1'> CLOSE </span>
                                   
                                 </div>
                             </div>    
