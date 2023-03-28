@@ -9,11 +9,11 @@ const SocialMediaIcons = () => {
   return (
     <div className='flex justify-between'>
         {socialmediaIconsData.map(item => {
-            const { Icon } = item
+            const { Icon, href } = item
             return (
-            <div>
+            <a href={href}>
                 <Icon />
-            </div>)
+            </a>)
         })}
     </div>
   )
@@ -22,21 +22,25 @@ const SocialMediaIcons = () => {
 const socialmediaIconsData = [
     {
         label: 'FaceBook',
+        href: '#',
         Icon: FaceBookIcon,
         id: '1'
     },
     {
         label: 'Twitter',
+        href: '#',
         Icon: TwitterIcon,
         id: '2'
     },
     {
         label: 'Instagram',
+        href: '#',
         Icon: InstagramIcon,
         id: '3'
     },
     {
         label: 'Youtube',
+        href: '#',
         Icon: YoutubeIcon,
         id: '4'
     },
