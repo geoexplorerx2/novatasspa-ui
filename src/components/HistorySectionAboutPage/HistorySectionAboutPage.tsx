@@ -8,7 +8,7 @@ import ButtonPrimary from '../../lib/Button/ButtonPrimary';
 
 const HistorySectionAboutPage = () => {
     return (
-        <SectionBackground wrapperClassNames='h-[1050px] mt-[162px] ' backgroundDivClassNames='bg-[#B2A285] h-[740px]' >
+        <SectionBackground wrapperClassNames='h-[740px] mt-[162px] mt-[225px]' backgroundDivClassNames='bg-[#B2A285]' >
 
             <LetterTape wrapperClassName='absolute flex opacity-10 overflow-hidden top-[-62px] z-[-1]' />
 
