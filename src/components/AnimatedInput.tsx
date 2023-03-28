@@ -34,7 +34,7 @@ const AnimatedInput: FC<InfoProps> = (props) => {
 
   return (
     <div className={`${wrapperClassName} relative w-full h-[50px] lg:h-[70px] flex items-center  px-[22px] ${isFocused ? ' border-black border-[1px]' : 'border-[#DDDDDD] border'}`}>
-        <div>
+        <div className={` ${inputType === 'textArea' ? 'h-full pt-7' : ''}`}>
             {Icon && Icon}
         </div>
       <label className={`absolute top-0 transition-all text-xs font-medium  px-2
@@ -52,7 +52,7 @@ const AnimatedInput: FC<InfoProps> = (props) => {
             onFocus={() => onFocus()}
             onBlur={() => onBlur()}
             name={name}
-            className={`border-none w-full h-full cursor-pointer transition ease-out bg-transparent focus:ring-0 relative z-[2] resize-none`}
+            className={`border-none w-full h-full cursor-pointer transition ease-out bg-transparent focus:ring-0 relative z-[2] pt-7 text-lg font-semibold ${Icon ? 'px-4' : 'pl-0'}`}
             cols={30}
             rows={10}
 
