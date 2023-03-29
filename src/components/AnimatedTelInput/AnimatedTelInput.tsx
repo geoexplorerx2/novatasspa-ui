@@ -41,11 +41,6 @@ const AnimatedTelInput: FC<InfoProps> = (props) => {
     const flagsDiv = document.querySelector('.react-international-phone-input-container .react-international-phone-country-selector-button') as HTMLElement
     if (flagsDiv) { flagsDiv.style.cssText += 'height: 30px !important; border: none !important; padding-left: 10px !important' };
 
-    
-    useEffect(()=> {
-        console.log('flagsDiv::', flagsDiv)
-    })
-
 
     return (
         <div className={`${wrapperClassName} relative px-[22px] w-full h-[50px] lg:h-[70px] flex items-center ${isFocused ? ' border-black border-[1px]' : 'border-[#DDDDDD] border'}`}>
