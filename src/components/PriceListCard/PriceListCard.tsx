@@ -19,8 +19,11 @@ const PriceListCard: FC<PriceListCard_Props> = (props) => {
                 <p className='text-[#666B45] text-[16px] font-semibold mt-[5px] font-poppins'>30 min.</p>
             </div>
 
-            <div className='flex flex-col justify-end'> {/* ml-[93px] */}
-                <h1 className='text-[#423930] text-[34px] font-semibold pl-[54px] font-poppins'>$38</h1>
+            <div className='flex flex-col justify-end '> {/* ml-[93px] */}
+                <h1 className='text-[#423930] text-[34px] font-semibold pl-[54px] font-poppins relative'>
+                    <span>38</span>
+                    <span className='absolute top-0 text-[24px]'>$</span>
+                </h1>
                 <button className='text-[16px] text-[#423930] bookButton inline-flex'>
                     Book Now 
                     <img src={ArrowRight} alt='' className='w-[16px] ml-[13px] translate-y-[5px]' />

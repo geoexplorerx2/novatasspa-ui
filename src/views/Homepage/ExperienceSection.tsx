@@ -30,7 +30,7 @@ const ExperienceSection = () => {
                             </span>
                         </ButtonPrimary>
                     </div>
-                    <div className='relative w-[690px] h-[767px] -top-[53px]'>
+                    <div className='relative w-[690px] h-[767px] -top-[130px]'>
                         <img src={massageImage} alt="massaging image" className='' />
                         <div className='absolute -left-8 bottom-[30px] bg-white py-14 px-12'>
                             <img src={twelve} alt='twelve' />

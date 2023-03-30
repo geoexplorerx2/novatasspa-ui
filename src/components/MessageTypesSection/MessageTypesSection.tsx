@@ -14,42 +14,42 @@ const MessageTypesSection = () => {
     const messageTypesContent = [
         {
             title: 'Aromatherapy Massage',
-            price: 'Start from 38 $',
+            price: 'Start from 38',
             image: message_1
         },
         {
             title: 'Aromatherapy Massage',
-            price: 'Start from 38 $',
+            price: 'Start from 38',
             image: message_2
         },
         {
             title: 'Aromatherapy Massage',
-            price: 'Start from 38 $',
+            price: 'Start from 38',
             image: message_3
         },
         {
             title: 'Aromatherapy Massage',
-            price: 'Start from 38 $',
+            price: 'Start from 38',
             image: message_4
         },
         {
             title: 'Aromatherapy Massage',
-            price: 'Start from 38 $',
+            price: 'Start from 38',
             image: message_5
         },
         {
             title: 'Aromatherapy Massage',
-            price: 'Start from 38 $',
+            price: 'Start from 38',
             image: message_6
         },
         {
             title: 'Aromatherapy Massage',
-            price: 'Start from 38 $',
+            price: 'Start from 38',
             image: message_7
         },
         {
             title: 'Aromatherapy Massage',
-            price: 'Start from 38 $',
+            price: 'Start from 38',
             image: message_8
         },
     ]
@@ -76,7 +76,7 @@ const MessageTypesSection = () => {
                             return (
                                 <div className=''>
                                     <h6 className='text-[#423930] text-[24px] leading-[24px] font-gotu'>{title}</h6>
-                                    <p className='text-[#666B45] font-semibold text-[16px] leading-[20px] mt-[10px] font-poppins'>{price}</p>
+                                    <p className='text-[#666B45] font-semibold text-[16px] leading-[20px] mt-[10px] font-poppins relative'>{price}<span className='top-[-3px] text-[11px] absolute'>$</span></p>
                                     <img src={image} alt='' className='mt-[14px]' />
                                 </div>
                             )
@@ -85,7 +85,7 @@ const MessageTypesSection = () => {
                                 <div className=''>
                                     <img src={image} alt='' className='mt-0' />
                                     <h6 className='text-[#423930] text-[24px] leading-[24px] mt-[14px] font-gotu'>{title}</h6>
-                                    <p className='text-[#666B45] font-semibold text-[16px] leading-[20px] mt-[10px] font-poppins'>{price}</p>
+                                    <p className='text-[#666B45] font-semibold text-[16px] leading-[20px] mt-[10px] font-poppins relative'>{price}<span className='top-[-3px] text-[11px] absolute'>$</span></p>
                                 </div>
                             )
                         }

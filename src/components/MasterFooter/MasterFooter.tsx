@@ -9,7 +9,7 @@ const MasterFooter = () => {
     <div className='flex h-[120px] bg-[#0D0D0D] z-10 relative'>
         <div className='container justify-between items-center'>
 
-            <div className='flex justify-start py-[49px]'>
+            <div className='flex justify-start py-[49px]' onClick={()=> window.scrollTo({top: 0, behavior: 'smooth'})}>
               <Logo img={ novatasspaLogoLight }  />
             </div>
 

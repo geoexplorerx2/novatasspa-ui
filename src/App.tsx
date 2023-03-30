@@ -1,5 +1,5 @@
-import React, { FC, useState } from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
+import React, { FC, useEffect, useState } from 'react';
+import { BrowserRouter as Router  } from 'react-router-dom';
 import './App.css';
 import { MasterFooter, MasterHeader } from './components';
 import Routers from './routers';
