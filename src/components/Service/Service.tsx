@@ -3,9 +3,9 @@ import ButtonPrimary from '../../lib/Button/ButtonPrimary';
 
 const Service = ({ data }: any) => {
   return (
-    <div className='container flex flex-row pt-[100px] pb-[23px] space-x-[151px]'>
-      <div className='max-w-[690px]'>
-        <img className='' src={data.image} />
+    <div className='container flex flex-row pt-[100px] pb-[23px] gap-x-[150px]'>
+      <div>
+        <img className='max-w-[690px]' src={data.image} />
       </div>
       <div className='flex flex-col '>
         <div className='mt-[53px]'>
@@ -14,12 +14,13 @@ const Service = ({ data }: any) => {
         <div className='font-gotu font-normal text-[64px] text-[#B2A285] leading-[74px] tracking-[0.05em]'>
           {data.service}
         </div>
-        <div className='font-poppins font-normal w-[690px] text-[18px] text-[#423930] mt-[30px] leading-[28px] tracking-[0.02em]'>
-          {data.description}
-          {/* <p className='font-poppins font-normal text-[18px] text-[#423930] mt-[30px] leading-[28px] tracking-[0.02em] mb-3'>{data.description_parapgrath1}</p>
-          <p className='font-poppins font-normal text-[18px] text-[#423930] mt-[30px] leading-[28px] tracking-[0.02em]'>{data.description_parapgrath2}</p> */}
+        <div className='font-poppins font-normal w-[570px] text-[18px] text-[#423930] mt-[30px] leading-[28px] tracking-[0.02em]'>
+          {data.description_parapgrath1}
         </div>
-        <div className='mt-[48px]'>
+        <div className='font-poppins font-normal w-[570px] text-[18px] text-[#423930] mt-[30px] leading-[28px] tracking-[0.02em]'>
+          {data.description_parapgrath2}
+        </div>
+        <div className='mt-[30px]'>
           <ButtonPrimary type="button" className='w-[235px] h-[60px] box-border border-2 border-[#423930]'>
             <span className="font-gotu font-normal text-[22px] text-[#423930] leading-[28px] tracking-[0.02em]">Contact Now</span>
             <span className="text-[#3944B3] ml-2">

@@ -20,7 +20,7 @@ const MenuItems: FC<MenuItemsProps> = ({
 
   const RenderItem = (item: NavigationItemType) => {
     return (
-      <div className="flex items-center">
+      <div className="flex items-center" onClick={()=> window.scrollTo({top: 0, behavior: 'smooth'})}>
         <NavLink
           // exact
           // strict

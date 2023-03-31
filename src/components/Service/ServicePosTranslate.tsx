@@ -3,18 +3,19 @@ import ButtonPrimary from '../../lib/Button/ButtonPrimary';
 
 const ServicePosTranslate = ({ data }: any) => {
   return (
-    <div className='flex flex-row py-[100px] space-x-[151px]'>
+    <div className='flex flex-row py-[100px]'>
       <div className='flex flex-col '>
         <div className='mt-[53px]'>
-          <img src={data.service_deco_object} />
+          <img src={data.service_deco_object} className='max-w-[690px]' />
         </div>
         <div className='font-gotu font-normal text-[64px] text-[#B2A285] leading-[74px] tracking-[0.05em]'>
           {data.service}
         </div>
-        <div className='font-poppins font-normal w-[690px] text-[18px] text-[#423930] mt-[30px] leading-[28px] tracking-[0.02em]'>
-          {data.description}
-          {/* <p className='font-poppins font-normal text-[18px] text-[#423930] mt-[30px] leading-[28px] tracking-[0.02em] mb-3'>{data.description_parapgrath1}</p>
-        <p className='font-poppins font-normal text-[18px] text-[#423930] mt-[30px] leading-[28px] tracking-[0.02em]'>{data.description_parapgrath2}</p> */}
+        <div className='font-poppins font-normal w-[570px] text-[18px] text-[#423930] mt-[30px] leading-[28px] tracking-[0.02em]'>
+          {data.description_parapgrath1}
+        </div>
+        <div className='font-poppins font-normal w-[570px] text-[18px] text-[#423930] mt-[30px] leading-[28px] tracking-[0.02em]'>
+          {data.description_parapgrath2}
         </div>
         <div className='mt-[48px]'>
           <ButtonPrimary type="button" className='w-[235px] h-[60px] box-border border-2 border-[#423930]'>

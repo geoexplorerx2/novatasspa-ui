@@ -72,7 +72,7 @@ const VideoPlayer = () => {
 
                 <div className='ml-[30px]'>
                     <p className='font-medium text-[16px] text-white font-poppins'>{progress ? progress : '9:56'}</p>
-                    <h1 className='text-white text-[34px] font-gotu'>History, Purposeand <br></br> and Usage</h1>
+                    <h1 className='text-white text-[34px] font-gotu'>History, Purpose <br/> and Usage</h1>
                 </div>
             </div>
 
