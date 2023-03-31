@@ -7,6 +7,7 @@ import { NavigationItemType } from '../../types/menus/menus'
 import { NAVIGATION_MENU } from '../constants/navigation'
 import hamburgermenu from "../../assets/icons/hamburgermenu.svg";
 import { ReactComponent as CrossIcon } from '../../assets/icons/cross.svg'
+import SocialMediaIcons from '../SocialMediaIcons/SocialMediaIcons'
 
 
 
@@ -166,9 +167,12 @@ const MainMenu: FC = () => {
                                     }
 
                                 </ul>
-                            </div>        
+                            </div>    
+                           
+                              <SocialMediaIcons wrapperClassNames='space-x-[60px] w-min ml-64 px-5 absolute bottom-[53px]'/>    
+                            
                         </div>
-
+                        
                     </div>
                 // </Transition>
                 , document.body

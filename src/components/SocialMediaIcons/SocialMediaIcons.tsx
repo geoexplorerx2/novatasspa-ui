@@ -1,13 +1,18 @@
-import React from 'react'
+import React, { FC } from 'react'
 import {ReactComponent as FaceBookIcon} from '../../assets/icons/FacebookIcon.svg' 
 import {ReactComponent as TwitterIcon} from '../../assets/icons/TwitterIcon.svg' 
 import {ReactComponent as InstagramIcon} from '../../assets/icons/InstagramIcon.svg' 
 import {ReactComponent as YoutubeIcon} from '../../assets/icons/YoutubeIcon.svg' 
 
+interface SocialMediaIconsProps {
+    wrapperClassNames?: string
+}
 
-const SocialMediaIcons = () => {
+
+const SocialMediaIcons: FC<SocialMediaIconsProps> = (props) => {
+    const { wrapperClassNames } = props
   return (
-    <div className='flex justify-between'>
+    <div className={`${wrapperClassNames} flex justify-between`}>
         {socialmediaIconsData.map(item => {
             const { Icon, href } = item
             return (
