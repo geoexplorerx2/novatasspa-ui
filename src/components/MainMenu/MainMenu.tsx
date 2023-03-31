@@ -49,6 +49,7 @@ const MenuItem: FC<MenuItem> = (props) => {
 const MainMenu: FC = () => {
     const [ isMenuOpen, setIsMenuOpen ] = useState<boolean>(false)
     const drawerRef = useRef<any>()
+    const openButtonRef = useRef<any>()
 
     const handleClick = () => {
         setIsMenuOpen(prevState => !prevState)
@@ -59,16 +60,17 @@ const MainMenu: FC = () => {
     } 
       
   const eventClickOutsideDrawer = (event: MouseEvent) => {
+    console.log('the clicked event: ', event.target)
     if (!drawerRef.current) return;
 
     // click inside
-    if (drawerRef.current.contains(event.target as Node)) {
-      setIsMenuOpen(false)
+    if (drawerRef.current.contains(event.target as Node) || openButtonRef.current.contains(event.target)) {
+      
       return;
     }
 
     // click outside
-    // setIsMenuOpen(false);
+    setIsMenuOpen(false);
   };
 
 
@@ -112,7 +114,7 @@ const MainMenu: FC = () => {
 
   return (
     <div className=''>
-      <div className='' onClick={handleClick}>
+      <div className='' onClick={handleClick} ref={openButtonRef}>
         {/* {
           isMenuOpen 
           ?
@@ -143,8 +145,8 @@ const MainMenu: FC = () => {
                 //     style={{top: `${window.pageYOffset + 88}px`}}
                 //     ref={drawerRef}
                 // >
-                    <div className={`main-menu fixed w-screen h-screen top-0 left-0 bg-black bg-opacity-80 z-[1001] transition-all ${isMenuOpen ? 'opacity-100 translate-x-0' : ' opacity-50 -translate-x-[100%]'}`} ref={drawerRef}>
-                        <div className='w-full max-w-[945px] h-full mobileMenuShadow bg-white'  >  
+                    <div className={`main-menu fixed w-screen h-screen top-0 left-0 bg-black bg-opacity-80 z-[1001] transition-all ${isMenuOpen ? 'opacity-100 translate-x-0' : ' opacity-50 -translate-x-[100%]'}`}>
+                        <div className='w-full max-w-[945px] h-full mobileMenuShadow bg-white' ref={drawerRef} >  
                        
                             <div className='container ml-64 h-10 p-4 text-gray-600 py-14'>    
                                 <div className='flex space-x-5 ' onClick={handleCloseMenu}>
