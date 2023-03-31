@@ -40,7 +40,7 @@ const MenuItem: FC<MenuItem> = (props) => {
   };
 
   return (
-    <li key={item.id} onClick={() => {handleNavigation(item)}} className={`font-medium text-xl font-gotu md:text-[34px] md:tracking-tighter leading-[74px] ${isActive ? 'text-[#B3916E]' : ''}`}>                                     
+    <li key={item.id} onClick={() => {handleNavigation(item)}} className={`font-medium text-xl font-gotu md:text-[34px] md:tracking-tighter leading-[74px] cursor-pointer ${isActive ? 'text-[#B3916E]' : ''}`}>                                     
       {name}
     </li>
 )
