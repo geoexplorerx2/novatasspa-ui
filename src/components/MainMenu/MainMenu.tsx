@@ -63,6 +63,7 @@ const MainMenu: FC = () => {
 
     // click inside
     if (drawerRef.current.contains(event.target as Node)) {
+      setIsMenuOpen(false)
       return;
     }
 
@@ -142,16 +143,17 @@ const MainMenu: FC = () => {
                 //     style={{top: `${window.pageYOffset + 88}px`}}
                 //     ref={drawerRef}
                 // >
-                    <div className={`main-menu fixed w-screen h-screen top-0 left-0 bg-white z-[1001] transition-all ${isMenuOpen ? 'opacity-100 translate-x-0' : ' opacity-50 -translate-x-[100%]'}`}>
-                        <div className='w-full h-full mobileMenuShadow container' ref={drawerRef} >   
-                            <div className='container h-10 p-4 text-gray-600 my-14'>    
+                    <div className={`main-menu fixed w-screen h-screen top-0 left-0 bg-black bg-opacity-80 z-[1001] transition-all ${isMenuOpen ? 'opacity-100 translate-x-0' : ' opacity-50 -translate-x-[100%]'}`} ref={drawerRef}>
+                        <div className='w-full max-w-[945px] h-full mobileMenuShadow bg-white'  >  
+                       
+                            <div className='container ml-64 h-10 p-4 text-gray-600 py-14'>    
                                 <div className='flex space-x-5 ' onClick={handleCloseMenu}>
                                   <CrossIcon />
                                   <span className='h-9 text-xs font-poppins font-medium inline-block mt-1'> CLOSE </span>
                                   
                                 </div>
                             </div>    
-                            <div className='pt-8 px-5'>
+                            <div className='pt-8 px-5 ml-64'>
                                 <ul className='space-y-[30px]'>
                                     {
                                         NAVIGATION_MENU.map(menuItem => {
