@@ -6,7 +6,7 @@ import { ReactComponent as Arrow } from '../../assets/icons/ArrowRight.svg'
 import AnimatedTelInput from '../AnimatedTelInput/AnimatedTelInput';
  
 
-const ReservationForm = () => {
+const QuickReservationForm = () => {
 
     const [ values, setValues ] = useState({
         nameSurname: null,
@@ -46,4 +46,4 @@ const ReservationForm = () => {
   )
 }
 
-export default ReservationForm
+export default QuickReservationForm
