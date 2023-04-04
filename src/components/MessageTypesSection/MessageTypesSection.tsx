@@ -8,6 +8,7 @@ import message_5 from '../../assets/images/message_5.png';
 import message_6 from '../../assets/images/message_6.png';
 import message_7 from '../../assets/images/message_7.png';
 import message_8 from '../../assets/images/message_8.png';
+import ArrowRight from '../../assets/icons/right-arrow-black.png'
 
 const MessageTypesSection = () => {
 
@@ -73,23 +74,41 @@ const MessageTypesSection = () => {
 
                     if (index % 2 === 0) {
 
-                            return (
-                                <div className=''>
-                                    <h6 className='text-[#423930] text-[24px] leading-[24px] font-gotu'>{title}</h6>
-                                    <p className='text-[#666B45] font-semibold text-[16px] leading-[20px] mt-[10px] font-poppins relative'>{price}<span className='top-[-3px] text-[11px] absolute'>$</span></p>
-                                    <img src={image} alt='' className='mt-[14px]' />
+                        return (
+                            <div>
+                                <h6 className='text-[#423930] text-[24px] leading-[24px] font-gotu'>{title}</h6>
+                                <div className=' flex justify-between'>
+                                    <span className='text-[#666B45] font-semibold text-[16px] leading-[20px] mt-[10px] font-poppins relative'>
+                                        {price}
+                                        <span className='top-[-3px] text-[11px] absolute'>$</span>
+                                    </span>
+                                    <button className='text-[16px] text-[#423930] bookButton inline-flex leading-[20px] mt-[10px] font-poppins '>
+                                        Book Now
+                                        <img src={ArrowRight} alt='' className='w-[16px] ml-[13px] translate-y-[2px]' />
+                                    </button>
                                 </div>
-                            )
-                        } else {
-                            return (
-                                <div className=''>
-                                    <img src={image} alt='' className='mt-0' />
-                                    <h6 className='text-[#423930] text-[24px] leading-[24px] mt-[14px] font-gotu'>{title}</h6>
-                                    <p className='text-[#666B45] font-semibold text-[16px] leading-[20px] mt-[10px] font-poppins relative'>{price}<span className='top-[-3px] text-[11px] absolute'>$</span></p>
+                                <img src={image} alt='' className='mt-[14px]' />
+                            </div>
+                        )
+                    } else {
+                        return (
+                            <div>
+                                <img src={image} alt='' className='mt-0' />
+                                <h6 className='text-[#423930] text-[24px] leading-[24px] mt-[14px] font-gotu'>{title}</h6>
+                                <div className=' flex justify-between'>
+                                    <span className='text-[#666B45] font-semibold text-[16px] leading-[20px] mt-[10px] font-poppins relative'>
+                                        {price}
+                                        <span className='top-[-3px] text-[11px] absolute'>$</span>
+                                    </span>
+                                    <button className='text-[16px] text-[#423930] bookButton inline-flex leading-[20px] mt-[10px] font-poppins '>
+                                        Book Now
+                                        <img src={ArrowRight} alt='' className='w-[16px] ml-[13px] translate-y-[2px]' />
+                                    </button>
                                 </div>
-                            )
-                        }
+                            </div>
+                        )
                     }
+                }
                 )}
 
             </div>

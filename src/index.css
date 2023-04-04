@@ -16,11 +16,3 @@
     background: rgb(159, 175, 145) ;
     transform: rotate(-1deg);
 }
-
-.bookButton {
-    visibility: hidden;
-}
-
-.priceListCard:hover .bookButton {
-    visibility: visible !important;
-}
