@@ -61,7 +61,7 @@ const MainMenu: FC = () => {
     } 
       
   const eventClickOutsideDrawer = (event: MouseEvent) => {
-    console.log('the clicked event: ', event.target)
+    // console.log('the clicked event: ', event.target)
     if (!drawerRef.current) return;
 
     // click inside
@@ -87,7 +87,7 @@ const MainMenu: FC = () => {
   }, []);
 
   useEffect(() => { 
-    console.log('the isMenuOpen: ', isMenuOpen)
+    // console.log('the isMenuOpen: ', isMenuOpen)
     if (typeof window != 'undefined' && window.document) {
       if(isMenuOpen) {
 
