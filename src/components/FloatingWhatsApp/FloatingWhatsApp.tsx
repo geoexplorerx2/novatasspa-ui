@@ -81,7 +81,7 @@ export default function FloatingWhatsApp({
   onNotification,
   onLoopDone,
 
-  phoneNumber = '+905549867024',
+  phoneNumber = '+905526829411',
   accountName = 'Account Name',
   avatar = dummyAvatar,
   statusMessage = 'Çevrimiçi',
@@ -129,10 +129,11 @@ export default function FloatingWhatsApp({
 
   useEffect(() => {
     setTimeout(() => {
-      const btn = document.getElementsByClassName("styles_whatsappButton__WryQ2 floating-whatsapp-button")?.[0];
+      const btn = document.getElementsByClassName("styles_whatsappButton__eT79h floating-whatsapp-button")?.[0];
+      console.log('btn',btn)
       // @ts-ignore
       // Property 'click' does not exist on type 'Element'.
-      btn.click()
+      btn?.click()
     }, 13000);
   }, [])
 
