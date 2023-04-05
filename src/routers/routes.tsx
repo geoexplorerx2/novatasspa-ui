@@ -1,4 +1,4 @@
-import { About, Contact, Homepage, Services } from "../views";
+import { About, Booking, Contact, Homepage, Services } from "../views";
 
 const viewsUrls: any[] = [
     {
@@ -28,6 +28,13 @@ const viewsUrls: any[] = [
         component: Contact,
         type: "public",
         id: '4'
+    },
+    {
+        path: "/booking",
+        exact: true,
+        component: Booking,
+        type: "public",
+        id: '5'
     }
 ];
 
