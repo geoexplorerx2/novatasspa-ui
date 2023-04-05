@@ -14,7 +14,7 @@ const App: FC<AppProps> = () => {
     <Router>
       <MasterHeader />
       <Routers />
-      <FloatingWhatsApp accountName={'Nova Tas Spa'} phoneNumber={'+905526829411'} />
+      <FloatingWhatsApp accountName={'Nova Tas Spa'} phoneNumber={'+905417600248'} />
       <MasterFooter />
     </Router>
   );

@@ -81,7 +81,7 @@ export default function FloatingWhatsApp({
   onNotification,
   onLoopDone,
 
-  phoneNumber = '+905549867024',
+  phoneNumber = '+905417600248',
   accountName = 'Account Name',
   avatar = dummyAvatar,
   statusMessage = 'Çevrimiçi',
@@ -129,10 +129,11 @@ export default function FloatingWhatsApp({
 
   useEffect(() => {
     setTimeout(() => {
-      const btn = document.getElementsByClassName("styles_whatsappButton__WryQ2 floating-whatsapp-button")?.[0];
+      const btn = document.getElementsByClassName("styles_whatsappButton__eT79h floating-whatsapp-button")?.[0];
+      console.log('btn',btn)
       // @ts-ignore
       // Property 'click' does not exist on type 'Element'.
-      btn.click()
+      btn?.click()
     }, 13000);
   }, [])
 
@@ -242,7 +243,7 @@ export default function FloatingWhatsApp({
       >
         <header className={css.chatHeader}>
           <div className={css.avatar}>
-            <img src='https://novacarcare.s3.amazonaws.com/whatsapp.png' width='60' height='60' alt='whatsapp-avatar' />
+            <img src='https://novatasspa.s3.amazonaws.com/novatassap.png' width='60' height='60' alt='whatsapp-avatar' />
           </div>
           <div className={css.status}>
             <span className={css.statusTitle}>{accountName}</span>
@@ -278,7 +279,7 @@ export default function FloatingWhatsApp({
 
         </div>
 
-        <a className={`${css.chatFooter} flex`} href='https://wa.me/905322276954' target='_blank'>
+        <a className={`${css.chatFooter} flex`} href='https://wa.me/905417600248' target='_blank'>
           <button className='font-poppins font-normal !text-white !mx-auto border-[#25D366] !bg-[#25D366] w-full rounded-2xl py-2'>
             İletişime Geç
           </button>
