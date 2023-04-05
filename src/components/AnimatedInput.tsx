@@ -47,8 +47,8 @@ const AnimatedInput: FC<InfoProps> = (props) => {
         inputType === 'textArea'
           ?
           <textarea
-            value={value ?? inputValue}
-            onChange={(event) => onInputChange(event)}
+            // value={value ?? inputValue}
+            onChange={ onInputChange }
             onFocus={() => onFocus()}
             onBlur={() => onBlur()}
             name={name}
@@ -59,15 +59,13 @@ const AnimatedInput: FC<InfoProps> = (props) => {
           />
           :
           <input
-            value={value ?? inputValue}
-            onChange={(event) => onInputChange(event)}
+            // value={value ?? inputValue}
+            onChange={ onInputChange }
             onFocus={() => onFocus()}
             onBlur={() => onBlur()}
             type={inputType}
             name={name}
-            className={`border-none w-full h-full cursor-pointer transition ease-out bg-transparent focus:ring-0 relative z-[2] pt-7 text-lg font-semibold ${Icon ? 'px-4' : 'pl-0'}`
-            }
-            
+            className={`border-none w-full h-full cursor-pointer transition ease-out bg-transparent focus:ring-0 relative z-[2] pt-7 text-lg font-semibold ${Icon ? 'px-4' : 'pl-0'}`}
           />
       }
     </div>

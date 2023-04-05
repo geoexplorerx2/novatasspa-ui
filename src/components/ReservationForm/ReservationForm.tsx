@@ -1,46 +1,102 @@
 import React, { useState } from 'react'
 import AnimatedInput from '../AnimatedInput';
-import { ReactComponent as  HumanAvatar } from '../../assets/icons/humanAvatar.svg'
-import { ReactComponent as  MailIcon } from '../../assets/icons/mailIcon.svg'
+import { ReactComponent as HumanAvatar } from '../../assets/icons/humanAvatar.svg'
+import { ReactComponent as MailIcon } from '../../assets/icons/mailIcon.svg'
 import { ReactComponent as Arrow } from '../../assets/icons/ArrowRight.svg'
 import AnimatedTelInput from '../AnimatedTelInput/AnimatedTelInput';
- 
+import { useForm, useValidate } from '../../hooks';
+import services from '../../api/services';
+
 
 const ReservationForm = () => {
+  const {
+    values,
+    errors,
+    handleChange,
+    handleSubmit
+  } = useForm(_handleQuickReservation, useValidate, 'quickreservation');
 
-    const [ values, setValues ] = useState({
-        nameSurname: null,
-        email: null,
-        phoneNo: null,
-        
-  
+  const server = services;
+
+  function _handleQuickReservation() {
+
+    const quick_reservation_data = {
+      name_surname: values?.namesurname,
+      phone: values?.telehone,
+      country: 'Turkey',
+      email: values?.quickreservation_email
+    };
+
+    // quick reservation
+    server.quickReservation(quick_reservation_data)
+      .then((res: any) => {
+        // console.log({ res });
       })
-      const handleChange = (e: React.ChangeEvent<HTMLInputElement>, name?: string) => {
-        const value = e?.target?.value ?? e;
-        const inputName = e?.target?.name ?? name;
-        setValues((prevState) => ({...prevState, [inputName] : value }))
-      }
-  
-      const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault()
-        console.log(values)
-      }
-    
-  
+      .catch((error: any) => {
+        // console.log({error});
+      })
+  };
+
+  // const [values, setValues] = useState({
+  //   nameSurname: null,
+  //   email: null,
+  //   phoneNo: null,
+
+
+  // });
+
+  // const handleChange = (e: React.ChangeEvent<HTMLInputElement>, name?: string) => {
+  //   const value = e?.target?.value ?? e;
+  //   const inputName = e?.target?.name ?? name;
+  //   setValues((prevState) => ({ ...prevState, [inputName]: value }))
+  // };
+
+  // const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  //   e.preventDefault()
+  //   console.log(values)
+  // };
+
+
   return (
     <div className='w-[450px] p-[30px] bg-white space-y-[30px]'>
-        <h3 className='text-2xl font-gotu '>Online Reservation Form</h3>
-        <form onSubmit={handleSubmit} className='space-y-[30px]'>
-                <AnimatedInput value={values.nameSurname} inputType='text' label='Name, Surname' name='nameSurname' onChange={(e: any) => handleChange(e)} Icon={<HumanAvatar />} />
-                <AnimatedInput value={values.email} inputType='text' label='E-Mail Address' name='email' onChange={(e: any) => handleChange(e)} Icon={<MailIcon />}/>
-                <AnimatedTelInput label={'Phone Number '} name='phoneNo' onChange={(e: any) => handleChange(e, 'phoneNo')} />
-                <button type='submit' className='w-full flex justify-between py-4 px-[31px] bg-[#423930] text-white text-[22px] -tracking-[0.02em] leading-[28px] font-gotu'>
-                    <span>
-                            Make Reservation
-                    </span>
-                    <Arrow className='text-white' />
-                </button>
-        </form>
+      <h3 className='text-2xl font-gotu '>Online Reservation Form</h3>
+      <div className='flex flex-col'>
+        <span>{errors.namesurname}</span>
+        <span>{errors.quickreservation_email}</span>
+      </div>
+      <form className='space-y-[30px]'>
+        <AnimatedInput
+          // value={values.nameSurname}
+          inputType='text'
+          label='Name, Surname'
+          name='namesurname'
+          onChange={handleChange}
+          Icon={<HumanAvatar />}
+        />
+        <AnimatedInput
+          // value={values.email} 
+          inputType='text'
+          label='E-Mail Address'
+          name='quickreservation_email'
+          onChange={handleChange}
+          Icon={<MailIcon />}
+        />
+        <AnimatedTelInput
+          label={'Phone Number '}
+          name='phone'
+          onChange={handleChange}
+        />
+        <button
+          onClick={handleSubmit}
+          type='button'
+          className='w-full flex justify-between py-4 px-[31px] bg-[#423930] text-white text-[22px] -tracking-[0.02em] leading-[28px] font-gotu'
+        >
+          <span>
+            Make Reservation
+          </span>
+          <Arrow className='text-white' />
+        </button>
+      </form>
 
     </div>
   )
