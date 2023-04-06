@@ -5,7 +5,19 @@ import { post } from "./request";
 class Services {
 
     public quickReservation = (quick_reservation: any): Promise<any> => {
-        // const formdata = new FormData(registry);
+
+        // const formdata = new FormData();
+        // formdata.append('quick_reservation', quick_reservation);
+
+        // formdata.append('name_surname', quick_reservation.name_surname);
+        // formdata.append('phone', quick_reservation.phone);
+        // formdata.append('country', quick_reservation.country);
+        // formdata.append('email', quick_reservation.email);
+
+        // let name_surname = formdata.get('quick_reservation');
+        // let name = name_surname.name_surname
+        // console.log(name);
+
         return new Promise((resolve, reject) => {
             return post({
                 url: `contactform/store`,

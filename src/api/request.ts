@@ -20,8 +20,9 @@ const doRequest = (request: any): Promise<HTTPResponse> => {
         request.method !== "DELETE" && 
         !request.headers.hasOwnProperty("Content-Type")
     ) {
-        // request.headers["Content-Type"] = "application/x-www-form-urlencoded";
-        request.headers["Content-Type"] = "application/json";
+        request.headers["Content-Type"] = "application/x-www-form-urlencoded";
+        // request.headers["Content-Type"] = "application/json";
+        // request.headers["Content-Type"] = "multipart/form-data";
         if (request.body) {
             // request.body = encodeParameters(request.body);
             request.body = JSON.stringify(request.body);
