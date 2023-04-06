@@ -5,6 +5,7 @@ import { BASE_URL } from "./env";
 export const post = (request: HTTPRequest): Promise<HTTPResponse> => {
     return new Promise((resolve, reject) => {
         request.method = "POST";
+        // request.mode = request.cors;
         doRequest(request).then(resolve).catch(reject);
     });
 };

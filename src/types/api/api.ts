@@ -4,6 +4,7 @@ export interface HTTPRequest extends RequestInit {
     headers?: any;
     body?: any;
     request_user_profile?: boolean;
+    // cors: any;
 };
 
 export interface HTTPResponse extends Response {
