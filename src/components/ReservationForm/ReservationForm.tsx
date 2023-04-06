@@ -22,7 +22,7 @@ const ReservationForm = () => {
 
     const quick_reservation_data = {
       name_surname: values?.namesurname,
-      phone: values?.telehone,
+      phone: values?.telephone,
       country: 'Turkey',
       email: values?.quickreservation_email
     };

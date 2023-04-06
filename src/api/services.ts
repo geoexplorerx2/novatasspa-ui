@@ -9,7 +9,8 @@ class Services {
         return new Promise((resolve, reject) => {
             return post({
                 url: `contactform/store`,
-                body: quick_reservation
+                body: quick_reservation,
+                // cors: ''
             }).then((res: any) => {
                 resolve(res);
             }).catch(this.handleError.bind(null, reject));
