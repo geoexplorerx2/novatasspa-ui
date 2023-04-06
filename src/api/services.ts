@@ -22,7 +22,8 @@ class Services {
             return post({
                 url: `contactform/store`,
                 body: quick_reservation,
-                // cors: ''
+                credentials: 'omit',
+                // mode: 'no-cors'
             }).then((res: any) => {
                 resolve(res);
             }).catch(this.handleError.bind(null, reject));
