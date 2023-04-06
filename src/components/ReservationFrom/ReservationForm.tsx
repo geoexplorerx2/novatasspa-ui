@@ -7,6 +7,7 @@ import { ReactComponent as MailIcon } from '../../assets/icons/mailIcon.svg'
 import { DateInput } from '../../lib';
 import { DateValue } from '@mantine/dates';
 import AnimatedDateInput from '../AnimatedDateInput/AnimatedDateInput';
+import AnimatedTimeInput from '../AnimatedTimeInput/AnimatedTimeInput';
 
 
 const ReservationForm = () => {
@@ -14,10 +15,11 @@ const ReservationForm = () => {
         nameSurname: null,
         email: null,
         phoneNo: null,
-        date: undefined
+        date: undefined,
+        time: undefined
     })
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement>, name?: string) => {
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>, name?: string) => {
         const value = e?.target?.value ?? e;
         const inputName = e?.target?.name ?? name;
         setValues((prevState) => ({ ...prevState, [inputName]: value }))
@@ -38,7 +40,9 @@ const ReservationForm = () => {
     return (
         <div className='w-full p-[30px] bg-white space-y-[30px]'>
             <form onSubmit={handleSubmit} className='grid grid-cols-2 w-full gap-[30px]'>
+                {/* @ts-ignore */}
                 <AnimatedDateInput value={values.date} setValue={setValues} label="Reservation Date"/>
+                <AnimatedTimeInput handleChange={handleChange} label="Reservation Time" value={values.time}/>
                 <AnimatedInput value={values.nameSurname} inputType='text' label='Name, Surname' name='nameSurname' onChange={(e: any) => handleChange(e)} Icon={<HumanAvatar />} />
                 <AnimatedInput value={values.email} inputType='text' label='E-Mail Address' name='email' onChange={(e: any) => handleChange(e)} Icon={<MailIcon />} />
                 <AnimatedTelInput label={'Phone Number '} name='phoneNo' onChange={(e: any) => handleChange(e, 'phoneNo')} />
