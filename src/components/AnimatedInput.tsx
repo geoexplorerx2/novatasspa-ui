@@ -38,7 +38,7 @@ const AnimatedInput: FC<InfoProps> = (props) => {
             {Icon && Icon}
         </div>
       <label className={`absolute top-0 transition-all text-xs font-medium  px-2
-                        ${isFocused || value ? "translate-y-4 bg-white text-sm z-[3] font-normal" : "translate-y-4 lg:translate-y-[27px] text-[22px] text-[#0D2C3B] text-opacity-50 z-[1]"}
+                        ${isFocused || value ? "translate-y-4 text-sm z-[3] font-normal" : "translate-y-4 lg:translate-y-[27px] text-[22px] text-[#0D2C3B] text-opacity-50 z-[1]"}
                         ${Icon ? 'left-[53px]' : 'left-3'}
                         `}>
         {label}

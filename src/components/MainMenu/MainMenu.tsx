@@ -61,7 +61,6 @@ const MainMenu: FC = () => {
     } 
       
   const eventClickOutsideDrawer = (event: MouseEvent) => {
-    console.log('the clicked event: ', event.target)
     if (!drawerRef.current) return;
 
     // click inside
