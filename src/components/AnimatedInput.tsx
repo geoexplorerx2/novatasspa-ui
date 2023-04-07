@@ -34,7 +34,7 @@ const AnimatedInput: FC<InfoProps> = (props) => {
 
   console.log('from input::', name)
   // errors.map((e: any) => console.log(e))
-  const errorsKeys = Object.keys(errors)
+  const errorsKeys = Object?.keys(errors ?? {})
   console.log('errorsKeys', errorsKeys)
 
   return (
