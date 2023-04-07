@@ -2,17 +2,18 @@ import React, { FC, InputHTMLAttributes, useEffect, useState } from 'react'
 interface InfoProps extends InputHTMLAttributes<HTMLInputElement> {
   label: string;
   inputType: string;
-  name?: string;
   onChange?: any;
   value?: any;
   wrapperClassName?: string;
   Icon?: any;
   focusStateStyles?: string
+  errors?: any
+  name?: string;
 };
 
 const AnimatedInput: FC<InfoProps> = (props) => {
 
-  const { label, inputType, name, onChange, value, wrapperClassName, Icon, focusStateStyles } = props
+  const { label, inputType, name, onChange, value, wrapperClassName, Icon, focusStateStyles, errors } = props
 
   const [inputValue, setInputValue] = useState("");
   const [isFocused, setIsFocused] = useState(false);
@@ -31,10 +32,13 @@ const AnimatedInput: FC<InfoProps> = (props) => {
     setIsFocused(false);
   };
 
-
+  console.log('from input::', name)
+  // errors.map((e: any) => console.log(e))
+  const errorsKeys = Object.keys(errors)
+  console.log('errorsKeys', errorsKeys)
 
   return (
-    <div className={`${wrapperClassName} relative w-full h-[50px] lg:h-[70px] flex items-center  px-[22px] ${isFocused ? `${focusStateStyles} border-black border-[1px]` : 'border-[#DDDDDD] border'}`}>
+    <div className={`${wrapperClassName} relative w-full h-[50px] lg:h-[70px] flex items-center  px-[22px] ${isFocused ? `${focusStateStyles} border-black border-[1px]` : 'border-[#DDDDDD] border'} ${errorsKeys.includes(name ?? "") ? `border-2 border-red-600` : ''}`}>
         <div className={` ${inputType === 'textArea' ? 'h-full pt-7' : ''}`}>
             {Icon && Icon}
         </div>
@@ -48,8 +52,8 @@ const AnimatedInput: FC<InfoProps> = (props) => {
         inputType === 'textArea'
           ?
           <textarea
-            value={value ?? inputValue}
-            onChange={(event) => onInputChange(event)}
+            // value={value ?? inputValue}
+            onChange={onInputChange}
             onFocus={() => onFocus()}
             onBlur={() => onBlur()}
             name={name}
@@ -60,15 +64,13 @@ const AnimatedInput: FC<InfoProps> = (props) => {
           />
           :
           <input
-            value={value ?? inputValue}
-            onChange={(event) => onInputChange(event)}
+            // value={value ?? inputValue}
+            onChange={onInputChange}
             onFocus={() => onFocus()}
             onBlur={() => onBlur()}
             type={inputType}
             name={name}
-            className={`border-none w-full h-full cursor-pointer transition ease-out bg-transparent focus:ring-0 relative z-[2] pt-7 text-lg font-semibold ${Icon ? 'px-4' : 'pl-0'}`
-            }
-            
+            className={`border-none w-full h-full cursor-pointer transition ease-out bg-transparent focus:ring-0 relative z-[2] pt-7 text-lg font-semibold ${Icon ? 'px-4' : 'pl-0'}`}
           />
       }
     </div>

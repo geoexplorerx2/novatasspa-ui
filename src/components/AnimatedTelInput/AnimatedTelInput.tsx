@@ -27,7 +27,7 @@ const AnimatedTelInput: FC<InfoProps> = (props) => {
     const onInputChange = (e: any) => {
 
         setInputValue(e);
-        onChange && onChange(e)
+        onChange && onChange(e, 'telephone');
         setPhone(e);
     };
 

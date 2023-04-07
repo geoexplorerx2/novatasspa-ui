@@ -8,6 +8,7 @@ import message_5 from '../../assets/images/message_5.png';
 import message_6 from '../../assets/images/message_6.png';
 import message_7 from '../../assets/images/message_7.png';
 import message_8 from '../../assets/images/message_8.png';
+import ArrowRight from '../../assets/icons/right-arrow-black.png'
 
 const MessageTypesSection = () => {
 
@@ -54,6 +55,126 @@ const MessageTypesSection = () => {
         },
     ]
 
+    const messageTypesContent_2 = [
+        {
+            title: 'FAR EAST MASSAGES',
+            sectionId: 1,
+            content: [
+                {
+                    name: 'Hot Stone Massage',
+                    price: 'per person 80',
+                    duration: '50 minutes',
+                    image: message_1,
+                    messageId: 1
+                },
+                {
+                    name: 'Traditional Bali Massage',
+                    price: 'per person 80',
+                    duration: '50 minutes',
+                    image: message_2,
+                    messageId: 2
+                },
+                {
+                    name: 'Thai Massage',
+                    price: 'per person 90',
+                    duration: '50 minutes',
+                    image: message_3,
+                    messageId: 3
+                },
+                {
+                    name: 'Blend Thai Massage',
+                    price: 'per person 90',
+                    duration: '50 minutes',
+                    image: message_4,
+                    messageId: 4
+                }
+            ]
+
+        },
+        {
+            title: 'SPA CLASSICS',
+            sectionId: 2,
+            content: [
+                {
+                    name: 'Reflexology ',
+                    price: 'per person 40',
+                    duration: '30 minutes',
+                    image: message_1,
+                    messageId: 1
+                },
+                {
+                    name: 'Head & Shoulders Massage',
+                    price: 'per person 40',
+                    duration: '30 minutes',
+                    image: message_2,
+                    messageId: 2
+                },
+                {
+                    name: 'Back Massage',
+                    price: 'per person 50',
+                    duration: '40 minutes',
+                    image: message_3,
+                    messageId: 3
+                },
+                {
+                    name: 'Classic Massage',
+                    price: 'per person 65',
+                    duration: '50 minutes',
+                    image: message_4,
+                    messageId: 4
+                },
+                {
+                    name: 'Anti Stress Massage',
+                    price: 'per person 75',
+                    duration: '50 minutes',
+                    image: message_5,
+                    messageId: 5
+                },
+                {
+                    name: 'Aromatherapy Massage',
+                    price: 'per person 75',
+                    duration: '50 minutes',
+                    image: message_6,
+                    messageId: 6
+                }
+            ]
+        },
+        {
+            title: 'THERAPEUTIC MASSAGE',
+            sectionId: 3,
+            content: [
+                {
+                    name: 'Medical Massage',
+                    price: 'per person 80',
+                    duration: '50 minutes',
+                    image: message_1,
+                    messageId: 1
+                },
+                {
+                    name: 'Deep Tissue Massage',
+                    price: 'per person 90',
+                    duration: '50 minutes',
+                    image: message_2,
+                    messageId: 2
+                },
+                {
+                    name: 'Regional Trilogy Massage',
+                    price: 'per person 90',
+                    duration: '60 minutes',
+                    image: message_3,
+                    messageId: 3
+                },
+                {
+                    name: 'Catma Signature Massage',
+                    price: 'per person 90',
+                    duration: '60 minutes',
+                    image: message_4,
+                    messageId: 4
+                }
+            ]
+        },
+    ]
+
     return (
         <div className='container pt-[100px]'>
             <div className='ml-[99px] z-[2] text-center'>
@@ -66,33 +187,113 @@ const MessageTypesSection = () => {
                 <p className='text-[#423930] text-[18px] mt-[30px] mx-auto font-poppins'>From its medieval origins to the digital era, learn everything there <br></br> is to know about the ubiquitous lorem ipsum passage.</p>
             </div>
 
-            <div className='grid grid-cols-4 grid-rows-2 gap-x-[30px] gap-y-[100px] mt-[100px] mb-[67px]'>
+
+            {messageTypesContent_2.map(section => {
+                const { title, sectionId, content } = section;
+
+                return (
+                    <>
+                        <h1 className='text-[#B2A285] text-[44px] font-gotu mt-[100px]'>{title}</h1>
+                        <div className='grid grid-cols-4 gap-x-[30px] gap-y-[100px] mt-[50px] mb-[67px]'>
+
+                            {content.map((messageType, index) => {
+                                const { name, price, duration, image, messageId } = messageType;
+
+                                return (
+                                    <>
+                                        {index % 2 === 0 ? (
+                                            <div>
+                                                <h6 className='text-[#423930] text-[24px] leading-[24px] font-gotu'>{name}</h6>
+                                                <div className=' flex justify-between'>
+                                                    <span className='text-[#666B45] font-semibold text-[16px] leading-[20px] mt-[10px] font-poppins relative'>
+                                                        {price}
+                                                        <span className='top-[-3px] text-[11px] absolute'>€</span>
+                                                    </span>
+                                                    <button className='text-[16px] text-[#423930] bookButton inline-flex leading-[20px] mt-[10px] font-poppins '>
+                                                        Book Now
+                                                        <img src={ArrowRight} alt='' className='w-[16px] ml-[13px] translate-y-[2px]' />
+                                                    </button>
+                                                </div>
+                                                <img src={image} alt='' className='mt-[14px]' />
+                                            </div>
+                                        ) : (
+                                            <div>
+                                                <img src={image} alt='' className='mt-0' />
+                                                <h6 className='text-[#423930] text-[24px] leading-[24px] mt-[14px] font-gotu'>{name}</h6>
+                                                <div className=' flex justify-between'>
+                                                    <span className='text-[#666B45] font-semibold text-[16px] leading-[20px] mt-[10px] font-poppins relative'>
+                                                        {price}
+                                                        <span className='top-[-3px] text-[11px] absolute'>€</span>
+                                                    </span>
+                                                    <button className='text-[16px] text-[#423930] bookButton inline-flex leading-[20px] mt-[10px] font-poppins '>
+                                                        Book Now
+                                                        <img src={ArrowRight} alt='' className='w-[16px] ml-[13px] translate-y-[2px]' />
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        )}
+                                    </>
+
+                                )
+                            })
+                            }
+                        </div>
+                    </>
+                )
+
+            })}
+
+
+            {/* OLD Start */}
+
+            {/* <div className='grid grid-cols-4 grid-rows-2 gap-x-[30px] gap-y-[100px] mt-[100px] mb-[67px]'>
 
                 {messageTypesContent.map((card, index) => {
                     const { title, price, image } = card;
 
                     if (index % 2 === 0) {
 
-                            return (
-                                <div className=''>
-                                    <h6 className='text-[#423930] text-[24px] leading-[24px] font-gotu'>{title}</h6>
-                                    <p className='text-[#666B45] font-semibold text-[16px] leading-[20px] mt-[10px] font-poppins relative'>{price}<span className='top-[-3px] text-[11px] absolute'>$</span></p>
-                                    <img src={image} alt='' className='mt-[14px]' />
+                        return (
+                            <div>
+                                <h6 className='text-[#423930] text-[24px] leading-[24px] font-gotu'>{title}</h6>
+                                <div className=' flex justify-between'>
+                                    <span className='text-[#666B45] font-semibold text-[16px] leading-[20px] mt-[10px] font-poppins relative'>
+                                        {price}
+                                        <span className='top-[-3px] text-[11px] absolute'>€</span>
+                                    </span>
+                                    <button className='text-[16px] text-[#423930] bookButton inline-flex leading-[20px] mt-[10px] font-poppins '>
+                                        Book Now
+                                        <img src={ArrowRight} alt='' className='w-[16px] ml-[13px] translate-y-[2px]' />
+                                    </button>
                                 </div>
-                            )
-                        } else {
-                            return (
-                                <div className=''>
-                                    <img src={image} alt='' className='mt-0' />
-                                    <h6 className='text-[#423930] text-[24px] leading-[24px] mt-[14px] font-gotu'>{title}</h6>
-                                    <p className='text-[#666B45] font-semibold text-[16px] leading-[20px] mt-[10px] font-poppins relative'>{price}<span className='top-[-3px] text-[11px] absolute'>$</span></p>
+                                <img src={image} alt='' className='mt-[14px]' />
+                            </div>
+                        )
+                    } else {
+                        return (
+                            <div>
+                                <img src={image} alt='' className='mt-0' />
+                                <h6 className='text-[#423930] text-[24px] leading-[24px] mt-[14px] font-gotu'>{title}</h6>
+                                <div className=' flex justify-between'>
+                                    <span className='text-[#666B45] font-semibold text-[16px] leading-[20px] mt-[10px] font-poppins relative'>
+                                        {price}
+                                        <span className='top-[-3px] text-[11px] absolute'>€</span>
+                                    </span>
+                                    <button className='text-[16px] text-[#423930] bookButton inline-flex leading-[20px] mt-[10px] font-poppins '>
+                                        Book Now
+                                        <img src={ArrowRight} alt='' className='w-[16px] ml-[13px] translate-y-[2px]' />
+                                    </button>
                                 </div>
-                            )
-                        }
+                            </div>
+                        )
                     }
+                }
                 )}
 
-            </div>
+            </div> */}
+
+            {/* OLD end */}
+
         </div>
     )
 }
