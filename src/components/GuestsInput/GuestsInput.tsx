@@ -68,7 +68,7 @@ const GuestsInput: FC<GuestsInputPros> = (props) => {
 
 
     return (
-        <div className={`relative w-full h-[50px] lg:h-[70px] flex items-center  pl-[22px] border-[#DDDDDD] border ${isPopoverOpen ? "bg-white" : "bg-[#f7f7f7]" }`}
+        <div className={`relative w-full h-[50px] lg:h-[70px] flex items-center pl-[22px] rounded-[10px] border-[#DDDDDD] border ${isPopoverOpen ? "bg-white" : "bg-[#f7f7f7]" }`}
             onClick={() => { setIsPopoverOpen(true) }}
             ref={wrapperRef}
         >
