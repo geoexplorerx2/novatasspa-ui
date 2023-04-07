@@ -36,7 +36,7 @@ class Services {
             return post({
                 url: `bookingform/store`,
                 body: booking_data,
-                credentials: 'omit',
+                credentials: 'include',
                 // mode: 'no-cors'
             }).then((res: any) => {
                 resolve(res);
