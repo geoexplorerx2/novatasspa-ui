@@ -10,7 +10,7 @@ const Booking = () => {
     <div className='h-screen'>
         <div className='w-full h-full flex'> 
           <img src={ReservationBanner} alt='reservation salon image' />
-          <div className='w-full h-full border border-pink-500'>
+          <div className='w-full h-full'>
           <img src={novatasspaLogo} alt="Novatas Logo" className='mx-auto my-7 mx-wuto'/>
             <div className='w-full h-full px-[150px]'>
               
