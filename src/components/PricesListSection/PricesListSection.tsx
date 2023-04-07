@@ -15,21 +15,21 @@ const PricesListSection = () => {
             serviceType: 'Turkish Hammam',
             services: [
                 {
-                    id: 1,
+                    hamamid: 1,
                     name: 'Jasmine Hammam',
                     time: '25 min.',
                     price: '40',
                     image: prices_list_1
                 },
                 {
-                    id: 2,
+                    hamamid: 2,
                     name: 'Tulip Hammam',
                     time: '40 min.',
                     price: '60',
                     image: prices_list_2
                 },
                 {
-                    id: 2,
+                    hamamid: 2,
                     name: 'Neyl-ü Fer Hammam',
                     time: '50 min.',
                     price: '75',
@@ -42,28 +42,28 @@ const PricesListSection = () => {
             serviceType: 'Hammam & Massage Packages',
             services: [
                 {
-                    id: 1,
+                    hamamid: 1,
                     name: 'Lilium Package',
                     time: '55 min.',
                     price: '60',
                     image: prices_list_1
                 },
                 {
-                    id: 2,
+                    hamamid: 2,
                     name: 'Crystal Package',
                     time: '80 min.',
                     price: '80',
                     image: prices_list_2
                 },
                 {
-                    id: 3,
+                    hamamid: 3,
                     name: 'Lotus Package',
                     time: '100 min.',
                     price: '110',
                     image: prices_list_3
                 },
                 {
-                    id: 4,
+                    hamamid: 4,
                     name: 'Luxury Novatas Package',
                     time: '125 min.',
                     price: '140',
@@ -76,42 +76,42 @@ const PricesListSection = () => {
             serviceType: 'Spa Classics',
             services: [
                 {
-                    id: 1,
+                    hamamid: 1,
                     name: 'Reflexology',
                     time: '25 min.',
                     price: '30',
                     image: prices_list_1
                 },
                 {
-                    id: 2,
+                    hamamid: 2,
                     name: 'Head&shoulders Massage',
                     time: '25 min.',
                     price: '30',
                     image: prices_list_2
                 },
                 {
-                    id: 3,
+                    hamamid: 3,
                     name: 'Back Massage',
                     time: '30 min.',
                     price: '35',
                     image: prices_list_3
                 },
                 {
-                    id: 4,
+                    hamamid: 4,
                     name: 'Klasic Massage',
                     time: '50 min.',
                     price: '50',
                     image: prices_list_4
                 },
                 {
-                    id: 5,
+                    hamamid: 5,
                     name: 'Anti-stress Massage',
                     time: '50 min.',
                     price: '65',
                     image: prices_list_5
                 },
                 {
-                    id: 6,
+                    hamamid: 6,
                     name: 'Aromatherapy Massage',
                     time: '50 min.',
                     price: '65',
@@ -124,21 +124,21 @@ const PricesListSection = () => {
             serviceType: 'Far East Massage',
             services: [
                 {
-                    id: 1,
+                    hamamid: 1,
                     name: 'Hot Stone Massage',
                     time: '50 min.',
                     price: '70',
                     image: prices_list_1
                 },
                 {
-                    id: 2,
+                    hamamid: 2,
                     name: 'Tridational Bali Massage',
                     time: '50 min.',
                     price: '70',
                     image: prices_list_2
                 },
                 {
-                    id: 3,
+                    hamamid: 3,
                     name: 'Blend Thai Massage',
                     time: '50 min.',
                     price: '80',
@@ -151,28 +151,28 @@ const PricesListSection = () => {
             serviceType: 'Therapeutic Massage',
             services: [
                 {
-                    id: 1,
+                    hamamid: 1,
                     name: 'Medical Massage',
                     time: '40 min.',
                     price: '70',
                     image: prices_list_1
                 },
                 {
-                    id: 2,
+                    hamamid: 2,
                     name: 'Deep Tissue Massage',
                     time: '50 min.',
                     price: '80',
                     image: prices_list_2
                 },
                 {
-                    id: 3,
+                    hamamid: 3,
                     name: 'Regional Trilogy Massage',
                     time: '60 min.',
                     price: '80',
                     image: prices_list_3
                 },
                 {
-                    id: 4,
+                    hamamid: 4,
                     name: 'Novatas Signature Massage',
                     time: '60 min.',
                     price: '90',
@@ -185,28 +185,28 @@ const PricesListSection = () => {
             serviceType: 'Peeling Treatment',
             services: [
                 {
-                    id: 1,
+                    hamamid: 1,
                     name: 'Coconut Peeling',
                     time: '25 min.',
                     price: '30',
                     image: prices_list_1
                 },
                 {
-                    id: 2,
+                    hamamid: 2,
                     name: 'Grape Seeds Peeling',
                     time: '25 min.',
                     price: '30',
                     image: prices_list_2
                 },
                 {
-                    id: 3,
+                    hamamid: 3,
                     name: 'Olive Oil Peeling',
                     time: '25 min.',
                     price: '30',
                     image: prices_list_3
                 },
                 {
-                    id: 4,
+                    hamamid: 4,
                     name: 'Rose Peeling',
                     time: '25 min.',
                     price: '30',

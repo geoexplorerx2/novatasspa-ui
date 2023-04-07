@@ -5,6 +5,9 @@ const useValidate = (values: any, type: any) => {
             if(!values.namesurname){
                 errors.namesurname = 'Name surname is required';
             }
+            // if(!values.phone) {
+            //     errors.phone = 'Phone Number is required';
+            // }
             if(!values.quickreservation_email){
                 errors.quickreservation_email = 'Email address is required';
             } else if(!/\S+@\S+\.\S+/.test(values.quickreservation_email)) {

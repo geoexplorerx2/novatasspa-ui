@@ -10,7 +10,7 @@ const PriceListCard: FC<PriceListCard_Props> = (props) => {
     const { service } = props
     return (
 
-        <div className='flex items-center cursor-pointer priceListCard mt-[30px]' key={service.id}>
+        <div className='flex items-center cursor-pointer priceListCard mt-[30px]' key={service.hamamid}>
 
             <img src={service.image} alt='' className="" />
             

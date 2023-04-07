@@ -12,6 +12,7 @@ interface InfoProps extends InputHTMLAttributes<HTMLInputElement> {
     value?: any;
     wrapperClassName?: string;
     focusStateStyles?: string;
+    errors?: string;
 };
 
 const AnimatedTelInput: FC<InfoProps> = (props) => {
@@ -19,7 +20,7 @@ const AnimatedTelInput: FC<InfoProps> = (props) => {
 
     const [phone, setPhone] = useState('');
 
-    const { label, inputType, name, onChange, value, wrapperClassName, focusStateStyles } = props
+    const { label, inputType, name, onChange, value, wrapperClassName, focusStateStyles, errors } = props
 
     const [inputValue, setInputValue] = useState("");
     const [isFocused, setIsFocused] = useState(false);
@@ -59,10 +60,9 @@ const AnimatedTelInput: FC<InfoProps> = (props) => {
             >
 
                 <PhoneInput
-
-                    defaultCountry="tr"
                     value={phone ?? value ?? inputValue}
                     onChange={(event) => onInputChange(event)}
+                    defaultCountry="tr"
                     inputClassName={`!border-none w-full h-full cursor-pointer transition ease-out !bg-transparent focus:ring-0 relative !text-lg !font-semibold !mt-[28px]`}
                     className={`border-none w-full h-full cursor-pointer transition ease-out bg-transparent focus:ring-0 relative ${isFocused || inputValue ? 'opacity-100' : 'opacity-0'}`}
                     countrySelectorStyleProps={{ className: 'translate-y-[30px]' }}
