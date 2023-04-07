@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { ReactComponent as BaliMassageIcon } from '../../assets/icons/bali-massage-icon.svg'
 import { ReactComponent as BlendThaiMassageIcon } from '../../assets/icons/blend-thai-massage.svg'
 import { ReactComponent as ThaiMassageIcon } from '../../assets/icons/thai-massage.svg'
@@ -11,16 +11,41 @@ import { ReactComponent as ReflexologyMassageIcon } from '../../assets/icons/ref
 
 
 const ChooseMassage = () => {
+
+  const [ selectedItems, setSelectedItems ] = useState<Record<string, boolean>>( () => {
+    let initialSelectedItems: Record<string, boolean> = {}
+    MassageTypesData.forEach(item => {
+      initialSelectedItems[item.value] = false
+     })
+     return initialSelectedItems
+  }
+)
+
+
+  const handleChange = (targetId: string) => {
+   
+    setSelectedItems(prevState => ({...prevState, [targetId]: !prevState[targetId]}))
+  }
+
+  useEffect(() => {
+    console.log('the selectedItems: ', selectedItems)
+  
+  }, [selectedItems])
+  
+
+
+
   return (
     <div className='w-full col-span-2'>
-        <h3 className='mb-3 font-medium'>Choose Hammam</h3>
+        <h3 className='mb-3 font-medium'>Massage</h3>
         <div className='grid grid-cols-4  min-[1600px]:grid-cols-6 gap-[30px]'>
             {
               MassageTypesData.map((massageType, index) => {
                 const {label, value, Icon, id} = massageType
+                const isActive = selectedItems[value] === true
                 return (
-                  <div className={`flex flex-col ${index === 6 ? 'col-start-3' : '' } `} key={id}>
-                    <div className='h-[90px] mb-[10px] bg-[#F7F7F7] hover:bg-[#B2A285] p-6 rounded-[10px] group flex justify-center items-center'><Icon className='group-hover:text-white' /></div>
+                  <div className={`relative flex flex-col cursor-pointer ${index === 6 ? 'col-start-3' : '' } `} key={id} onClick={() => {handleChange(value)}}>
+                    <div className={`h-[90px] mb-[10px] bg-[#F7F7F7] hover:bg-[#B2A285] p-6 rounded-[10px] group flex justify-center items-center ${isActive ? 'border-2 border-[#B2A285]' : ''}`}><Icon className='group-hover:text-white' /></div>
                     <span className='font-sm text-center'>{label}</span>
                   </div>
                 )
