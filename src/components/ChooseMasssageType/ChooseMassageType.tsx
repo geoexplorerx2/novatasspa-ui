@@ -14,13 +14,13 @@ const ChooseMassage = () => {
   return (
     <div className='w-full col-span-2'>
         <h3 className='mb-3 font-medium'>Choose Hammam</h3>
-        <div className='grid grid-cols-4 min-[1600px]:grid-cols-6 gap-[30px]'>
+        <div className='grid grid-cols-4  min-[1600px]:grid-cols-6 gap-[30px]'>
             {
               MassageTypesData.map((massageType, index) => {
                 const {label, value, Icon, id} = massageType
                 return (
                   <div className={`flex flex-col ${index === 6 ? 'col-start-3' : '' } `}>
-                    <div className='mb-[10px] bg-[#F7F7F7] hover:bg-[#B2A285] p-6 rounded-[10px] group'><Icon className='group-hover:text-white' /></div>
+                    <div className='h-[90px] mb-[10px] bg-[#F7F7F7] hover:bg-[#B2A285] p-6 rounded-[10px] group flex justify-center items-center'><Icon className='group-hover:text-white' /></div>
                     <span className='font-sm text-center'>{label}</span>
                   </div>
                 )
