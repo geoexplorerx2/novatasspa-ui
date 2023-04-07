@@ -13,8 +13,8 @@ import ChooseMassage from '../ChooseMasssageType/ChooseMassageType';
 
 const BookingForm = () => {
     const [values, setValues] = useState({
-        nameSurname: null,
-        email: null,
+        nameSurname: '',
+        email: '',
         phoneNo: null,
         date: undefined,
         time: undefined,
