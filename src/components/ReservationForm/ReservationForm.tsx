@@ -56,6 +56,7 @@ const ReservationForm = () => {
   //   console.log(values)
   // };
 
+  console.log('errors::',errors)
 
   return (
     <div className='w-[450px] p-[30px] bg-white space-y-[30px]'>
@@ -72,6 +73,7 @@ const ReservationForm = () => {
           name='namesurname'
           onChange={handleChange}
           Icon={<HumanAvatar />}
+          errors={errors}
         />
         <AnimatedInput
           // value={values.email} 
@@ -80,6 +82,7 @@ const ReservationForm = () => {
           name='quickreservation_email'
           onChange={handleChange}
           Icon={<MailIcon />}
+          errors={errors}
         />
         <AnimatedTelInput
           label={'Phone Number '}
