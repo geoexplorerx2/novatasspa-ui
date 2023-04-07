@@ -1,7 +1,7 @@
 import React, { FC, InputHTMLAttributes, useState, useEffect } from 'react';
 import { PhoneInput } from 'react-international-phone';
 import 'react-international-phone/style.css';
-import { ReactComponent as PhoneIcon } from '../../assets/icons/phone.svg'
+import { ReactComponent as PhoneIcon } from '../../assets/icons/phone-icon.svg'
 
 
 interface InfoProps extends InputHTMLAttributes<HTMLInputElement> {

@@ -72,21 +72,6 @@ const AnimatedTimeInput: FC<AnimatedTimeInputProps> = (props) => {
 
             }
         </div>
-
-
-
-        // <div>
-        //     <select name="time" id="time-select" onChange={handleSelection}>
-        //         {
-        //             options.map(option => {
-        //                 const { label, value, id } = option
-        //                 return (
-        //                     <option value={value}>{label}</option>
-        //                 )
-        //             })
-        //         }
-        //     </select>
-        // </div>
     )
 }
 
