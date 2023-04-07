@@ -20,10 +20,16 @@ const useForm = (callback: any, validate: any, formType: any) => {
         setIsSubmitting(true);
     };
 
-    const handleChange = (event: any, type: any) => {
-        // event.persist();
-        if(type == 'telephone')setValues((value: any) => ({ ...value, telephone: event }))
-        else setValues((value: any) => ({ ...value, [event.target.name]: event.target.value }));
+    const handleChange = (event: any, type: any = '') => {
+
+
+        if (type === 'telephone') setValues((value: any) => ({ ...value, 'phone': event }))
+        else {
+            console.log('event::', event)
+
+            event.persist();
+            setValues((value: any) => ({ ...value, [event.target.name]: event.target.value }));
+        }
     };
 
     return {

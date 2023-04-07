@@ -19,6 +19,8 @@ const ReservationForm = () => {
   const [servermessage, setServerMessage] = useState<any>();
   const server = services;
 
+  console.log('values::',values)
+
   function _handleQuickReservation() {
 
     const quick_reservation_data = {
@@ -69,7 +71,7 @@ const ReservationForm = () => {
       </div>
       <form className='space-y-[30px]'>
         <AnimatedInput
-          // value={values.nameSurname}
+          value={values}
           inputType='text'
           label='Name, Surname'
           name='namesurname'
@@ -78,7 +80,7 @@ const ReservationForm = () => {
           errors={errors}
         />
         <AnimatedInput
-          // value={values.email} 
+          value={values} 
           inputType='text'
           label='E-Mail Address'
           name='quickreservation_email'
@@ -87,9 +89,12 @@ const ReservationForm = () => {
           errors={errors}
         />
         <AnimatedTelInput
-          label={'Phone Number '}
+          value={values} 
+          inputType='telephone'
+          label={'Phone Number'}
           name='phone'
           onChange={handleChange}
+          errors={errors}
         />
         <button
           onClick={handleSubmit}
