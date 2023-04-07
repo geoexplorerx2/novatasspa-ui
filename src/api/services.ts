@@ -30,6 +30,19 @@ class Services {
         });
     };
 
+    // booking
+    public booking = (booking_data: any): Promise<any> => {
+        return new Promise((resolve, reject) => {
+            return post({
+                url: `bookingform/store`,
+                body: booking_data,
+                credentials: 'omit',
+                // mode: 'no-cors'
+            }).then((res: any) => {
+                resolve(res);
+            }).catch(this.handleError.bind(null, reject));
+        });
+    };
     // handle error
     private handleError = (reject: any, response: HTTPResponse): Promise<HTTPResponse> => {
         if (response.message === "Failed to fetch") {
