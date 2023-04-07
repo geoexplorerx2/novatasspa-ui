@@ -36,12 +36,6 @@ const GuestsInput: FC<GuestsInputPros> = (props) => {
     }
 
 
-    useEffect(() => {
-        // handleChange && handleChange(guestsCount, 'guestsCount')
-    }, [guestsCount])
-
-
-
     const handleClickOutsideInput = (event: MouseEvent) => {
         if (!wrapperRef.current) return;
 
@@ -55,6 +49,25 @@ const GuestsInput: FC<GuestsInputPros> = (props) => {
         setIsPopoverOpen(false);
     };
 
+    const handleMaleCountChange = (type: 'increment' | 'decrement') => {
+        if(type === 'increment'){
+            setGuestsCount(prevState => ({...prevState, maleCount: prevState.maleCount++ }))
+        } else if (type === 'decrement'){
+            if(guestsCount.maleCount <= 0 ) return
+            setGuestsCount(prevState => ({...prevState, maleCount: prevState.maleCount-- }))
+        }
+        
+    }
+   
+    const handleFemaleCountChange = (type: 'increment' | 'decrement') => {
+        if(type === 'increment'){
+            setGuestsCount(prevState => ({...prevState, femaleCount: prevState.femaleCount++ }))
+        } else if (type === 'decrement'){
+            if(guestsCount.femaleCount <= 0) return
+            setGuestsCount(prevState => ({...prevState, femaleCount: prevState.femaleCount-- }))
+        }
+        
+    }
 
     useEffect(() => {
         if (handleClickOutsideInput) {
@@ -67,6 +80,10 @@ const GuestsInput: FC<GuestsInputPros> = (props) => {
     }, []);
 
 
+    useEffect(() => {
+        console.log('guests Count', guestsCount)
+    } ,[guestsCount])
+    const totalGuestsCount = guestsCount.femaleCount + guestsCount.maleCount
     return (
         <div className={`relative w-full h-[50px] lg:h-[70px] flex items-center pl-[22px] rounded-[10px] border-[#DDDDDD] border ${isPopoverOpen ? "bg-white" : "bg-[#f7f7f7]" }`}
             onClick={() => { setIsPopoverOpen(true) }}
@@ -79,23 +96,31 @@ const GuestsInput: FC<GuestsInputPros> = (props) => {
                 `}>
                 {label}
             </label>
+            <div className='pl-4 pt-5 font-semibold text-lg'>
+                <span className='mr-2'>
+                    {totalGuestsCount} 
+                </span>
+                <span>
+                    {totalGuestsCount > 1 ? 'People' : 'Person'}
+                </span>
+             </div>
 
             <div className={`max-w-full absolute top-[70px] left-0 transition-all duration-500 z-20 ${isPopoverOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}>
                 <div className='grid grid-cols-2 gap-4 h-full border rounded-[10px] bg-white p-4 shadow-[0_30px_30px_-30px_rgba(0,0,0,0.2)]'>
                     <div className='grid grid-cols-2 items-center gap-4'>
                         <span>Male</span>
                         <div className='flex flex-col justify-center items-center border gap-4'>
-                            <button className='bg-[#B2A285] w-full h-7 text-white'>+</button>
-                            <span className=''>1</span>
-                            <button className='bg-[#B2A285] w-full h-7 text-white'>-</button>
+                            <button className='bg-[#B2A285] w-full h-7 text-white' onClick={() => {handleMaleCountChange('increment')}}>+</button>
+                            <span className=''>{guestsCount.maleCount}</span>
+                            <button className='bg-[#B2A285] w-full h-7 text-white' onClick={() => {handleMaleCountChange('decrement')}}>-</button>
                         </div>
                     </div>
                     <div className='grid grid-cols-2 items-center gap-4'>
                         <span>Female</span>
                         <div className='flex flex-col justify-center items-center border gap-4'>
-                        <button className='bg-[#B2A285] w-full h-7 text-white'>+</button>
-                            <span>1</span>
-                            <button className='bg-[#B2A285] w-full h-7 text-white'>-</button>
+                        <button className='bg-[#B2A285] w-full h-7 text-white' onClick={() => {handleFemaleCountChange('increment')}}>+</button>
+                            <span>{guestsCount.femaleCount}</span>
+                            <button className='bg-[#B2A285] w-full h-7 text-white' onClick={() => {handleFemaleCountChange('decrement')}}>-</button>
                         </div>
                     </div>
 

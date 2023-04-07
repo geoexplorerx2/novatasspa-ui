@@ -12,7 +12,6 @@ const ChooseHamam = () => {
 
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    
     const targetName = e.target.name
     setSelectedItems(prevState => ({...prevState, [targetName]: !prevState[targetName]}))
   }
