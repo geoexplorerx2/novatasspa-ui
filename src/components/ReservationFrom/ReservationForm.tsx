@@ -9,6 +9,7 @@ import { DateValue } from '@mantine/dates';
 import AnimatedDateInput from '../AnimatedDateInput/AnimatedDateInput';
 import AnimatedTimeInput from '../AnimatedTimeInput/AnimatedTimeInput';
 import GuestsInput from '../GuestsInput/GuestsInput';
+import ChooseHamam from '../ChooseHammam/ChooseHammam';
 
 
 const ReservationForm = () => {
@@ -53,6 +54,8 @@ const ReservationForm = () => {
                 <GuestsInput label='Guests' value={values.guestsCount} handleChange={handleGuestsChange}/>
                 <AnimatedTelInput label={'Phone Number '} name='phoneNo' onChange={(e: any) => handleChange(e, 'phoneNo')} />
                 <AnimatedInput value={values.email} inputType='text' label='E-Mail Address' name='email' onChange={(e: any) => handleChange(e)} Icon={<AtSignIcon />} />
+                <ChooseHamam />
+                
                 {/* <button type='submit' className='w-full flex justify-between py-4 px-[31px] bg-[#423930] text-white text-[22px] -tracking-[0.02em] leading-[28px] font-gotu'>
                     <span>
                         Make Reservation
