@@ -57,12 +57,11 @@ const ReservationForm = () => {
                 <AnimatedInput value={values.email} inputType='text' label='E-Mail Address' name='email' onChange={(e: any) => handleChange(e)} Icon={<AtSignIcon />} />
                 <ChooseHamam />
                 <ChooseMassage />
-                {/* <button type='submit' className='w-full flex justify-between py-4 px-[31px] bg-[#423930] text-white text-[22px] -tracking-[0.02em] leading-[28px] font-gotu'>
-                    <span>
-                        Make Reservation
+                <button type='submit' className='w-full col-span-2 flex justify-center py-4 px-[31px] rounded-[10px] bg-[#B2A285] text-white text-[22px] -tracking-[0.02em] leading-[28px] font-gotu'>
+                    <span className=''>
+                        Book Now
                     </span>
-                    <Arrow className='text-white' />
-                </button> */}
+                </button>
             </form>
 
         </div>
