@@ -45,7 +45,7 @@ const ChooseMassage = () => {
                 const isActive = selectedItems[value] === true
                 return (
                   <div className={`relative flex flex-col cursor-pointer ${index === 6 ? 'col-start-3' : '' } `} key={id} onClick={() => {handleChange(value)}}>
-                    <div className={`h-[90px] mb-[10px] bg-[#F7F7F7] p-6 rounded-[10px] group flex justify-center items-center ${isActive ? 'border-2 border-[#B2A285]' : ''}`}><Icon className='group-hover:text-white' /></div>
+                    <div className={`h-[90px] mb-[10px] bg-[#F7F7F7] p-6 rounded-[10px] group flex justify-center items-center ${isActive ? 'border-2 border-[#B2A285]' : ''}`}><Icon className='' /></div>
                     <span className='font-sm text-center'>{label}</span>
                   </div>
                 )
