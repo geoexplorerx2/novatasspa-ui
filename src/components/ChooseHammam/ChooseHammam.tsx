@@ -9,8 +9,8 @@ const ChooseHamam = () => {
           HammamsData.map(hammam => {
             const { label, value, id } = hammam
             return (
-              <div className='border-2 rounded-[10px] border-[#CCCCCC] px-5 py-4 flex justify-between' key={id} >
-                <label htmlFor={id} className='text-sm font-medium'>Pasha Hammam</label>
+              <div className='border-2 rounded-[10px] border-[#CCCCCC] px-5 py-4 flex justify-between items-center' key={id} >
+                <label htmlFor={id} className='text-sm font-medium'>{ label }</label>
                 <input id={id} type='checkbox' className='appearance-none focus:ring-0 focus:ring-transparent rounded-full border-2 border-[#CCCCCC] w-[20px] h-[20px] p-1' />
               </div>
             )
