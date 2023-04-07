@@ -1,8 +1,8 @@
 import React from 'react';
 import ReservationBanner from '../../assets/images/reservationBanner.png'
-import ReservationForm from '../../components/ReservationFrom/ReservationForm';
 import { Logo } from '../../lib';
 import novatasspaLogo from "../../assets/logo/novatasspaLogo.svg";
+import BookingForm from '../../components/BookingForm/BookingForm';
 
 
 const Booking = () => {
@@ -14,7 +14,7 @@ const Booking = () => {
           <img src={novatasspaLogo} alt="Novatas Logo" className='mx-auto my-7 mx-wuto'/>
             <div className='w-full h-full px-[150px]'>
               
-              <ReservationForm />
+              <BookingForm />
 
             </div>
           </div>

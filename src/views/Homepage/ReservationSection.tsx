@@ -1,7 +1,7 @@
 import React from 'react'
 import SectionBackground from '../../components/SectionBackground/SectionBackground'
 import Chick from '../../assets/images/WomanLeaf.png'
-import ReservationForm from '../../components/QuickReservationForm/QuickReservationForm'
+import ReservationForm from '../../components/ReservationForm/ReservationFrom'
 
 
 const ReservationSection = () => {

@@ -4,8 +4,6 @@ import AnimatedTelInput from '../AnimatedTelInput/AnimatedTelInput';
 import { ReactComponent as Arrow } from '../../assets/icons/ArrowRight.svg'
 import { ReactComponent as HumanAvatar } from '../../assets/icons/human-avatar.svg'
 import { ReactComponent as AtSignIcon } from '../../assets/icons/at-sign-icon.svg'
-import { DateInput } from '../../lib';
-import { DateValue } from '@mantine/dates';
 import AnimatedDateInput from '../AnimatedDateInput/AnimatedDateInput';
 import AnimatedTimeInput from '../AnimatedTimeInput/AnimatedTimeInput';
 import GuestsInput from '../GuestsInput/GuestsInput';
@@ -13,7 +11,7 @@ import ChooseHamam from '../ChooseHammam/ChooseHammam';
 import ChooseMassage from '../ChooseMasssageType/ChooseMassageType';
 
 
-const ReservationForm = () => {
+const BookingForm = () => {
     const [values, setValues] = useState({
         nameSurname: null,
         email: null,
@@ -72,4 +70,4 @@ const ReservationForm = () => {
 
 
 
-export default ReservationForm
+export default BookingForm
