@@ -5,14 +5,15 @@ interface InfoProps extends InputHTMLAttributes<HTMLInputElement> {
   onChange?: any;
   value?: any;
   wrapperClassName?: string;
-  Icon?: any
+  Icon?: any;
+  focusStateStyles?: string
   errors?: any
   name?: string;
 };
 
 const AnimatedInput: FC<InfoProps> = (props) => {
 
-  const { label, inputType, name, onChange, value, wrapperClassName, Icon, errors } = props
+  const { label, inputType, name, onChange, value, wrapperClassName, Icon, focusStateStyles, errors } = props
 
   const [inputValue, setInputValue] = useState("");
   const [isFocused, setIsFocused] = useState(false);
@@ -37,7 +38,7 @@ const AnimatedInput: FC<InfoProps> = (props) => {
   console.log('errors', errors)
 
   return (
-    <div className={`${wrapperClassName} ${name && errorsKeys?.includes(name ?? "") ? `border-2 border-red-600` : ''} relative w-full h-[50px] lg:h-[70px] flex items-center  px-[22px] ${isFocused ? ' border-black border-[1px]' : 'border-[#DDDDDD] border'}`}>
+    <div className={`${wrapperClassName} ${name && errorsKeys?.includes(name ?? "") ? `border-2 border-red-600` : ''} relative w-full h-[50px] lg:h-[70px] flex items-center  px-[22px] ${isFocused ? `${focusStateStyles} border-black border-[1px]` : 'border-[#DDDDDD] border'}`}>
       <div className={` ${inputType === 'textArea' ? 'h-full pt-7' : ''}`}>
         {Icon && Icon}
       </div>

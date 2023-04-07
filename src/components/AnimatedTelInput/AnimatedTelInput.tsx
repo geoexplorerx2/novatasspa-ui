@@ -1,7 +1,7 @@
 import React, { FC, InputHTMLAttributes, useState, useEffect } from 'react';
 import { PhoneInput } from 'react-international-phone';
 import 'react-international-phone/style.css';
-import { ReactComponent as PhoneIcon } from '../../assets/icons/phone.svg'
+import { ReactComponent as PhoneIcon } from '../../assets/icons/phone-icon.svg'
 
 
 interface InfoProps extends InputHTMLAttributes<HTMLInputElement> {
@@ -11,6 +11,7 @@ interface InfoProps extends InputHTMLAttributes<HTMLInputElement> {
     onChange?: any;
     value?: any;
     wrapperClassName?: string;
+    focusStateStyles?: string;
     errors?: string;
 };
 
@@ -19,7 +20,7 @@ const AnimatedTelInput: FC<InfoProps> = (props) => {
 
     const [phone, setPhone] = useState('');
 
-    const { label, inputType, name, onChange, value, wrapperClassName, errors } = props
+    const { label, inputType, name, onChange, value, wrapperClassName, focusStateStyles, errors } = props
 
     const [inputValue, setInputValue] = useState("");
     const [isFocused, setIsFocused] = useState(false);
@@ -44,10 +45,10 @@ const AnimatedTelInput: FC<InfoProps> = (props) => {
 
 
     return (
-        <div className={`${wrapperClassName} relative px-[22px] w-full h-[50px] lg:h-[70px] flex items-center ${isFocused ? ' border-black border-[1px]' : 'border-[#DDDDDD] border'}`}>
+        <div className={`${wrapperClassName} relative px-[22px] w-full h-[50px] lg:h-[70px] flex items-center ${isFocused ? `${focusStateStyles} border-black border-[1px]` : 'border-[#DDDDDD] border'}`}>
             <PhoneIcon />
             <label className={`absolute top-0 left-[53px] transition-all text-xs font-medium  px-2
-                        ${isFocused || inputValue ? "translate-y-4 bg-white text-sm z-[3] font-normal" : "translate-y-4 lg:translate-y-[27px] text-[22px] text-[#0D2C3B] text-opacity-50 z-[1]"}
+                        ${isFocused || inputValue ? "translate-y-4 text-sm z-[3] font-normal" : "translate-y-4 lg:translate-y-[27px] text-[22px] text-[#0D2C3B] text-opacity-50 z-[1]"}
                         `}>
                 {label}
             </label>
