@@ -22,8 +22,8 @@ const Contact = () => {
                       Phone Number
                     </span>
                     <span>
-                      <a href='tel:+908508880066' className='font-semibold text-[#0D0D0D] text-lg'>
-                        +90 850 888 0066
+                      <a href='tel:+905417600248' className='font-semibold text-[#0D0D0D] text-lg'>
+                        +90 541 760 0248
                       </a>
                     </span>
                   </div>
