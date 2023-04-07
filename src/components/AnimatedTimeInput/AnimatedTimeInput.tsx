@@ -39,7 +39,7 @@ const AnimatedTimeInput: FC<AnimatedTimeInputProps> = (props) => {
 
 
     return (
-        <div className={`relative w-full h-[50px] lg:h-[70px] flex items-center  pl-[22px] ${isFocused ? ' border-black border-[1px]' : 'border-[#DDDDDD] border'}`}>
+        <div className={`relative w-full h-[50px] lg:h-[70px] flex items-center  pl-[22px] transition-all hover:bg-white rounded-[10px]  ${isFocused ? ' border-black border-[1px] bg-white' : 'border-[#DDDDDD] border bg-[#F7F7F7]'}`}>
             <div className={``}>
                 <Clock />
             </div>

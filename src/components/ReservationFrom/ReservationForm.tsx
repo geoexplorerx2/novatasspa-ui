@@ -51,10 +51,10 @@ const ReservationForm = () => {
                 {/* @ts-ignore */}
                 <AnimatedDateInput value={values.date} setValue={setValues} label="Reservation Date"/>
                 <AnimatedTimeInput handleChange={handleChange} label="Reservation Time" value={values.time}/>
-                <AnimatedInput value={values.nameSurname} inputType='text' label='Name, Surname' name='nameSurname' onChange={(e: any) => handleChange(e)} Icon={<HumanAvatar />} />
+                <AnimatedInput value={values.nameSurname} inputType='text' label='Name, Surname' name='nameSurname' onChange={(e: any) => handleChange(e)} Icon={<HumanAvatar />}  wrapperClassName={`transition-all bg-[#F7F7F7] hover:bg-white rounded-[10px]`} focusStateStyles='bg-white'/>
                 <GuestsInput label='Guests' value={values.guestsCount} handleChange={handleGuestsChange}/>
-                <AnimatedTelInput label={'Phone Number '} name='phoneNo' onChange={(e: any) => handleChange(e, 'phoneNo')} />
-                <AnimatedInput value={values.email} inputType='text' label='E-Mail Address' name='email' onChange={(e: any) => handleChange(e)} Icon={<AtSignIcon />} />
+                <AnimatedTelInput label={'Phone Number '} name='phoneNo' onChange={(e: any) => handleChange(e, 'phoneNo')} wrapperClassName={`transition-all bg-[#F7F7F7] hover:bg-white rounded-[10px]`} focusStateStyles='bg-white'/>
+                <AnimatedInput value={values.email} inputType='text' label='E-Mail Address' name='email' onChange={(e: any) => handleChange(e)} Icon={<AtSignIcon />} wrapperClassName={`transition-all bg-[#F7F7F7] hover:bg-white rounded-[10px]`} focusStateStyles='bg-white'/>
                 <ChooseHamam />
                 <ChooseMassage />
                 <button type='submit' className='w-full col-span-2 flex justify-center py-4 px-[31px] rounded-[10px] bg-[#B2A285] text-white text-[22px] -tracking-[0.02em] leading-[28px] font-gotu'>

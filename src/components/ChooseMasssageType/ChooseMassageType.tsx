@@ -19,7 +19,7 @@ const ChooseMassage = () => {
               MassageTypesData.map((massageType, index) => {
                 const {label, value, Icon, id} = massageType
                 return (
-                  <div className={`flex flex-col ${index === 6 ? 'col-start-3' : '' } `}>
+                  <div className={`flex flex-col ${index === 6 ? 'col-start-3' : '' } `} key={id}>
                     <div className='h-[90px] mb-[10px] bg-[#F7F7F7] hover:bg-[#B2A285] p-6 rounded-[10px] group flex justify-center items-center'><Icon className='group-hover:text-white' /></div>
                     <span className='font-sm text-center'>{label}</span>
                   </div>
