@@ -202,7 +202,7 @@ const MessageTypesSection = () => {
                                 return (
                                     <>
                                         {index % 2 === 0 ? (
-                                            <div>
+                                            <a href="/booking"><div>
                                                 <h6 className='text-[#423930] text-[24px] leading-[24px] font-gotu'>{name}</h6>
                                                 <div className=' flex justify-between'>
                                                     <span className='text-[#666B45] font-semibold text-[16px] leading-[20px] mt-[10px] font-poppins relative'>
@@ -215,9 +215,9 @@ const MessageTypesSection = () => {
                                                     </button>
                                                 </div>
                                                 <img src={image} alt='' className='mt-[14px]' />
-                                            </div>
+                                            </div></a>
                                         ) : (
-                                            <div>
+                                            <a href="/booking"><div>
                                                 <img src={image} alt='' className='mt-0' />
                                                 <h6 className='text-[#423930] text-[24px] leading-[24px] mt-[14px] font-gotu'>{name}</h6>
                                                 <div className=' flex justify-between'>
@@ -225,12 +225,12 @@ const MessageTypesSection = () => {
                                                         {price}
                                                         <span className='top-[-3px] text-[11px] absolute'>€</span>
                                                     </span>
-                                                    <button className='text-[16px] text-[#423930] bookButton inline-flex leading-[20px] mt-[10px] font-poppins '>
+                                                    <a href="/booking"><button className='text-[16px] text-[#423930] bookButton inline-flex leading-[20px] mt-[10px] font-poppins '>
                                                         Book Now
                                                         <img src={ArrowRight} alt='' className='w-[16px] ml-[13px] translate-y-[2px]' />
-                                                    </button>
+                                                    </button></a>
                                                 </div>
-                                            </div>
+                                            </div></a>
                                         )}
                                     </>
 
@@ -242,57 +242,6 @@ const MessageTypesSection = () => {
                 )
 
             })}
-
-
-            {/* OLD Start */}
-
-            {/* <div className='grid grid-cols-4 grid-rows-2 gap-x-[30px] gap-y-[100px] mt-[100px] mb-[67px]'>
-
-                {messageTypesContent.map((card, index) => {
-                    const { title, price, image } = card;
-
-                    if (index % 2 === 0) {
-
-                        return (
-                            <div>
-                                <h6 className='text-[#423930] text-[24px] leading-[24px] font-gotu'>{title}</h6>
-                                <div className=' flex justify-between'>
-                                    <span className='text-[#666B45] font-semibold text-[16px] leading-[20px] mt-[10px] font-poppins relative'>
-                                        {price}
-                                        <span className='top-[-3px] text-[11px] absolute'>€</span>
-                                    </span>
-                                    <button className='text-[16px] text-[#423930] bookButton inline-flex leading-[20px] mt-[10px] font-poppins '>
-                                        Book Now
-                                        <img src={ArrowRight} alt='' className='w-[16px] ml-[13px] translate-y-[2px]' />
-                                    </button>
-                                </div>
-                                <img src={image} alt='' className='mt-[14px]' />
-                            </div>
-                        )
-                    } else {
-                        return (
-                            <div>
-                                <img src={image} alt='' className='mt-0' />
-                                <h6 className='text-[#423930] text-[24px] leading-[24px] mt-[14px] font-gotu'>{title}</h6>
-                                <div className=' flex justify-between'>
-                                    <span className='text-[#666B45] font-semibold text-[16px] leading-[20px] mt-[10px] font-poppins relative'>
-                                        {price}
-                                        <span className='top-[-3px] text-[11px] absolute'>€</span>
-                                    </span>
-                                    <button className='text-[16px] text-[#423930] bookButton inline-flex leading-[20px] mt-[10px] font-poppins '>
-                                        Book Now
-                                        <img src={ArrowRight} alt='' className='w-[16px] ml-[13px] translate-y-[2px]' />
-                                    </button>
-                                </div>
-                            </div>
-                        )
-                    }
-                }
-                )}
-
-            </div> */}
-
-            {/* OLD end */}
 
         </div>
     )
