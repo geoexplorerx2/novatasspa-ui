@@ -53,8 +53,8 @@ const VideoPlayer = () => {
             <video
                 onTimeUpdate={handleProgress}
                 ref={videoRef}
-                // width="690px"
-                // height="690px"
+                width="690px"
+                height="690px"
                 // controls
                 poster={vid_poster}
             >
