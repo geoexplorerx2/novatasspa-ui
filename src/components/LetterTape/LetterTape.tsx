@@ -6,16 +6,18 @@ interface LetterTapeProps {
 }
 
 const LetterTape: FC<LetterTapeProps> = (props) => {
-    const {wrapperClassName} = props;
+    const { wrapperClassName } = props;
 
-    
+
     return (
-        <div className={`${wrapperClassName}`}>
-            {LETTERS_TAPE.map((letter:any)=> (
-                <img src={letter.letter} alt='' className={letter.className} />
-            ))}
+        <div className='flex'>
+            <div className={`${wrapperClassName}`}>
+                {LETTERS_TAPE.map((letter: any) => (
+                    <img src={letter.letter} alt='' className={letter.className} />
+                ))}
+            </div>
         </div>
     )
 }
 
-export default LetterTape
+export default LetterTape;
