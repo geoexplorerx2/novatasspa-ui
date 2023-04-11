@@ -51,20 +51,20 @@ const GuestsInput: FC<GuestsInputPros> = (props) => {
 
     const handleMaleCountChange = (type: 'increment' | 'decrement') => {
         if(type === 'increment'){
-            setGuestsCount(prevState => ({...prevState, maleCount: prevState.maleCount++ }))
+            setGuestsCount(prevState => ({...prevState, maleCount: prevState.maleCount + 1 }))
         } else if (type === 'decrement'){
             if(guestsCount.maleCount <= 0 ) return
-            setGuestsCount(prevState => ({...prevState, maleCount: prevState.maleCount-- }))
+            setGuestsCount(prevState => ({...prevState, maleCount: prevState.maleCount - 1 }))
         }
         
     }
    
     const handleFemaleCountChange = (type: 'increment' | 'decrement') => {
         if(type === 'increment'){
-            setGuestsCount(prevState => ({...prevState, femaleCount: prevState.femaleCount++ }))
+            setGuestsCount(prevState => ({...prevState, femaleCount: prevState.femaleCount + 1 }))
         } else if (type === 'decrement'){
             if(guestsCount.femaleCount <= 0) return
-            setGuestsCount(prevState => ({...prevState, femaleCount: prevState.femaleCount-- }))
+            setGuestsCount(prevState => ({...prevState, femaleCount: prevState.femaleCount - 1 }))
         }
         
     }
