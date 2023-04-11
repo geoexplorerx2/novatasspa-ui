@@ -48,7 +48,7 @@ const HistorySectionCarousel = () => {
                         touchDrag={true}
                         stagePadding={0}
                         margin={30}
-                        autoplay={false}
+                        autoplay={true}
                         merge={true}
                         dots={true}
                         dotsEach={1}
