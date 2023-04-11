@@ -76,7 +76,7 @@ const ServiceCard: FC<ServiceCardProps> = (props) => {
 
 const ServicesData: ServiceType[] = [
     {
-        title: 'Luxury Hamam (Hamam With Massage)',
+        title: 'Luxury Hamam',
         description: 'A luxurious combination of a Turkish bath and a massage session that involves a body scrub, full body foam , head shoulders-back foam massage,honey and milk body care,facial clay mask,hot stone massage and reflexology massage.',
         info: [],
         duration: '90',
