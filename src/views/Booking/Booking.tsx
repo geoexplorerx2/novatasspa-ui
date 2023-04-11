@@ -46,7 +46,7 @@ const Booking = () => {
     };
 
     return (
-      <div className='h-screen'>
+      <div className=''>
           <div className='w-full h-full flex'> 
             <img src={ReservationBanner} alt='reservation salon image' />
             <div className='w-full h-full'>
