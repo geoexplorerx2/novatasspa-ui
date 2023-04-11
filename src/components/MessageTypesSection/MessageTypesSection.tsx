@@ -193,10 +193,10 @@ const MessageTypesSection = () => {
 
                 return (
                     <>
-                        <h1 className='text-[#B2A285] text-[44px] font-gotu mt-[100px]'>{title}</h1>
+                        {/* <h1 className='text-[#B2A285] text-[44px] font-gotu mt-[100px]'>{title}</h1> */}
                         <div className='grid grid-cols-4 gap-x-[30px] gap-y-[100px] mt-[50px] mb-[67px]'>
 
-                            {content.map((messageType, index) => {
+                            {/* {content.map((messageType, index) => {
                                 const { name, price, duration, image, messageId } = messageType;
 
                                 return (
@@ -236,7 +236,7 @@ const MessageTypesSection = () => {
 
                                 )
                             })
-                            }
+                            } */}
                         </div>
                     </>
                 )
