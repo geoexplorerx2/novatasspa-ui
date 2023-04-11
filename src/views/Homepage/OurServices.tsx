@@ -33,7 +33,7 @@ const ServiceCard: FC<ServiceCardProps> = (props) => {
     const { service: { description, info, duration, Icon, id, price, title } } = props
     const [ isHovered, setIsHovered ] = useState(false)
     return (
-        <a href='/boooking'><div className={`relative border cursor-pointer border-[#EEEEEE] py-[42px] px-[35px] space-y-[30px] transition-all ${isHovered ? 'bg-[#423930]' : 'bg-white'}`} key={id} onMouseEnter={() => {setIsHovered(true)}} onMouseLeave={() => {setIsHovered(false)} } >
+        <a href='/booking'><div className={`relative border cursor-pointer border-[#EEEEEE] py-[42px] px-[35px] space-y-[30px] transition-all ${isHovered ? 'bg-[#423930]' : 'bg-white'}`} key={id} onMouseEnter={() => {setIsHovered(true)}} onMouseLeave={() => {setIsHovered(false)} } >
             <div className='flex justify-between'>
                 <Icon className={`${isHovered ? 'text-white' : ''}`}/>
                 <div>
