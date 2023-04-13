@@ -7,8 +7,7 @@ interface AnimatedTimeInputProps {
     handleChange: (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>, name?: string) => void
     label?: string,
     value?: string,
-}
-
+};
 
 const AnimatedTimeInput: FC<AnimatedTimeInputProps> = (props) => {
     const { handleChange, label = 'Time', value } = props
@@ -18,14 +17,11 @@ const AnimatedTimeInput: FC<AnimatedTimeInputProps> = (props) => {
     const handleSelection = (e: React.ChangeEvent<HTMLSelectElement>) => {
 
         const target = e.target
-        const value = e.target.value
+        const value: any = e.target.value
 
         setSelectedOption(value)
-        handleChange && handleChange(e, 'time')
-    }
-
-
-
+        handleChange && handleChange(value, 'time')
+    };
 
     const onFocus = () => {
         setIsFocused(true);
@@ -34,9 +30,6 @@ const AnimatedTimeInput: FC<AnimatedTimeInputProps> = (props) => {
     const onBlur = () => {
         setIsFocused(false);
     };
-
-
-
 
     return (
         <div className={`relative w-full h-[50px] lg:h-[70px] flex items-center  pl-[22px] transition-all hover:bg-white rounded-[10px]  ${isFocused ? ' border-black border-[1px] bg-white' : 'border-[#DDDDDD] border bg-[#F7F7F7]'}`}>
