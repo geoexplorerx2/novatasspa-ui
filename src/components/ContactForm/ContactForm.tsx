@@ -29,13 +29,8 @@ const ContactForm: FC = () => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     // e.preventDefault()
-    console.log('values', values)
+    // console.log('values', values)
   }
-
-
-  useEffect(() => {
-    console.log('the form values are:', values)
-  },)
 
 
   return (
