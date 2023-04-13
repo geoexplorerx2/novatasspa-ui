@@ -1,6 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import React, { FC, useEffect, useState } from 'react';
 
-const ChooseHamam = () => {
+interface ChooseHamamProps{
+  onChange?: Function;
+};
+
+const ChooseHamam: FC<ChooseHamamProps> = ({ onChange }) => {
   const [ selectedItems, setSelectedItems ] = useState<Record<string, boolean>>( () => {
     let initialSelectedItems: Record<string, boolean> = {}
       HammamsData.forEach(item => {
@@ -8,19 +12,16 @@ const ChooseHamam = () => {
      })
      return initialSelectedItems
   }
-)
-
+);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const targetName = e.target.name
+    const targetName = e.target.name;
     setSelectedItems(prevState => ({...prevState, [targetName]: !prevState[targetName]}))
-  }
+  };
 
   useEffect(() => {
-    console.log('the selectedItems: ', selectedItems)
-  
-  }, [selectedItems])
-  
+    onChange && onChange(selectedItems, 'hammam');
+  }, [selectedItems]);
 
   return (
     <div className='w-full col-span-2'>
@@ -70,6 +71,6 @@ const HammamsData = [
     value: 'LuxuryHammam',
     id: '5',
   },
-]
+];
 
-export default ChooseHamam
+export default ChooseHamam;

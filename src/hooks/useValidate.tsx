@@ -20,39 +20,17 @@ const useValidate = (values: any, type: any) => {
             }
             break;
         case 'booking':
-            if (!values.reservation_date) {
-                errors.reservation_date = 'Reservation Date is required';
-            }
-            if (!values.reservation_time) {
-                errors.reservation_time = 'Reservation Time is required'
-            }
-            if (!values.name_surname) {
-                errors.name_surname = 'Name & Surname is required'
-            }
-            if (!values.phone) {
-                errors.phone = 'Phone Number is required'
-            }
-            if (!values.country) {
-                errors.country = 'Country is required'
-            }
-            if (!values.email) {
-                errors.email = 'Email is required'
-            }
-            if (!values.massage_package) {
-                errors.massage_package = 'Massage Package is required'
-            }
-            if (!values.hammam_package) {
-                errors.hammam_package = 'Hamam Package is required'
-            }
-            if (!values.male_pax) {
-                errors.male_pax = 'Male Pax is required'
-            }
-            if (!values.female_pax) {
-                errors.female_pax = 'Female Pax is required'
-            }
-            if (!/\S+@\S+\.\S+/.test(values.email)) {
-                errors.email = 'Email address is invalid';
-            }
+            if(!values.booking_name_surname) errors.booking_name_surname = 'Name surname is required';
+            if(!values.date) errors.date = ' Reservation date is required';
+
+            if(!values.email){
+                errors.email = 'Email address is required';
+            } else if(!/\S+@\S+\.\S+/.test(values.email)) {
+                errors.enail = 'Email address is invalid';
+            };
+
+            // if(Object.keys(values.hammam).length == 0 || !values.hammam || !Object.keys(values?.hammam).find(key => values?.hammam[key] == true)) errors.hammam = 'Hammam is required';
+            // if(Object.keys(values.massages).length == 0 || !values.massages || !Object.keys(values?.massages).find(key => values?.massages[key] == true)) errors.massages = 'Massages is required';
 
             break;
         default:

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, FC } from 'react'
 import { ReactComponent as BaliMassageIcon } from '../../assets/icons/bali-massage-icon.svg'
 import { ReactComponent as BlendThaiMassageIcon } from '../../assets/icons/blend-thai-massage.svg'
 import { ReactComponent as ThaiMassageIcon } from '../../assets/icons/thai-massage.svg'
@@ -9,31 +9,33 @@ import { ReactComponent as AntiStressMassageIcon } from '../../assets/icons/anti
 import { ReactComponent as ReflexologyMassageIcon } from '../../assets/icons/reflexology-icon.svg'
 
 
+interface ChooseMassageProps{
+ onChange?: Function;
+};
 
-const ChooseMassage = () => {
+const ChooseMassage: FC<ChooseMassageProps> = ({onChange}) => {
 
   const [ selectedItems, setSelectedItems ] = useState<Record<string, boolean>>( () => {
     let initialSelectedItems: Record<string, boolean> = {}
+    
+    // 
     MassageTypesData.forEach(item => {
       initialSelectedItems[item.value] = false
-     })
-     return initialSelectedItems
-  }
-)
+    });
+
+       return initialSelectedItems
+    }
+);
 
 
   const handleChange = (targetId: string) => {
-   
     setSelectedItems(prevState => ({...prevState, [targetId]: !prevState[targetId]}))
-  }
+  };
 
   useEffect(() => {
     console.log('the selectedItems: ', selectedItems)
-  
-  }, [selectedItems])
-  
-
-
+    onChange && onChange(selectedItems, 'massages');
+  }, [selectedItems]);
 
   return (
     <div className='w-full col-span-2'>
@@ -54,8 +56,7 @@ const ChooseMassage = () => {
         </div>
     </div>
   )
-}
-
+};
 
 
 const MassageTypesData = [
