@@ -10,7 +10,7 @@ const PriceListCard: FC<PriceListCard_Props> = (props) => {
     const { service } = props
     return (
 
-        <div className='flex items-center cursor-pointer priceListCard mt-[30px]' key={service.id}>
+        <a href="/booking"><div className='flex items-center cursor-pointer priceListCard mt-[30px]' key={service.hamamid}>
 
             <img src={service.image} alt='' className="" />
             
@@ -24,12 +24,12 @@ const PriceListCard: FC<PriceListCard_Props> = (props) => {
                     <span>{service.price}</span>
                     <span className='absolute top-0 text-[24px]'>$</span>
                 </h1>
-                <button className='text-[16px] text-[#423930] bookButton inline-flex'>
+                <button className='text-[13px] font-medium text-[#423930] bookButton inline-flex'>
                     Book Now 
-                    <img src={ArrowRight} alt='' className='w-[16px] ml-[13px] translate-y-[5px]' />
+                    <img src={ArrowRight} alt='' className='w-[16px] ml-[13px] translate-y-[1px]' />
                 </button>
             </div>
-        </div>
+        </div></a>
     )
 }
 

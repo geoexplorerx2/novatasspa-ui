@@ -18,7 +18,9 @@ const OurServices: FC = () => {
 interface ServiceType {
     title: string,
     description: string,
-    price: number,
+    info: any,
+    duration: string,
+    price: string,
     Icon: any,
     id: string
 }
@@ -28,10 +30,10 @@ interface ServiceCardProps {
 }
 
 const ServiceCard: FC<ServiceCardProps> = (props) => {
-    const { service: { description, Icon, id, price, title } } = props
+    const { service: { description, info, duration, Icon, id, price, title } } = props
     const [ isHovered, setIsHovered ] = useState(false)
     return (
-        <div className={`relative border border-[#EEEEEE] py-[42px] px-[35px] space-y-[30px] transition-all ${isHovered ? 'bg-[#423930]' : 'bg-white'}`} key={id} onMouseEnter={() => {setIsHovered(true)}} onMouseLeave={() => {setIsHovered(false)} } >
+        <a href='/booking'><div className={`relative border cursor-pointer border-[#EEEEEE] py-[42px] px-[35px] space-y-[30px] transition-all ${isHovered ? 'bg-[#423930]' : 'bg-white'}`} key={id} onMouseEnter={() => {setIsHovered(true)}} onMouseLeave={() => {setIsHovered(false)} } >
             <div className='flex justify-between'>
                 <Icon className={`${isHovered ? 'text-white' : ''}`}/>
                 <div>
@@ -41,20 +43,32 @@ const ServiceCard: FC<ServiceCardProps> = (props) => {
                         </span>
                         <span className='text-xs inline-block font-medium'>$</span>
                     </div>
-                    <div className='flex space-x-4'>
-                        <span className='text-white flex items-center cursor-pointer font-gotu'>Book Now</span>
-                        <span className='text-white'> &gt;</span>
+                    <p className={`flex justify-end ${isHovered ? 'text-white' : ''} text-black`}>{duration} minutes per person</p>
+                    <div className={`${isHovered ? 'text-white' : 'text-black'} flex space-x-4`}>
+                        <span className={`flex items-center cursor-pointer font-gotu`}>Book Now</span>
+                        <span className=''> &gt;</span>
                     </div>
                 </div>
             </div>
 
             <h3 className={`font-gotu text-[34px] leading-[34px] tracking-tighter w-1/2 ${isHovered ? 'text-white' : ''}`}>{title}</h3>
             <p className={`${isHovered ? 'text-white' : ''}`}>{description}</p>
+            {
+                info.length > 0 ? 
+                <ul>
+                    {info.map((li: string)=> {
+                        return (
+                            <li className={`${isHovered ? 'text-white' : ''}`}>- {li}</li>
+                        )
+                    })}
+                </ul>
+                : ''
+            }
 
             {
              isHovered && <Wave className='absolute top-0 right-0 !mt-0' />            
             } 
-        </div>
+        </div></a>
     )
 }
 
@@ -62,61 +76,91 @@ const ServiceCard: FC<ServiceCardProps> = (props) => {
 
 const ServicesData: ServiceType[] = [
     {
-        title: 'Pasha Hammam',
-        description: 'From its medieval origins to the digital era, learn everything there is to know about the ubiquitous lorem ipsum passage.',
+        title: 'Luxury Hamam',
+        description: 'A luxurious combination of a Turkish bath and a massage session that involves a body scrub, full body foam , head shoulders-back foam massage,honey and milk body care,facial clay mask,hot stone massage and reflexology massage.',
+        info: [],
+        duration: '90',
         Icon: CaldleAndFlower,
-        price: 38,
+        price: '200',
         id: '1'
     },
     {
-        title: 'Pasha Hammam',
-        description: 'From its medieval origins to the digital era, learn everything there is to know about the ubiquitous lorem ipsum passage.',
+        title: 'VIP Hamam',
+        description: 'A deluxe Turkish bath session that involves a traditional body scrub, relaxing foam, body peeling and an anti-stress massage.',
+        info: [
+            'Body Scrub', 'Body Peeling', 'Anti-Stress Massage' 
+        ],
+        duration: '80',
         Icon: CaldleAndFlower,
-        price: 38,
+        price: '150',
         id: '2'
     },
     {
-        title: 'Pasha Hammam',
-        description: 'From its medieval origins to the digital era, learn everything there is to know about the ubiquitous lorem ipsum passage.',
+        title: 'Sultan Hamam',
+        description: 'A revitalizing Turkish bath session that involves a traditional body scrub, foam massage, body mask made from honey and milk.',
+        info: [
+            'Body Scrub', 'All Body Foam', 'Foam Massage', 'All Body Honey', 'Milk Body Care'
+        ],
+        duration: '50',
         Icon: CaldleAndFlower,
-        price: 38,
+        price: '100 ',
         id: '3'
     },
     {
-        title: 'Pasha Hammam',
-        description: 'From its medieval origins to the digital era, learn everything there is to know about the ubiquitous lorem ipsum passage.',
+        title: 'Shahrazad Hamam',
+        description: 'A rejuvenating Turkish bath session that involves a traditional body scrub, followed by a head & shoulders foam massage.',
+        info: [
+            'Body Scrub', 'Foam Massage', 'All Body Foam'
+        ],
+        duration: '50',
         Icon: CaldleAndFlower,
-        price: 38,
+        price: '80',
         id: '4'
     },
     {
         title: 'Pasha Hammam',
-        description: 'From its medieval origins to the digital era, learn everything there is to know about the ubiquitous lorem ipsum passage.',
+        description: 'A refreshing Turkish bath session with traditional body scrub, followed by a relaxing full body foam cover.',
+        info: [
+            'Body Scrub', 'All Body Foam'
+        ],
+        duration: '2',
         Icon: CaldleAndFlower,
-        price: 38,
+        price: '60',
         id: '5'
     },
-    {
-        title: 'Pasha Hammam',
-        description: 'From its medieval origins to the digital era, learn everything there is to know about the ubiquitous lorem ipsum passage.',
-        Icon: CaldleAndFlower,
-        price: 38,
-        id: '6'
-    },
-    {
-        title: 'Pasha Hammam',
-        description: 'From its medieval origins to the digital era, learn everything there is to know about the ubiquitous lorem ipsum passage.',
-        Icon: CaldleAndFlower,
-        price: 38,
-        id: '7'
-    },
-    {
-        title: 'Pasha Hammam',
-        description: 'From its medieval origins to the digital era, learn everything there is to know about the ubiquitous lorem ipsum passage.',
-        Icon: CaldleAndFlower,
-        price: 38,
-        id: '8'
-    },
+    // {
+    //     title: 'Pasha Hammam',
+    //     description: 'From its medieval origins to the digital era, learn everything there is to know about the ubiquitous lorem ipsum passage.',
+    //     info: [
+    //         'Body Scrub', 'All Body Foam'
+    //     ],
+    //     duration: '2',
+    //     Icon: CaldleAndFlower,
+    //     price: '38',
+    //     id: '6'
+    // },
+    // {
+    //     title: 'Pasha Hammam',
+    //     description: 'From its medieval origins to the digital era, learn everything there is to know about the ubiquitous lorem ipsum passage.',
+    //     info: [
+    //         'Body Scrub', 'All Body Foam'
+    //     ],
+    //     duration: '2',
+    //     Icon: CaldleAndFlower,
+    //     price: '38',
+    //     id: '7'
+    // },
+    // {
+    //     title: 'Pasha Hammam',
+    //     description: 'From its medieval origins to the digital era, learn everything there is to know about the ubiquitous lorem ipsum passage.',
+    //     info: [
+    //         'Body Scrub', 'All Body Foam'
+    //     ],
+    //     duration: '2',
+    //     Icon: CaldleAndFlower,
+    //     price: '38',
+    //     id: '8'
+    // },
 ]
 
 

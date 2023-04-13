@@ -16,13 +16,16 @@ const ReservationForm = () => {
     handleSubmit
   } = useForm(_handleQuickReservation, useValidate, 'quickreservation');
 
+  const [servermessage, setServerMessage] = useState<any>();
   const server = services;
+
+  console.log('values::',values)
 
   function _handleQuickReservation() {
 
     const quick_reservation_data = {
       name_surname: values?.namesurname,
-      phone: values?.telehone,
+      phone: values?.telephone,
       country: 'Turkey',
       email: values?.quickreservation_email
     };
@@ -30,10 +33,12 @@ const ReservationForm = () => {
     // quick reservation
     server.quickReservation(quick_reservation_data)
       .then((res: any) => {
-        // console.log({ res });
+        let message = res.entity;
+        setServerMessage(message);
       })
       .catch((error: any) => {
-        // console.log({error});
+        let message = error.entity;
+        setServerMessage(message);
       })
   };
 
@@ -56,35 +61,40 @@ const ReservationForm = () => {
   //   console.log(values)
   // };
 
-
   return (
     <div className='w-[450px] p-[30px] bg-white space-y-[30px]'>
       <h3 className='text-2xl font-gotu '>Online Reservation Form</h3>
       <div className='flex flex-col'>
+        <span>{servermessage && servermessage.data}</span>
         <span>{errors.namesurname}</span>
         <span>{errors.quickreservation_email}</span>
       </div>
       <form className='space-y-[30px]'>
         <AnimatedInput
-          // value={values.nameSurname}
+          value={values}
           inputType='text'
           label='Name, Surname'
           name='namesurname'
           onChange={handleChange}
           Icon={<HumanAvatar />}
+          errors={errors}
         />
         <AnimatedInput
-          // value={values.email} 
+          value={values} 
           inputType='text'
           label='E-Mail Address'
           name='quickreservation_email'
           onChange={handleChange}
           Icon={<MailIcon />}
+          errors={errors}
         />
         <AnimatedTelInput
-          label={'Phone Number '}
+          value={values} 
+          inputType='telephone'
+          label={'Phone Number'}
           name='phone'
           onChange={handleChange}
+          errors={errors}
         />
         <button
           onClick={handleSubmit}

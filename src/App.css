@@ -85,3 +85,7 @@
   left: -25px !important;
   top: 12rem !important;
 }
+
+.owl-carousel.owl-drag .owl-item {
+  cursor: pointer !important;
+}

@@ -4,7 +4,8 @@ import { BASE_URL } from "./env";
 // post: create || update
 export const post = (request: HTTPRequest): Promise<HTTPResponse> => {
     return new Promise((resolve, reject) => {
-        request.method = "POST";
+        request.method = "post";
+        // request.mode = request.cors;
         doRequest(request).then(resolve).catch(reject);
     });
 };
@@ -21,6 +22,7 @@ const doRequest = (request: any): Promise<HTTPResponse> => {
     ) {
         // request.headers["Content-Type"] = "application/x-www-form-urlencoded";
         request.headers["Content-Type"] = "application/json";
+        // request.headers["Content-Type"] = "multipart/form-data";
         if (request.body) {
             // request.body = encodeParameters(request.body);
             request.body = JSON.stringify(request.body);

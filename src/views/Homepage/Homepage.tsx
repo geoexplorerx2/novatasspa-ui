@@ -15,7 +15,7 @@ const Homepage = () => {
       <ExperienceSection />
       <OurServices />
       <HistorySection />
-      <MessageTypesSection />
+      {/* <MessageTypesSection /> */}
       <PricesListSection />
       <TrustedCompaniesSection />
       <ReservationSection />

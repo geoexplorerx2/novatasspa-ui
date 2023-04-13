@@ -63,5 +63,60 @@ export const LETTERS_TAPE = [
         letter: a_letter,
         className: 'mr-[32.7px]'
     },
-
+    {
+        letter: t_letter,
+        className: 'mr-[32.7px]'
+    },
+    {
+        letter: a_letter,
+        className: 'mr-[32.7px]'
+    },
+    {
+        letter: s_letter,
+        className: 'mr-[32.7px]'
+    },
+    {
+        letter: n_letter,
+        className: 'mr-[32.7px]'
+    },
+    {
+        letter: o_letter,
+        className: 'mr-[32.7px]'
+    },
+    {
+        letter: v_letter,
+        className: 'mr-[32.7px]'
+    },
+    {
+        letter: a_letter,
+        className: 'mr-[32.7px]'
+    },
+    {
+        letter: t_letter,
+        className: 'mr-[32.7px]'
+    },
+    {
+        letter: a_letter,
+        className: 'mr-[46.76px]'
+    },
+    {
+        letter: s_letter,
+        className: 'mr-[50px]'
+    },
+    {
+        letter: n_letter,
+        className: 'mr-[62.35px]'
+    },
+    {
+        letter: o_letter,
+        className: 'mr-[44.73px]'
+    },
+    {
+        letter: v_letter,
+        className: 'mr-[32.7px]'
+    },
+    {
+        letter: a_letter,
+        className: 'mr-[32.7px]'
+    },
 ]
