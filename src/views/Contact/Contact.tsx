@@ -9,7 +9,7 @@ import { ReactComponent as MailIcon } from '../../assets/icons/mailIcon.svg'
 const Contact = () => {
   return (
     <div className='container h-screen'>
-         <div className='container grid grid-cols-1 xl:grid-cols-3 gap-x-[30px] lg:mt-4 my-[30px] lg:px-9 2xl:px-0'>
+         <div className='container grid grid-cols-1 xl:grid-cols-3 gap-x-[30px] lg:mt-4 my-[30px] lg:px-9 2xl:px-0 '>
           <div className='flex flex-col w-full col-span-2 justify-between'>
             <Map wrapperClassNames='col-span-2'/>
             <div className='grid grid-cols-5 mb-[25px]'>
