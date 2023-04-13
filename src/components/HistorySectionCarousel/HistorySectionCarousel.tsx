@@ -5,6 +5,22 @@ import history_carousel_1 from '../../assets/images/history_carousel_1.png';
 import history_carousel_2 from '../../assets/images/history_carousel_2.png';
 import history_carousel_3 from '../../assets/images/history_carousel_3.png';
 import history_carousel_4 from '../../assets/images/history_carousel_4.png';
+import history_carousel_5 from '../../assets/images/gallery_1.png';
+import history_carousel_6 from '../../assets/images/gallery_2.png';
+import history_carousel_7 from '../../assets/images/gallery_3.png';
+import history_carousel_8 from '../../assets/images/gallery_4.png';
+import history_carousel_9 from '../../assets/images/gallery_5.png';
+import history_carousel_10 from '../../assets/images/gallery_6.png';
+import history_carousel_11 from '../../assets/images/gallery_7.png';
+import history_carousel_12 from '../../assets/images/gallery_8.png';
+import history_carousel_13 from '../../assets/images/gallery_9.png';
+import history_carousel_14 from '../../assets/images/gallery_10.png';
+import history_carousel_15 from '../../assets/images/gallery_11.png';
+import history_carousel_16 from '../../assets/images/gallery_12.png';
+import history_carousel_17 from '../../assets/images/gallery_13.png';
+import history_carousel_18 from '../../assets/images/gallery_14.png';
+import history_carousel_19 from '../../assets/images/gallery_15.png';
+import history_carousel_20 from '../../assets/images/gallery_16.png';
 import arrow from '../../assets/icons/right-arrow-black.png';
 
 const HistorySectionCarousel = () => {
@@ -29,6 +45,89 @@ const HistorySectionCarousel = () => {
             name: "image_4",
             src: history_carousel_4
         },
+        {
+            id: "5",
+            name: "image_1",
+            src: history_carousel_5
+        },
+        {
+            id: "6",
+            name: "image_2",
+            src: history_carousel_6
+        },
+        {
+            id: "7",
+            name: "image_3",
+            src: history_carousel_7
+        },
+        {
+            id: "8",
+            name: "image_4",
+            src: history_carousel_8
+        },
+        {
+            id: "9",
+            name: "image_1",
+            src: history_carousel_9
+        },
+        {
+            id: "10",
+            name: "image_2",
+            src: history_carousel_10
+        },
+        {
+            id: "11",
+            name: "image_3",
+            src: history_carousel_11
+        },
+
+
+
+        {
+            id: "12",
+            name: "image_1",
+            src: history_carousel_12
+        },
+        {
+            id: "13",
+            name: "image_2",
+            src: history_carousel_13
+        },
+        {
+            id: "14",
+            name: "image_3",
+            src: history_carousel_14
+        },
+        {
+            id: "15",
+            name: "image_4",
+            src: history_carousel_15
+        },
+        {
+            id: "16",
+            name: "image_1",
+            src: history_carousel_16
+        },
+        {
+            id: "17",
+            name: "image_2",
+            src: history_carousel_17
+        },
+        {
+            id: "18",
+            name: "image_3",
+            src: history_carousel_18
+        },
+        {
+            id: "19",
+            name: "image_2",
+            src: history_carousel_19
+        },
+        {
+            id: "20",
+            name: "image_3",
+            src: history_carousel_20
+        },
     ]
 
     const [clickedImage, setClickedImage] = useState('');
@@ -43,7 +142,7 @@ const HistorySectionCarousel = () => {
 
     const images = carousel_images.map((item, index) => {
         return (
-            <img src={item.src} alt={item.name} className='zzz' onClick={handleImageClick} />
+            <img src={item.src} alt={item.name} className='' onClick={handleImageClick} />
         )
     })
 

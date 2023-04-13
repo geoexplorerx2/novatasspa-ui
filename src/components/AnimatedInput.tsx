@@ -34,10 +34,10 @@ const AnimatedInput: FC<InfoProps> = (props) => {
     setIsFocused(false);
   };
 
-  console.log('from input::', value)
+  // console.log('from input::', value)
   // errors.map((e: any) => console.log(e))
   const errorsKeys = errors && Object.keys(errors)
-  console.log('errors', errors)
+  // console.log('errors', errors)
 
   return (
     <div className={`${wrapperClassName} ${name && errorsKeys?.includes(name ?? "") ? `border-2 border-red-600` : ''} relative w-full h-[50px] lg:h-[70px] flex items-center  px-[22px] ${isFocused ? `${focusStateStyles} border-black border-[1px]` : 'border-[#DDDDDD] border'}`}>
@@ -46,14 +46,14 @@ const AnimatedInput: FC<InfoProps> = (props) => {
       </div>
       {/* || value[name as string] */}
       <label className={`absolute top-0 transition-all text-xs font-medium  px-2
-                        ${isFocused  ? "translate-y-4 bg-white text-sm z-[3] font-normal" : "translate-y-4 lg:translate-y-[27px] text-[22px] text-[#0D2C3B] text-opacity-50 z-[1]"}
+                        ${isFocused || inputValue  ? "translate-y-4 bg-white text-sm z-[3] font-normal" : "translate-y-4 lg:translate-y-[27px] text-[22px] text-[#0D2C3B] text-opacity-50 z-[1]"}
                         ${Icon ? 'left-[53px]' : 'left-3'}
                         `}>
         {label}
       </label>
 
       
-      {errors &&  Object.keys(errors).length > 0 && <span className='absolute right-[5px] top-[-20px] bg-red-600 rounded-lg text-white p-2'>{errors && [name as string]}</span>}
+      {errors && errors?.[name as string]?.length > 0 && <span className='absolute right-[5px] top-[-20px] bg-red-600 rounded-lg text-white p-2'>{errors && errors[name as string]}</span>}
 
       {
         inputType === 'textArea'
