@@ -21,11 +21,11 @@ const ContactForm: FC = () => {
   const handleChange = (event: any, type: any = '') => {
     if (type === 'telephone') setValues((value: any) => ({ ...value, 'phone': event }))
     else {
-        // console.log('event::', event)
-        event.persist();
-        setValues((value: any) => ({ ...value, [event.target.name]: event.target.value }));
+      // console.log('event::', event)
+      event.persist();
+      setValues((value: any) => ({ ...value, [event.target.name]: event.target.value }));
     }
-};
+  };
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     // e.preventDefault()
@@ -48,30 +48,30 @@ const ContactForm: FC = () => {
           Icon={<HumanAvatar />}
           wrapperClassName='bg-white' />
 
-        <AnimatedInput 
-              value={values?.email} 
-              inputType='text' 
-              label='Your Email' 
-              name='email' 
-              onChange={handleChange} 
-              Icon={<MailIcon />} 
-              wrapperClassName='bg-white'/>
+        <AnimatedInput
+          value={values?.email}
+          inputType='text'
+          label='Your Email'
+          name='email'
+          onChange={handleChange}
+          Icon={<MailIcon />}
+          wrapperClassName='bg-white' />
 
-        <AnimatedTelInput 
-              value={values?.phoneNo} 
-              inputType='text' 
-              label='Your Number' 
-              name='phoneNo' 
-              onChange={(e: any) => handleChange(e, 'telephone')}  
-              wrapperClassName='bg-white'/>
+        <AnimatedTelInput
+          value={values?.phoneNo}
+          inputType='text'
+          label='Your Number'
+          name='phone'
+          onChange={(e: any) => handleChange(e, 'telephone')}
+          wrapperClassName='bg-white' />
 
-        <AnimatedInput 
-              value={values.message} 
-              inputType='textArea' 
-              label='Your Message' 
-              name='message' onChange={handleChange} 
-              wrapperClassName='!h-[150px] md:col-span-3 xl:col-span-1 bg-white' 
-              Icon={<MessageIcon /> }/>
+        <AnimatedInput
+          value={values.message}
+          inputType='textArea'
+          label='Your Message'
+          name='message' onChange={handleChange}
+          wrapperClassName='!h-[150px] md:col-span-3 xl:col-span-1 bg-white'
+          Icon={<MessageIcon />} />
 
         <button type='submit' className='w-full bg-[#423930] flex justify-between items-center px-[30px] py-3 lg:py-[18px] text-white text-base md:col-span-3 xl:col-span-1 font-gotu'>
           <span>
