@@ -22,10 +22,12 @@ const useForm = (callback: any, validate: any, formType: any) => {
 
     const handleChange = (event: any, type: any = '') => {
 
-
         if (type === 'telephone') {
             setValues((value: any) => ({ ...value, 'phone': event }))
             // console.log('telvalue', event)
+        }
+        else if (type && type !== 'telephone') {
+            setValues((value:any) => ({...value, [type]: event}))
         }
         else {
             // console.log('event::', event)
