@@ -38,8 +38,6 @@ const BookingForm = () => {
 
     useEffect(() => {
       console.log('the values changed: ', values)
-    
-      
     }, [values])
     
 
