@@ -6,59 +6,88 @@ import { ReactComponent as ArrowRight } from '../../assets/icons/ArrowRight.svg'
 import { ReactComponent as HumanAvatar } from '../../assets/icons/humanAvatar.svg'
 import { ReactComponent as MailIcon } from '../../assets/icons/mailIcon.svg'
 import { ReactComponent as MessageIcon } from '../../assets/icons/messageIcon.svg'
+import { useForm, useValidate } from '../../hooks';
+import services from '../../api/services';
 
 
 
 const ContactForm: FC = () => {
-  const [values, setValues] = useState({
-    nameSurname: '',
-    email: '',
-    phoneNo: '',
-    message: ''
+  // const [values, setValues] = useState({
+  //   nameSurname: '',
+  //   email: '',
+  //   phoneNo: '',
+  //   message: ''
 
-  })
+  // });
 
-  const handleChange = (event: any, type: any = '') => {
-    if (type === 'telephone') setValues((value: any) => ({ ...value, 'phone': event }))
-    else {
-      // console.log('event::', event)
-      event.persist();
-      setValues((value: any) => ({ ...value, [event.target.name]: event.target.value }));
-    }
+  const {
+    values,
+    errors,
+    handleChange,
+    handleSubmit
+  } = useForm(_handleQuickReservation, useValidate, 'quickreservation');
+
+  const [servermessage, setServerMessage] = useState<any>();
+  const server = services;
+
+  // const handleChange = (event: any, type: any = '') => {
+  //   if (type === 'telephone') setValues((value: any) => ({ ...value, 'phone': event }))
+  //   else {
+  //     // console.log('event::', event)
+  //     event.persist();
+  //     setValues((value: any) => ({ ...value, [event.target.name]: event.target.value }));
+  //   }
+  // };
+
+  // const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  //   // e.preventDefault()
+  //   // console.log('values', values)
+  // };
+
+  function _handleQuickReservation() {
+
+    const quick_reservation_data = {
+      name_surname: values?.namesurname,
+      phone: values?.phone,
+      country: 'Turkey',
+      email: values?.quickreservation_email
+    };
+
+    // quick reservation
+    server.quickReservation(quick_reservation_data)
+      .then((res: any) => {
+        let message = res.entity;
+        setServerMessage(message);
+      })
+      .catch((error: any) => {
+        let message = error.entity;
+        setServerMessage(message);
+      })
   };
-
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    // e.preventDefault()
-    // console.log('values', values)
-  };
-
 
   return (
     <div className='w-full xl:w-[450px]  p-[30px] bg-[#9FAF911A] dark:bg-[#0b0b0b] h-min'>
       <span className='text-2xl font-normal dark:text-white font-gotu'>
         Contact Form
       </span>
-      <form className='w-full space-y-[30px] md:space-y-0 2xl:space-y-[30px] md:gap-4 2xl:gap-0 mt-6 grid grid-cols-1 md:grid-cols-3 xl:grid-cols-1' onSubmit={handleSubmit} >
+      <div className='flex flex-col'>
+        <span>{servermessage && servermessage.data}</span>
+        <span>{errors.namesurname}</span>
+        <span>{errors.quickreservation_email}</span>
+        <span>{errors.phone}</span>
+      </div>
+      <form className='w-full space-y-[30px] md:space-y-0 2xl:space-y-[30px] md:gap-4 2xl:gap-0 mt-6 grid grid-cols-1 md:grid-cols-3 xl:grid-cols-1' >
         <AnimatedInput
-          value={values.nameSurname}
+          // value={values.nameSurname}
           inputType='text'
           label='Name, Surname'
-          name='nameSurname'
+          name='namesurname'
           onChange={handleChange}
           Icon={<HumanAvatar />}
           wrapperClassName='bg-white' />
 
-        <AnimatedInput
-          value={values?.email}
-          inputType='text'
-          label='Your Email'
-          name='email'
-          onChange={handleChange}
-          Icon={<MailIcon />}
-          wrapperClassName='bg-white' />
-
         <AnimatedTelInput
-          value={values?.phoneNo}
+          // value={values?.phoneNo}
           inputType='text'
           label='Your Number'
           name='phone'
@@ -66,14 +95,28 @@ const ContactForm: FC = () => {
           wrapperClassName='bg-white' />
 
         <AnimatedInput
+          // value={values?.email}
+          inputType='text'
+          label='Your Email'
+          name='quickreservation_email'
+          onChange={handleChange}
+          Icon={<MailIcon />}
+          wrapperClassName='bg-white' />
+
+
+        {/* <AnimatedInput
           value={values.message}
           inputType='textArea'
           label='Your Message'
           name='message' onChange={handleChange}
           wrapperClassName='!h-[150px] md:col-span-3 xl:col-span-1 bg-white'
-          Icon={<MessageIcon />} />
+          Icon={<MessageIcon />} /> */}
 
-        <button type='submit' className='w-full bg-[#423930] flex justify-between items-center px-[30px] py-3 lg:py-[18px] text-white text-base md:col-span-3 xl:col-span-1 font-gotu'>
+        <button
+          onClick={handleSubmit}
+          type='button'
+          className='w-full bg-[#423930] flex justify-between items-center px-[30px] py-3 lg:py-[18px] text-white text-base md:col-span-3 xl:col-span-1 font-gotu'
+        >
           <span>
             Send Form
           </span>
@@ -82,6 +125,6 @@ const ContactForm: FC = () => {
       </form>
     </div>
   )
-}
+};
 
 export default ContactForm

@@ -80,9 +80,6 @@ const HistorySectionCarousel = () => {
             name: "image_3",
             src: history_carousel_11
         },
-
-
-
         {
             id: "12",
             name: "image_1",
@@ -130,25 +127,59 @@ const HistorySectionCarousel = () => {
         },
     ]
 
-    const [clickedImage, setClickedImage] = useState('');
+    const [clickedImage, setClickedImage] = useState({ src: '', id: '' });
+    // console.log('clicked image:', clickedImage)
+
 
     const handleImageClick = (e: any) => {
-        setClickedImage(e.target.src);
+        setClickedImage({ src: e.target.src, id: e.target.id });
     }
 
     const handleClosingGallery = () => {
-        setClickedImage('')
+        setClickedImage({ src: '', id: '' })
+    }
+
+    const handlePrevImage = () => {
+        // console.log('length', Object.entries(carousel_images).length)
+
+        let currentId = clickedImage.id;
+        // console.log('currentId', currentId)
+
+        let prevId
+
+        Number(currentId) >= 2 ? prevId = Number(currentId) - 2 : prevId = Object.entries(carousel_images).length -1;
+
+        let prevImage = carousel_images[prevId];
+        prevImage = carousel_images[prevId];
+        setClickedImage({ src: prevImage.src, id: prevImage.id })
+    }
+
+    const handleNextImage = () => {
+        // console.log('length', Object.entries(carousel_images).length)
+
+        let currentId = clickedImage.id;
+        let nextId = Number(currentId);
+
+        let nextImage = carousel_images[nextId];
+
+        Number(currentId) < Object.entries(carousel_images).length ?
+            setClickedImage({ src: nextImage.src, id: nextImage.id })
+            :
+            nextId = 0;
+            
+        nextImage = carousel_images[nextId];
+        setClickedImage({ src: nextImage.src, id: nextImage.id })
     }
 
     const images = carousel_images.map((item, index) => {
         return (
-            <img src={item.src} alt={item.name} className='' onClick={handleImageClick} />
+            <img id={item.id} alt={item.name} src={item.src} className='' onClick={handleImageClick} />
         )
     })
 
     return (
         <>
-            <div className='container relative mt-[123px] pb-[123px] historySection pt-[200px]'>
+            <div className='container relative mt-[123px] pb-[123px] historySection'>
                 <div className='relative' >
                     <OwlCarousel
                         navText=
@@ -162,7 +193,7 @@ const HistorySectionCarousel = () => {
                         merge={true}
                         dots={true}
                         dotsEach={1}
-                        slideBy={1}
+                        slideBy={3}
                         loop={true}
                         responsive=
                         {
@@ -183,11 +214,16 @@ const HistorySectionCarousel = () => {
                     </OwlCarousel>
                 </div>
 
-                {clickedImage &&
+                {clickedImage.src &&
                     createPortal(
                         <div className='fixed w-screen h-screen top-0 left-0 flex justify-center bg-black bg-opacity-80 z-50'>
-                            <img src={clickedImage} alt='' className='fixed w-full max-w-[850px] top-[20%] findme' />
-                            <img onClick={handleClosingGallery} className='absolute w-[60px] top-[9rem] right-[4rem] cursor-pointer' src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAACXBIWXMAAAsTAAALEwEAmpwYAAABzUlEQVR4nO3cUU4CMRRG4SaGZ1mGPrAEdBWyxPpSdkVi4iZ+M3GIRhMyA+29LfecBUD9MqFF2qZEREREREREREREREREnSVpK+kg6SV1lqTXeWzbNHKSdpJO+ilL2nQwrs08lnPTGHdpxCQ9S/rQ/46e2JIe/iCf+xwO+wKyK/YF5PGwFyC7YC9AHgd7BbIp9grk/rHn1cXviW9ppSX2PPFN77G2U5erkXmZdG2lBfYNyOfeUm9N6+Qb/qDq2BWQp/apx1Z+DjbDroScU69dMelUnyArjaHpvDE8tr7f+/3ukT2xFQ3ZA1tRkS2xFR3ZAlsgt8cWyO2fbIFs8kWiVHqNsT+TjZ7sW3L94SEK9jEMsiN2PGQH7LjIhtggG2CDbIANsgE2yJeq9I0PaCNksA2RwTZEBtsQGWzZIcfFlj1yPGz5IcfBFv/4H/KnrMyT3RA5NXzNoTPYbpDDYxtuoMlhsR22hOVw2I6bHHMY7A627ea7x+5hE7giYHsjhzhaMR9gd0eujN3dRQEcf7PqTg90PqYek/S08ohy4Yhye+zCofv2T3bhGon22IWLUSrHVT8+l1ftU58XBRy6XV0QERERERERERERERGlyH0BBM4Nm7KQeq0AAAAASUVORK5CYII=" alt=''/>
+
+                            <img onClick={handleClosingGallery} className='absolute w-[60px] top-[9rem] right-[4rem] cursor-pointer' src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAACXBIWXMAAAsTAAALEwEAmpwYAAABzUlEQVR4nO3cUU4CMRRG4SaGZ1mGPrAEdBWyxPpSdkVi4iZ+M3GIRhMyA+29LfecBUD9MqFF2qZEREREREREREREREREnSVpK+kg6SV1lqTXeWzbNHKSdpJO+ilL2nQwrs08lnPTGHdpxCQ9S/rQ/46e2JIe/iCf+xwO+wKyK/YF5PGwFyC7YC9AHgd7BbIp9grk/rHn1cXviW9ppSX2PPFN77G2U5erkXmZdG2lBfYNyOfeUm9N6+Qb/qDq2BWQp/apx1Z+DjbDroScU69dMelUnyArjaHpvDE8tr7f+/3ukT2xFQ3ZA1tRkS2xFR3ZAlsgt8cWyO2fbIFs8kWiVHqNsT+TjZ7sW3L94SEK9jEMsiN2PGQH7LjIhtggG2CDbIANsgE2yJeq9I0PaCNksA2RwTZEBtsQGWzZIcfFlj1yPGz5IcfBFv/4H/KnrMyT3RA5NXzNoTPYbpDDYxtuoMlhsR22hOVw2I6bHHMY7A627ea7x+5hE7giYHsjhzhaMR9gd0eujN3dRQEcf7PqTg90PqYek/S08ohy4Yhye+zCofv2T3bhGon22IWLUSrHVT8+l1ftU58XBRy6XV0QERERERERERERERGlyH0BBM4Nm7KQeq0AAAAASUVORK5CYII=" alt='' />
+
+                            <img src={clickedImage?.src} id={clickedImage?.id} alt='' className='fixed w-full max-w-[850px] top-[20%] findme' />
+
+                            <img id='' src={arrow} onClick={handlePrevImage} className='fixed w-[75px] p-[20px] bg-white rotate-180 top-[47rem] left-[4rem] mx-auto aaaooo' alt='' />
+                            <img src={arrow} onClick={handleNextImage} className='fixed w-[75px] p-[20px] bg-white top-[47rem] right-[4rem] mx-auto' alt='' />
                         </div>
                         , document.getElementById('root') as HTMLElement)
                 }
