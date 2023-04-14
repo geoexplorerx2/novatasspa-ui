@@ -19,13 +19,12 @@ const ReservationForm = () => {
   const [servermessage, setServerMessage] = useState<any>();
   const server = services;
 
-  // console.log('values::',values)
 
   function _handleQuickReservation() {
 
     const quick_reservation_data = {
       name_surname: values?.namesurname,
-      phone: values?.telephone,
+      phone: values?.phone,
       country: 'Turkey',
       email: values?.quickreservation_email
     };
