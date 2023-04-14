@@ -148,7 +148,7 @@ const HistorySectionCarousel = () => {
 
     return (
         <>
-            <div className='container relative mt-[123px] pb-[123px]'>
+            <div className='container relative mt-[123px] pb-[123px] historySection pt-[200px]'>
                 <div className='relative' >
                     <OwlCarousel
                         navText=
@@ -171,13 +171,12 @@ const HistorySectionCarousel = () => {
                                     items: 1
                                 },
                                 '1025': {
-                                    items: 3
+                                    items: 2
                                 },
-                                '1919': {
+                                '1400': {
                                     items: 3
                                 }
                             }
-
                         }
                     >
                         {images}

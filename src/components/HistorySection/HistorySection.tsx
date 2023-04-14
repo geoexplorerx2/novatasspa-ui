@@ -9,8 +9,8 @@ import ButtonPrimary from '../../lib/Button/ButtonPrimary';
 const HistorySection = () => {
     return (
         <SectionBackground wrapperClassNames='h-[1050px] mt-[162px] mb-[252px]' backgroundDivClassNames='bg-[#B2A285]' >
-            <LetterTape wrapperClassName='absolute flex opacity-10 overflow-hidden top-[-62px] z-[-1]' />
-                <div className='grid grid-cols-2 container'>
+            <LetterTape wrapperClassName='absolute flex justify-center items-center opacity-10 overflow-hidden top-[-62px] z-[-1]' />
+                {/* <div className='grid grid-cols-2 container'>
                     <div className='block translate-y-[-62px]'>
                         <VideoPlayer />
                     </div>
@@ -28,7 +28,7 @@ const HistorySection = () => {
                             </span>
                         </ButtonPrimary>
                     </div>
-                </div>
+                </div> */}
 
                 <HistorySectionCarousel />
         </SectionBackground>
