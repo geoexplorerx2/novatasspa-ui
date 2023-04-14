@@ -30,7 +30,7 @@ const ContactForm: FC = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     // e.preventDefault()
     // console.log('values', values)
-  }
+  };
 
 
   return (
