@@ -27,7 +27,7 @@ const SocialMediaIcons: FC<SocialMediaIconsProps> = (props) => {
 const socialmediaIconsData = [
     {
         label: 'FaceBook',
-        href: '#',
+        href: 'https://m.facebook.com/people/Novatas-Spa-Management/100090799741261/',
         Icon: FaceBookIcon,
         id: '1'
     },
@@ -39,7 +39,7 @@ const socialmediaIconsData = [
     },
     {
         label: 'Instagram',
-        href: '#',
+        href: 'https://www.instagram.com/novatasspa/',
         Icon: InstagramIcon,
         id: '3'
     },

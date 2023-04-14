@@ -48,15 +48,6 @@ const ContactForm: FC = () => {
           Icon={<HumanAvatar />}
           wrapperClassName='bg-white' />
 
-        <AnimatedInput
-          value={values?.email}
-          inputType='text'
-          label='Your Email'
-          name='email'
-          onChange={handleChange}
-          Icon={<MailIcon />}
-          wrapperClassName='bg-white' />
-
         <AnimatedTelInput
           value={values?.phoneNo}
           inputType='text'
@@ -66,12 +57,22 @@ const ContactForm: FC = () => {
           wrapperClassName='bg-white' />
 
         <AnimatedInput
+          value={values?.email}
+          inputType='text'
+          label='Your Email'
+          name='email'
+          onChange={handleChange}
+          Icon={<MailIcon />}
+          wrapperClassName='bg-white' />
+
+
+        {/* <AnimatedInput
           value={values.message}
           inputType='textArea'
           label='Your Message'
           name='message' onChange={handleChange}
           wrapperClassName='!h-[150px] md:col-span-3 xl:col-span-1 bg-white'
-          Icon={<MessageIcon />} />
+          Icon={<MessageIcon />} /> */}
 
         <button type='submit' className='w-full bg-[#423930] flex justify-between items-center px-[30px] py-3 lg:py-[18px] text-white text-base md:col-span-3 xl:col-span-1 font-gotu'>
           <span>
