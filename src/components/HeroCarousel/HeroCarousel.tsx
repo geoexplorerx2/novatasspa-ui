@@ -13,20 +13,20 @@ const HeroCarousel = () => {
     const carouselContent = [
         {
             id: 1,
-            header: 'Beauty and Success Start Here',
-            body: 'From its medieval origins to the digital era, learn everything there is to know about the ubiquitous lorem ipsum passage.',
+            header: 'It’s Time to Find Yourself Again',
+            body: 'Take a break from your busy life & come relax at Novatas Crystal Spa! Book your session & relieve your stress today!',
             image: { img_2 }
         },
         {
             id: 2,
-            header: 'Beauty and Success Start Here',
-            body: 'From its medieval origins to the digital era, learn everything there is to know about the ubiquitous lorem ipsum passage.',
+            header: 'It’s Time to Find Yourself Again',
+            body: 'Take a break from your busy life & come relax at Novatas Crystal Spa! Book your session & relieve your stress today!',
             image: { img_2 }
         },
         {
             id: 3,
-            header: 'Beauty and Success Start Here',
-            body: 'From its medieval origins to the digital era, learn everything there is to know about the ubiquitous lorem ipsum passage.',
+            header: 'It’s Time to Find Yourself Again',
+            body: 'Take a break from your busy life & come relax at Novatas Crystal Spa! Book your session & relieve your stress today!',
             image: { img_2 }
         },
     ]

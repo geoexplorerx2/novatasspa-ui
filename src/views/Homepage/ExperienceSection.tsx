@@ -16,8 +16,8 @@ const ExperienceSection = () => {
                             <Leaf className='text-white' />
                             <Leaf className='text-white rotate-[175deg]' />
                         </div>
-                        <h2 className='text-white text-[64px] font-gotu leading-[74px] tracking-tighter'>Beauty and Success Start Here</h2>
-                        <p className='text-white text-lg '>From its medieval origins to the digital era, learn everything there is to know about the ubiquitous lorem ipsum passage.</p>
+                        <h2 className='text-white text-[64px] font-gotu leading-[74px] tracking-tighter'>Treat Yourself to a Blissful Escape</h2>
+                        <p className='text-white text-lg '>Revitalize your body and mind with our professional massage therapists practicing traditional as well as modern therapeutic techniques.</p>
                         {/* <button className='flex justify-between border border-white text-white px-8 py-4'>Learn More <ArrowRight className='ml-[30px]'/> </button> */}
 
                         <ButtonPrimary type="button" className='w-[229px] h-[60px] mt-[30px] box-border border-2 border-[#fff]'>

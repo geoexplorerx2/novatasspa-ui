@@ -77,15 +77,31 @@
 .owl-next {
   position: absolute !important;
   right: -25px !important;
-  top: 12rem !important;
+  top: 5rem !important;
 }
 
 .owl-prev {
   position: absolute !important;
   left: -25px !important;
-  top: 12rem !important;
+  top: 5rem !important;
 }
 
 .owl-carousel.owl-drag .owl-item {
   cursor: pointer !important;
+}
+
+.historySection .owl-carousel .owl-stage-outer {
+  max-height: 215px;
+}
+
+@media screen and (min-width: 1250px) {
+  .historySection  .owl-carousel .owl-stage-outer {
+    max-height: 300px;
+  }
+  .owl-prev {
+    top: 8rem !important;
+  }
+  .owl-next {
+    top: 8rem !important;
+  }
 }
