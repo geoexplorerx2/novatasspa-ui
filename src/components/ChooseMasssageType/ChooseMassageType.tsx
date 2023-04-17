@@ -43,7 +43,7 @@ const ChooseMassage: FC<ChooseMassageProps> = ({ onChange, errors, name }) => {
   return (
     <div className={`w-full col-span-2` }>
       <h3 className={`mb-3 font-medium border-2 border-white w-fit p-2 rounded-lg ${errorsKeys?.includes(name ?? "") ? ' border-2 !border-red-700' : ''}`}>Massage</h3>
-      <div className='grid grid-cols-4  min-[1600px]:grid-cols-6 gap-[30px]'>
+      <div className='grid grid-cols-4 gap-[30px]'>
         {
           MassageTypesData.map((massageType, index) => {
             const { label, value, Icon, id } = massageType

@@ -64,10 +64,10 @@ const ReservationForm = () => {
     <div className='w-[450px] p-[30px] bg-white space-y-[30px]'>
       <h3 className='text-2xl font-gotu '>Online Reservation Form</h3>
       <div className='flex flex-col'>
-        <span>{servermessage && servermessage.data}</span>
+        {/* <span>{servermessage && servermessage.data}</span>
         <span>{errors.namesurname}</span>
         <span>{errors.quickreservation_email}</span>
-        <span>{errors.phone}</span>
+        <span>{errors.phone}</span> */}
       </div>
       <form className='space-y-[30px]'>
         <AnimatedInput

@@ -70,12 +70,12 @@ const ContactForm: FC = () => {
       <span className='text-2xl font-normal dark:text-white font-gotu'>
         Contact Form
       </span>
-      <div className='flex flex-col'>
+      {/* <div className='flex flex-col'>
         <span>{servermessage && servermessage.data}</span>
         <span>{errors.namesurname}</span>
         <span>{errors.quickreservation_email}</span>
         <span>{errors.phone}</span>
-      </div>
+      </div> */}
       <form className='w-full space-y-[30px] md:space-y-0 2xl:space-y-[30px] md:gap-4 2xl:gap-0 mt-6 grid grid-cols-1 md:grid-cols-3 xl:grid-cols-1' >
         <AnimatedInput
           // value={values.nameSurname}
