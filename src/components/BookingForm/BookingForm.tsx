@@ -75,7 +75,7 @@ const BookingForm: FC<BookingFormProps> = ({ handleChange, handleSubmit, errors,
 
         <div className='flex flex-col items-center space-y-[20px] px-5'>
           <h2 className='text-[black] text-[28px] font-semibold'>
-            Thanks for your Booking !
+            Thank you for your Booking !
           </h2>
           <p className='text-lg text-center max-w-[500px]'>
             {serverRes?.data}
