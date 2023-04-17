@@ -1,10 +1,6 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
 import OwlCarousel from 'react-owl-carousel';
-import history_carousel_1 from '../../assets/images/history_carousel_1.png';
-import history_carousel_2 from '../../assets/images/history_carousel_2.png';
-import history_carousel_3 from '../../assets/images/history_carousel_3.png';
-import history_carousel_4 from '../../assets/images/history_carousel_4.png';
 import history_carousel_5 from '../../assets/images/gallery_1.png';
 import history_carousel_6 from '../../assets/images/gallery_2.png';
 import history_carousel_7 from '../../assets/images/gallery_3.png';
@@ -25,129 +21,120 @@ import arrow from '../../assets/icons/right-arrow-black.png';
 
 const HistorySectionCarousel = () => {
     const carousel_images = [
-        // {
-        //     id: "1",
-        //     name: "image_1",
-        //     src: history_carousel_1
-        // },
-        // {
-        //     id: "2",
-        //     name: "image_2",
-        //     src: history_carousel_2
-        // },
-        // {
-        //     id: "3",
-        //     name: "image_3",
-        //     src: history_carousel_3
-        // },
-        // {
-        //     id: "4",
-        //     name: "image_4",
-        //     src: history_carousel_4
-        // },
         {
-            id: "5",
+            id: "1",
             name: "image_1",
             src: history_carousel_5
         },
         {
-            id: "6",
+            id: "2",
             name: "image_2",
             src: history_carousel_6
         },
         {
-            id: "7",
+            id: "3",
             name: "image_3",
             src: history_carousel_7
         },
         {
-            id: "8",
+            id: "4",
             name: "image_4",
             src: history_carousel_8
         },
         {
-            id: "9",
+            id: "5",
             name: "image_1",
             src: history_carousel_9
         },
         {
-            id: "10",
+            id: "6",
             name: "image_2",
             src: history_carousel_10
         },
         {
-            id: "11",
+            id: "7",
             name: "image_3",
             src: history_carousel_11
         },
         {
-            id: "12",
-            name: "image_1",
+            id: "8",
+            name: "image_4",
             src: history_carousel_12
         },
         {
-            id: "13",
-            name: "image_2",
+            id: "9",
+            name: "image_1",
             src: history_carousel_13
         },
         {
-            id: "14",
-            name: "image_3",
+            id: "10",
+            name: "image_2",
             src: history_carousel_14
         },
         {
-            id: "15",
-            name: "image_4",
+            id: "11",
+            name: "image_3",
             src: history_carousel_15
         },
         {
-            id: "16",
+            id: "12",
             name: "image_1",
             src: history_carousel_16
         },
         {
-            id: "17",
+            id: "13",
             name: "image_2",
             src: history_carousel_17
         },
         {
-            id: "18",
+            id: "14",
             name: "image_3",
             src: history_carousel_18
         },
         {
-            id: "19",
-            name: "image_2",
+            id: "15",
+            name: "image_4",
             src: history_carousel_19
         },
         {
-            id: "20",
-            name: "image_3",
+            id: "16",
+            name: "image_1",
             src: history_carousel_20
         },
     ]
 
     const [clickedImage, setClickedImage] = useState({ src: '', id: '' });
+    const [isImageOpen, setIsImageOpen] = useState(false)
     // console.log('clicked image:', clickedImage)
 
+    useEffect(()=> {
+        if (typeof window !== 'undefined' && window.document) {
+            if (isImageOpen) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = 'auto'
+            }
+        }
+
+    }, [isImageOpen])
 
     const handleImageClick = (e: any) => {
         setClickedImage({ src: e.target.src, id: e.target.id });
+        setIsImageOpen(true)
     }
 
     const handleClosingGallery = () => {
         setClickedImage({ src: '', id: '' })
+        setIsImageOpen(false)
     }
 
     const handlePrevImage = () => {
         // console.log('length', Object.entries(carousel_images).length)
-
         let currentId = clickedImage.id;
         // console.log('currentId', currentId)
-
         let prevId
 
-        Number(currentId) >= 2 ? prevId = Number(currentId) - 2 : prevId = Object.entries(carousel_images).length -1;
+        Number(currentId) >= 2 ? prevId = Number(currentId) - 2 : prevId = Object.entries(carousel_images).length - 1;
 
         let prevImage = carousel_images[prevId];
         prevImage = carousel_images[prevId];
@@ -159,14 +146,13 @@ const HistorySectionCarousel = () => {
 
         let currentId = clickedImage.id;
         let nextId = Number(currentId);
-
         let nextImage = carousel_images[nextId];
 
         Number(currentId) < Object.entries(carousel_images).length ?
             setClickedImage({ src: nextImage.src, id: nextImage.id })
             :
             nextId = 0;
-            
+
         nextImage = carousel_images[nextId];
         setClickedImage({ src: nextImage.src, id: nextImage.id })
     }
@@ -220,10 +206,12 @@ const HistorySectionCarousel = () => {
 
                             <img onClick={handleClosingGallery} className='absolute w-[60px] top-[9rem] right-[4rem] cursor-pointer' src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAACXBIWXMAAAsTAAALEwEAmpwYAAABzUlEQVR4nO3cUU4CMRRG4SaGZ1mGPrAEdBWyxPpSdkVi4iZ+M3GIRhMyA+29LfecBUD9MqFF2qZEREREREREREREREREnSVpK+kg6SV1lqTXeWzbNHKSdpJO+ilL2nQwrs08lnPTGHdpxCQ9S/rQ/46e2JIe/iCf+xwO+wKyK/YF5PGwFyC7YC9AHgd7BbIp9grk/rHn1cXviW9ppSX2PPFN77G2U5erkXmZdG2lBfYNyOfeUm9N6+Qb/qDq2BWQp/apx1Z+DjbDroScU69dMelUnyArjaHpvDE8tr7f+/3ukT2xFQ3ZA1tRkS2xFR3ZAlsgt8cWyO2fbIFs8kWiVHqNsT+TjZ7sW3L94SEK9jEMsiN2PGQH7LjIhtggG2CDbIANsgE2yJeq9I0PaCNksA2RwTZEBtsQGWzZIcfFlj1yPGz5IcfBFv/4H/KnrMyT3RA5NXzNoTPYbpDDYxtuoMlhsR22hOVw2I6bHHMY7A627ea7x+5hE7giYHsjhzhaMR9gd0eujN3dRQEcf7PqTg90PqYek/S08ohy4Yhye+zCofv2T3bhGon22IWLUSrHVT8+l1ftU58XBRy6XV0QERERERERERERERGlyH0BBM4Nm7KQeq0AAAAASUVORK5CYII=" alt='' />
 
-                            <img src={clickedImage?.src} id={clickedImage?.id} alt='' className='fixed w-full max-w-[850px] top-[20%] findme' />
+                            <div className='flex justify-center align-middle '>
+                                <img src={clickedImage?.src} id={clickedImage?.id} alt='' className='absolute w-full max-w-[800px] findme top-[40%] left-[50%] translate-x-[-50%] translate-y-[-50%]' />
 
-                            <img id='' src={arrow} onClick={handlePrevImage} className='fixed w-[75px] p-[20px] bg-white rotate-180 top-[47rem] left-[4rem] mx-auto aaaooo' alt='' />
-                            <img src={arrow} onClick={handleNextImage} className='fixed w-[75px] p-[20px] bg-white top-[47rem] right-[4rem] mx-auto' alt='' />
+                                <img id='' src={arrow} onClick={handlePrevImage} className='fixed w-[75px] p-[20px] bg-white rotate-180 top-[47rem] left-[4rem] mx-auto aaaooo' alt='' />
+                                <img src={arrow} onClick={handleNextImage} className='fixed w-[75px] p-[20px] bg-white top-[47rem] right-[4rem] mx-auto' alt='' />
+                            </div>
                         </div>
                         , document.getElementById('root') as HTMLElement)
                 }

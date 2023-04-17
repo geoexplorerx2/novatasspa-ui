@@ -37,7 +37,7 @@ const AnimatedInput: FC<InfoProps> = (props) => {
   // console.log('from input::', value)
   // errors.map((e: any) => console.log(e))
   const errorsKeys = errors && Object.keys(errors)
-  // console.log('errors', errors)
+  // console.log('errorsKeys', errors
 
   return (
     <div className={`${wrapperClassName} ${name && errorsKeys?.includes(name ?? "") ? `border-2 border-red-600` : ''} relative w-full h-[50px] lg:h-[70px] flex items-center  px-[22px] ${isFocused ? `${focusStateStyles} border-black border-[1px]` : 'border-[#DDDDDD] border'}`}>
@@ -53,7 +53,7 @@ const AnimatedInput: FC<InfoProps> = (props) => {
       </label>
 
       
-      {errors && errors?.[name as string]?.length > 0 && <span className='absolute right-[5px] top-[-20px] bg-red-600 rounded-lg text-white p-2'>{errors && errors[name as string]}</span>}
+      {/* {errors && errors?.[name as string]?.length > 0 && <span className='absolute right-[5px] top-[-20px] bg-red-600 rounded-lg text-white p-2'>{errors && errors[name as string]}</span>} */}
 
       {
         inputType === 'textArea'
