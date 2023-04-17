@@ -37,7 +37,7 @@ const AnimatedInput: FC<InfoProps> = (props) => {
   // console.log('from input::', value)
   // errors.map((e: any) => console.log(e))
   const errorsKeys = errors && Object.keys(errors)
-  // console.log('errors', errors)
+  // console.log('errorsKeys', errors
 
   return (
     <div className={`${wrapperClassName} ${name && errorsKeys?.includes(name ?? "") ? `border-2 border-red-600` : ''} relative w-full h-[50px] lg:h-[70px] flex items-center  px-[22px] ${isFocused ? `${focusStateStyles} border-black border-[1px]` : 'border-[#DDDDDD] border'}`}>
