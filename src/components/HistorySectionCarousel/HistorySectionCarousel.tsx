@@ -25,26 +25,26 @@ import arrow from '../../assets/icons/right-arrow-black.png';
 
 const HistorySectionCarousel = () => {
     const carousel_images = [
-        {
-            id: "1",
-            name: "image_1",
-            src: history_carousel_1
-        },
-        {
-            id: "2",
-            name: "image_2",
-            src: history_carousel_2
-        },
-        {
-            id: "3",
-            name: "image_3",
-            src: history_carousel_3
-        },
-        {
-            id: "4",
-            name: "image_4",
-            src: history_carousel_4
-        },
+        // {
+        //     id: "1",
+        //     name: "image_1",
+        //     src: history_carousel_1
+        // },
+        // {
+        //     id: "2",
+        //     name: "image_2",
+        //     src: history_carousel_2
+        // },
+        // {
+        //     id: "3",
+        //     name: "image_3",
+        //     src: history_carousel_3
+        // },
+        // {
+        //     id: "4",
+        //     name: "image_4",
+        //     src: history_carousel_4
+        // },
         {
             id: "5",
             name: "image_1",
