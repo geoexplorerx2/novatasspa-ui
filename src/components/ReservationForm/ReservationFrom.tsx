@@ -79,6 +79,14 @@ const ReservationForm = () => {
           Icon={<HumanAvatar />}
           errors={errors}
         />
+        <AnimatedTelInput
+          value={values} 
+          inputType='telephone'
+          label={'Phone Number'}
+          name='phone'
+          onChange={handleChange}
+          errors={errors}
+        />
         <AnimatedInput
           value={values} 
           inputType='text'
@@ -86,14 +94,6 @@ const ReservationForm = () => {
           name='quickreservation_email'
           onChange={handleChange}
           Icon={<MailIcon />}
-          errors={errors}
-        />
-        <AnimatedTelInput
-          value={values} 
-          inputType='telephone'
-          label={'Phone Number'}
-          name='phone'
-          onChange={handleChange}
           errors={errors}
         />
         <button
