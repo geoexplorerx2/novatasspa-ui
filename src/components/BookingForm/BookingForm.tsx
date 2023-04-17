@@ -71,8 +71,17 @@ const BookingForm: FC<BookingFormProps> = ({ handleChange, handleSubmit, errors,
         {handleSubmit ?? handleSubmit()}
       </div>
 
-      {serverRes?.data ? <div className='border-2 border-green-600 bg-green-600 rounded-md p-5 mb-3 w-fit text-white text-xl mx-auto'><img className='w-8 inline mr-3' src={checkMark} alt='' />Thank you</div> :
+      {serverRes?.data ?
 
+        <div className='flex flex-col items-center space-y-[20px] px-5'>
+          <h2 className='text-[black] text-[28px] font-semibold'>
+            Thanks for your Booking !
+          </h2>
+          <p className='text-lg text-center max-w-[500px]'>
+            {serverRes?.data}
+          </p>
+        </div>
+        :
         <form onSubmit={handleSubmit} className='grid grid-cols-2 w-full gap-[30px]'>
           {/* @ts-ignore */}
 
