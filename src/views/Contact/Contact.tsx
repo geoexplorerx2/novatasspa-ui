@@ -4,6 +4,8 @@ import Map from '../../components/Map/Map';
 import SocialmediaIcons from '../../components/SocialMediaIcons/SocialMediaIcons';
 import { ReactComponent as PhoneCallIcon } from '../../assets/icons/phoneCallIcon.svg'
 import { ReactComponent as MailIcon } from '../../assets/icons/mailIcon.svg'
+import GoogleMap from '../../components/Map/GoogleMap';
+
 
 
 const Contact = () => {
@@ -11,7 +13,8 @@ const Contact = () => {
     <div className='container h-screen'>
       <div className='container grid grid-cols-1 xl:grid-cols-3 gap-x-[30px] lg:mt-4 my-[30px] lg:px-9 2xl:px-0 '>
         <div className='flex flex-col w-full col-span-2 justify-between'>
-          <Map wrapperClassNames='col-span-2' />
+          {/* <Map wrapperClassNames='col-span-2' /> */}
+          <GoogleMap wrapperClassNames='col-span-2 h-[400px]'/>
           <div className='grid grid-cols-5 mb-[25px]'>
 
             <div className='flex space-x-[38px] col-span-3 mt-9'>
