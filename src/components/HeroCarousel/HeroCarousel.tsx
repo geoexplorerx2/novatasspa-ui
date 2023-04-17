@@ -17,18 +17,18 @@ const HeroCarousel = () => {
             body: 'Take a break from your busy life & come relax at Novatas Crystal Spa! Book your session & relieve your stress today!',
             image: { img_2 }
         },
-        {
-            id: 2,
-            header: 'It’s Time to Find Yourself Again',
-            body: 'Take a break from your busy life & come relax at Novatas Crystal Spa! Book your session & relieve your stress today!',
-            image: { img_2 }
-        },
-        {
-            id: 3,
-            header: 'It’s Time to Find Yourself Again',
-            body: 'Take a break from your busy life & come relax at Novatas Crystal Spa! Book your session & relieve your stress today!',
-            image: { img_2 }
-        },
+        // {
+        //     id: 2,
+        //     header: 'It’s Time to Find Yourself Again',
+        //     body: 'Take a break from your busy life & come relax at Novatas Crystal Spa! Book your session & relieve your stress today!',
+        //     image: { img_2 }
+        // },
+        // {
+        //     id: 3,
+        //     header: 'It’s Time to Find Yourself Again',
+        //     body: 'Take a break from your busy life & come relax at Novatas Crystal Spa! Book your session & relieve your stress today!',
+        //     image: { img_2 }
+        // },
     ]
 
     const theContent = carouselContent.map(item => {

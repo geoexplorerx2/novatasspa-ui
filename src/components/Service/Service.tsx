@@ -21,7 +21,7 @@ const Service = ({ data }: any) => {
           {data.description_parapgrath2}
         </div>
         <div className='mt-[30px]'>
-          <ButtonPrimary type="button" className='w-[235px] h-[60px] box-border border-2 border-[#423930]'>
+          <a href='/booking'><ButtonPrimary type="button" className='w-[235px] h-[60px] box-border border-2 border-[#423930]'>
             <span className="font-gotu font-normal text-[22px] text-[#423930] leading-[28px] tracking-[0.02em]">Contact Now</span>
             <span className="text-[#3944B3] ml-2">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -29,7 +29,7 @@ const Service = ({ data }: any) => {
                 <path d="M20.33 12.75H3.5C3.30149 12.7487 3.11149 12.6693 2.97112 12.5289C2.83075 12.3885 2.75131 12.1985 2.75 12C2.75131 11.8015 2.83075 11.6115 2.97112 11.4711C3.11149 11.3307 3.30149 11.2513 3.5 11.25H20.33C20.5285 11.2513 20.7185 11.3307 20.8589 11.4711C20.9993 11.6115 21.0787 11.8015 21.08 12C21.0787 12.1985 20.9993 12.3885 20.8589 12.5289C20.7185 12.6693 20.5285 12.7487 20.33 12.75Z" fill="#423930" />
               </svg>
             </span>
-          </ButtonPrimary>
+          </ButtonPrimary></a>
         </div>
       </div>
     </div>

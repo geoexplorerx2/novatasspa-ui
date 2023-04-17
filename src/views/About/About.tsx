@@ -10,8 +10,8 @@ const About = () => {
     <div className='min-h-screen'>
       <Service data={SERVICES_DATA[0]} />
       <TrustedCompaniesSection />
-      <HistorySectionAboutPage />
-      <MessionVisionSection />
+      {/* <HistorySectionAboutPage /> */}
+      {/* <MessionVisionSection /> */}
     </div>
   )
 };

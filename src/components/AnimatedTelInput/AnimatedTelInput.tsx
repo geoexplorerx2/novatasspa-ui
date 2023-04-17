@@ -44,6 +44,7 @@ const AnimatedTelInput: FC<InfoProps> = (props) => {
     // console.log('telerror', errors)
 
     const errorsKeys = errors && Object.keys(errors)
+    console.log('errorsKeys', errorsKeys)
 
     const flagsDiv = document.querySelector('.react-international-phone-input-container .react-international-phone-country-selector-button') as HTMLElement
     if (flagsDiv) { flagsDiv.style.cssText += 'height: 30px !important; border: none !important; padding-left: 10px !important' };
