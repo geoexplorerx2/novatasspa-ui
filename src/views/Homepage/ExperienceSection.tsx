@@ -9,7 +9,7 @@ import ButtonPrimary from '../../lib/Button/ButtonPrimary'
 const ExperienceSection = () => {
     return (
         <div className={'overflow-hidden'}>
-            <SectionBackground wrapperClassNames='md:h-[1050px] my-20'>
+            <SectionBackground wrapperClassNames=' md:h-[1050px] my-20'>
                 <div className='container grid grid-cols-1 md:grid-cols-2 pt-[68px] md:pt-0 gap-y-[123px] md:gap-y-0'>
                     <div className='h-full w-full max-w-full lg:max-w-[600px] flex flex-col space-y-[30px] items-start justify-center px-11'>
                         <div className='flex space-x-4'>
@@ -30,8 +30,8 @@ const ExperienceSection = () => {
                             </span>
                         </ButtonPrimary>
                     </div>
-                    <div className='relative md:w-[690px] md:h-[767px] md:-top-[130px]'>
-                        <img src={massageImage} alt="massaging image" className='' />
+                    <div className='relative md:-top-[130px] flex justify-end md:inline-block pb-[163px] md:pb-0'>
+                        <img src={massageImage} alt="massaging image" className='w-11/12  md:w-[690px] md:h-[767px]' />
                         <div className='absolute top-[-65px] md:top-auto right-0 md:right-auto  md:-left-8 md:bottom-[30px] bg-white p-7 md:py-14 md:px-12'>
                             <img src={twelve} alt='twelve' className='w-11 md:w-auto' />
                             <span className='text-'>Years<br /> Experience</span>

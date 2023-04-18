@@ -6,9 +6,9 @@ import { ReactComponent as Wave } from '../../assets/icons/wave.svg'
 
 const OurServices: FC = () => {
     return (
-        <div className='container -mt-[430px] overflow-hidden lg:overflow-visible'>
-            <h2 className='text-white text-[64px] font-gotu leading-[74px] tracking-tighter mb-12'>Our <br /> Services</h2>
-            <div className='grid grid-cols-4 gap-[30px]'>
+        <div className='container -mt-[188px] md:-mt-[430px] overflow-hidden lg:overflow-visible'>
+            <h2 className='text-white text-3xl md:text-[64px] font-gotu md:leading-[74px] md:tracking-tighter mb-5 lg:mb-12 px-9 md:px-0'>Our <br className='hidden md:inline-block' /> Services</h2>
+            <div className='grid grid-cols-1 md:grid-cols-4 gap-[30px] px-9 md:px-0'>
                 {ServicesData.map(service => <ServiceCard service={service}/>)}
             </div>
         </div>
