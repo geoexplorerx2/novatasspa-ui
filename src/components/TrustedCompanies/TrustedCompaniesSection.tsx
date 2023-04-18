@@ -14,9 +14,9 @@ import CoffeCompanyLogo from '../../assets/icons/CoffeCompanyLogo.svg'
 const TrustedCompaniesSection: FC = () => {
   return (
     <div className='container mb-16'>
-      <h2 className='text-[44px] tracking-tighter leading-[54px] font-gotu font-normal text-center my-32'>Trusted by 6,000+ Companies < br /> Support Sponsor.</h2>
+      <h2 className='text-2xl md:text-[44px] md:tracking-tighter leading-[54px] font-gotu font-normal text-center my-20 md:my-32'>Trusted by 6,000+ Companies < br /> Support Sponsor.</h2>
       {/* first row of the images */}
-      <div className='grid grid-cols-4 justify-items-center w-full gap-y-[60px] mb-[60px]'>
+      <div className='grid grid-cols-2 lg:grid-cols-4 justify-items-center w-full gap-y-[60px] mb-[60px]'>
         {
           companiesData.slice(0, 4).map(companyData => {
             const { Icon } = companyData;
@@ -29,8 +29,8 @@ const TrustedCompaniesSection: FC = () => {
         }
       </div>
       {/* second row of the images */}
-      <div className='grid grid-cols-5 justify-items-center w-full gap-y-[60px]'>
-        <div></div>
+      <div className='grid grid-cols-2 lg:grid-cols-5 justify-items-center w-full gap-y-[60px]'>
+        <div className='hidden lg:inline-block'></div>
         {
           companiesData.slice(-3).map(companyData => {
             const { Icon } = companyData;
@@ -41,7 +41,7 @@ const TrustedCompaniesSection: FC = () => {
             )
           })
         }
-        <div></div>
+        <div className='hidden lg:inline-block'></div>
       </div>
       <div className='grid grid-cols-3 justify-items-center w-full'>
         {/* {
