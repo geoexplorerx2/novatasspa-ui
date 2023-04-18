@@ -22,7 +22,7 @@ const PriceListCard: FC<PriceListCard_Props> = (props) => {
             <div className='flex flex-col justify-end '>
                 <h1 className='text-[#423930] text-[34px] font-semibold pl-[54px] font-poppins relative'>
                     <span>{service.price}</span>
-                    <span className='absolute top-0 text-[24px]'>$</span>
+                    <span className='absolute top-0 text-[24px]'>€</span>
                 </h1>
                 <button className='text-[13px] font-medium text-[#423930] bookButton inline-flex'>
                     Book Now 

@@ -37,27 +37,28 @@ const HeroCarousel = () => {
         const { id, header, body, image } = item;
 
         return (
-            <div key={id} className='item'>
-                <div className='flex flex-row justify-center items-center relative'>
+            <div key={id} className='item '>
+                <div className='flex max-[393px]:flex-col-reverse flex-row justify-center items-center max-[393px]:items-start relative'>
 
-                    <img src={img_1} alt='' className='absolute top-[60px] right-0 max-w-[1320px] z-[2]' />
-                    <div className='relative'>
-                        <img src={img_2} alt='' className='max-w-[622px] z-[-2] mt-[22px]' />
+                    <img src={img_1} alt='' className='absolute max-[393px]:max-w-[316px] max-[393px]:top-[21rem] top-[60px] right-0 max-[393px]:right-[10px] max-w-[1320px] z-[2]' />
+
+                    <div className='relative max-[393px]:translate-y-[-100px]'>
+                        <img src={img_2} alt='' className='max-w-[622px] max-[393px]:max-w-[225px] z-[-2] mt-[22px]' />
                         <img src={img_3} alt='' className='absolute top-[545px] left-[365px] !w-[463px]' />
                     </div>
 
-                    <div className='ml-[99px] z-[2]'>
-                        <div className='inline-flex'>
+                    <div className='min-[393px]:ml-[99px] z-[2] max-[393px]:pt-[25px] max-[393px]:text-center'>
+                        <div className='inline-flex max-[393px]:text-center'>
                             <Leaf className='text-[#B2A285]' />
                             <Leaf className='rotate-[175deg] ml-[15.6px] text-[#B2A285]' />
                         </div>
 
-                        <h1 className='font-normal text-[#B2A285] text-[64px] leading-[74px] font-gotu'>{header}</h1>
-                        <p className='text-[#423930] text-[18px] mt-[30px] font-poppins'>{body}</p>
+                        <h1 className='font-normal text-[#B2A285] text-[64px] leading-[74px] font-gotu max-[393px]:mt-[25px] max-[393px]:text-[30px] max-[393px]:leading-[40px]'>{header}</h1>
+                        <p className='text-[#423930] text-[18px] mt-[30px] font-poppins max-[393px]:text-[15px]'>{body}</p>
 
                         <a href='/booking'>
-                            <ButtonPrimary type="button" className='w-[229px] h-[60px] box-border border-2 border-[#423930] mt-[30px]'>
-                                <span className="font-gotu font-normal text-[22px] text-[#423930] leading-[28px] tracking-[0.02em]">Book Now</span>
+                            <ButtonPrimary type="button" className='w-[229px] h-[60px] max-[393px]:w-[178px] max-[393px]:h-[46px] box-border border-2 border-[#423930] mt-[30px] max-[393px]:bg-[#FFFFFF66]'>
+                                <span className="font-gotu font-normal text-[22px] text-[#423930] leading-[28px] tracking-[0.02em] max-[393px]:text-[16px]">Book Now</span>
                                 <span className="text-[#423930] ml-2">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M14.4301 18.819C14.3316 18.8194 14.2339 18.8001 14.1429 18.7623C14.0519 18.7245 13.9694 18.669 13.9001 18.599C13.7606 18.4579 13.6824 18.2674 13.6824 18.069C13.6824 17.8706 13.7606 17.6801 13.9001 17.539L19.4401 11.999L13.9001 6.45901C13.7703 6.31636 13.7005 6.12921 13.7051 5.93642C13.7097 5.74364 13.7884 5.56003 13.9248 5.42374C14.0612 5.28744 14.2449 5.20893 14.4377 5.20451C14.6305 5.20009 14.8175 5.27011 14.9601 5.40001L21.0301 11.47C21.1696 11.6111 21.2478 11.8016 21.2478 12C21.2478 12.1984 21.1696 12.3889 21.0301 12.53L14.9601 18.6C14.8907 18.6698 14.8081 18.7252 14.7171 18.7628C14.6261 18.8004 14.5285 18.8195 14.4301 18.819Z" fill="#423930" />
@@ -79,12 +80,12 @@ const HeroCarousel = () => {
                 // nav
                 margin={15}
                 mouseDrag={false}
-                touchDrag={true}
+                touchDrag={false}
                 stagePadding={15}
                 autoplay={true}
                 merge={true}
-                dots={true}
-                slideBy={1}
+                dots={false}
+                slideBy={0}
                 dotsEach={1}
                 loop={true}
                 responsive={
