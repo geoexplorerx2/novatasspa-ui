@@ -6,7 +6,7 @@ import { ReactComponent as Wave } from '../../assets/icons/wave.svg'
 
 const OurServices: FC = () => {
     return (
-        <div className='container -mt-[430px]'>
+        <div className='container -mt-[430px] overflow-hidden lg:overflow-visible'>
             <h2 className='text-white text-[64px] font-gotu leading-[74px] tracking-tighter mb-12'>Our <br /> Services</h2>
             <div className='grid grid-cols-4 gap-[30px]'>
                 {ServicesData.map(service => <ServiceCard service={service}/>)}

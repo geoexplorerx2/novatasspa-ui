@@ -8,15 +8,15 @@ import ButtonPrimary from '../../lib/Button/ButtonPrimary'
 
 const ExperienceSection = () => {
     return (
-        <div>
-            <SectionBackground wrapperClassNames='h-[1050px] my-20'>
-                <div className='container grid grid-cols-2'>
-                    <div className='h-full w-full max-w-[600px] flex flex-col space-y-[30px] items-start justify-center'>
+        <div className={'overflow-hidden'}>
+            <SectionBackground wrapperClassNames='md:h-[1050px] my-20'>
+                <div className='container grid grid-cols-1 md:grid-cols-2 pt-[68px] md:pt-0 gap-y-[123px] md:gap-y-0'>
+                    <div className='h-full w-full max-w-full lg:max-w-[600px] flex flex-col space-y-[30px] items-start justify-center px-11'>
                         <div className='flex space-x-4'>
                             <Leaf className='text-white' />
                             <Leaf className='text-white rotate-[175deg]' />
                         </div>
-                        <h2 className='text-white text-[64px] font-gotu leading-[74px] tracking-tighter'>Treat Yourself to a Blissful Escape</h2>
+                        <h2 className='text-white text-3xl lg:text-[64px] font-gotu md:leading-[74px] md:tracking-tighter'>Treat Yourself to a Blissful Escape</h2>
                         <p className='text-white text-lg '>Revitalize your body and mind with our professional massage therapists practicing traditional as well as modern therapeutic techniques.</p>
                         {/* <button className='flex justify-between border border-white text-white px-8 py-4'>Learn More <ArrowRight className='ml-[30px]'/> </button> */}
 
@@ -30,10 +30,10 @@ const ExperienceSection = () => {
                             </span>
                         </ButtonPrimary>
                     </div>
-                    <div className='relative w-[690px] h-[767px] -top-[130px]'>
+                    <div className='relative md:w-[690px] md:h-[767px] md:-top-[130px]'>
                         <img src={massageImage} alt="massaging image" className='' />
-                        <div className='absolute -left-8 bottom-[30px] bg-white py-14 px-12'>
-                            <img src={twelve} alt='twelve' />
+                        <div className='absolute top-[-65px] md:top-auto right-0 md:right-auto  md:-left-8 md:bottom-[30px] bg-white p-7 md:py-14 md:px-12'>
+                            <img src={twelve} alt='twelve' className='w-11 md:w-auto' />
                             <span className='text-'>Years<br /> Experience</span>
                         </div>
                     </div>
