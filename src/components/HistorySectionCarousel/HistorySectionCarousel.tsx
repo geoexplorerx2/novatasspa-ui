@@ -187,7 +187,10 @@ const HistorySectionCarousel = () => {
                                 '1': {
                                     items: 1
                                 },
-                                '1025': {
+                                '600': {
+                                    items: 1
+                                },
+                                '900': {
                                     items: 2
                                 },
                                 '1400': {
