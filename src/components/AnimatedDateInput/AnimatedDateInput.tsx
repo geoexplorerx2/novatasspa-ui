@@ -71,6 +71,8 @@ const AnimatedDateInput: FC<AnimatedDateInputPropsType> = (props) => {
                 {label}
             </label>
 
+            {errors && errors?.[name as string]?.length > 0 && <span className='absolute right-[5px] top-[-20px] bg-red-600 rounded-lg text-white p-2'>{errors && errors[name as string]}</span>}
+
             <DateInput
                 // value={value ?? inputValue}
                 onChange={handleDateChange}
