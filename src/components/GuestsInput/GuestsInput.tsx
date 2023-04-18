@@ -7,12 +7,14 @@ interface GuestsInputPros {
     handleChange?: Function;
     // handleChange: (guests: GuestsType) => void
     label?: string,
-    value?: GuestsType
+    value?: GuestsType,
+    name?: string,
+    errors?: any;
 };
 
 
 const GuestsInput: FC<GuestsInputPros> = (props) => {
-    const { label, value, handleChange } = props
+    const { label, value, handleChange, name='guests', errors } = props
     const [isPopoverOpen, setIsPopoverOpen] = useState(false)
     const [guestsCount, setGuestsCount] = useState(
         {
@@ -77,11 +79,14 @@ const GuestsInput: FC<GuestsInputPros> = (props) => {
 
     const totalGuestsCount = guestsCount.femaleCount + guestsCount.maleCount;
 
+    const errorsKeys = errors && Object.keys(errors)
+
     return (
-        <div className={`relative w-full h-[50px] lg:h-[70px] flex items-center pl-[22px] rounded-[10px] border-[#DDDDDD] border hover:bg-white transition-all ${isPopoverOpen ? "bg-white" : "bg-[#f7f7f7]"}`}
+        <div className={`relative ${errorsKeys?.includes(name ?? "") ? ' border-2 !border-red-700' : ''} w-full h-[50px] lg:h-[70px] flex items-center pl-[22px] rounded-[10px] border-[#DDDDDD] border hover:bg-white transition-all ${isPopoverOpen ? "bg-white" : "bg-[#f7f7f7]"}`}
             onClick={() => { setIsPopoverOpen(true) }}
             ref={wrapperRef}
         >
+            {errors && errors?.[name as string]?.length > 0 && <span className='absolute right-[5px] top-[-20px] bg-red-600 rounded-lg text-white p-2'>{errors && errors[name as string]}</span>}
             <div className={``}>
                 <PeopleAvatar />
             </div>
@@ -97,6 +102,7 @@ const GuestsInput: FC<GuestsInputPros> = (props) => {
                     {totalGuestsCount > 1 ? 'People' : 'Person'}
                 </span>
             </div>
+
 
             <div className={`max-w-full absolute top-[70px] left-0 transition-all duration-500 z-20 ${isPopoverOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}>
                 <div className='grid grid-cols-2 gap-4 h-full border rounded-[10px] bg-white p-4 shadow-[0_30px_30px_-30px_rgba(0,0,0,0.2)]'>

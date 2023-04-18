@@ -3,6 +3,7 @@ import {ReactComponent as FaceBookIcon} from '../../assets/icons/FacebookIcon.sv
 import {ReactComponent as TwitterIcon} from '../../assets/icons/TwitterIcon.svg' 
 import {ReactComponent as InstagramIcon} from '../../assets/icons/InstagramIcon.svg' 
 import {ReactComponent as YoutubeIcon} from '../../assets/icons/YoutubeIcon.svg' 
+import {ReactComponent as WhatsappIcon} from '../../assets/icons/whatsapp.svg'
 
 interface SocialMediaIconsProps {
     wrapperClassNames?: string
@@ -16,7 +17,7 @@ const SocialMediaIcons: FC<SocialMediaIconsProps> = (props) => {
         {socialmediaIconsData.map(item => {
             const { Icon, href } = item
             return (
-            <a href={href}>
+            <a target='_blank' rel='noreferrer' className='' href={href}>
                 <Icon />
             </a>)
         })}
@@ -48,6 +49,12 @@ const socialmediaIconsData = [
         href: '#',
         Icon: YoutubeIcon,
         id: '4'
+    },
+    {
+        label: 'Whatsapp',
+        href: 'https://wa.me/905417600248',
+        Icon: WhatsappIcon,
+        id: '5'
     },
 ]
 
