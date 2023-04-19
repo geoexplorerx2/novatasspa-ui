@@ -66,14 +66,6 @@
   bottom: 20px !important;
 }
 
-.owl-carousel .owl-nav button.owl-prev,
-.owl-carousel .owl-nav button.owl-next {
-  width: 60px !important;
-  height: 60px !important;
-  border: 2px solid #FFFFFF !important;
-  background-color: #fff !important;
-}
-
 .owl-next {
   position: absolute !important;
   right: -25px !important;
@@ -95,13 +87,44 @@
 }
 
 @media screen and (min-width: 1250px) {
-  .historySection  .owl-carousel .owl-stage-outer {
+  .historySection .owl-carousel .owl-stage-outer {
     max-height: 300px;
   }
+
   .owl-prev {
     top: 8rem !important;
   }
+
   .owl-next {
     top: 8rem !important;
+  }
+}
+
+.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel .owl-nav button.owl-next {
+  width: 60px !important;
+  height: 60px !important;
+  border: 2px solid #FFFFFF !important;
+  background-color: #fff !important;
+}
+
+@media screen and (max-width: 780px) {
+
+  .owl-carousel .owl-nav button.owl-prev,
+  .owl-carousel .owl-nav button.owl-next {
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  .owl-next {
+    position: absolute !important;
+    right: 7px !important;
+    top: 90px !important;
+  }
+  
+  .owl-prev {
+    position: absolute !important;
+    left: 7px !important;
+    top: 90px !important;
   }
 }

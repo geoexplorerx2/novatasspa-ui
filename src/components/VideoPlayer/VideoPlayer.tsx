@@ -1,7 +1,9 @@
 import React, { useState, useRef, useEffect } from 'react';
 import play from '../../assets/icons/play.svg';
 import pause from '../../assets/icons/pause.png';
-import vid_poster from '../../assets/images/vid_poster.png';
+import vid_poster from '../../assets/images/vid_poster_cropped.png';
+// import video from '../../assets/videos/video.mp4';
+
 
 const VideoPlayer = () => {
     const [isPlaying, setIsPlaying] = useState(false);
@@ -40,7 +42,6 @@ const VideoPlayer = () => {
             progress_unformatted = length - (currentTime ? currentTime : 0);
             setProgress(secondsToMinutes(progress_unformatted))
         }
-
     }
 
 
@@ -58,7 +59,7 @@ const VideoPlayer = () => {
                 // controls
                 poster={vid_poster}
             >
-                <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4" />
+                <source src="https://novatasspa.s3.amazonaws.com/Novatasspa.mp4" type="video/mp4" />
             </video>
 
             <div className='absolute flex left-[30px] bottom-[30px]' >
@@ -71,8 +72,8 @@ const VideoPlayer = () => {
                 </button>
 
                 <div className='ml-[30px]'>
-                    <p className='font-medium text-[16px] text-white font-poppins'>{progress ? progress : '9:56'}</p>
-                    <h1 className='text-white text-[34px] font-gotu'>History, Purpose <br/> and Usage</h1>
+                    <p className='font-medium text-[16px] text-white font-poppins'>{progress ? progress : '0:39'}</p>
+                    <h1 className='text-white md:text-[25px] text-[25px] font-gotu'>History, Purpose <br/> and Usage</h1>
                 </div>
             </div>
 

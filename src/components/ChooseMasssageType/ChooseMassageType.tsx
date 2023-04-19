@@ -15,7 +15,7 @@ interface ChooseMassageProps {
   name?: any;
 };
 
-const ChooseMassage: FC<ChooseMassageProps> = ({ onChange, errors, name }) => {
+const ChooseMassage: FC<ChooseMassageProps> = ({ onChange, errors, name = 'massages' }) => {
 
   const [selectedItems, setSelectedItems] = useState<Record<string, boolean>>(() => {
     let initialSelectedItems: Record<string, boolean> = {}
@@ -41,9 +41,11 @@ const ChooseMassage: FC<ChooseMassageProps> = ({ onChange, errors, name }) => {
   }, [selectedItems]);
 
   return (
-    <div className={`w-full col-span-2` }>
+    <div className={`w-full col-span-2`}>
       <h3 className={`mb-3 font-medium border-2 border-white w-fit p-2 rounded-lg ${errorsKeys?.includes(name ?? "") ? ' border-2 !border-red-700' : ''}`}>Massage</h3>
-      <div className='grid grid-cols-4 gap-[30px]'>
+
+      <div className='grid grid-cols-4 gap-[30px] relative'>
+        {errors && errors?.[name as string]?.length > 0 && <span className='absolute right-[0px] top-[-50px] bg-red-600 rounded-lg text-white p-2'>{errors[name as string]}</span>}
         {
           MassageTypesData.map((massageType, index) => {
             const { label, value, Icon, id } = massageType
