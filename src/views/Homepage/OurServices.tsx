@@ -47,9 +47,9 @@ const ServiceCard: FC<ServiceCardProps> = (props) => {
                 <div>
                     <div className={`flex justify-end ${isHovered ? 'text-white' : ''}`}>
                         <span className='font-medium text-2xl mr-1'>
-                            {price}
+                        €{price}
                         </span>
-                        <span className='text-xs inline-block font-medium'>€</span>
+                        {/* <span className='text-xs inline-block font-medium'>€</span> */}
                     </div>
                     <p className={`flex justify-end ${isHovered ? 'text-white' : ''} text-black`}>{duration} minutes per person</p>
                     <div className={`${isHovered ? 'text-white' : 'text-black'} flex space-x-4`}>

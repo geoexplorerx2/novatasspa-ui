@@ -83,7 +83,8 @@
 }
 
 .historySection .owl-carousel .owl-stage-outer {
-  max-height: 215px;
+  max-height: 225px;
+  /* padding-bottom: 200px; */
 }
 
 @media screen and (min-width: 1250px) {
@@ -127,4 +128,8 @@
     left: 7px !important;
     top: 90px !important;
   }
+}
+
+.styles_chatBody__neBf9 .styles_message__lF-t3 {
+  max-width: calc(100% - 20px) !important;
 }

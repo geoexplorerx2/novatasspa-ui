@@ -17,8 +17,8 @@ const HistorySection = () => {
     };
 
     return (
-        <SectionBackground wrapperClassNames='lg:h-[1050px] h-[950px] mt-[162px] mb-[252px] overflow-hidden' backgroundDivClassNames='bg-[#B2A285]' >
-            <LetterTape wrapperClassName='absolute flex justify-center items-center opacity-10  top-[-62px] z-[-1]' />
+        <SectionBackground wrapperClassNames='lg:h-[1050px] h-[950px] mt-[162px] mb-[252px]' backgroundDivClassNames='bg-[#B2A285]' >
+            <LetterTape wrapperClassName='absolute flex justify-center items-center opacity-10 overflow-hidden top-[-62px] z-[-1] max-w-[100vw]' />
 
             <div className='flex flex-col-reverse lg:grid lg:grid-cols-2 justify-center items-center container'>
 
