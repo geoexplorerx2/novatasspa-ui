@@ -34,7 +34,8 @@ const MenuItem: FC<MenuItem> = (props) => {
 
   const handleNavigation = (item: NavigationItemType) => {
     // goToPage(item.href);
-    navigate(item.href)
+    let activeLang = localStorage.getItem('activeLang');
+    navigate(`${activeLang + item.href}`)
     setIsMenuOpen(false)
 
   };
@@ -101,7 +102,7 @@ const MainMenu: FC = () => {
 
       }
       if(!isMenuOpen){
-        // document.body.style.height = 'unset'
+          // document.body.style.height = 'unset'
           // document.body.style.overflowY = 'unset';
           document.body.style.position = '';
           document.body.style.top = '';
