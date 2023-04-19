@@ -104,7 +104,7 @@ export default function FloatingWhatsApp({
   buttonStyle,
   buttonClassName = 'floating-whatsapp-button',
 
-  chatboxHeight = 345,
+  chatboxHeight = 400,
   chatboxStyle,
   chatboxClassName = 'floating-whatsapp-chatbox',
 

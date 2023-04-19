@@ -28,6 +28,9 @@ const Service = ({ data }: any) => {
         <div className='font-poppins font-normal lg:w-[570px] text-[15px] lg:text-[18px] text-[#423930] mt-[30px] leading-[28px] tracking-[0.02em] text-center lg:text-left px-[37px] lg:px-0'>
           {data.description_parapgrath2}
         </div>
+        <div className='font-poppins font-normal lg:w-[570px] text-[15px] lg:text-[18px] text-[#423930] mt-[30px] leading-[28px] tracking-[0.02em] text-center lg:text-left px-[37px] lg:px-0'>
+          {data.description_parapgrath3}
+        </div>
         <div className='mt-[30px] mx-auto lg:mx-0'>
 
         <a onClick={handleBookingClick} ><ButtonPrimary type="button" className='lg:w-[235px] w-[200px] lg:h-[60px] h-[46px] box-border border-2 border-[#423930]'>

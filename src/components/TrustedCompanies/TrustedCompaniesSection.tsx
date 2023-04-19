@@ -15,7 +15,7 @@ import { Icon } from 'leaflet'
 const TrustedCompaniesSection: FC = () => {
   return (
     <div className='container mb-16'>
-      <h2 className='text-2xl md:text-[44px] md:tracking-tighter leading-[54px] font-gotu font-normal text-center my-20 md:my-32'>Trusted by 6,000+ Companies < br />Our References</h2>
+      <h2 className='text-2xl md:text-[44px] md:tracking-tighter leading-[54px] font-gotu font-normal text-center my-20 md:my-32'>Our References</h2>
       {/* first row of the images */}
       {/* <div className='grid grid-cols-2 lg:grid-cols-4 justify-items-center w-full gap-y-[60px] mb-[60px]'>
         {
@@ -47,9 +47,9 @@ const TrustedCompaniesSection: FC = () => {
 
       <div className='grid md:grid-cols-3 grid-cols-2'>
         {companiesData.map(item => {
-          const { Icon } = item
+          const { Icon, className } = item;
           return (
-            <img src={Icon} className='!min-w-[150px] mb-10' />
+            <img src={Icon} className={`mb-10 ${className} mx-auto`} alt='' />
           )
         })}
       </div>
@@ -75,34 +75,40 @@ const TrustedCompaniesSection: FC = () => {
 
 const companiesData = [
   {
-    label: 'The Backyard',
+    label: 'Nova Plaza Hotel',
     Icon: logo_1,
-    id: '1'
+    id: '1',
+    className: '-translate-y-[15px]'
   },
   {
-    label: 'Natural Brand',
+    label: 'Zer Architects',
     Icon: logo_2,
-    id: '2'
+    id: '2',
+    className: 'max-w-[200px]'
   },
   {
-    label: 'Leaf Natural Brand',
+    label: 'Vipser',
     Icon: logo_3,
-    id: '3'
+    id: '3',
+    className: 'max-w-[200px]'
   },
   {
-    label: 'Smile',
+    label: 'Arpanu Travel',
     Icon: logo_4,
-    id: '4'
+    id: '4',
+    className: 'max-w-[240px]'
   },
   {
-    label: 'Microwave',
+    label: 'Book Perfect',
     Icon: logo_5,
-    id: '5'
+    id: '5',
+    className: 'max-w-[300px]'
   },
   {
-    label: 'Natural Nature Beauty',
+    label: 'Arpanu Medical',
     Icon: logo_6,
-    id: '6'
+    id: '6',
+    className: 'max-w-[300px]'
   },
 ]
 

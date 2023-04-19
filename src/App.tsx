@@ -5,6 +5,7 @@ import './App.css';
 import { MasterFooter, MasterHeader } from './components';
 import { FloatingWhatsApp } from './components/FloatingWhatsApp';
 import Routers from './routers';
+import ScrollToTop from './components/MasterHeader/ScrollToTop';
 
 interface AppProps {
 };
@@ -27,6 +28,7 @@ const App: FC<AppProps> = () => {
   
   return (
     <Router>
+      <ScrollToTop />
       <MasterHeader />
       <Routers />
       <FloatingWhatsApp
