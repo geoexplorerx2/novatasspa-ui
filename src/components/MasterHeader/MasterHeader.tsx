@@ -31,7 +31,7 @@ const MasterHeader = () => {
 
     return (
         <div className='sticky top-0 z-[1000] bg-white'>
-            <div className="h-[123px] container py-5 relative  flex justify-between items-center overflow-hidden">
+            <div className="h-[123px] container py-5 px-5 md:px-0 relative  flex justify-between items-center overflow-hidden">
                 <div className="flex justify-start">
                     {/* <div className='flex space-x-[20px] cursor-pointer'>
                     <div className=''>
