@@ -77,15 +77,17 @@ const BookingForm: FC<BookingFormProps> = ({ handleChange, handleSubmit, errors,
           </p>
         </div>
         :
-        <form onSubmit={handleSubmit} className='grid grid-cols-2 w-full gap-[30px]'>
-          {/* @ts-ignore */}
-
+        <form onSubmit={handleSubmit}>
+          <div className='grid grid-cols-1 w-full gap-[30px]'>
+           
+        {/* @ts-ignore */}
           <AnimatedDateInput
             handleChange={handleChange}
             //   value={values.date} 
             // setValue={setValues} 
             label="Reservation Date"
             errors={errors}
+            wrapperClassNames='col-span-2 md:col-span-1'
           />
 
           <AnimatedTimeInput
@@ -93,6 +95,7 @@ const BookingForm: FC<BookingFormProps> = ({ handleChange, handleSubmit, errors,
             label="Reservation Time"
             // value={values.time}
             errors={errors}
+            wrapperClassNames='col-span-2 md:col-span-1'
           />
 
           <AnimatedInput
@@ -103,9 +106,10 @@ const BookingForm: FC<BookingFormProps> = ({ handleChange, handleSubmit, errors,
             handleChange={handleChange}
             // onChange={(e: any) => handleChange(e)}
             Icon={<HumanAvatar />}
-            wrapperClassName={`transition-all bg-[#F7F7F7] hover:bg-white rounded-[10px]`}
+            wrapperClassName={`transition-all bg-[#F7F7F7] hover:bg-white rounded-[10px] col-span-2 md:col-span-1`}
             focusStateStyles='bg-white'
             errors={errors}
+            
           />
 
           <GuestsInput
@@ -114,13 +118,14 @@ const BookingForm: FC<BookingFormProps> = ({ handleChange, handleSubmit, errors,
             // handleChange={handleGuestsChange}
             handleChange={handleChange}
             errors={errors}
+            wrapperClassNames='col-span-2 md:col-span-1 col-span-2 md:col-span-1'
           />
 
           <AnimatedTelInput
             label={'Phone Number '}
             name='phone'
             onChange={(e: any) => handleChange(e, 'phone')}
-            wrapperClassName={`transition-all bg-[#F7F7F7] hover:bg-white rounded-[10px]`}
+            wrapperClassName={`transition-all bg-[#F7F7F7] hover:bg-white rounded-[10px] col-span-2 md:col-span-1`}
             focusStateStyles='bg-white'
             errors={errors}
           />
@@ -132,7 +137,7 @@ const BookingForm: FC<BookingFormProps> = ({ handleChange, handleSubmit, errors,
             name='email'
             onChange={(e: any) => handleChange(e)}
             Icon={<AtSignIcon />}
-            wrapperClassName={`transition-all bg-[#F7F7F7] hover:bg-white rounded-[10px]`}
+            wrapperClassName={`transition-all bg-[#F7F7F7] hover:bg-white rounded-[10px] col-span-2 md:col-span-1`}
             focusStateStyles='bg-white'
             errors={errors}
           />
@@ -150,6 +155,8 @@ const BookingForm: FC<BookingFormProps> = ({ handleChange, handleSubmit, errors,
               Book Now
             </span>
           </button>
+          </div>
+         
 
         </form>
       }

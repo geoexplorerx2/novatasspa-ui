@@ -10,11 +10,12 @@ interface GuestsInputPros {
     value?: GuestsType,
     name?: string,
     errors?: any;
+    wrapperClassNames?: string
 };
 
 
 const GuestsInput: FC<GuestsInputPros> = (props) => {
-    const { label, value, handleChange, name='guests', errors } = props
+    const { label, value, handleChange, name='guests', errors, wrapperClassNames } = props
     const [isPopoverOpen, setIsPopoverOpen] = useState(false)
     const [guestsCount, setGuestsCount] = useState(
         {
@@ -82,7 +83,7 @@ const GuestsInput: FC<GuestsInputPros> = (props) => {
     const errorsKeys = errors && Object.keys(errors)
 
     return (
-        <div className={`relative ${errorsKeys?.includes(name ?? "") ? ' border-2 !border-red-700' : ''} w-full h-[50px] lg:h-[70px] flex items-center pl-[22px] rounded-[10px] border-[#DDDDDD] border hover:bg-white transition-all ${isPopoverOpen ? "bg-white" : "bg-[#f7f7f7]"}`}
+        <div className={`${wrapperClassNames} relative ${errorsKeys?.includes(name ?? "") ? ' border-2 !border-red-700' : ''} w-full h-[50px] lg:h-[70px] flex items-center pl-[22px] rounded-[10px] border-[#DDDDDD] border hover:bg-white transition-all ${isPopoverOpen ? "bg-white" : "bg-[#f7f7f7]"}`}
             onClick={() => { setIsPopoverOpen(true) }}
             ref={wrapperRef}
         >
