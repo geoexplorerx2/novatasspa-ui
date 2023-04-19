@@ -10,7 +10,7 @@ const LetterTape: FC<LetterTapeProps> = (props) => {
 
 
     return (
-        <div className='flex'>
+        <div className='flex overflow-hidden' >
             <div className={`${wrapperClassName}`}>
                 {LETTERS_TAPE.map((letter: any) => (
                     <img src={letter.letter} alt='' className={letter.className} />

@@ -44,7 +44,7 @@ const HeroCarousel = () => {
             <div key={id} className='item '>
                 <div className='flex flex-col-reverse md:flex-row justify-center md:items-center items-start relative'>
 
-                    <img src={img_1} alt='' className='absolute max-w-[316px] top-[24rem] lg:top-[60px] lg:right-0 right-[-8px] mx-[10%] lg:max-w-[1320px] z-[2]' />
+                    <img src={img_1} alt='' className='absolute max-w-[316px] top-[24rem] lg:top-[60px] md:top-[10px] lg:right-0 right-[-8px] mx-[10%] lg:max-w-[1320px] md:max-w-[1020px] z-[2]' />
 
                     <div className='relative max-[393px]:translate-y-[-100px]'>
                         <img src={img_2} alt='' className='lg:max-w-[622px] md:max-w-[350px] max-w-[225px] z-[-2] mt-[22px] mx-[10%]' />
