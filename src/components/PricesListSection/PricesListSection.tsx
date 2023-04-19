@@ -30,7 +30,7 @@ const PricesListSection = () => {
                 },
                 {
                     hamamid: 2,
-                    name: 'Neyl-ü Fer Hammam',
+                    name: 'Lotus Hammam',
                     time: '50 min.',
                     price: '75',
                     image: prices_list_3
@@ -57,7 +57,7 @@ const PricesListSection = () => {
                 },
                 {
                     hamamid: 3,
-                    name: 'Lotus Package',
+                    name: 'Tulip Package',
                     time: '100 min.',
                     price: '110',
                     image: prices_list_3
@@ -84,7 +84,7 @@ const PricesListSection = () => {
                 },
                 {
                     hamamid: 2,
-                    name: 'Head&shoulders Massage',
+                    name: 'Head & shoulders Massage',
                     time: '25 min.',
                     price: '30',
                     image: prices_list_2
@@ -98,14 +98,14 @@ const PricesListSection = () => {
                 },
                 {
                     hamamid: 4,
-                    name: 'Klasic Massage',
+                    name: 'Classic Massage',
                     time: '50 min.',
                     price: '50',
                     image: prices_list_4
                 },
                 {
                     hamamid: 5,
-                    name: 'Anti-stress Massage',
+                    name: 'Anti-Stress Massage',
                     time: '50 min.',
                     price: '65',
                     image: prices_list_5
