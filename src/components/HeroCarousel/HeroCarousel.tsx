@@ -77,8 +77,8 @@ const HeroCarousel = () => {
         )
     })
 
-    return (
-        <div className='container relative'>
+    return ( 
+        <div className='container relative overflow-hidden'>
             {/* <OwlCarousel className='owl-theme'
                 // nav
                 margin={15}
