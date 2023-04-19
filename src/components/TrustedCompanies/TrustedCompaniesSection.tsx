@@ -3,12 +3,12 @@ import React, { FC } from 'react'
 // import { ReactComponent as NaturalBrandCompanyLogo } from '../../assets/icons/NaturalBrandCompanyLogo.svg'
 // import { ReactComponent as LeafNaturalBrandCompanyLogo } from '../../assets/icons/LeafNaturalBrandCompanyLogo.svg'
 // import { ReactComponent as MicrowavecompanyLogo } from '../../assets/icons/MicrowavecompanyLogo.svg'
-import BackyardCompanyLogo from '../../assets/icons/BackyardCompanyLogo.svg'
-import NaturalBrandCompanyLogo from '../../assets/icons/NaturalBrandCompanyLogo.svg'
-import LeafNaturalBrandCompanyLogo from '../../assets/icons/LeafNaturalBrandCompanyLogo.svg'
-import MicrowavecompanyLogo from '../../assets/icons/MicrowavecompanyLogo.svg'
-import SmileCompanyIcon from '../../assets/icons/SmileCompanyIcon.svg'
-import CoffeCompanyLogo from '../../assets/icons/CoffeCompanyLogo.svg'
+import logo_1 from '../../assets/logo/logolar_02.svg'
+import logo_2 from '../../assets/logo/logolar-03.svg'
+import logo_3 from '../../assets/logo/logolar-04.svg'
+import logo_4 from '../../assets/logo/logolar-05.svg'
+import logo_5 from '../../assets/logo/logolar-06.svg'
+import logo_6 from '../../assets/logo/logolar-07.svg'
 
 
 const TrustedCompaniesSection: FC = () => {
@@ -22,7 +22,7 @@ const TrustedCompaniesSection: FC = () => {
             const { Icon } = companyData;
             return (
               <div>
-                <img src={Icon} />
+                <img src={Icon} className='!w-[300px]'  />
               </div>
             )
           })
@@ -36,7 +36,7 @@ const TrustedCompaniesSection: FC = () => {
             const { Icon } = companyData;
             return (
               <div>
-                <img src={Icon} />
+                <img src={Icon} className='!w-[300px]' />
               </div>
             )
           })
@@ -65,38 +65,33 @@ const TrustedCompaniesSection: FC = () => {
 const companiesData = [
   {
     label: 'The Backyard',
-    Icon: BackyardCompanyLogo,
+    Icon: logo_1,
     id: '1'
   },
   {
     label: 'Natural Brand',
-    Icon: NaturalBrandCompanyLogo,
+    Icon: logo_2,
     id: '2'
   },
   {
     label: 'Leaf Natural Brand',
-    Icon: LeafNaturalBrandCompanyLogo,
+    Icon: logo_3,
     id: '3'
   },
   {
     label: 'Smile',
-    Icon: SmileCompanyIcon,
+    Icon: logo_4,
     id: '4'
   },
   {
     label: 'Microwave',
-    Icon: MicrowavecompanyLogo,
+    Icon: logo_5,
     id: '5'
   },
   {
     label: 'Natural Nature Beauty',
-    Icon: LeafNaturalBrandCompanyLogo,
+    Icon: logo_6,
     id: '6'
-  },
-  {
-    label: 'Cofee',
-    Icon: CoffeCompanyLogo,
-    id: '7'
   },
 ]
 

@@ -7,7 +7,7 @@ const Services = () => {
   return (
     <div className='container'>
       {
-        SERVICES_DATA.map((service: any, idx: number) => (
+        SERVICES_DATA.filter((a , _ ) => _ < 1).map((service: any, idx: number) => (
           idx % 2 == 0 ?
             <Service data={service} /> :
             <ServicePosTranslate data={service} />

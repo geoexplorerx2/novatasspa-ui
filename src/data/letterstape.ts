@@ -41,7 +41,7 @@ export const LETTERS_TAPE = [
     },
     {
         letter: a_letter,
-        className: 'md:mr-[46.76px] md:w-full w-[48px] mr-[12.7px]'
+        className: 'md:mr-[32.7px] md:w-full w-[48px] mr-[12.7px]'
     },
     {
         letter: s_letter,
@@ -89,7 +89,7 @@ export const LETTERS_TAPE = [
     },
     {
         letter: a_letter,
-        className: 'md:mr-[32.7px] md:w-full w-[20px] mr-[12.7px]'
+        className: 'md:mr-[32.7px] md:w-full w-[48px] mr-[12.7px]'
     },
     {
         letter: t_letter,
@@ -97,7 +97,7 @@ export const LETTERS_TAPE = [
     },
     {
         letter: a_letter,
-        className: 'md:mr-[46.76px] md:w-full w-[20px] mr-[12.7px]'
+        className: 'md:mr-[32.7px] md:w-full w-[48px] mr-[12.7px]'
     },
     {
         letter: s_letter,
