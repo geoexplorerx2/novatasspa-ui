@@ -1,8 +1,15 @@
 import React from 'react';
 import ButtonPrimary from '../../lib/Button/ButtonPrimary';
+import { useNavigate } from 'react-router-dom';
 
 const Service = ({ data }: any) => {
-  let activeLang = localStorage.getItem('activeLang');
+  const navigate = useNavigate();
+  const activeLang = localStorage.getItem('activeLang');
+  
+  const handleBookingClick = () => {
+    navigate(`/${activeLang}/booking`);
+};
+
   return (
     <div className='container flex lg:flex-row flex-col lg:pt-[100px] pt-[32px] pb-[23px] lg:gap-x-[150px]'>
       <div>
@@ -23,7 +30,7 @@ const Service = ({ data }: any) => {
         </div>
         <div className='mt-[30px] mx-auto lg:mx-0'>
 
-        <a href={`${activeLang}/booking`}><ButtonPrimary type="button" className='lg:w-[235px] w-[200px] lg:h-[60px] h-[46px] box-border border-2 border-[#423930]'>
+        <a onClick={handleBookingClick} ><ButtonPrimary type="button" className='lg:w-[235px] w-[200px] lg:h-[60px] h-[46px] box-border border-2 border-[#423930]'>
             <span className="font-gotu font-normal lg:text-[22px] text-[16px] text-[#423930] leading-[28px] tracking-[0.02em]">Contact Now</span>
             <span className="text-[#3944B3] ml-2">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -16,7 +16,7 @@ const MenuItems: FC<MenuItemsProps> = ({
   let activeLang = localStorage.getItem('activeLang');
 
   const handleNavLink = (item: NavigationItemType) => {
-    urlNavigate(`${activeLang+'/'+item.href}`)
+    urlNavigate(`${item.href != '/' ? activeLang+'/'+item.href : item.href}`);
   };
 
   const RenderItem = (item: NavigationItemType) => {
@@ -28,7 +28,7 @@ const MenuItems: FC<MenuItemsProps> = ({
           target={item.targetBlank ? "_blank" : undefined}
           rel="noopener noreferrer"
           className={`inline-flex items-center xl:text-xs whitespace-nowrap px-[.1vw]`}
-          to={item.href}
+          to={`${item.href != '/' ? activeLang + item.href : item.href}`}
           onClick={(e: any) => { handleNavLink(item) }}
         >
           <span className={`font-poppins font-normal text-[20px] text-[#FFFFFF] px-4 leading-[14px] tracking-[0.02em]`}>

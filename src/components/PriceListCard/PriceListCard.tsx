@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import ArrowRight from '../../assets/icons/right-arrow-black.png'
+import { useNavigate } from 'react-router-dom';
 
 interface PriceListCard_Props {
     service?: any,
@@ -7,11 +8,21 @@ interface PriceListCard_Props {
 
 
 const PriceListCard: FC<PriceListCard_Props> = (props) => {
-    const { service } = props
+    const { service } = props;
+    const navigate = useNavigate();
     let activeLang = localStorage.getItem('activeLang');
+
+    const handleBookingClick = () => {
+        navigate(`/${activeLang}/booking`);
+    };
+
     return (
 
-        <a href={`${activeLang}/booking`}><div className='flex items-center cursor-pointer priceListCard mt-[30px]' key={service.hamamid}>
+        <a 
+        //   href={`${activeLang}/booking`} 
+          onClick={handleBookingClick}
+        >
+            <div className='flex items-center cursor-pointer priceListCard mt-[30px]' key={service.hamamid}>
 
             <img src={service.image} alt='' className="" />
             
