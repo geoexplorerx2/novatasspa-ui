@@ -7,10 +7,10 @@ import { SERVICES_DATA } from '../../data/services';
 
 const About = () => {
   return (
-    <div className='min-h-screen'>
+    <div className='min-h-screen overflow-hidden'>
       <Service data={SERVICES_DATA[0]} />
       <TrustedCompaniesSection />
-      {/* <HistorySectionAboutPage /> */}
+      <HistorySectionAboutPage />
       {/* <MessionVisionSection /> */}
     </div>
   )

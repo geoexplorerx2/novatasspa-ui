@@ -65,15 +65,15 @@ const VideoPlayer = () => {
             <div className='absolute flex left-[30px] bottom-[30px]' >
                 <button className='' onClick={togglePlay}>
                     {isPlaying ?
-                        <img src={pause} alt='' className='w-[50px] h-[50px]' />
+                        <img src={pause} alt='' className='md:w-[50px] w-[30px] md:h-[50px] h-[30px]' />
                         :
-                        <img src={play} alt='' className='w-[50px] h-[50px]' />
+                        <img src={play} alt='' className='md:w-[50px] w-[30px] md:h-[50px] h-[30px]' />
                     }
                 </button>
 
                 <div className='ml-[30px]'>
-                    <p className='font-medium text-[16px] text-white font-poppins'>{progress ? progress : '0:39'}</p>
-                    <h1 className='text-white md:text-[25px] text-[25px] font-gotu'>History, Purpose <br/> and Usage</h1>
+                    <p className='font-medium md:text-[16px] text-[14px] text-white font-poppins'>{progress ? progress : '0:39'}</p>
+                    <h1 className='text-white md:text-[25px] text-[16px] font-gotu'>History, Purpose <br/> and Usage</h1>
                 </div>
             </div>
 

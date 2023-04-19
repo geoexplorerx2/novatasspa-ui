@@ -5,21 +5,28 @@ import HistorySectionCarousel from '../HistorySectionCarousel/HistorySectionCaro
 import LetterTape from '../LetterTape/LetterTape';
 import SectionBackground from '../SectionBackground/SectionBackground';
 import ButtonPrimary from '../../lib/Button/ButtonPrimary';
+import { ReactComponent as Leaf } from '../../assets/icons/leaf.svg';
+
 
 const HistorySectionAboutPage = () => {
+    let activeLang = localStorage.getItem('activeLang');
     return (
         <SectionBackground wrapperClassNames='h-[740px] mt-[162px] mt-[225px]' backgroundDivClassNames='bg-[#B2A285]' >
 
             <LetterTape wrapperClassName='absolute flex opacity-10 overflow-hidden top-[-62px] z-[-1]' />
 
-            <div className='grid grid-cols-2 container gap-x-[151px]'>
+            <div className='lg:grid lg:grid-cols-2 flex flex-col-reverse container gap-x-[151px]'>
 
-                <div className='mt-[142px]'>
-                    <h1 className='text-[64px] leading-[74px] text-white font-gotu'>Beauty and Success Start Here</h1>
-                    <p className='mt-[30px] text-[18px] leading-[28px] text-white font-poppins'>From its medieval origins to the digital era, learn everything there is to know about the ubiquitous lorem ipsum passage.</p>
+                <div className='lg:mt-[142px] mt-[41px] px-[25px] lg:px-0'>
+                    <div className='flex space-x-4 min-[393px]:display-hidden lg:hidden'>
+                        <Leaf className='text-white' />
+                        <Leaf className='text-white rotate-[175deg]' />
+                    </div>
+                    <h1 className='lg:text-[64px] text-[30px] lg:leading-[74px] leading-[30px] text-white font-gotu mt-[23px] lg:mt-0'>Harmonize Your Body and Soul</h1>
+                    <p className='mt-[30px] lg:text-[18px] text-[15px] leading-[28px] text-white font-poppins'>Whenever you need a place to relax between your hectic schedule or to indulge in some real pampering, don't forget to reserve your spot at the Novatas Spa!</p>
 
-                    <ButtonPrimary type="button" className='w-[229px] h-[60px] mt-[30px] box-border border-2 border-[#fff]'>
-                        <span className="font-gotu font-normal text-[22px] text-[#fff] leading-[28px] tracking-[0.02em]">Learn More</span>
+                    <ButtonPrimary type="button" className='lg:w-[229px] w-[178px] lg:h-[60px] h-[47px] mt-[30px] box-border border-2 border-[#fff]'>
+                    <a href={`${activeLang}/booking`}><span className="font-gotu font-normal lg:text-[22px] text-[16px] text-[#fff] leading-[28px] tracking-[0.02em]">Book Now</span></a>
                         <span className="text-[#fff] ml-2">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M14.4301 18.819C14.3316 18.8194 14.2339 18.8001 14.1429 18.7623C14.0519 18.7245 13.9694 18.669 13.9001 18.599C13.7606 18.4579 13.6824 18.2674 13.6824 18.069C13.6824 17.8706 13.7606 17.6801 13.9001 17.539L19.4401 11.999L13.9001 6.45901C13.7703 6.31636 13.7005 6.12921 13.7051 5.93642C13.7097 5.74364 13.7884 5.56003 13.9248 5.42374C14.0612 5.28744 14.2449 5.20893 14.4377 5.20451C14.6305 5.20009 14.8175 5.27011 14.9601 5.40001L21.0301 11.47C21.1696 11.6111 21.2478 11.8016 21.2478 12C21.2478 12.1984 21.1696 12.3889 21.0301 12.53L14.9601 18.6C14.8907 18.6698 14.8081 18.7252 14.7171 18.7628C14.6261 18.8004 14.5285 18.8195 14.4301 18.819Z" fill="#fff" />
@@ -29,7 +36,7 @@ const HistorySectionAboutPage = () => {
                     </ButtonPrimary>
                 </div>
 
-                <div className='block translate-y-[-62px]'>
+                <div className='block translate-y-[-62px] max-w-[90vw] mx-auto lg:max-w-full lg:mx-0'>
                     <VideoPlayer />
                 </div>
             </div>
