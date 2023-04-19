@@ -57,7 +57,7 @@ const BookingForm: FC<BookingFormProps> = ({ handleChange, handleSubmit, errors,
 
 
   return (
-    <div className='w-full p-[30px] bg-white space-y-[30px]'>
+    <div className='w-full bg-white space-y-[30px]'>
       <div className='flex flex-col'>
         {/* {serverRes?.data} */}
         {/* {errors?.booking_name_surname && <div className='border-2 border-red-600 bg-red-600 rounded-md p-3 mb-3 w-fit text-white'><img className='w-6 inline mr-3' src={exclamationMark} alt='' />{errors?.booking_name_surname}</div>}*/}
