@@ -78,7 +78,7 @@ const BookingForm: FC<BookingFormProps> = ({ handleChange, handleSubmit, errors,
         </div>
         :
         <form onSubmit={handleSubmit}>
-          <div className='grid grid-cols-1 w-full gap-[30px]'>
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-[30px] mb-8'>
            
         {/* @ts-ignore */}
           <AnimatedDateInput
