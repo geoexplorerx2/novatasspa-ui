@@ -221,7 +221,7 @@ const PricesListSection = () => {
             <div className='container'>
                 <h1 className="text-[#B2A285] text-[44px] leading-[54px] pt-[124px] font-gotu">Our Price List</h1>
 
-                <div className="md:grid lg:grid-cols-3 md:grid-cols-2 flex flex-col pb-[93px] gap-[30px]">
+                <div className="md:grid xl:grid-cols-3 lg:grid-cols-2 flex flex-col pb-[93px] gap-[30px]">
                     {
                         pricesData.map(type => {
                             const { id, serviceType, services } = type

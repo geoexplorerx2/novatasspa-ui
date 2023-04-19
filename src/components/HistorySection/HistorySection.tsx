@@ -9,21 +9,21 @@ import { ReactComponent as Leaf } from '../../assets/icons/leaf.svg';
 
 const HistorySection = () => {
     return (
-        <SectionBackground wrapperClassNames='md:h-[1050px] h-[950px] mt-[162px] mb-[252px]' backgroundDivClassNames='bg-[#B2A285]' >
-            <LetterTape wrapperClassName='absolute overflow-hidden flex justify-center items-center opacity-10 overflow-hidden top-[-62px] z-[-1]' />
+        <SectionBackground wrapperClassNames='lg:h-[1050px] h-[950px] mt-[162px] mb-[252px]' backgroundDivClassNames='bg-[#B2A285]' >
+            <LetterTape wrapperClassName='absolute flex justify-center items-center opacity-10 overflow-hidden top-[-62px] z-[-1]' />
 
-            <div className='flex flex-col-reverse justify-center items-center xl:grid xl:grid-cols-2 container'>
+            <div className='flex flex-col-reverse justify-center items-center  container'>
 
-                <div className='block min-[393px]:translate-y-[-62px] max-w:[90vw] md:max-w-full mt-[42px] md:mt-0'>
+                <div className='block min-[393px]:translate-y-[-62px] max-w:[80vw] lg:max-w-full mt-[42px] xl:mt-0'>
                     <VideoPlayer />
                 </div>
 
-                <div className='min-[393px]:ml-[151px] md:mt-[142px] mt-[64px] px-4'>
+                <div className='min-[393px]:ml-[151px] lg:mt-[142px] mt-[64px] px-4 mx-auto'>
                     <div className='flex space-x-4 min-[393px]:display-hidden'>
                         <Leaf className='text-white' />
                         <Leaf className='text-white rotate-[175deg]' />
                     </div>
-                    <h1 className='md:text-[64px] text-[30px] md:leading-[74px] leading-[30px] text-white font-gotu pt-[23px] md:pt-0'>Beauty and Success Start Here</h1>
+                    <h1 className='xl:text-[64px] text-[30px] xl:leading-[74px] leading-[30px] text-white font-gotu pt-[23px] xl:pt-0'>Beauty and Success Start Here</h1>
                     <p className='mt-[30px] text-[18px] max-[393px]:text-[15px] leading-[28px] text-white font-poppins'>From its medieval origins to the digital era, learn everything there is to know about the ubiquitous lorem ipsum passage.</p>
 
                     <ButtonPrimary type="button" className='w-[229px] h-[60px] max-[393px]:w-[178px] max-[393px]:h-[47px] mt-[30px] box-border border-2 border-[#fff]'>
