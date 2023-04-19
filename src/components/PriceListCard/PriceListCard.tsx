@@ -15,14 +15,14 @@ const PriceListCard: FC<PriceListCard_Props> = (props) => {
             <img src={service.image} alt='' className="" />
             
             <div className='ml-[30px] w-[300px]'>
-                <h5 className='md:text-[24px] leading-[24px] text-[20px] '>{service.name}</h5>
-                <p className='text-[#666B45] md:text-[16px] text-[15px] font-semibold mt-[5px] font-poppins'>{service.time}</p>
+                <h5 className='lg:text-[24px] leading-[24px] text-[15px] '>{service.name}</h5>
+                <p className='text-[#666B45] lg:text-[16px] text-[12px] font-semibold mt-[5px] font-poppins'>{service.time}</p>
             </div>
 
-            <div className='flex flex-col justify-end '>
-                <h1 className='text-[#423930] text-[34px] font-semibold pl-[54px] font-poppins relative'>
-                    <span className='md:text-[34px] text-[24px]'>{service.price}</span>
-                    <span className='absolute top-0 md:text-[34px] text-[18px]'>€</span>
+            <div className='flex flex-col justify-end ml-[30px]'>
+                <h1 className='text-[#423930] text-[34px] font-semibold font-poppins relative '>
+                    <span className='lg:text-[34px] text-[20px]'>{service.price}</span>
+                    <span className='absolute top-0 lg:text-[30px] text-[18px]'>€</span>
                 </h1>
                 <button className='text-[13px] font-medium text-[#423930] bookButton inline-flex w-[200px]'>
                     Book Now 
