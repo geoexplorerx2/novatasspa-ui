@@ -40,7 +40,7 @@ const MenuItem: FC<MenuItem> = (props) => {
   };
 
   return (
-    <li key={item.id} onClick={() => {handleNavigation(item)}} className={`font-medium text-xl font-gotu md:text-[34px] md:tracking-tighter leading-[74px] cursor-pointer ${isActive ? 'text-[#B3916E]' : ''}`}>                                     
+    <li key={item.id} onClick={() => {handleNavigation(item)}} className={`font-medium text-[30px] font-gotu md:text-[34px] md:tracking-tighter leading-[74px] cursor-pointer ${isActive ? 'text-[#B3916E]' : ''}`}>                                     
       {name}
     </li>
 )
@@ -125,7 +125,7 @@ const MainMenu: FC = () => {
                     <div className=''>
                        <img src={hamburgermenu} />
                     </div>
-                    <div className='font-gotu font-medium text-[12px] text-[#423930] leading-[14px] tracking-[0.02em] mt-[5px] cursor-pointer'>
+                    <div className='font-gotu hidden md:inline-block font-medium text-[12px] text-[#423930] leading-[14px] tracking-[0.02em] mt-[5px] cursor-pointer'>
                         Menu
                     </div>
                     
@@ -149,14 +149,14 @@ const MainMenu: FC = () => {
                     <div className={`main-menu fixed w-screen h-screen top-0 left-0 bg-black bg-opacity-80 z-[1001] transition-all ${isMenuOpen ? 'opacity-100 translate-x-0' : ' opacity-50 -translate-x-[100%]'}`}>
                         <div className='w-full max-w-[945px] h-full mobileMenuShadow bg-white' ref={drawerRef} >  
                        
-                            <div className='container ml-64 h-10 p-4 text-gray-600 py-14'>    
+                            <div className='container md:ml-64 h-10 p-4 text-gray-600 py-14'>    
                                 <div className='flex space-x-5 ' onClick={handleCloseMenu}>
                                   <CrossIcon />
                                   <span className='h-9 text-xs font-poppins font-medium inline-block mt-1'> CLOSE </span>
                                   
                                 </div>
                             </div>    
-                            <div className='pt-8 px-5 ml-64'>
+                            <div className='pt-8 px-5 md:ml-64 '>
                                 <ul className='space-y-[30px]'>
                                     {
                                         NAVIGATION_MENU.map(menuItem => {
@@ -169,7 +169,7 @@ const MainMenu: FC = () => {
                                 </ul>
                             </div>    
                            
-                              <SocialMediaIcons wrapperClassNames='space-x-[60px] w-min ml-64 px-5 absolute bottom-[53px]'/>    
+                              <SocialMediaIcons wrapperClassNames='space-x-[60px] w-min md:ml-64 px-5 absolute bottom-[53px]'/>    
                             
                         </div>
                         
