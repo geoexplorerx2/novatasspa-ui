@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useState } from 'react';
+import React, { FC, useEffect, useLayoutEffect, useState } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import TagManager from 'react-gtm-module';
 import './App.css';
@@ -19,6 +19,12 @@ const App: FC<AppProps> = () => {
     tagManagerArgs
   );
 
+
+  useLayoutEffect(() => {
+    localStorage.setItem('activeLang', 'en')
+  }, [])
+
+  
   return (
     <Router>
       <MasterHeader />
