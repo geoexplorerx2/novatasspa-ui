@@ -63,9 +63,10 @@ const LanguagePicker: FC<LanguagePickerProps> = ({ bgColor, openDropdownMenu, se
                             icon={languageIcon}
                             data={activeLang}
                             className="" // inline-block
-                            bgColor={bgColor}
+                            bgColor={`${bgColor} !w-auto md:!w-[121px]`}
                             // handleClick={(opened: boolean) => setOpenDropdownMenu(!openDropdownMenu)}
                             handleClick={() => {}}
+                            textClassNames="hidden md:inline-block"
                         />
                         {/* <div className=''>
                             <img src={languageIcon} alt='' />
