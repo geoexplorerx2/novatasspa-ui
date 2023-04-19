@@ -9,14 +9,15 @@ import logo_3 from '../../assets/logo/logolar-04.svg'
 import logo_4 from '../../assets/logo/logolar-05.svg'
 import logo_5 from '../../assets/logo/logolar-06.svg'
 import logo_6 from '../../assets/logo/logolar-07.svg'
+import { Icon } from 'leaflet'
 
 
 const TrustedCompaniesSection: FC = () => {
   return (
     <div className='container mb-16'>
-      <h2 className='text-2xl md:text-[44px] md:tracking-tighter leading-[54px] font-gotu font-normal text-center my-20 md:my-32'>Trusted by 6,000+ Companies < br /> Support Sponsor.</h2>
+      <h2 className='text-2xl md:text-[44px] md:tracking-tighter leading-[54px] font-gotu font-normal text-center my-20 md:my-32'>Trusted by 6,000+ Companies < br />Our References</h2>
       {/* first row of the images */}
-      <div className='grid grid-cols-2 lg:grid-cols-4 justify-items-center w-full gap-y-[60px] mb-[60px]'>
+      {/* <div className='grid grid-cols-2 lg:grid-cols-4 justify-items-center w-full gap-y-[60px] mb-[60px]'>
         {
           companiesData.slice(0, 4).map(companyData => {
             const { Icon } = companyData;
@@ -27,9 +28,9 @@ const TrustedCompaniesSection: FC = () => {
             )
           })
         }
-      </div>
+      </div> */}
       {/* second row of the images */}
-      <div className='grid grid-cols-2 lg:grid-cols-5 justify-items-center w-full gap-y-[60px]'>
+      {/* <div className='grid grid-cols-2 lg:grid-cols-5 justify-items-center w-full gap-y-[60px]'>
         <div className='hidden lg:inline-block'></div>
         {
           companiesData.slice(-3).map(companyData => {
@@ -42,7 +43,17 @@ const TrustedCompaniesSection: FC = () => {
           })
         }
         <div className='hidden lg:inline-block'></div>
+      </div> */}
+
+      <div className='grid md:grid-cols-3 grid-cols-2'>
+        {companiesData.map(item => {
+          const { Icon } = item
+          return (
+            <img src={Icon} className='!min-w-[150px] mb-10' />
+          )
+        })}
       </div>
+
       <div className='grid grid-cols-3 justify-items-center w-full'>
         {/* {
             companiesData.slice(-3).map(companyData => {
