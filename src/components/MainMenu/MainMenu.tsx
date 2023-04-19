@@ -24,20 +24,19 @@ const MenuItem: FC<MenuItem> = (props) => {
   const { href, id, name, targetBlank } = item
 
   const navigate = useNavigate();
-  const location = useLocation()
+  const location = useLocation();
 
 
   useEffect(() => {
-
     setIsActive(location.pathname === item.href)
   }, [location])
 
   const handleNavigation = (item: NavigationItemType) => {
     // goToPage(item.href);
     let activeLang = localStorage.getItem('activeLang');
-    navigate(`${activeLang + item.href}`)
-    setIsMenuOpen(false)
 
+    navigate(`${item.href != '/' ? (activeLang + item.href ) : item.href}`);
+    setIsMenuOpen(false);
   };
 
   return (

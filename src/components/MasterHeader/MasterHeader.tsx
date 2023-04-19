@@ -7,11 +7,14 @@ import world from '../../assets/icons/languageIcon.svg';
 import MainMenu from '../MainMenu/MainMenu';
 import LanguagePicker from '../LanguagePicker/LanguagePicker';
 import { Languages } from '../constants/Languages';
+import { useNavigate } from 'react-router-dom';
 
 const MasterHeader = () => {
 
     const [activeLang, setActiveLang] = useState<any>(Languages[0]);
     const [openDropdownMenu, setOpenDropdownMenu] = useState<boolean>(false);
+    const navigate = useNavigate();
+    
     const origin = window.location.origin;
     const currentpage_uri = window.location.pathname.split('/');
     const pageuri = currentpage_uri.length > 2 && currentpage_uri.slice(2).join('/');
@@ -20,11 +23,9 @@ const MasterHeader = () => {
         setActiveLang(lang);
         localStorage.setItem('activeLang', lang?.id);
 
-
-        // history.replace(dynamicUrl);
         if (pageuri) {
-            let dynamicUrl = origin + '/' + lang?.id + '/' + pageuri;
-            window.location.href = dynamicUrl;
+            let dynamicUrl = lang?.id + '/' + pageuri;
+            navigate(dynamicUrl);
         };
     };
 

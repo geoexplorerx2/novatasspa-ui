@@ -2,6 +2,7 @@ import React, { FC, useState } from 'react'
 import { servicesVersion } from 'typescript'
 import { ReactComponent as CaldleAndFlower } from '../../assets/icons/candleFlower.svg'
 import { ReactComponent as Wave } from '../../assets/icons/wave.svg'
+import { useNavigate } from 'react-router-dom'
 
 
 const OurServices: FC = () => {
@@ -32,10 +33,15 @@ interface ServiceCardProps {
 const ServiceCard: FC<ServiceCardProps> = (props) => {
     const { service: { description, info, duration, Icon, id, price, title } } = props
     const [ isHovered, setIsHovered ] = useState(false);
-    let activeLang = localStorage.getItem('activeLang');
+    const activeLang = localStorage.getItem('activeLang');
+    const navigate = useNavigate();
     
+    const handleBookingClick = () => {
+        navigate(`/${activeLang}/booking`);
+    };
+
     return (
-        <a href={`${activeLang}/booking`}><div className={`relative border cursor-pointer border-[#EEEEEE] py-[42px] px-[35px] space-y-[30px] transition-all ${isHovered ? 'bg-[#423930]' : 'bg-white'}`} key={id} onMouseEnter={() => {setIsHovered(true)}} onMouseLeave={() => {setIsHovered(false)} } >
+        <a onClick={handleBookingClick}><div className={`relative border cursor-pointer border-[#EEEEEE] py-[42px] px-[35px] space-y-[30px] transition-all ${isHovered ? 'bg-[#423930]' : 'bg-white'}`} key={id} onMouseEnter={() => {setIsHovered(true)}} onMouseLeave={() => {setIsHovered(false)} } >
             <div className='flex justify-between'>
                 <Icon className={`${isHovered ? 'text-white' : ''}`}/>
                 <div>
