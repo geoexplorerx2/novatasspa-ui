@@ -44,11 +44,11 @@ const HeroCarousel = () => {
             <div key={id} className='item '>
                 <div className='flex flex-col-reverse md:flex-row justify-center md:items-center items-start relative'>
 
-                    <img src={img_1} alt='' className='absolute max-w-[316px] top-[21rem] lg:top-[60px] lg:right-0 right-[10px] lg:max-w-[1320px] z-[2]' />
+                    <img src={img_1} alt='' className='absolute max-w-[316px] top-[24rem] lg:top-[60px] lg:right-0 right-[-8px] mx-[10%] lg:max-w-[1320px] z-[2]' />
 
                     <div className='relative max-[393px]:translate-y-[-100px]'>
-                        <img src={img_2} alt='' className='lg:max-w-[622px] md:max-w-[350px] max-w-[225px] z-[-2] mt-[22px]' />
-                        <img src={img_3} alt='' className='absolute top-[545px] left-[365px] !w-[463px]' />
+                        <img src={img_2} alt='' className='lg:max-w-[622px] md:max-w-[350px] max-w-[225px] z-[-2] mt-[22px] mx-[10%]' />
+                        <img src={img_3} alt='' className='absolute lg:top-[545px] lg:left-[365px] lg:w-[463px] w-[50px] bottom-[17px] mx-[10%]' />
                     </div>
 
                     <div className='sm:ml-[99px] z-[2] pt-[25px] lg:pt-0 text-center lg:text-left'>

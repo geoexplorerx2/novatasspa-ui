@@ -218,8 +218,8 @@ const PricesListSection = () => {
 
     return (
         <SectionBackground backgroundDivClassNames='bg-[#F5F5F5] h-[970px]'>
-            <div className='container overflow-hidden lg:overflow-visible'>
-                <h1 className="text-[#B2A285] text-[44px] leading-[54px] pt-[124px] font-gotu">Our Price List</h1>
+            <div className='container overflow-hidden'>
+                <h1 className="text-[#B2A285] text-[44px] leading-[54px] pt-[124px] font-gotu mx-8">Our Price List</h1>
 
                 <div className="md:grid xl:grid-cols-3 lg:grid-cols-2 flex flex-col pb-[93px] gap-[30px]">
                     {
@@ -228,7 +228,7 @@ const PricesListSection = () => {
 
                             return (
                                 <div>
-                                    <h2 className="text-[#423930] lg:text-[24px] leading-[24px] pt-[30px] font-gotu" key={id}>{serviceType}</h2>
+                                    <h2 className="text-[#423930] lg:text-[24px] leading-[24px] pt-[30px] font-gotu mx-8" key={id}>{serviceType}</h2>
                                     {services.map(service => {
                                         return (
                                             <PriceListCard service={service} />
