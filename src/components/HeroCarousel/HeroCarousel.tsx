@@ -37,12 +37,12 @@ const HeroCarousel = () => {
 
         return (
             <div key={id} className='item '>
-                <div className='flex flex-col-reverse lg:flex-row justify-center lg:items-center items-start relative'>
+                <div className='flex flex-col-reverse md:flex-row justify-center md:items-center items-start relative'>
 
                     <img src={img_1} alt='' className='absolute max-w-[316px] top-[21rem] lg:top-[60px] lg:right-0 right-[10px] lg:max-w-[1320px] z-[2]' />
 
                     <div className='relative max-[393px]:translate-y-[-100px]'>
-                        <img src={img_2} alt='' className='lg:max-w-[622px] max-w-[225px] z-[-2] mt-[22px]' />
+                        <img src={img_2} alt='' className='lg:max-w-[622px] md:max-w-[350px] max-w-[225px] z-[-2] mt-[22px]' />
                         <img src={img_3} alt='' className='absolute top-[545px] left-[365px] !w-[463px]' />
                     </div>
 
