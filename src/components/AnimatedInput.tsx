@@ -40,7 +40,7 @@ const AnimatedInput: FC<InfoProps> = (props) => {
   // console.log('errorsKeys', errors
 
   return (
-    <div className={`${wrapperClassName} ${name && errorsKeys?.includes(name ?? "") ? `border-2 border-red-600` : ''} relative w-full h-[50px] lg:h-[70px] flex items-center  px-[22px] ${isFocused ? `${focusStateStyles} border-black border-[1px]` : 'border-[#DDDDDD] border'}`}>
+    <div className={`${wrapperClassName} ${name && errorsKeys?.includes(name ?? "") ? `border-2 border-red-600` : ''} relative w-full h-[80px] lg:h-[70px] flex items-center  px-[22px] ${isFocused ? `${focusStateStyles} border-black border-[1px]` : 'border-[#DDDDDD] border'}`}>
       <div className={` ${inputType === 'textArea' ? 'h-full pt-7' : ''}`}>
         {Icon && Icon}
       </div>

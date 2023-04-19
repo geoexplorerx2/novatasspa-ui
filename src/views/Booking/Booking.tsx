@@ -46,11 +46,11 @@ const Booking = () => {
 
   return (
     <div className=''>
-      <div className='w-full h-full flex'>
-        <img src={ReservationBanner} alt='reservation salon image' />
+      <div className='w-full h-full grid grid-cols-1 xl:grid-cols-2'>
+        <img src={ReservationBanner} alt='reservation salon image' className='hidden xl:inline-block h-full'/>
         <div className='w-full h-full'>
           <img src={novatasspaLogo} alt="Novatas Logo" className='mx-auto my-7 mx-wuto' />
-          <div className='w-full h-full px-[150px]'>
+          <div className='w-full h-full px-5 md:px-9 '>
 
             <BookingForm
               errors={errors}
