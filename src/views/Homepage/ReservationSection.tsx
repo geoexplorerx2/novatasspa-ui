@@ -6,20 +6,27 @@ import ReservationForm from '../../components/ReservationForm/ReservationFrom'
 
 const ReservationSection = () => {
   return (
-    <div className='relative top-4 h-[970px] overflow-hidden'>
-      <div className='absolute z-[10] w-full h-full flex flex-col justify-center items-center'>
-        <h2 className='text-white font-gotu text-[64px] tracking-tighter leading-[74px] mb-7'>Make a Quick <br /> Reservation</h2>
+    <div className='relative h-[970px] overflow-hidden'>
+      <div className='absolute z-[10] w-full h-full flex flex-col lg:justify-center items-center mt-[69px] px-6'>
+        <h2 className='text-white font-gotu text-3xl lg:text-[64px] tracking-tighter lg:leading-[74px] mb-7 text-center'>Make a Quick <br className='hidden md:inline-block' /> Reservation</h2>
         <ReservationForm />
       </div>
-     
-        <SectionBackground backgroundDivClassNames='h-full'>
-         
-          <img src={Chick} className="relative top-4 w-1/2 max-h-full -mt-[8px]"/>
+      <div className='-skew-y-1 h-full w-full overflow-hidden'>
+        <SectionBackground backgroundDivClassNames='h-full !-top-4' wrapperClassNames='h-full'>
+
+          <img src={Chick} className="hidden md:inline-block relative max-w-none md:max-w-full md:w-1/2 h-full max-h-full object-cover -translate-y-4" />
+
+          <div className='w-1/2 h-full   md:hidden overflow-hidden 1 '>
+            <img src={Chick} className="relative  max-w-none w-[217%] h-[127%] max-h-none -mt-[8px] object-cover object-[50%_-149px] translate-y-2 " />
+          </div>
+
         </SectionBackground>
 
-      
+      </div>
+
+
     </div>
-    
+
   )
 }
 
