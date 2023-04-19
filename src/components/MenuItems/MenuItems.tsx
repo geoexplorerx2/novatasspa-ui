@@ -13,9 +13,10 @@ const MenuItems: FC<MenuItemsProps> = ({
 }) => {
 
   const urlNavigate = useNavigate();
+  let activeLang = localStorage.getItem('activeLang');
 
   const handleNavLink = (item: NavigationItemType) => {
-    urlNavigate(item.href)
+    urlNavigate(`${activeLang+'/'+item.href}`)
   };
 
   const RenderItem = (item: NavigationItemType) => {

@@ -11,12 +11,22 @@ import { Languages } from '../constants/Languages';
 const MasterHeader = () => {
 
     const [activeLang, setActiveLang] = useState<any>(Languages[0]);
+    const [openDropdownMenu, setOpenDropdownMenu] = useState<boolean>(false);
+    const origin = window.location.origin;
+    const currentpage_uri = window.location.pathname.split('/');
+    const pageuri = currentpage_uri.length > 2 && currentpage_uri.slice(2).join('/');
 
     const handleLan = (lang: any) => {
         setActiveLang(lang);
-    };
+        localStorage.setItem('activeLang', lang?.id);
 
-    const [openDropdownMenu, setOpenDropdownMenu] = useState<boolean>(false);
+
+        // history.replace(dynamicUrl);
+        if (pageuri) {
+            let dynamicUrl = origin + '/' + lang?.id + '/' + pageuri;
+            window.location.href = dynamicUrl;
+        };
+    };
 
 
     return (
