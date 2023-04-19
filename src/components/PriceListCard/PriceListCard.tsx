@@ -8,9 +8,10 @@ interface PriceListCard_Props {
 
 const PriceListCard: FC<PriceListCard_Props> = (props) => {
     const { service } = props
+    let activeLang = localStorage.getItem('activeLang');
     return (
 
-        <a href="/booking"><div className='flex items-center cursor-pointer priceListCard mt-[30px]' key={service.hamamid}>
+        <a href={`${activeLang}/booking`}><div className='flex items-center cursor-pointer priceListCard mt-[30px]' key={service.hamamid}>
 
             <img src={service.image} alt='' className="" />
             

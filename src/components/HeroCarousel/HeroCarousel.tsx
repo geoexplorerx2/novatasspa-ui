@@ -33,6 +33,10 @@ const HeroCarousel = () => {
 
     const theContent = carouselContent.map(item => {
 
+        let activeLang = localStorage.getItem('activeLang');
+
+        console.log('activeLang',activeLang)
+
         const { id, header, body, image } = item;
 
         return (
@@ -55,7 +59,7 @@ const HeroCarousel = () => {
                         <h1 className='font-normal text-[#B2A285] lg:text-[64px] lg:leading-[74px] font-gotu mt-[25px] lg:mt-0 text-[30px] leading-[40px]'>{header}</h1>
                         <p className='text-[#423930] lg:text-[18px] mt-[30px] font-poppins text-[15px]'>{body}</p>
 
-                        <a href='/booking'>
+                        <a href={`${activeLang}/booking`}>
                             <ButtonPrimary type="button" className='lg:w-[229px] lg:h-[60px] w-[178px] h-[46px] box-border border-2 border-[#423930] mt-[30px] max-[393px]:bg-[#FFFFFF66]'>
                                 <span className="font-gotu font-normal lg:text-[22px] text-[#423930] leading-[28px] tracking-[0.02em] text-[16px]">Book Now</span>
                                 <span className="text-[#423930] ml-2">
