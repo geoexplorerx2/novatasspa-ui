@@ -83,7 +83,7 @@ const GuestsInput: FC<GuestsInputPros> = (props) => {
     const errorsKeys = errors && Object.keys(errors)
 
     return (
-        <div className={`${wrapperClassNames} relative ${errorsKeys?.includes(name ?? "") ? ' border-2 !border-red-700' : ''} w-full h-[50px] lg:h-[70px] flex items-center pl-[22px] rounded-[10px] border-[#DDDDDD] border hover:bg-white transition-all ${isPopoverOpen ? "bg-white" : "bg-[#f7f7f7]"}`}
+        <div className={`${wrapperClassNames} relative ${errorsKeys?.includes(name ?? "") ? ' border-2 !border-red-700' : ''} w-full h-[80px] lg:h-[70px] flex items-center pl-[22px] rounded-[10px] border-[#DDDDDD] border hover:bg-white transition-all ${isPopoverOpen ? "bg-white" : "bg-[#f7f7f7]"}`}
             onClick={() => { setIsPopoverOpen(true) }}
             ref={wrapperRef}
         >
