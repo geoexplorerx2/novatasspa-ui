@@ -1,14 +1,10 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
 
 const useForm = (callback: any, validate: any, formType: any) => {
 
     const [values, setValues] = useState<any>({});
     const [errors, setErrors] = useState<any>({});
     const [isSubmitting, setIsSubmitting] = useState(false);
-
-    const activeLang = localStorage.getItem('activeLang');
-    const navigate = useNavigate()
 
     // submit if no errors
     useEffect(() => {
@@ -22,7 +18,6 @@ const useForm = (callback: any, validate: any, formType: any) => {
         setErrors(validate(values, formType));
         setIsSubmitting(true);
         // alert('thank you');
-        navigate(`/${activeLang}/thank-you`);
 
         return <div>Thank you</div>
     };

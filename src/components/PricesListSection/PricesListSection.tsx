@@ -132,7 +132,7 @@ const PricesListSection = () => {
                 },
                 {
                     hamamid: 2,
-                    name: 'Tridational Bali Massage',
+                    name: 'Traditional Bali Massage',
                     time: '50 min.',
                     price: '70',
                     image: prices_list_2
