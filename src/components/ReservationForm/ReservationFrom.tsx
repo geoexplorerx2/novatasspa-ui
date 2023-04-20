@@ -69,7 +69,7 @@ const ReservationForm = () => {
         <span>{errors.quickreservation_email}</span>
         <span>{errors.phone}</span> */}
       </div>
-      <form className='space-y-5 md:space-y-[30px]'>
+      <form onSubmit={handleSubmit} className='space-y-5 md:space-y-[30px]'>
         <AnimatedInput
           value={values}
           inputType='text'
