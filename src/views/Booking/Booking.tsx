@@ -5,7 +5,7 @@ import novatasspaLogo from "../../assets/logo/novatasspaLogo.svg";
 import BookingForm from '../../components/BookingForm/BookingForm';
 import services from '../../api/services';
 import { useForm, useValidate } from '../../hooks';
-
+import { useNavigate } from 'react-router-dom';
 
 
 const Booking = () => {
@@ -18,6 +18,8 @@ const Booking = () => {
   } = useForm(_handleBooking, useValidate, 'booking');
 
   const server = services;
+  const navigate = useNavigate();
+  const activeLang = localStorage.getItem('activeLang');
 
   function _handleBooking() {
 
@@ -38,6 +40,7 @@ const Booking = () => {
     server.booking(booking_data)
       .then((res: any) => {
         setServerRes(res?.entity);
+        res.entity.code === 200 && navigate(`/${activeLang}/thank-you`);
       })
       .catch((error: any) => {
         setServerRes(error.entity);

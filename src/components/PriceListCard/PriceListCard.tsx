@@ -32,11 +32,11 @@ const PriceListCard: FC<PriceListCard_Props> = (props) => {
             </div>
 
             <div className='flex flex-col justify-end ml-[30px]'>
-                <h1 className='text-[#423930] text-[34px] font-semibold font-poppins relative '>
-                    <span className='lg:text-[26px] sm:text-[20px] text-[14px]'>€ {service.price}</span>
+                <h1 className='text-[#423930] text-[34px] font-semibold font-poppins relative xl:justify-start md:justify-center'>
+                    <span className='lg:text-[26px] sm:text-[20px] text-[14px] '>€ {service.price}</span>
                     {/* <span className='absolute top-0 lg:text-[24px] sm:text-[18px] text-[12px]'>€</span> */}
                 </h1>
-                <button className='sm:text-[13px] text-[10px] font-medium text-[#423930] bookButton inline-flex w-[200px]'>
+                <button className='sm:text-[13px] text-[10px] font-medium text-[#423930] bookButton inline-flex w-[200px] xl:justify-start md:justify-center'>
                     Book Now 
                     <img src={ArrowRight} alt='' className='w-[16px] ml-[13px] translate-y-[1px]' />
                 </button>
