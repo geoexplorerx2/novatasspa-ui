@@ -85,7 +85,7 @@ export default function FloatingWhatsApp({
   accountName = 'Account Name',
   avatar = dummyAvatar,
   statusMessage = 'Çevrimiçi',
-  chatMessage = 'Merhabalar,                              Nasıl yardımcı olabiliriz?',
+  chatMessage = 'If you are interested in a Traditional Turkish Bath experience in Istanbul or have any questions about the process in general, feel free to start a chat. Our Hospitality Supervisors are at your service to provide you with support.',
   placeholder = 'Type a message..',
 
   messageDelay = 2,
@@ -104,7 +104,7 @@ export default function FloatingWhatsApp({
   buttonStyle,
   buttonClassName = 'floating-whatsapp-button',
 
-  chatboxHeight = 320,
+  chatboxHeight = 400,
   chatboxStyle,
   chatboxClassName = 'floating-whatsapp-chatbox',
 
@@ -220,7 +220,7 @@ export default function FloatingWhatsApp({
   }, [allowEsc, isOpen, handleClose])
 
   return (
-    <div className={`${css.floatingWhatsapp} ${darkMode ? `${css.dark} ` : ''} ${className}`} style={style}>
+    <div className={`${css.floatingWhatsapp} ${darkMode ? `${css.dark} ` : ''} ${className} !container`} style={style}>
       <div
         className={`${css.whatsappButton} ${buttonClassName}`}
         onClick={handleOpen}
@@ -267,7 +267,7 @@ export default function FloatingWhatsApp({
             <div className={css.message}>
               <span className={css.triangle} />
               <span className={css.accountName}>{accountName}</span>
-              <p className={css.messageBody}>{chatMessage}</p>
+              <p className={`${css.messageBody}`}>{chatMessage}</p>
               <span className={css.messageTime}>
                 {timeNow}
                 <span style={{ marginLeft: 5 }}>

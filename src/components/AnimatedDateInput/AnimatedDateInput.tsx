@@ -17,6 +17,7 @@ interface AnimatedDateInputPropsType {
     }>>,
     handleChange?: any;
     errors?: any;
+    wrapperClassNames?: string
 };
 
 const useStyles = createStyles(theme => ({
@@ -39,7 +40,7 @@ const useStyles = createStyles(theme => ({
 
 
 const AnimatedDateInput: FC<AnimatedDateInputPropsType> = (props) => {
-    const { value, setValue, name = 'date', label, handleChange, errors } = props
+    const { value, setValue, name = 'date', label, handleChange, errors, wrapperClassNames } = props
     const [isFocused, setIsFocused] = useState(false);
     const [inputValue, setInputValue] = useState();
 
@@ -62,7 +63,7 @@ const AnimatedDateInput: FC<AnimatedDateInputPropsType> = (props) => {
     const errorsKeys = errors && Object.keys(errors)
 
     return (
-        <div className={`relative w-full h-[50px] lg:h-[70px] flex items-center  pl-[22px] transition-all hover:bg-white rounded-[10px] ${errorsKeys?.includes(name ?? "") ? ' border-2 border-red-700' : ''} ${isFocused ? ' border-black border-[1px] bg-white' : 'border-[#DDDDDD] border bg-[#F7F7F7]'}`}>
+        <div className={`${wrapperClassNames} relative w-full h-[80px] lg:h-[70px] flex items-center  pl-[22px] transition-all hover:bg-white rounded-[10px] ${errorsKeys?.includes(name ?? "") ? ' border-2 border-red-700' : ''} ${isFocused ? ' border-black border-[1px] bg-white' : 'border-[#DDDDDD] border bg-[#F7F7F7]'}`}>
             <div className={``}>
                 <img src={CalendarIcon} />
             </div>
@@ -70,6 +71,8 @@ const AnimatedDateInput: FC<AnimatedDateInputPropsType> = (props) => {
                         ${isFocused  ? "translate-y-4 text-sm z-[3] font-normal" : "translate-y-4 lg:translate-y-[27px] text-[22px] text-[#0D2C3B] text-opacity-50"}`}>
                 {label}
             </label>
+
+            {errors && errors?.[name as string]?.length > 0 && <span className='absolute right-[5px] top-[-20px] bg-red-600 rounded-lg text-white p-2'>{errors && errors[name as string]}</span>}
 
             <DateInput
                 // value={value ?? inputValue}

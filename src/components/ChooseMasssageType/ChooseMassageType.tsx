@@ -15,7 +15,7 @@ interface ChooseMassageProps {
   name?: any;
 };
 
-const ChooseMassage: FC<ChooseMassageProps> = ({ onChange, errors, name }) => {
+const ChooseMassage: FC<ChooseMassageProps> = ({ onChange, errors, name = 'massages' }) => {
 
   const [selectedItems, setSelectedItems] = useState<Record<string, boolean>>(() => {
     let initialSelectedItems: Record<string, boolean> = {}
@@ -41,15 +41,17 @@ const ChooseMassage: FC<ChooseMassageProps> = ({ onChange, errors, name }) => {
   }, [selectedItems]);
 
   return (
-    <div className={`w-full col-span-2` }>
+    <div className={`w-full col-span-2`}>
       <h3 className={`mb-3 font-medium border-2 border-white w-fit p-2 rounded-lg ${errorsKeys?.includes(name ?? "") ? ' border-2 !border-red-700' : ''}`}>Massage</h3>
-      <div className='grid grid-cols-4 gap-[30px]'>
+
+      <div className='grid grid-cols-3 md:grid-cols-4 gap-[30px] relative'>
+        {errors && errors?.[name as string]?.length > 0 && <span className='absolute right-[0px] top-[-50px] bg-red-600 rounded-lg text-white p-2'>{errors[name as string]}</span>}
         {
           MassageTypesData.map((massageType, index) => {
             const { label, value, Icon, id } = massageType
             const isActive = selectedItems[value] === true
             return (
-              <div className={`relative flex flex-col cursor-pointer ${index === 6 ? 'col-start-3' : ''} `} key={id} onClick={() => { handleChange(value) }}>
+              <div className={`relative flex flex-col cursor-pointer ${index === 6 ? 'lg:col-start-3' : ''} `} key={id} onClick={() => { handleChange(value) }}>
                 <div className={`h-[90px] mb-[10px] border-2  bg-[#F7F7F7] p-6 rounded-[10px] group flex justify-center items-center ${isActive ? 'border-2 border-[#B2A285]' : ''}`}><Icon className='' /></div>
                 <span className='font-sm text-center'>{label}</span>
               </div>

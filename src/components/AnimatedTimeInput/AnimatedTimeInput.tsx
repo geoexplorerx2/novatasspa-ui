@@ -9,10 +9,11 @@ interface AnimatedTimeInputProps {
     value?: string,
     errors?: any;
     name?: any;
+    wrapperClassNames?: string;
 };
 
 const AnimatedTimeInput: FC<AnimatedTimeInputProps> = (props) => {
-    const { handleChange, label = 'Time', value, errors, name = 'time' } = props
+    const { handleChange, label = 'Time', value, errors, name = 'time', wrapperClassNames } = props
     const [selectedOption, setSelectedOption] = useState('')
     const [isFocused, setIsFocused] = useState(false);
 
@@ -37,7 +38,7 @@ const AnimatedTimeInput: FC<AnimatedTimeInputProps> = (props) => {
 
 
     return (
-        <div className={`relative w-full h-[50px] lg:h-[70px] flex items-center  pl-[22px] transition-all hover:bg-white rounded-[10px] ${errorsKeys?.includes(name ?? "") ? ' border-2 border-red-700' : ''} ${isFocused ? ' border-black border-[1px] bg-white' : 'border-[#DDDDDD] border bg-[#F7F7F7]'}`}>
+        <div className={`${wrapperClassNames} relative w-full h-[80px] lg:h-[70px] flex items-center  pl-[22px] transition-all hover:bg-white rounded-[10px] ${errorsKeys?.includes(name ?? "") ? ' border-2 border-red-700' : ''} ${isFocused ? ' border-black border-[1px] bg-white' : 'border-[#DDDDDD] border bg-[#F7F7F7]'}`}>
             <div className={``}>
                 <Clock />
             </div>
@@ -46,6 +47,8 @@ const AnimatedTimeInput: FC<AnimatedTimeInputProps> = (props) => {
                         `}>
                 {label}
             </label>
+            {errors && errors?.[name as string]?.length > 0 && <span className='absolute right-[5px] top-[-20px] bg-red-600 rounded-lg text-white p-2'>{errors && errors[name as string]}</span>}
+
             {
                 <select
                     name="time"

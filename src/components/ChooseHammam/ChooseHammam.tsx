@@ -29,8 +29,10 @@ const ChooseHamam: FC<ChooseHamamProps> = ({ onChange, errors, name }) => {
 
   return (
     <div className={`w-full col-span-2`}>
+      
       <h3 className={`mb-3 font-medium border-2 border-white w-fit p-2 rounded-lg ${errorsKeys?.includes(name ?? "") ? 'border-2 !border-red-700' : ''} `}>Choose Hammam</h3>
-      <div className='grid grid-cols-3 w-full gap-4'>
+      <div className='grid grid-cols-1 md:grid-cols-3 w-full gap-4 relative'>
+        {errors && errors?.[name as string]?.length > 0 && <span className='absolute right-[0px] top-[-50px] bg-red-600 rounded-lg text-white p-2'>{errors[name as string]}</span>}
         {
           HammamsData.map(hammam => {
             const { label, value, id } = hammam

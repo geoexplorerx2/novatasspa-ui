@@ -57,15 +57,10 @@ const BookingForm: FC<BookingFormProps> = ({ handleChange, handleSubmit, errors,
 
 
   return (
-    <div className='w-full p-[30px] bg-white space-y-[30px]'>
+    <div className='w-full bg-white space-y-[30px]'>
       <div className='flex flex-col'>
         {/* {serverRes?.data} */}
-        {errors?.booking_name_surname && <div className='border-2 border-red-600 bg-red-600 rounded-md p-3 mb-3 w-fit text-white'><img className='w-6 inline mr-3' src={exclamationMark} alt='' />{errors?.booking_name_surname}</div>}
-        {errors?.date && <div className='border-2 border-red-600 bg-red-600 rounded-md p-3 mb-3 w-fit text-white'><img className='w-6 inline mr-3' src={exclamationMark} alt='' />{errors?.date}</div>}
-        {errors?.phone && <div className='border-2 border-red-600 bg-red-600 rounded-md p-3 mb-3 w-fit text-white'><img className='w-6 inline mr-3' src={exclamationMark} alt='' />{errors?.phone}</div>}
-        {errors?.email && <div className='border-2 border-red-600 bg-red-600 rounded-md p-3 mb-3 w-fit text-white'><img className='w-6 inline mr-3' src={exclamationMark} alt='' />{errors?.email}</div>}
-        {errors?.hammam && <div className='border-2 border-red-600 bg-red-600 rounded-md p-3 mb-3 w-fit text-white'><img className='w-6 inline mr-3' src={exclamationMark} alt='' />{errors?.hammam}</div>}
-        {errors?.massages && <div className='border-2 border-red-600 bg-red-600 rounded-md p-3 mb-3 w-fit text-white'><img className='w-6 inline mr-3' src={exclamationMark} alt='' />{errors?.massages}</div>}
+        {/* {errors?.booking_name_surname && <div className='border-2 border-red-600 bg-red-600 rounded-md p-3 mb-3 w-fit text-white'><img className='w-6 inline mr-3' src={exclamationMark} alt='' />{errors?.booking_name_surname}</div>}*/}
       </div>
       <div>
         {handleSubmit ?? handleSubmit()}
@@ -82,15 +77,17 @@ const BookingForm: FC<BookingFormProps> = ({ handleChange, handleSubmit, errors,
           </p>
         </div>
         :
-        <form onSubmit={handleSubmit} className='grid grid-cols-2 w-full gap-[30px]'>
-          {/* @ts-ignore */}
-
+        <form onSubmit={handleSubmit}>
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-[30px] mb-8'>
+           
+        {/* @ts-ignore */}
           <AnimatedDateInput
             handleChange={handleChange}
             //   value={values.date} 
             // setValue={setValues} 
             label="Reservation Date"
             errors={errors}
+            wrapperClassNames='col-span-2 md:col-span-1'
           />
 
           <AnimatedTimeInput
@@ -98,6 +95,7 @@ const BookingForm: FC<BookingFormProps> = ({ handleChange, handleSubmit, errors,
             label="Reservation Time"
             // value={values.time}
             errors={errors}
+            wrapperClassNames='col-span-2 md:col-span-1'
           />
 
           <AnimatedInput
@@ -108,9 +106,10 @@ const BookingForm: FC<BookingFormProps> = ({ handleChange, handleSubmit, errors,
             handleChange={handleChange}
             // onChange={(e: any) => handleChange(e)}
             Icon={<HumanAvatar />}
-            wrapperClassName={`transition-all bg-[#F7F7F7] hover:bg-white rounded-[10px]`}
+            wrapperClassName={`transition-all bg-[#F7F7F7] hover:bg-white rounded-[10px] col-span-2 md:col-span-1`}
             focusStateStyles='bg-white'
             errors={errors}
+            
           />
 
           <GuestsInput
@@ -118,13 +117,15 @@ const BookingForm: FC<BookingFormProps> = ({ handleChange, handleSubmit, errors,
             // value={values.guestsCount} 
             // handleChange={handleGuestsChange}
             handleChange={handleChange}
+            errors={errors}
+            wrapperClassNames='col-span-2 md:col-span-1 col-span-2 md:col-span-1'
           />
 
           <AnimatedTelInput
             label={'Phone Number '}
-            name='phoneNo'
+            name='phone'
             onChange={(e: any) => handleChange(e, 'phone')}
-            wrapperClassName={`transition-all bg-[#F7F7F7] hover:bg-white rounded-[10px]`}
+            wrapperClassName={`transition-all bg-[#F7F7F7] hover:bg-white rounded-[10px] col-span-2 md:col-span-1`}
             focusStateStyles='bg-white'
             errors={errors}
           />
@@ -136,7 +137,7 @@ const BookingForm: FC<BookingFormProps> = ({ handleChange, handleSubmit, errors,
             name='email'
             onChange={(e: any) => handleChange(e)}
             Icon={<AtSignIcon />}
-            wrapperClassName={`transition-all bg-[#F7F7F7] hover:bg-white rounded-[10px]`}
+            wrapperClassName={`transition-all bg-[#F7F7F7] hover:bg-white rounded-[10px] col-span-2 md:col-span-1`}
             focusStateStyles='bg-white'
             errors={errors}
           />
@@ -154,6 +155,8 @@ const BookingForm: FC<BookingFormProps> = ({ handleChange, handleSubmit, errors,
               Book Now
             </span>
           </button>
+          </div>
+         
 
         </form>
       }

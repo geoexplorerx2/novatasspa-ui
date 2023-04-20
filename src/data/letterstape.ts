@@ -9,114 +9,114 @@ import v_letter from '../assets/icons/V.svg';
 export const LETTERS_TAPE = [
     {
         letter: t_letter,
-        className: 'mr-[32.7px]'
+        className: 'md:mr-[32.7px] md:w-full w-[37px] mr-[12.7px]'
     },
     {
         letter: a_letter,
-        className: 'mr-[32.7px]'
+        className: 'md:mr-[32.7px] md:w-full w-[48px] mr-[12.7px]'
     },
     {
         letter: s_letter,
-        className: 'mr-[32.7px]'
+        className: 'md:mr-[32.7px] md:w-full w-[35px] mr-[18px]'
     },
     {
         letter: n_letter,
-        className: 'mr-[32.7px]'
+        className: 'md:mr-[32.7px] md:w-full w-[40px] mr-[12.7px]'
     },
     {
         letter: o_letter,
-        className: 'mr-[32.7px]'
+        className: 'md:mr-[32.7px] md:w-full w-[48px] mr-[12.7px]'
     },
     {
         letter: v_letter,
-        className: 'mr-[32.7px]'
+        className: 'md:mr-[32.7px] md:w-full w-[45px] mr-[12.7px]'
     },
     {
         letter: a_letter,
-        className: 'mr-[32.7px]'
+        className: 'md:mr-[32.7px] md:w-full w-[48px] mr-[12.7px]'
     },
     {
         letter: t_letter,
-        className: 'mr-[32.7px]'
+        className: 'md:mr-[32.7px] md:w-full w-[37px] mr-[12.7px]'
     },
     {
         letter: a_letter,
-        className: 'mr-[46.76px]'
+        className: 'md:mr-[32.7px] md:w-full w-[48px] mr-[12.7px]'
     },
     {
         letter: s_letter,
-        className: 'mr-[50px]'
+        className: 'md:mr-[50px] md:w-full w-[35px] mr-[12.7px]'
     },
     {
         letter: n_letter,
-        className: 'mr-[62.35px]'
+        className: 'md:mr-[62.35px] md:w-full w-[40px] mr-[12.7px]'
     },
     {
         letter: o_letter,
-        className: 'mr-[44.73px]'
+        className: 'md:mr-[44.73px] md:w-full w-[48px] mr-[12.7px]'
     },
     {
         letter: v_letter,
-        className: 'mr-[32.7px]'
+        className: 'md:mr-[32.7px] md:w-full w-[20px] mr-[12.7px]'
     },
     {
         letter: a_letter,
-        className: 'mr-[32.7px]'
+        className: 'md:mr-[32.7px] md:w-full w-[48px] mr-[12.7px]'
     },
     {
         letter: t_letter,
-        className: 'mr-[32.7px]'
+        className: 'md:mr-[32.7px] md:w-full w-[37px] mr-[12.7px]'
     },
     {
         letter: a_letter,
-        className: 'mr-[32.7px]'
+        className: 'md:mr-[32.7px] md:w-full w-[48px] mr-[12.7px]'
     },
     {
         letter: s_letter,
-        className: 'mr-[32.7px]'
+        className: 'md:mr-[32.7px] md:w-full w-[35px] mr-[12.7px]'
     },
     {
         letter: n_letter,
-        className: 'mr-[32.7px]'
+        className: 'md:mr-[32.7px] md:w-full w-[40px] mr-[12.7px]'
     },
     {
         letter: o_letter,
-        className: 'mr-[32.7px]'
+        className: 'md:mr-[32.7px] md:w-full w-[48px] mr-[12.7px]'
     },
     {
         letter: v_letter,
-        className: 'mr-[32.7px]'
+        className: 'md:mr-[32.7px] md:w-full w-[20px] mr-[12.7px]'
     },
     {
         letter: a_letter,
-        className: 'mr-[32.7px]'
+        className: 'md:mr-[32.7px] md:w-full w-[48px] mr-[12.7px]'
     },
     {
         letter: t_letter,
-        className: 'mr-[32.7px]'
+        className: 'md:mr-[32.7px] md:w-full w-[37px] mr-[12.7px]'
     },
     {
         letter: a_letter,
-        className: 'mr-[46.76px]'
+        className: 'md:mr-[32.7px] md:w-full w-[48px] mr-[12.7px]'
     },
     {
         letter: s_letter,
-        className: 'mr-[50px]'
+        className: 'md:mr-[50px] md:w-full w-[35px] mr-[12.7px]'
     },
     {
         letter: n_letter,
-        className: 'mr-[62.35px]'
+        className: 'md:mr-[62.35px] md:w-full w-[40px] mr-[12.7px]'
     },
     {
         letter: o_letter,
-        className: 'mr-[44.73px]'
+        className: 'md:mr-[44.73px] md:w-full w-[48px] mr-[12.7px]'
     },
     {
         letter: v_letter,
-        className: 'mr-[32.7px]'
+        className: 'md:mr-[32.7px] md:w-full w-[20px] mr-[12.7px]'
     },
     {
         letter: a_letter,
-        className: 'mr-[32.7px]'
+        className: 'md:mr-[32.7px] md:w-full w-[48px] mr-[12.7px]'
     },
 ]

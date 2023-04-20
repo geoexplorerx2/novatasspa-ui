@@ -13,24 +13,25 @@ const MenuItems: FC<MenuItemsProps> = ({
 }) => {
 
   const urlNavigate = useNavigate();
+  let activeLang = localStorage.getItem('activeLang');
 
   const handleNavLink = (item: NavigationItemType) => {
-    urlNavigate(item.href)
+    urlNavigate(`${item.href != '/' ? activeLang+'/'+item.href : item.href}`);
   };
 
   const RenderItem = (item: NavigationItemType) => {
     return (
-      <div className="flex items-center" onClick={()=> window.scrollTo({top: 0, behavior: 'smooth'})}>
+      <div className="flex items-center justify-center md:jusitfy-start" onClick={()=> window.scrollTo({top: 0, behavior: 'smooth'})}>
         <NavLink
           // exact
           // strict
           target={item.targetBlank ? "_blank" : undefined}
           rel="noopener noreferrer"
           className={`inline-flex items-center xl:text-xs whitespace-nowrap px-[.1vw]`}
-          to={item.href}
+          to={`${item.href != '/' ? activeLang + item.href : item.href}`}
           onClick={(e: any) => { handleNavLink(item) }}
         >
-          <span className={`font-poppins font-normal text-[20px] text-[#FFFFFF] px-4 leading-[14px] tracking-[0.02em]`}>
+          <span className={`font-poppins font-normal text-[20px] text-[#FFFFFF] md:px-4 leading-[14px] tracking-[0.02em] text-center md:text-left`}>
             {item.name}
           </span>
         </NavLink>

@@ -2,13 +2,14 @@ import React, { FC, useState } from 'react'
 import { servicesVersion } from 'typescript'
 import { ReactComponent as CaldleAndFlower } from '../../assets/icons/candleFlower.svg'
 import { ReactComponent as Wave } from '../../assets/icons/wave.svg'
+import { useNavigate } from 'react-router-dom'
 
 
 const OurServices: FC = () => {
     return (
-        <div className='container -mt-[430px]'>
-            <h2 className='text-white text-[64px] font-gotu leading-[74px] tracking-tighter mb-12'>Our <br /> Services</h2>
-            <div className='grid grid-cols-4 gap-[30px]'>
+        <div className='container -mt-[188px] md:-mt-[430px] overflow-hidden lg:overflow-visible'>
+            <h2 className='text-white text-3xl md:text-[64px] font-gotu md:leading-[74px] md:tracking-tighter mb-5 lg:mb-12 px-9 md:px-0'>Our <br className='hidden md:inline-block' /> Services</h2>
+            <div className='grid grid-cols-1 md:grid-cols-4 gap-[30px] px-9 md:px-0'>
                 {ServicesData.map(service => <ServiceCard service={service}/>)}
             </div>
         </div>
@@ -31,17 +32,24 @@ interface ServiceCardProps {
 
 const ServiceCard: FC<ServiceCardProps> = (props) => {
     const { service: { description, info, duration, Icon, id, price, title } } = props
-    const [ isHovered, setIsHovered ] = useState(false)
+    const [ isHovered, setIsHovered ] = useState(false);
+    const activeLang = localStorage.getItem('activeLang');
+    const navigate = useNavigate();
+    
+    const handleBookingClick = () => {
+        navigate(`/${activeLang}/booking`);
+    };
+
     return (
-        <a href='/booking'><div className={`relative border cursor-pointer border-[#EEEEEE] py-[42px] px-[35px] space-y-[30px] transition-all ${isHovered ? 'bg-[#423930]' : 'bg-white'}`} key={id} onMouseEnter={() => {setIsHovered(true)}} onMouseLeave={() => {setIsHovered(false)} } >
+        <a onClick={handleBookingClick}><div className={`relative border cursor-pointer border-[#EEEEEE] py-[42px] px-[35px] space-y-[30px] transition-all ${isHovered ? 'bg-[#423930]' : 'bg-white'}`} key={id} onMouseEnter={() => {setIsHovered(true)}} onMouseLeave={() => {setIsHovered(false)} } >
             <div className='flex justify-between'>
                 <Icon className={`${isHovered ? 'text-white' : ''}`}/>
                 <div>
                     <div className={`flex justify-end ${isHovered ? 'text-white' : ''}`}>
                         <span className='font-medium text-2xl mr-1'>
-                            {price}
+                        € {price}
                         </span>
-                        <span className='text-xs inline-block font-medium'>$</span>
+                        {/* <span className='text-xs inline-block font-medium'>€</span> */}
                     </div>
                     <p className={`flex justify-end ${isHovered ? 'text-white' : ''} text-black`}>{duration} minutes per person</p>
                     <div className={`${isHovered ? 'text-white' : 'text-black'} flex space-x-4`}>

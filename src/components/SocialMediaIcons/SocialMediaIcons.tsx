@@ -3,6 +3,8 @@ import {ReactComponent as FaceBookIcon} from '../../assets/icons/FacebookIcon.sv
 import {ReactComponent as TwitterIcon} from '../../assets/icons/TwitterIcon.svg' 
 import {ReactComponent as InstagramIcon} from '../../assets/icons/InstagramIcon.svg' 
 import {ReactComponent as YoutubeIcon} from '../../assets/icons/YoutubeIcon.svg' 
+import {ReactComponent as WhatsappIcon} from '../../assets/icons/whatsapp.svg'
+import {ReactComponent as Linkedin} from '../../assets/icons/linkedin.svg'
 
 interface SocialMediaIconsProps {
     wrapperClassNames?: string
@@ -16,7 +18,7 @@ const SocialMediaIcons: FC<SocialMediaIconsProps> = (props) => {
         {socialmediaIconsData.map(item => {
             const { Icon, href } = item
             return (
-            <a href={href}>
+            <a target='_blank' rel='noreferrer' className='' href={href}>
                 <Icon />
             </a>)
         })}
@@ -31,23 +33,35 @@ const socialmediaIconsData = [
         Icon: FaceBookIcon,
         id: '1'
     },
-    {
-        label: 'Twitter',
-        href: '#',
-        Icon: TwitterIcon,
-        id: '2'
-    },
+    // {
+    //     label: 'Twitter',
+    //     href: '#',
+    //     Icon: TwitterIcon,
+    //     id: '2'
+    // },
     {
         label: 'Instagram',
         href: 'https://www.instagram.com/novatasspa/',
         Icon: InstagramIcon,
         id: '3'
     },
+    // {
+    //     label: 'Youtube',
+    //     href: '#',
+    //     Icon: YoutubeIcon,
+    //     id: '4'
+    // },
+    // {
+    //     label: 'Whatsapp',
+    //     href: 'https://wa.me/905417600248',
+    //     Icon: WhatsappIcon,
+    //     id: '5'
+    // },
     {
-        label: 'Youtube',
-        href: '#',
-        Icon: YoutubeIcon,
-        id: '4'
+        label: 'LinkedIn',
+        href: 'https://www.linkedin.com/company/novatas-spa-management/',
+        Icon: Linkedin,
+        id: '6'
     },
 ]
 
