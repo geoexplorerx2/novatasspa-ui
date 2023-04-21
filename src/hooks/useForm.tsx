@@ -17,6 +17,7 @@ const useForm = (callback: any, validate: any, formType: any) => {
         // if(event) event.preventDefault();
         setErrors(validate(values, formType));
         setIsSubmitting(true);
+        
         // alert('thank you');
 
         return <div>Thank you</div>
