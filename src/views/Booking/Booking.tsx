@@ -6,6 +6,8 @@ import BookingForm from '../../components/BookingForm/BookingForm';
 import services from '../../api/services';
 import { useForm, useValidate } from '../../hooks';
 import { useNavigate } from 'react-router-dom';
+import { DateInputProps } from '@mantine/dates';
+import { addLeadingZeros } from '../../common/AddLeadingZeros';
 
 
 const Booking = () => {
@@ -23,8 +25,12 @@ const Booking = () => {
 
   function _handleBooking() {
 
+    const getDateFormat = (date: any) => {
+      return addLeadingZeros(date[2], 2) + '-' + addLeadingZeros(date[0], 2) + '-' + addLeadingZeros(date[1], 2);
+    };
+
     const booking_data = {
-      reservation_date: new Date(values?.date).toLocaleDateString().replaceAll('/', '-'), //'2023-03-30'
+      reservation_date: getDateFormat(new Date(values?.date).toLocaleDateString().split('/')), //'2023-03-30'
       reservation_time: values?.time,
       name_surname: values?.booking_name_surname,
       phone: values?.phone,
