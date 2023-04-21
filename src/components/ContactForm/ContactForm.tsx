@@ -8,7 +8,7 @@ import { ReactComponent as MailIcon } from '../../assets/icons/mailIcon.svg'
 import { ReactComponent as MessageIcon } from '../../assets/icons/messageIcon.svg'
 import { useForm, useValidate } from '../../hooks';
 import services from '../../api/services';
-
+import { useNavigate } from 'react-router-dom';
 
 
 const ContactForm: FC = () => {
@@ -29,6 +29,8 @@ const ContactForm: FC = () => {
 
   const [servermessage, setServerMessage] = useState<any>();
   const server = services;
+  const navigate = useNavigate()
+  const activeLang = localStorage.getItem('activeLang');
 
   // const handleChange = (event: any, type: any = '') => {
   //   if (type === 'telephone') setValues((value: any) => ({ ...value, 'phone': event }))
@@ -58,6 +60,7 @@ const ContactForm: FC = () => {
       .then((res: any) => {
         let message = res.entity;
         setServerMessage(message);
+        navigate(`/${activeLang}/thank-you`)
       })
       .catch((error: any) => {
         let message = error.entity;
