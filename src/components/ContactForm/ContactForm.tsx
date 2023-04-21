@@ -25,7 +25,7 @@ const ContactForm: FC = () => {
     errors,
     handleChange,
     handleSubmit
-  } = useForm(_handleQuickReservation, useValidate, 'quickreservation');
+  } = useForm(_handleQuickReservation, useValidate, 'contactForm');
 
   const [servermessage, setServerMessage] = useState<any>();
   const server = services;
@@ -84,7 +84,9 @@ const ContactForm: FC = () => {
           name='namesurname'
           onChange={handleChange}
           Icon={<HumanAvatar />}
-          wrapperClassName='bg-white' />
+          wrapperClassName='bg-white'
+          errors={errors}
+          />
 
         <AnimatedTelInput
           // value={values?.phoneNo}
@@ -92,7 +94,9 @@ const ContactForm: FC = () => {
           label='Your Number'
           name='phone'
           onChange={(e: any) => handleChange(e, 'telephone')}
-          wrapperClassName='bg-white' />
+          wrapperClassName='bg-white'
+          errors={errors}
+           />
 
         <AnimatedInput
           // value={values?.email}
@@ -101,7 +105,9 @@ const ContactForm: FC = () => {
           name='quickreservation_email'
           onChange={handleChange}
           Icon={<MailIcon />}
-          wrapperClassName='bg-white' />
+          wrapperClassName='bg-white'
+          errors={errors}
+          />
 
 
         {/* <AnimatedInput

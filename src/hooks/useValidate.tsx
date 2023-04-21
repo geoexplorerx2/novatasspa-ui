@@ -19,6 +19,22 @@ const useValidate = (values: any, type: any) => {
                 errors.quickreservation_email = 'Email address is invalid';
             }
             break;
+        case 'contactForm':
+            if (!values.namesurname) {
+                errors.namesurname = 'Name surname is required';
+            }
+            if (!values.phone) {
+                errors.phone = 'Phone Number is required';
+            }
+            if (values.phone.length < 7) {
+                errors.phone = 'Phone Number is invalid'
+            }
+            if (!values.quickreservation_email) {
+                errors.quickreservation_email = 'Email address is required';
+            } else if (!/\S+@\S+\.\S+/.test(values.quickreservation_email)) {
+                errors.quickreservation_email = 'Email address is invalid';
+            }
+            break;
 
         case 'booking':
             if(!values.booking_name_surname) errors.booking_name_surname = 'Name Surname is required';
