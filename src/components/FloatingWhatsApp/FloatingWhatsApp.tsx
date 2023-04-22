@@ -129,7 +129,7 @@ export default function FloatingWhatsApp({
 
   useEffect(() => {
     setTimeout(() => {
-      const btn = document.getElementsByClassName("styles_whatsappButton__otaVA")?.[0];
+      const btn = document.getElementsByClassName("floating-whatsapp-button")?.[0];
       // console.log('btn',btn)
       // @ts-ignore
       // Property 'click' does not exist on type 'Element'.
