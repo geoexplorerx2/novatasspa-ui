@@ -1,4 +1,4 @@
-import React, { FC, InputHTMLAttributes, useState, useEffect } from 'react';
+import React, { FC, InputHTMLAttributes, useState, useEffect, useRef } from 'react';
 import { PhoneInput } from 'react-international-phone';
 import 'react-international-phone/style.css';
 import { ReactComponent as PhoneIcon } from '../../assets/icons/phone-icon.svg'
@@ -19,7 +19,15 @@ interface InfoProps extends InputHTMLAttributes<HTMLInputElement> {
 const AnimatedTelInput: FC<InfoProps> = (props) => {
 
 
+    const phoneRef = useRef(null);
+    const phoneInput = document.getElementsByClassName('react-international-phone-input')?.[0] as HTMLElement;
+    phoneInput.setAttribute("ref", `${phoneRef}`)
     const [phone, setPhone] = useState('');
+
+    useEffect(()=> {
+        // @ts-ignore
+        phoneRef?.current?.blur();
+    }, [])
 
     const { label, inputType, name, onChange, value, wrapperClassName, focusStateStyles, errors } = props
 

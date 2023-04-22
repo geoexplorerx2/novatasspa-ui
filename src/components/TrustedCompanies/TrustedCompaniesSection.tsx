@@ -84,31 +84,31 @@ const companiesData = [
     label: 'Zer Architects',
     Icon: logo_2,
     id: '2',
-    className: 'md:max-w-[200px] max-w-[150px]'
+    className: 'md:max-w-[200px] max-w-[110px]'
   },
   {
     label: 'Vipser',
     Icon: logo_3,
     id: '3',
-    className: 'md:max-w-[200px] max-w-[150px]'
+    className: 'md:max-w-[200px] max-w-[110px]'
   },
   {
     label: 'Arpanu Travel',
     Icon: logo_4,
     id: '4',
-    className: 'md:max-w-[240px] max-w-[170px]'
+    className: 'md:max-w-[240px] max-w-[140px]'
   },
   {
     label: 'Book Perfect',
     Icon: logo_5,
     id: '5',
-    className: 'md:max-w-[300px] max-w-[170px]'
+    className: 'md:max-w-[300px] max-w-[140px]'
   },
   {
     label: 'Arpanu Medical',
     Icon: logo_6,
     id: '6',
-    className: 'md:max-w-[300px] max-w-[170px]'
+    className: 'md:max-w-[300px] max-w-[140px]'
   },
 ]
 
