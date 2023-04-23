@@ -24,7 +24,8 @@ const AnimatedTelInput: FC<InfoProps> = (props) => {
     phoneInput?.setAttribute("ref", `${phoneRef}`)
     const [phone, setPhone] = useState('');
 
-    useEffect(()=> {
+    useEffect(() => {
+        phoneInput?.setAttribute("ref", `${phoneRef}`)
         // @ts-ignore
         phoneRef?.current?.blur();
     }, [])
