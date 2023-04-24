@@ -85,7 +85,7 @@ export default function FloatingWhatsApp({
   accountName = 'Account Name',
   avatar = dummyAvatar,
   statusMessage = 'Online',
-  chatMessage = 'If you are interested in a Traditional Turkish Bath experience in Istanbul or have any questions about the process in general, feel free to start a chat. Our Hospitality Supervisors are at your service to provide you with support.',
+  chatMessage = 'If you are interested in a Hammam & Spa experience in Istanbul or have any questions about the process in general, feel free to start a chat. Our Hospitality Supervisors are at your service to provide you with support.',
   placeholder = 'Type a message..',
 
   messageDelay = 2,
