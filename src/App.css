@@ -141,3 +141,15 @@
 div[class^="styles_chatBody__"] {
   max-width: unset !important;
 }
+
+div[class^=".styles_message__"] {
+  max-width: unset !important;
+}
+
+.react-international-phone-country-selector-button {
+  border: unset !important;
+}
+
+.react-international-phone-input-container .react-international-phone-country-selector-button {
+  padding-left: 24px;
+}

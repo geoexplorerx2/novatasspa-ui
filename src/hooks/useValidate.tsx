@@ -58,8 +58,8 @@ const useValidate = (values: any, type: any) => {
                 errors.email = 'Email address is required';
             }
 
-            if(Object.keys(values.hammam).length == 0 || !values.hammam || !Object.keys(values?.hammam).find(key => values?.hammam[key] == true)) errors.hammam = 'Hammam is required';
-            if(Object.keys(values.massages).length == 0 || !values.massages || !Object.keys(values?.massages).find(key => values?.massages[key] == true)) errors.massages = 'Massages is required';
+            // if(Object.keys(values.hammam).length == 0 || !values.hammam || !Object.keys(values?.hammam).find(key => values?.hammam[key] == true)) errors.hammam = 'Hammam is required';
+            // if(Object.keys(values.massages).length == 0 || !values.massages || !Object.keys(values?.massages).find(key => values?.massages[key] == true)) errors.massages = 'Massages is required';
 
             break;
         default:

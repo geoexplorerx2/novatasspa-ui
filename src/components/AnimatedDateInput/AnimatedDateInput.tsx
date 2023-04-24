@@ -87,6 +87,7 @@ const AnimatedDateInput: FC<AnimatedDateInputPropsType> = (props) => {
                 minDate={dayjs(new Date()).startOf('month').add(new Date().getDate() - 1, 'days').toDate()}
                 onFocus={() => onFocus()}
                 onBlur={() => onBlur()}
+                inputMode='none'
             />
 
 

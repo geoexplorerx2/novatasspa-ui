@@ -56,7 +56,7 @@ const Booking = () => {
   return (
     <div className=''>
       <div className='w-full h-full grid grid-cols-1 xl:grid-cols-2'>
-        <img src={ReservationBanner} alt='reservation salon image' className='hidden xl:inline-block h-full'/>
+        <img src={ReservationBanner} alt='reservation salon image' className='hidden xl:inline-block h-full object-cover'/>
         <div className='w-full h-full'>
           {/* <img src={novatasspaLogo} alt="Novatas Logo" className='mx-auto my-7 mx-wuto' /> */}
           <div className='w-full h-full px-5 md:px-9 '>
