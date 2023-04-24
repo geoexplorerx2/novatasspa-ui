@@ -55,6 +55,8 @@ const BookingForm: FC<BookingFormProps> = ({ handleChange, handleSubmit, errors,
     console.log('errors', errors)
   }, [errors])
 
+  console.log('serverRes', serverRes)
+
 
   return (
     <div className='w-full bg-white space-y-[30px]'>

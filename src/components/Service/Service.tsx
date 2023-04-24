@@ -11,9 +11,9 @@ const Service = ({ data }: any) => {
 };
 
   return (
-    <div className='container flex lg:flex-row flex-col lg:pt-[100px] pt-[32px] pb-[23px] lg:gap-x-[150px]'>
+    <div className='container flex lg:flex-row flex-col lg:pt-[100px] pt-[32px] pb-[23px] xl:gap-x-[150px] gap-x-[80px]'>
       <div>
-        <img className='lg:max-w-[690px] max-w-[80vw] mx-auto lg:mx-0' src={data.image} />
+        <img className='xl:max-w-[690px] md:max-w-[50vw] max-w-[80vw] mx-auto lg:mx-0' src={data.image} />
       </div>
       <div className='flex flex-col '>
         <div className='lg:max-w-[690px] max-w-[20vw] mx-auto lg:mx-0 mt-[53px]'>
@@ -22,13 +22,13 @@ const Service = ({ data }: any) => {
         <div className='font-gotu font-normal text-[30px] lg:text-[64px] text-[#B2A285] leading-[74px] tracking-[0.05em] text-center lg:text-left'>
           {data.service}
         </div>
-        <div className='font-poppins font-normal lg:w-[570px] text-[15px] lg:text-[18px] text-[#423930] mt-[30px] leading-[28px] tracking-[0.02em] text-center lg:text-left px-[37px] lg:px-0'>
+        <div className='font-poppins font-normal text-[15px] lg:text-[18px] text-[#423930] mt-[30px] leading-[28px] tracking-[0.02em] text-center lg:text-left px-[37px] lg:px-0'>
           {data.description_parapgrath1}
         </div>
-        <div className='font-poppins font-normal lg:w-[570px] text-[15px] lg:text-[18px] text-[#423930] mt-[30px] leading-[28px] tracking-[0.02em] text-center lg:text-left px-[37px] lg:px-0'>
+        <div className='font-poppins font-normal text-[15px] lg:text-[18px] text-[#423930] mt-[30px] leading-[28px] tracking-[0.02em] text-center lg:text-left px-[37px] lg:px-0'>
           {data.description_parapgrath2}
         </div>
-        <div className='font-poppins font-normal lg:w-[570px] text-[15px] lg:text-[18px] text-[#423930] mt-[30px] leading-[28px] tracking-[0.02em] text-center lg:text-left px-[37px] lg:px-0'>
+        <div className='font-poppins font-normal text-[15px] lg:text-[18px] text-[#423930] mt-[30px] leading-[28px] tracking-[0.02em] text-center lg:text-left px-[37px] lg:px-0'>
           {data.description_parapgrath3}
         </div>
         <div className='mt-[30px] mx-auto lg:mx-0'>
