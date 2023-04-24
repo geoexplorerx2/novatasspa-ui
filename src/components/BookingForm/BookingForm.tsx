@@ -43,7 +43,7 @@ const BookingForm: FC<BookingFormProps> = ({ handleChange, handleSubmit, errors,
   // const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
   //     e.preventDefault()
   //     console.log(r)
-  // }
+  // }s
 
   // useEffect(() => { 
   //   console.log('the values changed: ', values)
@@ -51,11 +51,11 @@ const BookingForm: FC<BookingFormProps> = ({ handleChange, handleSubmit, errors,
 
   // }, [values])
 
-  useEffect(() => {
-    console.log('errors', errors)
-  }, [errors])
+  // useEffect(() => {
+  //   console.log('errors', errors)
+  // }, [errors])
 
-  console.log('serverRes', serverRes)
+  // console.log('serverRes', serverRes)
 
 
   return (
