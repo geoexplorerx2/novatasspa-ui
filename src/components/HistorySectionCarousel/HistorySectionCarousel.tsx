@@ -204,14 +204,14 @@ const HistorySectionCarousel = () => {
                     createPortal(
                         <div className='fixed w-screen h-screen top-0 left-0 flex justify-center bg-black bg-opacity-80 z-50'>
                             {/* X */}
-                            <img onClick={handleClosingGallery} className='absolute w-[6vw] cursor-pointer lg:top-[10%] top-[15%] right-[9%]  translate-x-[-20%] translate-y-[20%]' src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAACXBIWXMAAAsTAAALEwEAmpwYAAABzUlEQVR4nO3cUU4CMRRG4SaGZ1mGPrAEdBWyxPpSdkVi4iZ+M3GIRhMyA+29LfecBUD9MqFF2qZEREREREREREREREREnSVpK+kg6SV1lqTXeWzbNHKSdpJO+ilL2nQwrs08lnPTGHdpxCQ9S/rQ/46e2JIe/iCf+xwO+wKyK/YF5PGwFyC7YC9AHgd7BbIp9grk/rHn1cXviW9ppSX2PPFN77G2U5erkXmZdG2lBfYNyOfeUm9N6+Qb/qDq2BWQp/apx1Z+DjbDroScU69dMelUnyArjaHpvDE8tr7f+/3ukT2xFQ3ZA1tRkS2xFR3ZAlsgt8cWyO2fbIFs8kWiVHqNsT+TjZ7sW3L94SEK9jEMsiN2PGQH7LjIhtggG2CDbIANsgE2yJeq9I0PaCNksA2RwTZEBtsQGWzZIcfFlj1yPGz5IcfBFv/4H/KnrMyT3RA5NXzNoTPYbpDDYxtuoMlhsR22hOVw2I6bHHMY7A627ea7x+5hE7giYHsjhzhaMR9gd0eujN3dRQEcf7PqTg90PqYek/S08ohy4Yhye+zCofv2T3bhGon22IWLUSrHVT8+l1ftU58XBRy6XV0QERERERERERERERGlyH0BBM4Nm7KQeq0AAAAASUVORK5CYII=" alt='' />
+                            <img onClick={handleClosingGallery} className='absolute md:w-[2vw] w-[6vw] cursor-pointer md:top-[25%] top-[25%] sm:right-[2%] lg:right-[6%] right-[9%]  translate-x-[-20%] translate-y-[20%]' src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAACXBIWXMAAAsTAAALEwEAmpwYAAABzUlEQVR4nO3cUU4CMRRG4SaGZ1mGPrAEdBWyxPpSdkVi4iZ+M3GIRhMyA+29LfecBUD9MqFF2qZEREREREREREREREREnSVpK+kg6SV1lqTXeWzbNHKSdpJO+ilL2nQwrs08lnPTGHdpxCQ9S/rQ/46e2JIe/iCf+xwO+wKyK/YF5PGwFyC7YC9AHgd7BbIp9grk/rHn1cXviW9ppSX2PPFN77G2U5erkXmZdG2lBfYNyOfeUm9N6+Qb/qDq2BWQp/apx1Z+DjbDroScU69dMelUnyArjaHpvDE8tr7f+/3ukT2xFQ3ZA1tRkS2xFR3ZAlsgt8cWyO2fbIFs8kWiVHqNsT+TjZ7sW3L94SEK9jEMsiN2PGQH7LjIhtggG2CDbIANsgE2yJeq9I0PaCNksA2RwTZEBtsQGWzZIcfFlj1yPGz5IcfBFv/4H/KnrMyT3RA5NXzNoTPYbpDDYxtuoMlhsR22hOVw2I6bHHMY7A627ea7x+5hE7giYHsjhzhaMR9gd0eujN3dRQEcf7PqTg90PqYek/S08ohy4Yhye+zCofv2T3bhGon22IWLUSrHVT8+l1ftU58XBRy6XV0QERERERERERERERGlyH0BBM4Nm7KQeq0AAAAASUVORK5CYII=" alt='' />
 
-                            <div className='flex justify-center align-middle'>
-                                <img src={clickedImage?.src} id={clickedImage?.id} alt='' className='absolute w-[80vw] findme top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]' />
+                            <div className='flex justify-center align-middle z-[-1]'>
+                                <img src={clickedImage?.src} id={clickedImage?.id} alt='' className='absolute md:w-[40vw] w-[80vw] findme top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]' />
 
                                 <div className='relative'>
-                                    <img id='' src={arrow} onClick={handlePrevImage} className='absolute min-w-[50px] p-[15px] rounded-full bg-white top-[80vh] left-[4rem] mx-auto aaaooo' alt='' />
-                                    <img src={arrow} onClick={handleNextImage} className='absolute rotate-180 min-w-[50px] p-[15px] rounded-full bg-white top-[80vh] right-[4rem] mx-auto' alt='' />
+                                    <img id='' src={arrow} onClick={handlePrevImage} className='absolute cursor-pointer min-w-[50px] p-[15px] rounded-full bg-white top-[80vh] left-[4rem] mx-auto aaaooo' alt='' />
+                                    <img src={arrow} onClick={handleNextImage} className='absolute cursor-pointer rotate-180 min-w-[50px] p-[15px] rounded-full bg-white top-[80vh] right-[4rem] mx-auto' alt='' />
                                 </div>
                             </div>
                         </div>

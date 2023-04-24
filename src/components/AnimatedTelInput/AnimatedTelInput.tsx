@@ -21,10 +21,11 @@ const AnimatedTelInput: FC<InfoProps> = (props) => {
 
     const phoneRef = useRef(null);
     const phoneInput = document.getElementsByClassName('react-international-phone-input')?.[0] as HTMLElement;
-    phoneInput.setAttribute("ref", `${phoneRef}`)
+    phoneInput?.setAttribute("ref", `${phoneRef}`)
     const [phone, setPhone] = useState('');
 
-    useEffect(()=> {
+    useEffect(() => {
+        phoneInput?.setAttribute("ref", `${phoneRef}`)
         // @ts-ignore
         phoneRef?.current?.blur();
     }, [])
