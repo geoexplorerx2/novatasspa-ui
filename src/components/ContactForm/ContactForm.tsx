@@ -6,7 +6,7 @@ import { ReactComponent as ArrowRight } from '../../assets/icons/ArrowRight.svg'
 import { ReactComponent as HumanAvatar } from '../../assets/icons/humanAvatar.svg'
 import { ReactComponent as MailIcon } from '../../assets/icons/mailIcon.svg'
 import { ReactComponent as MessageIcon } from '../../assets/icons/messageIcon.svg'
-import { useForm, useValidate } from '../../hooks';
+import { useForm, useLocation, useValidate } from '../../hooks';
 import services from '../../api/services';
 import { useNavigate } from 'react-router-dom';
 
@@ -26,7 +26,8 @@ const ContactForm: FC = () => {
     handleChange,
     handleSubmit
   } = useForm(_handleQuickReservation, useValidate, 'contactForm');
-
+  const { countryName } = useLocation();
+  
   const [servermessage, setServerMessage] = useState<any>();
   const server = services;
   const navigate = useNavigate()
@@ -51,7 +52,7 @@ const ContactForm: FC = () => {
     const quick_reservation_data = {
       name_surname: values?.namesurname,
       phone: values?.phone,
-      country: 'Turkey',
+      country: countryName,
       email: values?.quickreservation_email
     };
 

@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import ReservationBanner from '../../assets/images/reservationBanner.png'
 import { Logo } from '../../lib';
 import novatasspaLogo from "../../assets/logo/novatasspaLogo.svg";
 import BookingForm from '../../components/BookingForm/BookingForm';
 import services from '../../api/services';
-import { useForm, useValidate } from '../../hooks';
+import { useForm, useLocation, useValidate } from '../../hooks';
 import { useNavigate } from 'react-router-dom';
 import { DateInputProps } from '@mantine/dates';
 import { addLeadingZeros } from '../../common/AddLeadingZeros';
@@ -12,6 +12,7 @@ import { addLeadingZeros } from '../../common/AddLeadingZeros';
 
 const Booking = () => {
   const [serverRes, setServerRes] = useState<any>();
+  const [country, setCountry] = useState(null);
   const {
     values,
     errors,
@@ -19,6 +20,7 @@ const Booking = () => {
     handleSubmit
   } = useForm(_handleBooking, useValidate, 'booking');
 
+  const { countryName } = useLocation();
   const server = services;
   const navigate = useNavigate();
   const activeLang = localStorage.getItem('activeLang');
@@ -34,7 +36,7 @@ const Booking = () => {
       reservation_time: values?.time,
       name_surname: values?.booking_name_surname,
       phone: values?.phone,
-      country: 'Turkey',
+      country: countryName,
       email: values?.email,
       massage_package: Object.keys(values?.massages).filter(key => values?.massages[key] == true),
       hammam_package: Object.keys(values?.hammam).filter(key => values?.hammam[key] == true),
@@ -56,7 +58,7 @@ const Booking = () => {
   return (
     <div className=''>
       <div className='w-full h-full grid grid-cols-1 xl:grid-cols-2'>
-        <img src={ReservationBanner} alt='reservation salon image' className='hidden xl:inline-block h-full object-cover'/>
+        <img src={ReservationBanner} alt='reservation salon image' className='hidden xl:inline-block h-full object-cover' />
         <div className='w-full h-full'>
           {/* <img src={novatasspaLogo} alt="Novatas Logo" className='mx-auto my-7 mx-wuto' /> */}
           <div className='w-full h-full px-5 md:px-9 '>
@@ -65,7 +67,7 @@ const Booking = () => {
               errors={errors}
               handleChange={handleChange}
               handleSubmit={handleSubmit}
-              serverRes = { serverRes}
+              serverRes={serverRes}
             />
 
           </div>
