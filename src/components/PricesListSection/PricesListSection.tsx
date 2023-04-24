@@ -219,7 +219,7 @@ const PricesListSection = () => {
     return (
         <SectionBackground backgroundDivClassNames='bg-[#F5F5F5] h-[970px]'>
             <div className='container overflow-hidden'>
-                <h1 className="text-[#B2A285] text-[44px] leading-[54px] pt-[124px] font-gotu mx-8 lg:mt-0 md:mt-[190px] mt-[170px]">Our Price List</h1>
+                <h1 className="text-[#B2A285] text-[44px] leading-[54px] lg:pt-[60px] font-gotu mx-8 lg:mt-0 md:mt-[190px] mt-[170px]">Our Price List</h1>
 
                 <div className="md:grid xl:grid-cols-3 lg:grid-cols-2 flex flex-col pb-[93px] gap-[30px]">
                     {
