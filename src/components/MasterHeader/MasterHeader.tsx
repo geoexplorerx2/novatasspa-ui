@@ -46,7 +46,7 @@ const MasterHeader = () => {
                     <MainMenu />
                 </div>
 
-                <div className="flex justify-center invisible md:visible">
+                <div className="flex justify-center ">
                     <Logo img={novatasspaLogo} />
                 </div>
 
