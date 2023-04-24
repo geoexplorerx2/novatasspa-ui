@@ -125,17 +125,17 @@ const ServicesData: ServiceType[] = [
         price: '80',
         id: '4'
     },
-    {
-        title: 'Pasha Hammam',
-        description: 'A refreshing Turkish bath session with traditional body scrub, followed by a relaxing full body foam cover.',
-        info: [
-            'Body Scrub', 'All Body Foam'
-        ],
-        duration: '2',
-        Icon: CaldleAndFlower,
-        price: '60',
-        id: '5'
-    },
+    // {
+    //     title: 'Pasha Hammam',
+    //     description: 'A refreshing Turkish bath session with traditional body scrub, followed by a relaxing full body foam cover.',
+    //     info: [
+    //         'Body Scrub', 'All Body Foam'
+    //     ],
+    //     duration: '2',
+    //     Icon: CaldleAndFlower,
+    //     price: '60',
+    //     id: '5'
+    // },
     // {
     //     title: 'Pasha Hammam',
     //     description: 'From its medieval origins to the digital era, learn everything there is to know about the ubiquitous lorem ipsum passage.',
