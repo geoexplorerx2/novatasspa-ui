@@ -47,9 +47,9 @@ const TrustedCompaniesSection: FC = () => {
 
       <div className='grid md:grid-cols-3 grid-cols-2'>
         {companiesData.map(item => {
-          const { Icon, className } = item;
+          const { Icon, className, href } = item;
           return (
-            <img src={Icon} className={`mb-10 ${className} mx-auto`} alt='' />
+            <a href={href} target='_blanck'><img src={Icon} className={`mb-10 ${className} mx-auto`} alt='' /></a>
           )
         })}
       </div>
@@ -78,37 +78,43 @@ const companiesData = [
     label: 'Nova Plaza Hotel',
     Icon: logo_1,
     id: '1',
-    className: '-translate-y-[15px]'
+    className: '-translate-y-[15px]',
+    href: 'https://www.novaplazahotels.com/en/'
   },
   {
     label: 'Zer Architects',
     Icon: logo_2,
     id: '2',
-    className: 'md:max-w-[200px] max-w-[110px]'
+    className: 'md:max-w-[200px] max-w-[110px]',
+    href: 'https://zerplusglobal.com/'
   },
   {
     label: 'Vipser',
     Icon: logo_3,
     id: '3',
-    className: 'md:max-w-[200px] max-w-[110px]'
+    className: 'md:max-w-[200px] max-w-[110px]',
+    href: 'https://www.vipser.com/'
   },
   {
     label: 'Arpanu Travel',
     Icon: logo_4,
     id: '4',
-    className: 'md:max-w-[240px] max-w-[140px]'
+    className: 'md:max-w-[240px] max-w-[140px]',
+    href: 'https://www.arpanutravel.com/',
   },
   {
     label: 'Book Perfect',
     Icon: logo_5,
     id: '5',
-    className: 'md:max-w-[300px] max-w-[140px]'
+    className: 'md:max-w-[300px] max-w-[140px]',
+    href: 'https://bookperfect.com/',
   },
   {
     label: 'Arpanu Medical',
     Icon: logo_6,
     id: '6',
-    className: 'md:max-w-[300px] max-w-[140px]'
+    className: 'md:max-w-[300px] max-w-[140px]',
+    href: 'https://arpanumedical.com/',
   },
 ]
 
