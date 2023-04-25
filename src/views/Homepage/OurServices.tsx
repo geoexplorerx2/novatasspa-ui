@@ -47,9 +47,9 @@ const ServiceCard: FC<ServiceCardProps> = (props) => {
     }
 
     return (
-        <a onClick={handleBookingClick}><div className={`z-[1] relative border cursor-pointer border-[#EEEEEE] py-[42px] px-[35px] space-y-[30px] transition-all ${isHovered ? 'bg-[#423930]' : 'bg-white'}`} key={id} onMouseEnter={() => { setIsHovered(true) }} onMouseLeave={() => { setIsHovered(false) }} >
+        <a onClick={handleBookingClick}><div className={`hover:shadow-2xl hover:shadow-grey-600 z-[1] relative border cursor-pointer border-[#EEEEEE] py-[42px] px-[35px] space-y-[30px] transition-all ${isHovered ? 'bg-[#423930]' : 'bg-white'}`} key={id} onMouseEnter={() => { setIsHovered(true) }} onMouseLeave={() => { setIsHovered(false) }} >
             <div className='flex justify-between'>
-                <Icon className={`${isHovered ? 'text-white' : ''}`} />
+                <Icon className={`${isHovered ? 'text-white' : 'text-[#423930]'}`} />
                 <div>
                     <div className={`flex justify-end ${isHovered ? 'text-white' : ''}`}>
                         <span className='font-medium text-2xl mr-1'>

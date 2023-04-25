@@ -53,30 +53,30 @@ const ChooseHamam: FC<ChooseHamamProps> = ({ onChange, errors, name }) => {
 
 const HammamsData = [
   {
-    label: 'Pasha Hammam',
-    value: 'PashaHammam',
+    label: 'Jasmine Hammam',
+    value: 'JasmineHammam',
     id: '1',
   },
   {
-    label: 'Shahrazad Hammam',
-    value: 'ShahrazadHammam',
+    label: 'Tulip Hammam',
+    value: 'TulipHammam',
     id: '2',
   },
   {
-    label: 'Sultan Hammam',
-    value: 'SultanHammam',
+    label: 'Lotus Hammam',
+    value: 'LotusHammam',
     id: '3',
   },
-  {
-    label: 'VIP Hammam',
-    value: 'VIPHammam',
-    id: '4',
-  },
-  {
-    label: 'Luxury Hammam',
-    value: 'LuxuryHammam',
-    id: '5',
-  },
+  // {
+  //   label: 'VIP Hammam',
+  //   value: 'VIPHammam',
+  //   id: '4',
+  // },
+  // {
+  //   label: 'Luxury Hammam',
+  //   value: 'LuxuryHammam',
+  //   id: '5',
+  // },
 ];
 
 export default ChooseHamam;
