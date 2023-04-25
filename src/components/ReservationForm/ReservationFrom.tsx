@@ -4,9 +4,9 @@ import { ReactComponent as HumanAvatar } from '../../assets/icons/humanAvatar.sv
 import { ReactComponent as MailIcon } from '../../assets/icons/mailIcon.svg'
 import { ReactComponent as Arrow } from '../../assets/icons/ArrowRight.svg'
 import AnimatedTelInput from '../AnimatedTelInput/AnimatedTelInput';
-import { useForm, useValidate } from '../../hooks';
+import { useForm, useLocation, useValidate } from '../../hooks';
 import services from '../../api/services';
-
+import { useNavigate } from "react-router-dom";
 
 const ReservationForm = () => {
   const {
@@ -15,9 +15,13 @@ const ReservationForm = () => {
     handleChange,
     handleSubmit
   } = useForm(_handleQuickReservation, useValidate, 'quickreservation');
-
+  const { countryName } = useLocation();
+  
   const [servermessage, setServerMessage] = useState<any>();
   const server = services;
+
+  const navigate= useNavigate()
+  const activeLang = localStorage.getItem('activeLang');
 
 
   function _handleQuickReservation() {
@@ -25,7 +29,7 @@ const ReservationForm = () => {
     const quick_reservation_data = {
       name_surname: values?.namesurname,
       phone: values?.phone,
-      country: 'Turkey',
+      country: countryName,
       email: values?.quickreservation_email
     };
 
@@ -33,6 +37,8 @@ const ReservationForm = () => {
     server.quickReservation(quick_reservation_data)
       .then((res: any) => {
         let message = res.entity;
+        message.code === 200 && navigate(`/${activeLang}/thank-you`);
+
         setServerMessage(message);
       })
       .catch((error: any) => {
@@ -69,7 +75,7 @@ const ReservationForm = () => {
         <span>{errors.quickreservation_email}</span>
         <span>{errors.phone}</span> */}
       </div>
-      <form className='space-y-5 md:space-y-[30px]'>
+      <form onSubmit={handleSubmit} className='space-y-5 md:space-y-[30px]'>
         <AnimatedInput
           value={values}
           inputType='text'

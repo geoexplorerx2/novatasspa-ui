@@ -83,7 +83,8 @@
 }
 
 .historySection .owl-carousel .owl-stage-outer {
-  max-height: 215px;
+  max-height: 225px;
+  /* padding-bottom: 200px; */
 }
 
 @media screen and (min-width: 1250px) {
@@ -127,4 +128,28 @@
     left: 7px !important;
     top: 90px !important;
   }
+}
+
+.styles_chatBody__hMXuy .styles_message__SwSRH {
+  max-width: unset !important;
+}
+
+.styles_chatBody__QjN76 .styles_message__LUM9h {
+  max-width: unset !important;
+}
+
+div[class^="styles_chatBody__"] {
+  max-width: unset !important;
+}
+
+div[class^=".styles_message__"] {
+  max-width: unset !important;
+}
+
+.react-international-phone-country-selector-button {
+  border: unset !important;
+}
+
+.react-international-phone-input-container .react-international-phone-country-selector-button {
+  padding-left: 24px;
 }

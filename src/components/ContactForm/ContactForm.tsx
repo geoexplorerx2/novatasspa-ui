@@ -6,9 +6,9 @@ import { ReactComponent as ArrowRight } from '../../assets/icons/ArrowRight.svg'
 import { ReactComponent as HumanAvatar } from '../../assets/icons/humanAvatar.svg'
 import { ReactComponent as MailIcon } from '../../assets/icons/mailIcon.svg'
 import { ReactComponent as MessageIcon } from '../../assets/icons/messageIcon.svg'
-import { useForm, useValidate } from '../../hooks';
+import { useForm, useLocation, useValidate } from '../../hooks';
 import services from '../../api/services';
-
+import { useNavigate } from 'react-router-dom';
 
 
 const ContactForm: FC = () => {
@@ -25,10 +25,13 @@ const ContactForm: FC = () => {
     errors,
     handleChange,
     handleSubmit
-  } = useForm(_handleQuickReservation, useValidate, 'quickreservation');
-
+  } = useForm(_handleQuickReservation, useValidate, 'contactForm');
+  const { countryName } = useLocation();
+  
   const [servermessage, setServerMessage] = useState<any>();
   const server = services;
+  const navigate = useNavigate()
+  const activeLang = localStorage.getItem('activeLang');
 
   // const handleChange = (event: any, type: any = '') => {
   //   if (type === 'telephone') setValues((value: any) => ({ ...value, 'phone': event }))
@@ -49,7 +52,7 @@ const ContactForm: FC = () => {
     const quick_reservation_data = {
       name_surname: values?.namesurname,
       phone: values?.phone,
-      country: 'Turkey',
+      country: countryName,
       email: values?.quickreservation_email
     };
 
@@ -58,6 +61,7 @@ const ContactForm: FC = () => {
       .then((res: any) => {
         let message = res.entity;
         setServerMessage(message);
+        navigate(`/${activeLang}/thank-you`)
       })
       .catch((error: any) => {
         let message = error.entity;
@@ -84,7 +88,9 @@ const ContactForm: FC = () => {
           name='namesurname'
           onChange={handleChange}
           Icon={<HumanAvatar />}
-          wrapperClassName='bg-white' />
+          wrapperClassName='bg-white'
+          errors={errors}
+          />
 
         <AnimatedTelInput
           // value={values?.phoneNo}
@@ -92,7 +98,9 @@ const ContactForm: FC = () => {
           label='Your Number'
           name='phone'
           onChange={(e: any) => handleChange(e, 'telephone')}
-          wrapperClassName='bg-white' />
+          wrapperClassName='bg-white'
+          errors={errors}
+           />
 
         <AnimatedInput
           // value={values?.email}
@@ -101,7 +109,9 @@ const ContactForm: FC = () => {
           name='quickreservation_email'
           onChange={handleChange}
           Icon={<MailIcon />}
-          wrapperClassName='bg-white' />
+          wrapperClassName='bg-white'
+          errors={errors}
+          />
 
 
         {/* <AnimatedInput

@@ -30,7 +30,7 @@ const PricesListSection = () => {
                 },
                 {
                     hamamid: 2,
-                    name: 'Neyl-ü Fer Hammam',
+                    name: 'Lotus Hammam',
                     time: '50 min.',
                     price: '75',
                     image: prices_list_3
@@ -57,7 +57,7 @@ const PricesListSection = () => {
                 },
                 {
                     hamamid: 3,
-                    name: 'Lotus Package',
+                    name: 'Tulip Package',
                     time: '100 min.',
                     price: '110',
                     image: prices_list_3
@@ -84,7 +84,7 @@ const PricesListSection = () => {
                 },
                 {
                     hamamid: 2,
-                    name: 'Head&shoulders Massage',
+                    name: 'Head & shoulders Massage',
                     time: '25 min.',
                     price: '30',
                     image: prices_list_2
@@ -98,14 +98,14 @@ const PricesListSection = () => {
                 },
                 {
                     hamamid: 4,
-                    name: 'Klasic Massage',
+                    name: 'Classic Massage',
                     time: '50 min.',
                     price: '50',
                     image: prices_list_4
                 },
                 {
                     hamamid: 5,
-                    name: 'Anti-stress Massage',
+                    name: 'Anti-Stress Massage',
                     time: '50 min.',
                     price: '65',
                     image: prices_list_5
@@ -132,7 +132,7 @@ const PricesListSection = () => {
                 },
                 {
                     hamamid: 2,
-                    name: 'Tridational Bali Massage',
+                    name: 'Traditional Bali Massage',
                     time: '50 min.',
                     price: '70',
                     image: prices_list_2
@@ -218,8 +218,8 @@ const PricesListSection = () => {
 
     return (
         <SectionBackground backgroundDivClassNames='bg-[#F5F5F5] h-[970px]'>
-            <div className='container overflow-hidden lg:overflow-visible'>
-                <h1 className="text-[#B2A285] text-[44px] leading-[54px] pt-[124px] font-gotu">Our Price List</h1>
+            <div className='container overflow-hidden'>
+                <h1 className="text-[#B2A285] text-[44px] leading-[54px] lg:pt-[60px] font-gotu mx-8 lg:mt-0 md:mt-[190px] mt-[170px]">Our Price List</h1>
 
                 <div className="md:grid xl:grid-cols-3 lg:grid-cols-2 flex flex-col pb-[93px] gap-[30px]">
                     {
@@ -228,7 +228,7 @@ const PricesListSection = () => {
 
                             return (
                                 <div>
-                                    <h2 className="text-[#423930] lg:text-[24px] leading-[24px] pt-[30px] font-gotu" key={id}>{serviceType}</h2>
+                                    <h2 className="text-[#423930] lg:text-[24px] leading-[24px] pt-[30px] font-gotu mx-8" key={id}>{serviceType}</h2>
                                     {services.map(service => {
                                         return (
                                             <PriceListCard service={service} />

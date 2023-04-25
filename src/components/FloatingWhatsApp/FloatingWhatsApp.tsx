@@ -84,8 +84,8 @@ export default function FloatingWhatsApp({
   phoneNumber = '+905417600248',
   accountName = 'Account Name',
   avatar = dummyAvatar,
-  statusMessage = 'Çevrimiçi',
-  chatMessage = 'Merhabalar,                              Nasıl yardımcı olabiliriz?',
+  statusMessage = 'Online',
+  chatMessage = 'If you are interested in a Hammam & Spa experience in Istanbul or have any questions about the process in general, feel free to start a chat. Our Hospitality Supervisors are at your service to provide you with support.',
   placeholder = 'Type a message..',
 
   messageDelay = 2,
@@ -104,7 +104,7 @@ export default function FloatingWhatsApp({
   buttonStyle,
   buttonClassName = 'floating-whatsapp-button',
 
-  chatboxHeight = 320,
+  chatboxHeight = 400,
   chatboxStyle,
   chatboxClassName = 'floating-whatsapp-chatbox',
 
@@ -129,12 +129,12 @@ export default function FloatingWhatsApp({
 
   useEffect(() => {
     setTimeout(() => {
-      const btn = document.getElementsByClassName("styles_whatsappButton__eT79h floating-whatsapp-button")?.[0];
+      const btn = document.getElementsByClassName("floating-whatsapp-button")?.[0];
       // console.log('btn',btn)
       // @ts-ignore
       // Property 'click' does not exist on type 'Element'.
       btn?.click()
-    }, 13000);
+    }, 10000);
   }, [])
 
   const handleNotification = useCallback(() => {
@@ -267,7 +267,7 @@ export default function FloatingWhatsApp({
             <div className={css.message}>
               <span className={css.triangle} />
               <span className={css.accountName}>{accountName}</span>
-              <p className={css.messageBody}>{chatMessage}</p>
+              <p className={`${css.messageBody}`}>{chatMessage}</p>
               <span className={css.messageTime}>
                 {timeNow}
                 <span style={{ marginLeft: 5 }}>
@@ -279,9 +279,9 @@ export default function FloatingWhatsApp({
 
         </div>
 
-        <a className={`${css.chatFooter} flex`} href='https://wa.me/905417600248' target='_blank'>
+        <a className={`${css.chatFooter} flex`} href='https://wa.me/905417600248?text=Hello,%20I%20would%20like%20to%20know%20about%20your%20services%20and%20prices!' target='_blank'>
           <button className='font-poppins font-normal !text-white !mx-auto border-[#25D366] !bg-[#25D366] w-full rounded-2xl py-2'>
-            İletişime Geç
+            Start Chat
           </button>
         </a>
       </div>

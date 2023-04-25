@@ -49,7 +49,7 @@ const LanguagePicker: FC<LanguagePickerProps> = ({ bgColor, openDropdownMenu, se
 
         <Popover
             as="div"
-            className={`menu-item menu-dropdown relative`}
+            className={`menu-item menu-dropdown`}
             ref={containerRef}
         >
             {({ open, close }: any) => (
@@ -63,9 +63,10 @@ const LanguagePicker: FC<LanguagePickerProps> = ({ bgColor, openDropdownMenu, se
                             icon={languageIcon}
                             data={activeLang}
                             className="" // inline-block
-                            bgColor={bgColor}
+                            bgColor={`${bgColor} !w-auto md:!w-[121px]`}
                             // handleClick={(opened: boolean) => setOpenDropdownMenu(!openDropdownMenu)}
                             handleClick={() => {}}
+                            textClassNames="hidden md:inline-block"
                         />
                         {/* <div className=''>
                             <img src={languageIcon} alt='' />
@@ -84,12 +85,12 @@ const LanguagePicker: FC<LanguagePickerProps> = ({ bgColor, openDropdownMenu, se
                     >
                         <Popover.Panel
                             static
-                            className={`sub-menu will-change-transform transform w-[260px] right-0 fixed translate-x-[-16rem] ${classAsProp}`}
+                            className={`sub-menu will-change-transform transform w-[260px] right-7 absolute ${classAsProp}`}
                         >
-                            <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 dark:ring-white dark:ring-opacity-10 text-sm relative bg-white dark:bg-neutral-900 py-2 grid grid-cols-2 gap-2">
+                            <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 dark:ring-white dark:ring-opacity-10 text-sm bg-white dark:bg-neutral-900 py-2 grid grid-cols-2 gap-2">
                                 {
                                     Languages?.map((lang: any) => (
-                                        <div className="flex justify-arround mx-2">
+                                        <div className="flex justify-arround mx-2 ">
                                             <Button
                                                 rounded=""
                                                 className={`${activeLang == lang.id ? 'bg-[#3944b3] text-[white] ' : 'bg-[#fff] text-[#000]'} rounded-[8px] hover:border-[#423930]  border-2 border-[rgba(57, 68, 179, 20%)]  flex justify-arround w-[106px] h-[50px] dark:text-white`}
