@@ -83,48 +83,48 @@ const ServiceCard: FC<ServiceCardProps> = (props) => {
 
 
 const ServicesData: ServiceType[] = [
-    {
-        title: 'Luxury Hamam',
-        description: 'A luxurious combination of a Turkish bath and a massage session that involves a body scrub, full body foam , head shoulders-back foam massage,honey and milk body care,facial clay mask,hot stone massage and reflexology massage.',
-        info: [],
-        duration: '90',
-        Icon: CaldleAndFlower,
-        price: '200',
-        id: '1'
-    },
-    {
-        title: 'VIP Hamam',
-        description: 'A deluxe Turkish bath session that involves a traditional body scrub, relaxing foam, body peeling and an anti-stress massage.',
-        info: [
-            'Body Scrub', 'Body Peeling', 'Anti-Stress Massage' 
-        ],
-        duration: '80',
-        Icon: CaldleAndFlower,
-        price: '150',
-        id: '2'
-    },
-    {
-        title: 'Sultan Hamam',
-        description: 'A revitalizing Turkish bath session that involves a traditional body scrub, foam massage, body mask made from honey and milk.',
-        info: [
-            'Body Scrub', 'All Body Foam', 'Foam Massage', 'All Body Honey', 'Milk Body Care'
-        ],
-        duration: '50',
-        Icon: CaldleAndFlower,
-        price: '100 ',
-        id: '3'
-    },
-    {
-        title: 'Shahrazad Hamam',
-        description: 'A rejuvenating Turkish bath session that involves a traditional body scrub, followed by a head & shoulders foam massage.',
-        info: [
-            'Body Scrub', 'Foam Massage', 'All Body Foam'
-        ],
-        duration: '50',
-        Icon: CaldleAndFlower,
-        price: '80',
-        id: '4'
-    },
+    // {
+    //     title: 'Luxury Hamam',
+    //     description: 'A luxurious combination of a Turkish bath and a massage session that involves a body scrub, full body foam , head shoulders-back foam massage,honey and milk body care,facial clay mask,hot stone massage and reflexology massage.',
+    //     info: [],
+    //     duration: '90',
+    //     Icon: CaldleAndFlower,
+    //     price: '200',
+    //     id: '1'
+    // },
+    // {
+    //     title: 'VIP Hamam',
+    //     description: 'A deluxe Turkish bath session that involves a traditional body scrub, relaxing foam, body peeling and an anti-stress massage.',
+    //     info: [
+    //         'Body Scrub', 'Body Peeling', 'Anti-Stress Massage' 
+    //     ],
+    //     duration: '80',
+    //     Icon: CaldleAndFlower,
+    //     price: '150',
+    //     id: '2'
+    // },
+    // {
+    //     title: 'Sultan Hamam',
+    //     description: 'A revitalizing Turkish bath session that involves a traditional body scrub, foam massage, body mask made from honey and milk.',
+    //     info: [
+    //         'Body Scrub', 'All Body Foam', 'Foam Massage', 'All Body Honey', 'Milk Body Care'
+    //     ],
+    //     duration: '50',
+    //     Icon: CaldleAndFlower,
+    //     price: '100 ',
+    //     id: '3'
+    // },
+    // {
+    //     title: 'Shahrazad Hamam',
+    //     description: 'A rejuvenating Turkish bath session that involves a traditional body scrub, followed by a head & shoulders foam massage.',
+    //     info: [
+    //         'Body Scrub', 'Foam Massage', 'All Body Foam'
+    //     ],
+    //     duration: '50',
+    //     Icon: CaldleAndFlower,
+    //     price: '80',
+    //     id: '4'
+    // },
     {
         title: 'Luxury Novatas Package',
         description: 'After a 10-min rest in the steam room, which will help to loosen up tense muscles, soften the skin and open the pores, the session continues with an exfoliating body scrub, a full body foam, where you will be covered in a cloud of silky foam bubbles and a relaxing head-shoulders-back foam massage. This will be followed by a honey and milk body care treatment which will leave your body smooth and refreshed. After the honey and milk body care treatment a rejuvenating facial clay mask will be applied. The session will continue with a relaxing Foot & Hand Massage and end with our Novatas Signature Massage, which is an individualistic muscle-relaxing and stress-relieving massage that is designed specifically for you and is carried out with your choice of %100 natural aromatic oils. Our massage therapists will analyze what your body needs, and apply a combination of techniques among hot stone, reflexology, anti-stress or Thai massages, to meet those needs accordingly.',
