@@ -11,7 +11,7 @@ const ReservationSection = () => {
         <h2 className='text-white font-gotu text-3xl lg:text-[64px] tracking-tighter lg:leading-[74px] mb-7 text-center'>Make a Quick <br className='hidden md:inline-block' /> Reservation</h2>
         <ReservationForm />
       </div>
-      <div className='-skew-y-1 h-full w-full overflow-hidden'>
+      <div className='-skew-y-1 h-[103%] w-full overflow-hidden mt-4'>
         <SectionBackground backgroundDivClassNames='h-full !-top-4' wrapperClassNames='h-full'>
 
           <img src={Chick} className="hidden md:inline-block relative max-w-none md:max-w-full md:w-1/2 h-full max-h-full object-cover -translate-y-4" />
