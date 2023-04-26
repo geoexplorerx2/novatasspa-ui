@@ -1,7 +1,7 @@
 import { Transition } from '@headlessui/react';
 import { Popover } from '@headlessui/react';
 import React, { FC, Fragment, ReactNode, useEffect, useRef, useState } from 'react';
-import Button  from '../../lib/Button/Button';
+import Button from '../../lib/Button/Button';
 import ButtonWithIcon from '../../lib/Button/ButtonWithIcon';
 import languageIcon from "../../assets/icons/languageIcon.svg";
 import { Languages } from '../constants/Languages';
@@ -65,7 +65,7 @@ const LanguagePicker: FC<LanguagePickerProps> = ({ bgColor, openDropdownMenu, se
                             className="" // inline-block
                             bgColor={`${bgColor} !w-auto md:!w-[121px]`}
                             // handleClick={(opened: boolean) => setOpenDropdownMenu(!openDropdownMenu)}
-                            handleClick={() => {}}
+                            handleClick={() => { }}
                             textClassNames="hidden md:inline-block"
                         />
                         {/* <div className=''>
@@ -87,14 +87,19 @@ const LanguagePicker: FC<LanguagePickerProps> = ({ bgColor, openDropdownMenu, se
                             static
                             className={`sub-menu will-change-transform transform w-[260px] right-7 absolute ${classAsProp}`}
                         >
+                            {({close}) => (
                             <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 dark:ring-white dark:ring-opacity-10 text-sm bg-white dark:bg-neutral-900 py-2 grid grid-cols-2 gap-2">
+
                                 {
                                     Languages?.map((lang: any) => (
                                         <div className="flex justify-arround mx-2 ">
                                             <Button
                                                 rounded=""
                                                 className={`${activeLang == lang.id ? 'bg-[#3944b3] text-[white] ' : 'bg-[#fff] text-[#000]'} rounded-[8px] hover:border-[#423930]  border-2 border-[rgba(57, 68, 179, 20%)]  flex justify-arround w-[106px] h-[50px] dark:text-white`}
-                                                onClick={() => handleLan(lang)}
+                                                onClick={() => {
+                                                    handleLan(lang)
+                                                    close()
+                                                }}
                                             >
                                                 {lang.name}
                                             </Button>
@@ -102,6 +107,7 @@ const LanguagePicker: FC<LanguagePickerProps> = ({ bgColor, openDropdownMenu, se
                                     ))
                                 }
                             </div>
+                            )}
                         </Popover.Panel>
                     </Transition>
                 </>
