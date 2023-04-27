@@ -44,7 +44,7 @@ const viewsUrls: any[] = [
         id: '5'
     },
     {
-        path: "/:lang/thank-you",
+        path: "/:lang/novatascrystal/thank-you",
         exact: true,
         component: Success,
         type: "public",
