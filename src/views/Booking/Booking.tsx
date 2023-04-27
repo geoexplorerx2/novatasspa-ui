@@ -48,7 +48,7 @@ const Booking = () => {
     server.booking(booking_data)
       .then((res: any) => {
         setServerRes(res?.entity);
-        res.entity.code === 200 && navigate(`/${activeLang}/thank-you`);
+        res.entity.code === 200 && navigate(`/${activeLang}/novatascrystal/thank-you`);
       })
       .catch((error: any) => {
         setServerRes(error.entity);

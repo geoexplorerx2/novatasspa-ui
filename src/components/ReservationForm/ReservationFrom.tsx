@@ -37,7 +37,7 @@ const ReservationForm = () => {
     server.quickReservation(quick_reservation_data)
       .then((res: any) => {
         let message = res.entity;
-        message.code === 200 && navigate(`/${activeLang}/thank-you`);
+        message.code === 200 && navigate(`/${activeLang}/novatascrystal/thank-you`);
 
         setServerMessage(message);
       })
