@@ -61,7 +61,7 @@ const ContactForm: FC = () => {
       .then((res: any) => {
         let message = res.entity;
         setServerMessage(message);
-        navigate(`/${activeLang}/thank-you`)
+        navigate(`/${activeLang}/novatascrystal/thank-you`)
       })
       .catch((error: any) => {
         let message = error.entity;
