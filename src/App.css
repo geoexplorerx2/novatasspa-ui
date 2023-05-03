@@ -122,7 +122,7 @@
     right: 7px !important;
     top: 90px !important;
   }
-  
+
   .owl-prev {
     position: absolute !important;
     left: 7px !important;
@@ -154,6 +154,15 @@ div[class^=".styles_message__"] {
   padding-left: 24px !important;
 }
 
+.hero_img {
+  background-image:
+    url('./assets/images/hero_overlay.png'),
+    url('./assets/images/hero_image.png');
+
+    background-origin: padding-box;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .stack > * {
   grid-area: 1 / 1;
 }

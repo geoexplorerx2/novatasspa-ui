@@ -38,6 +38,9 @@ module.exports = {
     },
 
     extend: {
+      backgroundImage: {
+        'hero-pattern': "url('../')",
+      },
       colors: {
         primary: {
           50: customColors("--c-primary-50"),
