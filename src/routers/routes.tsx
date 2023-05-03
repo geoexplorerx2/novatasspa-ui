@@ -1,10 +1,11 @@
 import { About, Booking, Contact, Homepage, Services, Success } from "../views";
+import { LandingPage } from "../views/Homepage";
 
 const viewsUrls: any[] = [
     {
         path: "/",
         exact: true,
-        component: Homepage,
+        component: LandingPage,
         type: "public",
         id: '1'
     },
