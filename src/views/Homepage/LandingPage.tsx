@@ -1,9 +1,10 @@
 import React from 'react';
+import MessageTypesSection from '../../components/MessageTypesSection/MessageTypesSection';
 
 const LandingPage = () => {
   return (
-    <div className='h-screen'>
-        
+    <div className='min-h-screen'>
+        <MessageTypesSection />
     </div>
   )
 };
