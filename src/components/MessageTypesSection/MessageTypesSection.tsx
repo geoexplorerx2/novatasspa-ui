@@ -123,56 +123,56 @@ const MessageTypesSection = () => {
                     image: message_4,
                     messageId: 4
                 },
-                {
-                    name: 'Anti Stress Massage',
-                    price: 'per person 75',
-                    duration: '50 minutes',
-                    image: message_5,
-                    messageId: 5
-                },
-                {
-                    name: 'Aromatherapy Massage',
-                    price: 'per person 75',
-                    duration: '50 minutes',
-                    image: message_6,
-                    messageId: 6
-                }
+                // {
+                //     name: 'Anti Stress Massage',
+                //     price: 'per person 75',
+                //     duration: '50 minutes',
+                //     image: message_5,
+                //     messageId: 5
+                // },
+                // {
+                //     name: 'Aromatherapy Massage',
+                //     price: 'per person 75',
+                //     duration: '50 minutes',
+                //     image: message_6,
+                //     messageId: 6
+                // }
             ]
         },
-        {
-            title: 'THERAPEUTIC MASSAGE',
-            sectionId: 3,
-            content: [
-                {
-                    name: 'Medical Massage',
-                    price: 'per person 80',
-                    duration: '50 minutes',
-                    image: message_1,
-                    messageId: 1
-                },
-                {
-                    name: 'Deep Tissue Massage',
-                    price: 'per person 90',
-                    duration: '50 minutes',
-                    image: message_2,
-                    messageId: 2
-                },
-                {
-                    name: 'Regional Trilogy Massage',
-                    price: 'per person 90',
-                    duration: '60 minutes',
-                    image: message_3,
-                    messageId: 3
-                },
-                {
-                    name: 'Catma Signature Massage',
-                    price: 'per person 90',
-                    duration: '60 minutes',
-                    image: message_4,
-                    messageId: 4
-                }
-            ]
-        },
+        // {
+        //     title: 'THERAPEUTIC MASSAGE',
+        //     sectionId: 3,
+        //     content: [
+        //         {
+        //             name: 'Medical Massage',
+        //             price: 'per person 80',
+        //             duration: '50 minutes',
+        //             image: message_1,
+        //             messageId: 1
+        //         },
+        //         {
+        //             name: 'Deep Tissue Massage',
+        //             price: 'per person 90',
+        //             duration: '50 minutes',
+        //             image: message_2,
+        //             messageId: 2
+        //         },
+        //         {
+        //             name: 'Regional Trilogy Massage',
+        //             price: 'per person 90',
+        //             duration: '60 minutes',
+        //             image: message_3,
+        //             messageId: 3
+        //         },
+        //         {
+        //             name: 'Catma Signature Massage',
+        //             price: 'per person 90',
+        //             duration: '60 minutes',
+        //             image: message_4,
+        //             messageId: 4
+        //         }
+        //     ]
+        // },
     ]
 
     return (
@@ -196,7 +196,7 @@ const MessageTypesSection = () => {
                         {/* <h1 className='text-[#B2A285] text-[44px] font-gotu mt-[100px]'>{title}</h1> */}
                         <div className='grid grid-cols-4 gap-x-[30px] gap-y-[100px] mt-[50px] mb-[67px]'>
 
-                            {/* {content.map((messageType, index) => {
+                            {content.map((messageType, index) => {
                                 const { name, price, duration, image, messageId } = messageType;
 
                                 return (
@@ -236,7 +236,7 @@ const MessageTypesSection = () => {
 
                                 )
                             })
-                            } */}
+                            }
                         </div>
                     </>
                 )
