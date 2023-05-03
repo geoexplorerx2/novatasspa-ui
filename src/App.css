@@ -153,3 +153,7 @@ div[class^=".styles_message__"] {
 .react-international-phone-input-container .react-international-phone-country-selector-button {
   padding-left: 24px !important;
 }
+
+.stack > * {
+  grid-area: 1 / 1;
+}
