@@ -163,3 +163,6 @@ div[class^=".styles_message__"] {
   background-repeat: no-repeat;
   background-size: cover;
 }
+.stack > * {
+  grid-area: 1 / 1;
+}
