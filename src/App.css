@@ -166,3 +166,32 @@ div[class^=".styles_message__"] {
 .stack > * {
   grid-area: 1 / 1;
 }
+
+.owl-dots .owl-dot span {
+  width: 50px !important;
+  height: 5px !important;
+  margin: 5px 5px !important;
+  background: #D6D6D6 !important;
+  display: block !important;
+  -webkit-backface-visibility: visible !important;
+  transition: opacity .2s ease !important;
+  border-radius: 30px !important;
+}
+
+.owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+  background: #000 !important;
+  width: 50px !important;
+}
+
+.rightCarousel .owl-dots {
+  position: absolute !important;
+  left: 160px !important;
+  bottom: -60px !important;
+}
+
+.leftCarousel .owl-dots {
+  position: absolute !important;
+  right: 160px !important;
+  bottom: -60px !important;
+}
