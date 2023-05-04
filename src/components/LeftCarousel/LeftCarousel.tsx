@@ -57,7 +57,7 @@ const LeftCarousel: FC<classProps> = (props) => {
     })
 
     return (
-        <div className='relative overflow-hidden'>
+        <div className='relative'>
             <div className='grid grid-cols-3 h-[350px] mt-[250px] overflow-hidden'>
                 
                 <div className='relative col-span-2 translate-x-[-120px] leftCarousel' >
@@ -106,7 +106,7 @@ const LeftCarousel: FC<classProps> = (props) => {
                         <p className='text-[#423930] font-poppins text-[18px] leading-[28px] mt-[40px]'>
                             {body}
                         </p>
-                        <ButtonPrimary type="button" className='lg:w-[229px] w-[178px] lg:h-[60px] h-[47px] mt-[46px] box-border border-2 border-[#9FAF91]'>
+                        <ButtonPrimary type="button" className='bg-white lg:w-[229px] w-[178px] lg:h-[60px] h-[47px] mt-[46px] box-border border-2 border-[#9FAF91]'>
                             <a onClick={handleBookingClick}><span className="font-gotu font-normal lg:text-[22px] text-[18px] text-[#9FAF91] leading-[28px] tracking-[0.02em]">View Details</span></a>
                             <span className="text-[#fff] ml-2">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
@@ -118,7 +118,7 @@ const LeftCarousel: FC<classProps> = (props) => {
                     </div>
                 </div>
             </div>
-            <img className='absolute right-0 top-[-200px] rotate-[230deg]' src={landingPageLayer} alt='' />
+            <img className='absolute right-0 top-[-300px] rotate-[230deg]' src={landingPageLayer} alt='' />
         </div>
     )
 }
