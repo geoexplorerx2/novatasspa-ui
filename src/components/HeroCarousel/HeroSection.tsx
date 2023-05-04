@@ -3,8 +3,10 @@ import ButtonPrimary from '../../lib/Button/ButtonPrimary'
 import { ReactComponent as Leaf } from '../../assets/icons/leaf.svg';
 
 const HeroSection = () => {
+  const isPathLandingPage = window.location.pathname === '/' ? true : false;
+
     return (
-        <div className={`h-[896px] text-center mx-auto flex justify-center hero_img`}>
+        <div className={`h-[896px] text-center mx-auto flex justify-center hero_img ${isPathLandingPage ? 'mt-[-125px]': 'mt-[0]'} `}>
 
             <div className='h-full mt-[112px] w-full max-w-full lg:max-w-[600px] flex flex-col justify-center space-y-[30px] items-center '>
                 <div className='flex space-x-4'>
