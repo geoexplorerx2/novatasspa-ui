@@ -11,6 +11,7 @@ import message_8 from '../../assets/images/message_8.png';
 import ArrowRight from '../../assets/icons/right-arrow-black.png'
 
 const MessageTypesSection = () => {
+    const activeLang = localStorage.getItem('activeLang')
 
     const messageTypesContent = [
         {
@@ -202,7 +203,7 @@ const MessageTypesSection = () => {
                                 return (
                                     <>
                                         {index % 2 === 0 ? (
-                                            <a href="/booking"><div>
+                                            <a href={activeLang + "/booking"}><div>
                                                 <h6 className='text-[#423930] text-[24px] leading-[24px] font-gotu'>{name}</h6>
                                                 <div className=' flex justify-between'>
                                                     <span className='text-[#666B45] font-semibold text-[16px] leading-[20px] mt-[10px] font-poppins relative'>
@@ -217,7 +218,7 @@ const MessageTypesSection = () => {
                                                 <img src={image} alt='' className='mt-[14px]' />
                                             </div></a>
                                         ) : (
-                                            <a href="/booking"><div>
+                                            <a href={activeLang + "/booking"}><div>
                                                 <img src={image} alt='' className='mt-0' />
                                                 <h6 className='text-[#423930] text-[24px] leading-[24px] mt-[14px] font-gotu'>{name}</h6>
                                                 <div className=' flex justify-between'>
