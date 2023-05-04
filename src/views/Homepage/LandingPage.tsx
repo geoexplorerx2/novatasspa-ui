@@ -1,5 +1,5 @@
 import React from 'react';
-import { ClearYourMindSection, HeroSection, MessageTypesSection } from '../../components';
+import { ClearYourMindSection, HeroSection, MessageTypesSection, NewsLetter } from '../../components';
 
 const LandingPage = () => {
   return (
@@ -7,6 +7,7 @@ const LandingPage = () => {
       <HeroSection />
       <MessageTypesSection />
       <ClearYourMindSection />
+      <NewsLetter />
     </>
   )
 };
