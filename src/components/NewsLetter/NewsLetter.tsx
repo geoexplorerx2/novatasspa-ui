@@ -1,6 +1,7 @@
 import React from 'react'
 import saunaImage from '../../assets/images/sauna.png'
 import AnimatedInput from '../AnimatedInput'
+import { ReactComponent as MailIcon } from '../../assets/icons/mailIcon.svg'
 
 
 const NewsLetter = () => {
@@ -15,7 +16,7 @@ const NewsLetter = () => {
                         <p className='text-xl opacity-50'>Subscribe now!</p>
 
                     </div>
-                    <AnimatedInput label='Your Number' name='' inputType='text' wrapperClassName='w-full' labelClassNames='text-white'/>
+                    <AnimatedInput label='Your Number' inputType='text' wrapperClassName='w-full' labelClassNames='text-white' Icon={<MailIcon className='text-white'/>}/>
                 </div>
             </div>
 
