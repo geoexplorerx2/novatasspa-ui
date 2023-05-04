@@ -61,7 +61,7 @@ const RightCarousel: FC<classProps> = (props) => {
     return (
         <div className={`overflow-hidden ${bottomMargin}`}>
             <img className={`absolute ${imageClass}`} src={landingPageLayer} alt='' />
-            <div className='grid grid-cols-3 h-[350px] mt-[250px] overflow-hidden rightCarousel'>
+            <div className='grid grid-cols-3 mt-[250px] overflow-hidden rightCarousel'>
                 <div className=' grid grid-col-3 mr-[-16rem]'>
                     <div className='col-start-3 col-span-2 w-[415px]'>
                         <div className='rounded-full border mt-[50px] border-[#E3E3E3] w-[66px] h-[66px] flex justify-center items-center'>
@@ -93,7 +93,7 @@ const RightCarousel: FC<classProps> = (props) => {
                         mouseDrag={true}
                         touchDrag={true}
                         stagePadding={0}
-                        margin={30}
+                        margin={68}
                         autoplay={false}
                         merge={true}
                         dots={true}
