@@ -10,7 +10,7 @@ const NewsLetter = () => {
         console.log(e)
     }
   return (
-    <div className='container'>
+    <div className='container mb-[250px]'>
         <div className='grid stack'>
             <img src={saunaImage} className='w-full' alt='sauna image'/>
             <div className='bg-black bg-opacity-[0.75] text-white flex justify-center pt-9'>
