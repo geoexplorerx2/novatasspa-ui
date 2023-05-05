@@ -205,7 +205,7 @@ const MessageTypesSection = () => {
                                         {index % 2 === 0 ? (
                                             <a href={activeLang + "/booking"}><div>
                                                 <h6 className='text-[#423930] text-[24px] leading-[24px] font-gotu'>{name}</h6>
-                                                <div className=' flex justify-between'>
+                                                <div className=' flex justify-between flex-col md:flex-row'>
                                                     <span className='text-[#666B45] font-semibold text-[16px] leading-[20px] mt-[10px] font-poppins relative'>
                                                         {price}
                                                         <span className='top-[-3px] text-[11px] absolute'>€</span>
