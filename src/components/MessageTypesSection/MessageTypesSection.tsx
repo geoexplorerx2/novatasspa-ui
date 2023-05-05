@@ -195,7 +195,7 @@ const MessageTypesSection = () => {
                 return (
                     <>
                         {/* <h1 className='text-[#B2A285] text-[44px] font-gotu mt-[100px]'>{title}</h1> */}
-                        <div className='grid grid-cols-4 gap-x-[30px] gap-y-[100px] mt-[50px] mb-[67px]'>
+                        <div className='grid grid-cols-2 lg:grid-cols-4 gap-x-[30px] gap-y-[100px] mt-[50px] mb-[67px] px-5 lg:px-0'>
 
                             {content.map((messageType, index) => {
                                 const { name, price, duration, image, messageId } = messageType;
@@ -221,15 +221,19 @@ const MessageTypesSection = () => {
                                             <a href={activeLang + "/booking"}><div>
                                                 <img src={image} alt='' className='mt-0' />
                                                 <h6 className='text-[#423930] text-[24px] leading-[24px] mt-[14px] font-gotu'>{name}</h6>
-                                                <div className=' flex justify-between'>
-                                                    <span className='text-[#666B45] font-semibold text-[16px] leading-[20px] mt-[10px] font-poppins relative'>
-                                                        {price}
+                                                <div className=' flex justify-between flex-col md:flex-row items-between md:items-start'>
+                                                    <div className='text-[#666B45] font-semibold text-[16px] leading-[20px] mt-[10px] font-poppins relative'>
+                                                        <span>
+                                                            {price}
+                                                        </span>
                                                         <span className='top-[-3px] text-[11px] absolute'>€</span>
-                                                    </span>
-                                                    <a href="/booking"><button className='text-[16px] text-[#423930] bookButton inline-flex leading-[20px] mt-[10px] font-poppins '>
-                                                        Book Now
+                                                    </div>
+                                                    <a href="/booking">
+                                                        <button className='w-full md:w-auto text-[16px] text-[#423930] bookButton inline-flex justify-between md:justify-start leading-[20px] mt-[10px] font-poppins '>
+                                                            Book Now
                                                         <img src={ArrowRight} alt='' className='w-[16px] ml-[13px] translate-y-[2px]' />
-                                                    </button></a>
+                                                    </button>
+                                                </a>
                                                 </div>
                                             </div></a>
                                         )}
