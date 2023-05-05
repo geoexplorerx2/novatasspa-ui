@@ -177,15 +177,15 @@ const MessageTypesSection = () => {
     ]
 
     return (
-        <div className='container pt-[100px]'>
-            <div className='ml-[99px] z-[2] text-center'>
+        <div className='container pt-[100px] px-6 md:px-0'>
+            <div className='md:ml-[99px] z-[2] text-center'>
                 <div className='inline-flex'>
                     <Leaf className='text-[#B2A285]' />
                     <Leaf className='rotate-[175deg] ml-[15.6px] text-[#B2A285]' />
                 </div>
 
-                <h1 className='font-normal text-[#B2A285] text-[64px] leading-[74px] font-gotu'>Beauty and Success Start Here</h1>
-                <p className='text-[#423930] text-[18px] mt-[30px] mx-auto font-poppins'>From its medieval origins to the digital era, learn everything there <br></br> is to know about the ubiquitous lorem ipsum passage.</p>
+                <h1 className='text-3xl font-normal text-[#B2A285] md:text-[64px] leading-[74px] font-gotu'>Beauty and Success Start Here</h1>
+                <p className='text-[#423930] text-base md:text-[18px] mt-[30px] mx-auto font-poppins'>From its medieval origins to the digital era, learn everything there <br></br> is to know about the ubiquitous lorem ipsum passage.</p>
             </div>
 
 
@@ -195,7 +195,7 @@ const MessageTypesSection = () => {
                 return (
                     <>
                         {/* <h1 className='text-[#B2A285] text-[44px] font-gotu mt-[100px]'>{title}</h1> */}
-                        <div className='grid grid-cols-2 lg:grid-cols-4 gap-x-[30px] gap-y-[100px] mt-[50px] mb-[67px] px-5 lg:px-0'>
+                        <div className='grid grid-cols-2 lg:grid-cols-4 gap-x-[30px] gap-y-[100px] mt-[50px] mb-[67px]'>
 
                             {content.map((messageType, index) => {
                                 const { name, price, duration, image, messageId } = messageType;
