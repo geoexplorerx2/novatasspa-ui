@@ -17,7 +17,7 @@ const ClearYourMindSection = () => {
 
           <h1 className='font-normal text-white text-4xl font-gotu'>Clear Your Mind, Refresh Your Body</h1>
           <p className='text-white text-[18px] opacity-70 mt-[30px] mx-auto font-poppins mb-[100px]'>From its medieval origins to the digital era, learn everything there <br></br> is to know about the ubiquitous lorem ipsum passage.</p>
-          <div className='flex justify-center space-x-[100px]'>
+          <div className='flex justify-center space-x-[100px] flex-wrap'>
             {
               data.map(item => {
                 const { label, Icon, id } = item;
