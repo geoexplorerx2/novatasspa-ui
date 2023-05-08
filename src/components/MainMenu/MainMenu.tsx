@@ -168,7 +168,7 @@ const MainMenu: FC = () => {
                   }
 
                 </ul>
-                <SocialMediaIcons wrapperClassNames='space-x-[60px] w-min xl:mt-14 mt-8 absolute' />
+                <SocialMediaIcons wrapperClassNames='space-x-[60px] w-full pr-7 md:pr-0 md:w-min mt-[67px] mt-8 absolute  md:bottom-[52px]' />
               </div>
 
 
