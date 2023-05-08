@@ -13,9 +13,9 @@ function Routers() {
   
   useEffect(() => {
     let activeLang = localStorage.getItem('activeLang');
-    if(location?.pathname == '/'){
-      urlNavigate(`${activeLang}/novatascrystal`);
-    };
+    // if(location?.pathname == '/'){
+    //   urlNavigate(`${activeLang}/novatascrystal`);
+    // };
   }, [location]);
 
   return (

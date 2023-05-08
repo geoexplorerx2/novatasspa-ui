@@ -5,7 +5,7 @@ import { createPortal } from 'react-dom'
 import { useLocation, useNavigate } from 'react-router-dom'
 import { NavigationItemType } from '../../types/menus/menus'
 import { NAVIGATION_MENU } from '../constants/navigation'
-import hamburgermenu from "../../assets/icons/hamburgermenu.svg";
+import { ReactComponent as Hamburgermenu} from "../../assets/icons/hamburgermenu.svg";
 import { ReactComponent as CrossIcon } from '../../assets/icons/cross.svg'
 import SocialMediaIcons from '../SocialMediaIcons/SocialMediaIcons'
 
@@ -111,6 +111,7 @@ const MainMenu: FC = () => {
     }
   }, [isMenuOpen])
 
+  const isPathLandingPage = window.location.pathname === '/' ? true : false;
 
 
   return (
@@ -123,9 +124,9 @@ const MainMenu: FC = () => {
           :  */}
         <div className='flex space-x-[20px] cursor-pointer'>
           <div className=''>
-            <img src={hamburgermenu} />
+            <Hamburgermenu className={`${isPathLandingPage ? 'text-white': '#423930'}`} />
           </div>
-          <div className='font-gotu hidden md:inline-block font-medium text-[12px] text-[#423930] leading-[14px] tracking-[0.02em] mt-[5px] cursor-pointer'>
+          <div className={`font-gotu hidden md:inline-block font-medium text-[12px] ${isPathLandingPage ? 'text-white': '#423930'} leading-[14px] tracking-[0.02em] mt-[5px] cursor-pointer`}>
             Menu
           </div>
 
@@ -167,7 +168,7 @@ const MainMenu: FC = () => {
                   }
 
                 </ul>
-                <SocialMediaIcons wrapperClassNames='space-x-[60px] w-min xl:mt-14 mt-8 absolute' />
+                <SocialMediaIcons wrapperClassNames='space-x-[60px] w-full pr-7 md:pr-0 md:w-min mt-[67px] mt-8 absolute  md:bottom-[52px]' />
               </div>
 
 

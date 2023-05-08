@@ -7,19 +7,20 @@ import {ReactComponent as WhatsappIcon} from '../../assets/icons/whatsapp.svg'
 import {ReactComponent as Linkedin} from '../../assets/icons/linkedin.svg'
 
 interface SocialMediaIconsProps {
-    wrapperClassNames?: string
+    wrapperClassNames?: string,
+    iconClassNames?: string,
 }
 
 
 const SocialMediaIcons: FC<SocialMediaIconsProps> = (props) => {
-    const { wrapperClassNames } = props
+    const { wrapperClassNames, iconClassNames } = props
   return (
     <div className={`${wrapperClassNames} flex justify-between`}>
         {socialmediaIconsData.map(item => {
             const { Icon, href } = item
             return (
             <a target='_blank' rel='noreferrer' className='' href={href}>
-                <Icon />
+                <Icon className={iconClassNames}/>
             </a>)
         })}
     </div>
