@@ -7,7 +7,7 @@ const InstagramImages = () => {
     <div className='bg-[#0D0D0D]'>
         <div className='container py-20 '>
             <h2 className='text-white text-4xl font-gotu text-center mb-20'>Instagram</h2>
-            <div className='flex justify-between mb-20'>
+            <div className='flex justify-between flex-wrap mb-20'>
                 {
                     data.map(instagramItem => {
                         const { img, label, id } = instagramItem
