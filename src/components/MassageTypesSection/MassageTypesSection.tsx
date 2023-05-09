@@ -10,9 +10,9 @@ import message_7 from '../../assets/images/message_7.png';
 import message_8 from '../../assets/images/message_8.png';
 import ArrowRight from '../../assets/icons/right-arrow-black.png'
 
-const MessageTypesSection = () => {
+const MassageTypesSection = () => {
 
-    const messageTypesContent = [
+    const massageTypesContent = [
         {
             title: 'Aromatherapy Massage',
             price: 'Start from 38',
@@ -247,4 +247,4 @@ const MessageTypesSection = () => {
     )
 }
 
-export default MessageTypesSection
+export default MassageTypesSection
