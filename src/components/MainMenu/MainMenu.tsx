@@ -124,7 +124,6 @@ const MainMenu: FC = () => {
   let activeLang = localStorage.getItem('activeLang');
 
   const isNovaCrystalHomepPage = location.pathname === `/${activeLang}/novatascrystal`
-console.log('isNovaCrystalHomepPage', isNovaCrystalHomepPage, location.pathname)
   const selectedMenuItems = isNovaCrystalHomepPage ? NAVIGATION_MENU : NAVIGATION_MENU_MANAGEMENT_HOMEPAGE
 
   return (
