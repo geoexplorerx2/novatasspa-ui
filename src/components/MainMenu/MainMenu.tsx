@@ -20,6 +20,7 @@ const MenuItem: FC<MenuItem> = (props) => {
   const { item, setIsMenuOpen } = props
 
   const [isActive, setIsActive] = useState(false)
+  let activeLang = localStorage.getItem('activeLang');
 
   const { href, id, name, targetBlank } = item
 
@@ -28,19 +29,27 @@ const MenuItem: FC<MenuItem> = (props) => {
 
 
   useEffect(() => {
-    setIsActive(location.pathname === item.href)
+   
+    const isHomepage = location.pathname === `/`
+    if(isHomepage && item.href === '/') {
+      setIsActive(true)
+      
+    }else{
+      setIsActive(location.pathname === `/${activeLang}${item.href}`)
+
+    }
+
   }, [location])
 
   const handleNavigation = (item: NavigationItemType) => {
     // goToPage(item.href);
-    let activeLang = localStorage.getItem('activeLang');
 
     navigate(`${item.href != '/' ? (activeLang + item.href) : item.href}`);
     setIsMenuOpen(false);
   };
 
   return (
-    <li key={item.id} onClick={() => { handleNavigation(item) }} className={`font-medium lg:text-[30px] text-[20px] font-gotu md:text-[34px] md:tracking-tighter lg:leading-[74px] leading-[40px] cursor-pointer ${isActive ? 'text-[#B3916E]' : ''}`}>
+    <li key={item.id} onClick={() => { handleNavigation(item) }} className={`font-medium lg:text-[30px] text-[20px] font-gotu md:text-[34px] md:tracking-tighter lg:leading-[74px] leading-[40px] cursor-pointer ${isActive ? '' : '!text-[#B3916E]'}`}>
       {name}
     </li>
   )
@@ -168,7 +177,7 @@ const MainMenu: FC = () => {
                   }
 
                 </ul>
-                <SocialMediaIcons wrapperClassNames='space-x-[60px] w-min xl:mt-14 mt-8 absolute' />
+                <SocialMediaIcons wrapperClassNames='space-x-[60px] w-full pr-7 md:pr-0 md:w-min mt-[67px] mt-8 absolute  md:bottom-[52px]' />
               </div>
 
 
