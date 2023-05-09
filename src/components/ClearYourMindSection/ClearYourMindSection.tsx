@@ -9,8 +9,8 @@ import { ReactComponent as PoolIcon } from '../../assets/icons/Pool.svg'
 
 const ClearYourMindSection = () => {
   return (
-    <div className={`relative grid stack overflow-hidden h-[914px] md:h-auto`}>
-      <img src={swimmingImage} alt='someone swimming' className='hidden lg:inline-block w-full column h-[914px] md:h-auto  md:col-span-1 ' />
+    <div className={`relative grid stack overflow-hidden h-[914px] md:h-[722px]`}>
+      <img src={swimmingImage} alt='someone swimming' className='hidden lg:inline-block w-full column h-[914px] md:h-[722px] md:h-auto  md:col-span-1 ' />
       <div
         className='lg:hidden h-[914px] bg-no-repeat bg-center' 
         style={{ backgroundImage: `url(${swimmingImage})` }}
