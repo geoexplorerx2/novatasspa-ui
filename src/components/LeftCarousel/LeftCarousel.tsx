@@ -58,7 +58,7 @@ const LeftCarousel: FC<classProps> = (props) => {
 
     return (
         <div className='relative overflow-hidden'>
-            <div className='grid lg:grid-cols-3 mt-[135px] lg:mt-[250px] overflow-hidden'>
+            <div className='grid lg:grid-cols-3 mt-[100px] lg:mt-[214px] overflow-hidden'>
 
                 <div className='relative col-span-2 lg:translate-x-[-120px] leftCarousel order-10 lg:order-1 mt-[63px] lg:mt-0 pl-[50px] lg:px-5' >
                     <OwlCarousel
@@ -80,14 +80,17 @@ const LeftCarousel: FC<classProps> = (props) => {
                             {
                                 '1': {
                                     items: 2.5,
-                                    margin: 27
+                                    margin: 27,
+                                    dots:true
                                     
                                 },
                                 '1000': {
-                                    items: 2
+                                    items: 2,
+                                    dots:true
                                 },
                                 '1921': {
-                                    items: 2
+                                    items: 2,
+                                    dots:true
                                 }
                             }
                         }
@@ -110,7 +113,7 @@ const LeftCarousel: FC<classProps> = (props) => {
                         </p>
                         <ButtonPrimary type="button" className='lg:w-[229px] w-[178px] lg:h-[60px] h-[47px] mt-[46px] box-border border-2 border-[#9FAF91]'>
                             <a onClick={handleBookingClick}>
-                                <span className="font-gotu font-normal lg:text-[22px] text-[18px] text-[#9FAF91] leading-[28px] tracking-[0.02em]">View Details</span>
+                                <span className="font-gotu font-normal lg:text-[22px] text-[18px] text-[#9FAF91] leading-[28px] tracking-[0.02em] whitespace-nowrap">View Details</span>
                             </a>
                             <span className="text-[#fff] ml-2">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">

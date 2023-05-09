@@ -59,9 +59,9 @@ const RightCarousel: FC<classProps> = (props) => {
     })
 
     return (
-        <div className={`overflow-hidden ${bottomMargin}`}>
+        <div className={`overflow-hidden pb-8 ${bottomMargin}`}>
             <img className={`absolute ${imageClass}`} src={landingPageLayer} alt='' />
-            <div className='grid lg:grid-cols-3 mt-[250px] overflow-hidden rightCarousel'>
+            <div className='grid lg:grid-cols-3 mt-[100px] lg:mt-[214px] overflow-hidden pb-8 rightCarousel'>
                 <div className=' grid grid-col-3 mr-[-16rem]'>
                     <div className='col-start-3 col-span-2 w-[415px] pl-[50px]'>
                         <div className='rounded-full border mt-[50px] border-[#E3E3E3] w-[66px] h-[66px] flex justify-center items-center'>
@@ -75,7 +75,7 @@ const RightCarousel: FC<classProps> = (props) => {
                             {body}
                         </p>
                         <ButtonPrimary type="button" className='lg:w-[229px] w-[178px] lg:h-[60px] h-[47px] mt-[46px] box-border border-2 border-[#9FAF91]'>
-                            <a onClick={handleBookingClick}><span className="font-gotu font-normal lg:text-[22px] text-[18px] text-[#9FAF91] leading-[28px] tracking-[0.02em]">View Details</span></a>
+                            <a onClick={handleBookingClick}><span className="font-gotu font-normal lg:text-[22px] text-[18px] text-[#9FAF91] leading-[28px] tracking-[0.02em] whitespace-nowrap">View Details</span></a>
                             <span className="text-[#fff] ml-2">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M14.4301 18.819C14.3316 18.8194 14.2339 18.8001 14.1429 18.7623C14.0519 18.7245 13.9694 18.669 13.9001 18.599C13.7606 18.4579 13.6824 18.2674 13.6824 18.069C13.6824 17.8706 13.7606 17.6801 13.9001 17.539L19.4401 11.999L13.9001 6.45901C13.7703 6.31636 13.7005 6.12921 13.7051 5.93642C13.7097 5.74364 13.7884 5.56003 13.9248 5.42374C14.0612 5.28744 14.2449 5.20893 14.4377 5.20451C14.6305 5.20009 14.8175 5.27011 14.9601 5.40001L21.0301 11.47C21.1696 11.6111 21.2478 11.8016 21.2478 12C21.2478 12.1984 21.1696 12.3889 21.0301 12.53L14.9601 18.6C14.8907 18.6698 14.8081 18.7252 14.7171 18.7628C14.6261 18.8004 14.5285 18.8195 14.4301 18.819Z" fill="#fff" />
@@ -85,7 +85,7 @@ const RightCarousel: FC<classProps> = (props) => {
                         </ButtonPrimary>
                     </div>
                 </div>
-                <div className='relative col-span-2 lg:translate-x-[120px] translate-x-[50px] mt-[63px] lg:mt-0' >
+                <div className='relative col-span-2 lg:translate-x-[120px] translate-x-[50px] mt-[63px] lg:mt-0 ' >
                     <OwlCarousel
                         // navText={[`<img src=${arrow} class='rotate-180 w-[20px] mx-auto' />`, `<img src=${arrow} class='w-[20px] mx-auto' />`]}
                         // nav={true}
@@ -105,14 +105,17 @@ const RightCarousel: FC<classProps> = (props) => {
                             {
                                 '1': {
                                     items: 1.5,
-                                    margin: 27
+                                    margin: 27,
+                                    dots: true
                                 },
                                 '1000': {
                                     items: 2,
-                                    margin: 27
+                                    margin: 27,
+                                    dots:true
                                 },
                                 '1921': {
-                                    items: 2
+                                    items: 2,
+                                    dots:true
                                 }
                             }
                         }
