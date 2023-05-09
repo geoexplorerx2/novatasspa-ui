@@ -2,7 +2,7 @@ import React from 'react';
 import HeroCarousel from '../../components/HeroCarousel/HeroCarousel';
 import HistorySection from '../../components/HistorySection/HistorySection';
 import TrustedCompaniesSection from '../../components/TrustedCompanies/TrustedCompaniesSection';
-import MessageTypesSection from '../../components/MessageTypesSection/MessageTypesSection';
+import MassageTypesSection from '../../components/MassageTypesSection/MassageTypesSection';
 import PricesListSection from '../../components/PricesListSection/PricesListSection';
 import ExperienceSection from './ExperienceSection';
 import OurServices from './OurServices';
@@ -15,7 +15,7 @@ const Homepage = () => {
       <ExperienceSection />
       <OurServices />
       <HistorySection />
-      {/* <MessageTypesSection /> */}
+      {/* <MassageTypesSection /> */}
       <PricesListSection />
       <TrustedCompaniesSection />
       <ReservationSection />
