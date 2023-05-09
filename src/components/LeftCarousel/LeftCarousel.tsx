@@ -52,15 +52,15 @@ const LeftCarousel: FC<classProps> = (props) => {
 
     const images = carousel_images.map((item, index) => {
         return (
-            <img id={item.id} alt={item.name} src={item.src} className='' />
+            <img id={item.id} alt={item.name} src={item.src} className='h-[277px] lg:h-auto' />
         )
     })
 
     return (
         <div className='relative overflow-hidden'>
-            <div className='grid grid-cols-3 mt-[250px] overflow-hidden'>
+            <div className='grid lg:grid-cols-3 mt-[135px] lg:mt-[250px] overflow-hidden'>
 
-                <div className='relative col-span-2 translate-x-[-120px] leftCarousel' >
+                <div className='relative col-span-2 lg:translate-x-[-120px] leftCarousel order-10 lg:order-1 mt-[63px] lg:mt-0 pl-[50px] lg:px-5' >
                     <OwlCarousel
                         // navText={[`<img src=${arrow} class='rotate-180 w-[20px] mx-auto' />`, `<img src=${arrow} class='w-[20px] mx-auto' />`]}
                         // nav={true}
@@ -79,7 +79,9 @@ const LeftCarousel: FC<classProps> = (props) => {
                         {
                             {
                                 '1': {
-                                    items: 1
+                                    items: 2.5,
+                                    margin: 27
+                                    
                                 },
                                 '1000': {
                                     items: 2
@@ -94,7 +96,7 @@ const LeftCarousel: FC<classProps> = (props) => {
                     </OwlCarousel>
                 </div>
 
-                <div className=' grid grid-col-3 mr-[16rem]'>
+                <div className=' grid grid-col-3 mr-[16rem] order-2 lg:order-10 pl-[50px] lg:pl-0'>
                     <div className='col-start-3 col-span-2 w-[415px]'>
                         <div className='rounded-full border mt-[50px] border-[#E3E3E3] w-[66px] h-[66px] flex justify-center items-center'>
                             {/* <OilIcon className='' /> */}
