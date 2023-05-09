@@ -4,7 +4,7 @@ import React, { FC, useEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { useLocation, useNavigate } from 'react-router-dom'
 import { NavigationItemType } from '../../types/menus/menus'
-import { NAVIGATION_MENU } from '../constants/navigation'
+import { NAVIGATION_MENU, NAVIGATION_MENU_MANAGEMENT_HOMEPAGE } from '../constants/navigation'
 import { ReactComponent as Hamburgermenu} from "../../assets/icons/hamburgermenu.svg";
 import { ReactComponent as CrossIcon } from '../../assets/icons/cross.svg'
 import SocialMediaIcons from '../SocialMediaIcons/SocialMediaIcons'
@@ -26,11 +26,10 @@ const MenuItem: FC<MenuItem> = (props) => {
 
   const navigate = useNavigate();
   const location = useLocation();
-
-
+  const isHomepage = location.pathname === `/`
+ 
   useEffect(() => {
    
-    const isHomepage = location.pathname === `/`
     if(isHomepage && item.href === '/') {
       setIsActive(true)
       
@@ -60,6 +59,7 @@ const MainMenu: FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false)
   const drawerRef = useRef<any>()
   const openButtonRef = useRef<any>()
+  const location = useLocation();
 
   const handleClick = () => {
     setIsMenuOpen(prevState => !prevState)
@@ -121,7 +121,10 @@ const MainMenu: FC = () => {
   }, [isMenuOpen])
 
   const isPathLandingPage = window.location.pathname === '/' ? true : false;
+  let activeLang = localStorage.getItem('activeLang');
 
+  const isNovaCrystalHomepPage = location.pathname === `/${activeLang}/novatascrystal`
+  const selectedMenuItems = isNovaCrystalHomepPage ? NAVIGATION_MENU : NAVIGATION_MENU_MANAGEMENT_HOMEPAGE
 
   return (
     <div className=''>
@@ -169,7 +172,7 @@ const MainMenu: FC = () => {
               <div className='lg:pt-8 pt-0 px-5 md:ml-64 '>
                 <ul className='space-y-[10px] lg:space-y-[20px]'>
                   {
-                    NAVIGATION_MENU.map(menuItem => {
+                    selectedMenuItems.map(menuItem => {
                       return (
                         <MenuItem item={menuItem} setIsMenuOpen={setIsMenuOpen} />
                       )

@@ -200,3 +200,19 @@ div[class^=".styles_message__"] {
   right: 160px !important;
   bottom: -60px !important;
 }
+
+@media screen and (max-width: 780px) {
+  .rightCarousel .owl-dots {
+    margin-top: 38px;
+    position: static !important;
+    /* left: 160px !important; */
+    bottom: -60px !important;
+  }
+
+.leftCarousel .owl-dots {
+  margin-top: 38px;
+  position: static !important;
+  /* right: 160px !important; */
+  bottom: -60px !important;
+}
+}

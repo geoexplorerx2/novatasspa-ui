@@ -23,3 +23,35 @@ export const NAVIGATION_MENU: NavigationItemType[] = [
     name: "Contact",
   }
 ];
+
+
+
+export const NAVIGATION_MENU_MANAGEMENT_HOMEPAGE: NavigationItemType[] = [
+  {
+    id: randomId(),
+    href: "/",
+    name: "Home",
+  },
+  {
+    id: randomId(),
+    href: "/about",
+    name: "About",
+  },
+  {
+    id: randomId(),
+    href: "/novatascrystal",
+    name: "Novatas Crystal",
+  },
+  {
+    id: randomId(),
+    href: "/services",
+    name: "Services",
+  },
+  {
+    id: randomId(),
+    href: "/contact",
+    name: "Contact",
+  }
+];
+
+
