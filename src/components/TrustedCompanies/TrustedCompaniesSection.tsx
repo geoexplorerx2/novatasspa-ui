@@ -86,7 +86,7 @@ const companiesData = [
     Icon: logo_2,
     id: '2',
     className: 'md:max-w-[200px] max-w-[110px]',
-    href: 'https://zerplusglobal.com/'
+    href: 'https://www.zerplusglobal.com/'
   },
   {
     label: 'Vipser',
@@ -107,14 +107,14 @@ const companiesData = [
     Icon: logo_5,
     id: '5',
     className: 'md:max-w-[300px] max-w-[140px]',
-    href: 'https://bookperfect.com/',
+    href: 'https://www.bookperfect.com/',
   },
   {
     label: 'Arpanu Medical',
     Icon: logo_6,
     id: '6',
     className: 'md:max-w-[300px] max-w-[140px]',
-    href: 'https://arpanumedical.com/',
+    href: 'https://www.arpanumedical.com/',
   },
 ]
 
