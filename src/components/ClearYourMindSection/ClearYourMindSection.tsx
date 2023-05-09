@@ -2,6 +2,9 @@ import React from 'react'
 import swimmingImage from '../../assets/images/swimming.png'
 import { ReactComponent as Leaf } from '../../assets/icons/leaf.svg';
 import { ReactComponent as OilIcon } from '../../assets/icons/OilIcon.svg'
+import { ReactComponent as bodyTherapyIcon } from '../../assets/icons/BodyTherapyIcon.svg'
+import { ReactComponent as FootMassageIcon } from '../../assets/icons/FootMassage.svg'
+import { ReactComponent as PoolIcon } from '../../assets/icons/Pool.svg'
 
 
 const ClearYourMindSection = () => {
@@ -55,17 +58,17 @@ const data = [
   },
   {
     label: "Body Therapy",
-    Icon: OilIcon,
+    Icon: bodyTherapyIcon,
     id: '2'
   },
   {
     label: "Foot Massage",
-    Icon: OilIcon,
+    Icon: FootMassageIcon,
     id: '3'
   },
   {
     label: "Pool",
-    Icon: OilIcon,
+    Icon: PoolIcon,
     id: '4'
   },
 ]
