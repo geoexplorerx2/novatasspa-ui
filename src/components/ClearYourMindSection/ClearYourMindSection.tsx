@@ -6,8 +6,14 @@ import { ReactComponent as OilIcon } from '../../assets/icons/OilIcon.svg'
 
 const ClearYourMindSection = () => {
   return (
-    <div className='relative grid stack overflow-hidden'>
-      <img src={swimmingImage} alt='someone swimming' className='w-full column h-[914px] md:h-auto md:col-span-1 ' />
+    <div className={`relative grid stack overflow-hidden h-[914px] md:h-auto`}>
+      <img src={swimmingImage} alt='someone swimming' className='hidden lg:inline-block w-full column h-[914px] md:h-auto  md:col-span-1 ' />
+      <div
+        className='lg:hidden h-[914px] bg-no-repeat bg-center' 
+        style={{ backgroundImage: `url(${swimmingImage})` }}
+      >
+
+      </div>
       <div className='col-span-1 py-[67px]'>
         <div className=' z-[2] text-center'>
           <div className='inline-flex mb-[90px]'>

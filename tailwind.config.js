@@ -39,7 +39,10 @@ module.exports = {
 
     extend: {
       backgroundImage: {
-        'hero-pattern': "url('../')",
+        backgroundImage: {
+          'hero-pattern': "url('/assets/images/swimming.png')",
+          'footer-texture': "url('/img/footer-texture.png')",
+        }
       },
       colors: {
         primary: {
