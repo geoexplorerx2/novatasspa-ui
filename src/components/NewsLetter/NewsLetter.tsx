@@ -11,11 +11,11 @@ const NewsLetter = () => {
         console.log(e)
     }
   return (
-    <div className='container mb-[250px] px-[30px] lg:px-0'>
+    <div className='container mb-[200px] lg:mb-[250px] px-[30px] lg:px-0'>
         <div className='grid stack'>
             <img src={saunaImage} className='w-full hidden lg:inline-block' alt='sauna image'/>
             <div
-        className='lg:hidden h-[345px] bg-no-repeat bg-center' 
+        className='lg:hidden h-[345px] bg-no-repeat bg-center bg-cover' 
         style={{ backgroundImage: `url(${saunaMobileImage})` }}
           />
             <div className='bg-black bg-opacity-[0.55] lg:bg-opacity-[0.75] text-white flex justify-center pt-9'>
