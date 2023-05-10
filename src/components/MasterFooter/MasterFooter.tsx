@@ -32,9 +32,11 @@ const MasterFooter = () => {
       </div>
       <div className='w-full bg-[#0D0D0D] py-[76px]'>
 
-                <div className='container flex justify-between items-center'>
-                  <p className='text-white inline-block'>Tesvikiye Mah, Sisli Cad, No:14, Istanbul</p>
-                  <SocialMediaIcons iconClassNames='text-white' wrapperClassNames='space-x-[60px] w-min inline-block'/>
+                <div className='container flex flex-col md:flex-row justify-center md:justify-between md:items-center'>
+                  <p className='text-white inline-flex justify-center md:inline-block'>Tesvikiye Mah, Sisli Cad, No:14, Istanbul</p>
+                  <div className='w-full flex justify-center md:justify-end mt-4 md:mt-0'>
+                    <SocialMediaIcons iconClassNames='text-white' wrapperClassNames='space-x-[60px] w-min inline-block'/>
+                  </div>
                 </div>
       </div>
     </>

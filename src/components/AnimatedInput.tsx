@@ -11,11 +11,12 @@ interface InfoProps extends InputHTMLAttributes<HTMLInputElement> {
   name?: string;
   handleChange?: any;
   labelClassNames?: string
+  focusStateLabelClassNames?: string
 };
 
 const AnimatedInput: FC<InfoProps> = (props) => {
 
-  const { label, inputType, name, onChange, value, wrapperClassName, Icon, focusStateStyles, errors, handleChange, labelClassNames } = props
+  const { label, inputType, name, onChange, value, wrapperClassName, Icon, focusStateStyles, errors, handleChange, labelClassNames, focusStateLabelClassNames } = props
 
   const [inputValue, setInputValue] = useState("");
   const [isFocused, setIsFocused] = useState(false);
@@ -47,7 +48,7 @@ const AnimatedInput: FC<InfoProps> = (props) => {
       </div>
       {/* || value[name as string] */}
       <label className={`${labelClassNames} absolute top-0 transition-all text-xs font-medium  px-2
-                        ${isFocused || inputValue  ? "translate-y-4  text-sm z-[3] font-normal" : "translate-y-4 lg:translate-y-[27px] text-[22px] text-[#0D2C3B] text-opacity-50 z-[1]"}
+                        ${isFocused || inputValue  ? `${focusStateLabelClassNames} translate-y-4  text-sm z-[3] font-normal` : "translate-y-4 lg:translate-y-[27px] text-[22px] text-[#0D2C3B] text-opacity-50 z-[1]"}
                         ${Icon ? 'left-[53px]' : 'left-3'}
                         `}>
         {label}
