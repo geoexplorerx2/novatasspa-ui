@@ -2,10 +2,17 @@ import React from 'react';
 import { Logo } from '../../lib';
 import novatasspaLogoLight from "../../assets/logo/novatasspaLogoLight.svg";
 import { MenuItems } from '../MenuItems';
-import { NAVIGATION_MENU } from '../constants';
+import { NAVIGATION_MENU, NAVIGATION_MENU_MANAGEMENT_HOMEPAGE} from '../constants';
 import SocialMediaIcons from '../SocialMediaIcons/SocialMediaIcons';
+import { useLocation } from 'react-router-dom';
 
 const MasterFooter = () => {
+  let activeLang = localStorage.getItem('activeLang');
+  const location = useLocation();
+
+  const isNovaCrystalHomepPage = location.pathname === `/${activeLang}/novatascrystal`
+  const selectedMenuItems = isNovaCrystalHomepPage ? NAVIGATION_MENU : NAVIGATION_MENU_MANAGEMENT_HOMEPAGE
+
   return (
     <>
       <div className='flex md:h-[120px] bg-[#0D0D0D] z-10 relative'>
@@ -20,7 +27,7 @@ const MasterFooter = () => {
                   <div className="items-center justify-center">
                     <ul className={` grid grid-cols-2 gap-5 md:flex flex-row justify-between items-center md:space-x-2 relative`}>
                       {
-                        NAVIGATION_MENU?.map((item: any) => (
+                        selectedMenuItems?.map((item: any) => (
                           <MenuItems key={item.id} menuItem={item} />
                         ))
                       }
