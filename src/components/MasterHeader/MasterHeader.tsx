@@ -38,7 +38,7 @@ const MasterHeader = () => {
 
 
     return (
-        <div className=''>
+        <div className='relative z-10'>
             <div className="h-[123px] container py-5 px-5 md:px-0 grid grid-cols-3 justify-items-center content-center overflow-hidden z-[9999999]">
                 <div className="flex justify-start justify-self-start">
                     {/* <div className='flex space-x-[20px] cursor-pointer'>
@@ -65,7 +65,7 @@ const MasterHeader = () => {
                     <img src={languageIcon} />
                 </div>
             </div> */}
-            <div className='flex justify-end flex-row justify-self-end'>
+            <div className='hidden md:flex justify-end flex-row justify-self-end'>
                 <Link to={`/${activeLang}/booking`}>
                     <button className={`${isPathLandingPage ? 'block' : 'hidden'} mr-[38px] py-2 px-3 text-[14px] leading-[28px] text-white border-[1px] border-white`}>
                         Request Appoinment
