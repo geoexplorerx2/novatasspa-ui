@@ -15,7 +15,7 @@ export const NAVIGATION_MENU: NavigationItemType[] = [
   {
     id: randomId(),
     href: "/services",
-    name: "Services",
+    name: "Treatments",
   },
   {
     id: randomId(),
@@ -45,7 +45,7 @@ export const NAVIGATION_MENU_MANAGEMENT_HOMEPAGE: NavigationItemType[] = [
   {
     id: randomId(),
     href: "/services",
-    name: "Services",
+    name: "Treatments",
   },
   {
     id: randomId(),
