@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 
 const MasterHeader = () => {
 
-    const [activeLang, setActiveLang] = useState<any>(Languages[0]);
+    const [activeLang, setActiveLang] = useState<any>(Languages[0].name);
     const [openDropdownMenu, setOpenDropdownMenu] = useState<boolean>(false);
     const navigate = useNavigate();
 
