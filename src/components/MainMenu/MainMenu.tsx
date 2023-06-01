@@ -4,8 +4,8 @@ import React, { FC, useEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { useLocation, useNavigate } from 'react-router-dom'
 import { NavigationItemType } from '../../types/menus/menus'
-import { NAVIGATION_MENU } from '../constants/navigation'
-import hamburgermenu from "../../assets/icons/hamburgermenu.svg";
+import { NAVIGATION_MENU, NAVIGATION_MENU_MANAGEMENT_HOMEPAGE } from '../constants/navigation'
+import { ReactComponent as Hamburgermenu} from "../../assets/icons/hamburgermenu.svg";
 import { ReactComponent as CrossIcon } from '../../assets/icons/cross.svg'
 import SocialMediaIcons from '../SocialMediaIcons/SocialMediaIcons'
 
@@ -20,27 +20,35 @@ const MenuItem: FC<MenuItem> = (props) => {
   const { item, setIsMenuOpen } = props
 
   const [isActive, setIsActive] = useState(false)
+  let activeLang = localStorage.getItem('activeLang');
 
   const { href, id, name, targetBlank } = item
 
   const navigate = useNavigate();
   const location = useLocation();
-
-
+  const isHomepage = location.pathname === `/`
+ 
   useEffect(() => {
-    setIsActive(location.pathname === item.href)
+   
+    if(isHomepage && item.href === '/') {
+      setIsActive(true)
+      
+    }else{
+      setIsActive(location.pathname === `/${activeLang}${item.href}`)
+
+    }
+
   }, [location])
 
   const handleNavigation = (item: NavigationItemType) => {
     // goToPage(item.href);
-    let activeLang = localStorage.getItem('activeLang');
 
     navigate(`${item.href != '/' ? (activeLang + item.href) : item.href}`);
     setIsMenuOpen(false);
   };
 
   return (
-    <li key={item.id} onClick={() => { handleNavigation(item) }} className={`font-medium lg:text-[30px] text-[20px] font-gotu md:text-[34px] md:tracking-tighter lg:leading-[74px] leading-[40px] cursor-pointer ${isActive ? 'text-[#B3916E]' : ''}`}>
+    <li key={item.id} onClick={() => { handleNavigation(item) }} className={`font-medium lg:text-[30px] text-[20px] font-gotu md:text-[34px] md:tracking-tighter lg:leading-[74px] leading-[40px] cursor-pointer ${isActive ? '' : '!text-[#B3916E]'}`}>
       {name}
     </li>
   )
@@ -51,6 +59,7 @@ const MainMenu: FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false)
   const drawerRef = useRef<any>()
   const openButtonRef = useRef<any>()
+  const location = useLocation();
 
   const handleClick = () => {
     setIsMenuOpen(prevState => !prevState)
@@ -111,7 +120,11 @@ const MainMenu: FC = () => {
     }
   }, [isMenuOpen])
 
+  const isPathLandingPage = window.location.pathname === '/' ? true : false;
+  let activeLang = localStorage.getItem('activeLang');
 
+  const isNovaCrystalHomepPage = location.pathname === `/${activeLang}/novatascrystal`
+  const selectedMenuItems = isNovaCrystalHomepPage ? NAVIGATION_MENU : NAVIGATION_MENU_MANAGEMENT_HOMEPAGE
 
   return (
     <div className=''>
@@ -123,9 +136,9 @@ const MainMenu: FC = () => {
           :  */}
         <div className='flex space-x-[20px] cursor-pointer'>
           <div className=''>
-            <img src={hamburgermenu} />
+            <Hamburgermenu className={`${isPathLandingPage ? 'text-white': '#423930'}`} />
           </div>
-          <div className='font-gotu hidden md:inline-block font-medium text-[12px] text-[#423930] leading-[14px] tracking-[0.02em] mt-[5px] cursor-pointer'>
+          <div className={`font-gotu hidden md:inline-block font-medium text-[12px] ${isPathLandingPage ? 'text-white': '#423930'} leading-[14px] tracking-[0.02em] mt-[5px] cursor-pointer`}>
             Menu
           </div>
 
@@ -159,7 +172,7 @@ const MainMenu: FC = () => {
               <div className='lg:pt-8 pt-0 px-5 md:ml-64 '>
                 <ul className='space-y-[10px] lg:space-y-[20px]'>
                   {
-                    NAVIGATION_MENU.map(menuItem => {
+                    selectedMenuItems.map(menuItem => {
                       return (
                         <MenuItem item={menuItem} setIsMenuOpen={setIsMenuOpen} />
                       )
@@ -167,7 +180,7 @@ const MainMenu: FC = () => {
                   }
 
                 </ul>
-                <SocialMediaIcons wrapperClassNames='space-x-[60px] w-min xl:mt-14 mt-8 absolute' />
+                <SocialMediaIcons wrapperClassNames='space-x-[60px] w-full pr-7 md:pr-0 md:w-min mt-[67px] mt-8 absolute  md:bottom-[52px]' />
               </div>
 
 

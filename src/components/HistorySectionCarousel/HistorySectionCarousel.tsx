@@ -177,7 +177,7 @@ const HistorySectionCarousel = () => {
                         margin={30}
                         autoplay={true}
                         merge={true}
-                        dots={true}
+                        dots={false}
                         dotsEach={1}
                         slideBy={3}
                         loop={true}

@@ -1,1 +1,1 @@
-export { NAVIGATION_MENU } from './navigation';
+export { NAVIGATION_MENU, NAVIGATION_MENU_MANAGEMENT_HOMEPAGE } from './navigation';

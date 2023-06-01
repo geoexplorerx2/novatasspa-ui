@@ -38,6 +38,12 @@ module.exports = {
     },
 
     extend: {
+      backgroundImage: {
+        backgroundImage: {
+          'hero-pattern': "url('/assets/images/swimming.png')",
+          'footer-texture': "url('/img/footer-texture.png')",
+        }
+      },
       colors: {
         primary: {
           50: customColors("--c-primary-50"),

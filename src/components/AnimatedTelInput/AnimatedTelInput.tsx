@@ -22,7 +22,7 @@ const AnimatedTelInput: FC<InfoProps> = (props) => {
     const phoneRef = useRef(null);
     // phoneInput?.setAttribute("ref", `${phoneRef}`)
     const [phone, setPhone] = useState('');
-    const [country, setCountry] = useState(null)
+    const [country, setCountry] = useState('tr')
     const [updatephoneui, setUpdatephoneui] = useState(Math.floor(Math.random()*100))
     console.log('updatephoneui',updatephoneui)
 

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Logo } from '../../lib';
-import novatasspaLogo from "../../assets/logo/novatasspaLogo.svg";
+import { ReactComponent as NovatasspaLogo } from "../../assets/logo/novatasspaLogo.svg";
 import hamburgermenu from "../../assets/icons/hamburgermenu.svg";
 import languageIcon from "../../assets/icons/languageIcon.svg";
 import world from '../../assets/icons/languageIcon.svg';
@@ -8,12 +8,17 @@ import MainMenu from '../MainMenu/MainMenu';
 import LanguagePicker from '../LanguagePicker/LanguagePicker';
 import { Languages } from '../constants/Languages';
 import { useNavigate } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 const MasterHeader = () => {
 
     const [activeLang, setActiveLang] = useState<any>(Languages[0]);
     const [openDropdownMenu, setOpenDropdownMenu] = useState<boolean>(false);
     const navigate = useNavigate();
+
+    const handleBookingClick = () => {
+        navigate(`/${activeLang}/booking`);
+    };
 
     const origin = window.location.origin;
     const currentpage_uri = window.location.pathname.split('/');
@@ -29,11 +34,13 @@ const MasterHeader = () => {
         };
     };
 
+    const isPathLandingPage = window.location.pathname === '/' ? true : false;
+
 
     return (
-        <div className='sticky top-0 z-[1000] bg-white'>
-            <div className="h-[123px] container py-5 px-5 md:px-0  flex justify-between items-center overflow-hidden z-[9999999]">
-                <div className="flex justify-start">
+        <div className='relative z-10'>
+            <div className="h-[123px] container py-5 px-5 md:px-0 grid grid-cols-3 justify-items-center content-center overflow-hidden z-[9999999]">
+                <div className="flex justify-start justify-self-start">
                     {/* <div className='flex space-x-[20px] cursor-pointer'>
                     <div className=''>
                        <img src={hamburgermenu} />
@@ -47,7 +54,7 @@ const MasterHeader = () => {
                 </div>
 
                 <div className="flex justify-center ">
-                    <Logo img={novatasspaLogo} />
+                    <NovatasspaLogo className={`${isPathLandingPage ? 'text-white' : '#423930'}`} />
                 </div>
 
                 {/* <div className="flex justify-end space-x-[20px] cursor-pointer">
@@ -58,8 +65,14 @@ const MasterHeader = () => {
                     <img src={languageIcon} />
                 </div>
             </div> */}
+            <div className='hidden md:flex justify-end flex-row justify-self-end'>
+                <Link to={`/${activeLang}/booking`}>
+                    <button className={`${isPathLandingPage ? 'block' : 'hidden'} mr-[38px] py-2 px-3 text-[14px] leading-[28px] text-white border-[1px] border-white`}>
+                        Request Appoinment
+                    </button>
+                </Link>
                 <LanguagePicker
-                    bgColor="bg-[#FFFFFF]"
+                    // bgColor="bg-[#FFFFFF]"
                     openDropdownMenu={openDropdownMenu}
                     setOpenDropdownMenu={setOpenDropdownMenu}
                     icon={world}
@@ -67,6 +80,7 @@ const MasterHeader = () => {
                     activeLang={activeLang}
                     handleLan={handleLan}
                 />
+            </div>
             </div>
             <div className='h-[1px] bg-[#666B45] opacity-10'></div>
         </div>
