@@ -24,6 +24,9 @@ const MasterHeader = () => {
     const currentpage_uri = window.location.pathname.split('/');
     const pageuri = currentpage_uri.length > 2 && currentpage_uri.slice(2).join('/');
 
+    const isPathLandingPage = window.location.pathname === '/' ? true : false;
+    let _activeLang = localStorage.getItem('activeLang');
+
     const handleLan = (lang: any) => {
         setActiveLang(lang);
         localStorage.setItem('activeLang', lang?.id);
@@ -34,8 +37,9 @@ const MasterHeader = () => {
         };
     };
 
-    const isPathLandingPage = window.location.pathname === '/' ? true : false;
-
+    const handleLogo = () => {
+        navigate(`/${_activeLang}/novatascrystal`);
+    };
 
     return (
         <div className='relative z-10'>
@@ -53,8 +57,13 @@ const MasterHeader = () => {
                     <MainMenu />
                 </div>
 
-                <div className="flex justify-center ">
-                    <NovatasspaLogo className={`${isPathLandingPage ? 'text-white' : '#423930'}`} />
+                <div 
+                  className="flex justify-center cursor-pointer" 
+                  onClick={() => handleLogo()}
+                >
+                    <NovatasspaLogo 
+                      className={`${isPathLandingPage ? 'text-white' : '#423930'}`} 
+                    />
                 </div>
 
                 {/* <div className="flex justify-end space-x-[20px] cursor-pointer">

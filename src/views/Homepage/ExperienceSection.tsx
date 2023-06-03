@@ -5,8 +5,16 @@ import { ReactComponent as ArrowRight } from '../../assets/icons/ArrowRight.svg'
 import twelve from '../../assets/icons/twelve.svg'
 import { ReactComponent as Leaf } from '../../assets/icons/leaf.svg';
 import ButtonPrimary from '../../lib/Button/ButtonPrimary'
+import { useNavigate } from 'react-router-dom'
 
 const ExperienceSection = () => {
+    const navigate = useNavigate();
+    let activeLang = localStorage.getItem('activeLang');
+    
+    const handleLearnMore = () => {
+        navigate(`${'about'}`); 
+    };
+
     return (
         <div className={'overflow-hidden'}>
             <SectionBackground wrapperClassNames=' md:h-[1050px] my-20'>
@@ -20,7 +28,11 @@ const ExperienceSection = () => {
                         <p className='text-white text-lg '>Revitalize your body and mind with our professional massage therapists practicing traditional as well as modern therapeutic techniques.</p>
                         {/* <button className='flex justify-between border border-white text-white px-8 py-4'>Learn More <ArrowRight className='ml-[30px]'/> </button> */}
 
-                        <ButtonPrimary type="button" className='w-[229px] h-[60px] mt-[30px] box-border border-2 border-[#423930] bg-[turquoise] opacity-80'>
+                        <ButtonPrimary 
+                           type="button" 
+                           onClick={() => handleLearnMore()}
+                           className='w-[229px] h-[60px] mt-[30px] box-border border-2 border-[#423930] bg-[turquoise] opacity-80'
+                        >
                             <span className="font-gotu font-bold text-[22px] text-[#423930] leading-[28px] tracking-[0.02em]">Learn More</span>
                             <span className="text-[#fff] ml-2">
                                 {/* <svg width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">

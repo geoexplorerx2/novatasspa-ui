@@ -67,7 +67,7 @@ const MainMenu: FC = () => {
 
   const handleCloseMenu = () => {
     setIsMenuOpen(false)
-  }
+  };
 
   const eventClickOutsideDrawer = (event: MouseEvent) => {
     // console.log('the clicked event: ', event.target)

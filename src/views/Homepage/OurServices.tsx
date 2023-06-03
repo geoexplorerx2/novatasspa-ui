@@ -31,9 +31,19 @@ interface ServiceCardProps {
 }
 
 const ServiceCard: FC<ServiceCardProps> = (props) => {
-    const { service: { description, info, duration, Icon, id, price, title } } = props
+    const { 
+        service: { 
+            description, 
+            info, 
+            duration, 
+            Icon, 
+            id, 
+            price, 
+            title } } = props;
+
     const [isHovered, setIsHovered] = useState(false);
-    const [learnMore, setLearnMore] = useState(false)
+    const [learnMore, setLearnMore] = useState(false);
+
     const activeLang = localStorage.getItem('activeLang');
     const navigate = useNavigate();
 
@@ -44,7 +54,7 @@ const ServiceCard: FC<ServiceCardProps> = (props) => {
     const LearnMoreFunc = (e: any) => {
         e.stopPropagation();
         setLearnMore(!learnMore)
-    }
+    };
 
     return (
         <a onClick={handleBookingClick}><div className={`hover:shadow-2xl hover:shadow-grey-600 z-[1] relative border cursor-pointer border-[#EEEEEE] py-[42px] px-[35px] space-y-[30px] transition-all ${isHovered ? 'bg-[#423930]' : 'bg-white'}`} key={id} onMouseEnter={() => { setIsHovered(true) }} onMouseLeave={() => { setIsHovered(false) }} >
