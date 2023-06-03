@@ -24,6 +24,13 @@ const viewsUrls: any[] = [
         id: '2'
     },
     {
+        path: "/:lang/novatascrystal/about",
+        exact: true,
+        component: About,
+        type: "public",
+        id: '2'
+    },
+    {
         path: "/:lang/services",
         exact: true,
         component: Services,
