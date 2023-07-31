@@ -243,7 +243,7 @@ export default function FloatingWhatsApp({
       >
         <header className={css.chatHeader}>
           <div className={css.avatar}>
-            <img src='https://novatasspa.s3.amazonaws.com/novatassap.png' width='60' height='60' alt='whatsapp-avatar' />
+            <img src='https://istanbul-hammam-bucket.s3.eu-central-1.amazonaws.com/novatasspaLogo.svg' width='60' height='60' alt='whatsapp-avatar' className='bg-white px-[2px]'/>
           </div>
           <div className={css.status}>
             <span className={css.statusTitle}>{accountName}</span>
