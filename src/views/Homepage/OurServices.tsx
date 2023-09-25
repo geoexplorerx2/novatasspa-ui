@@ -3,12 +3,17 @@ import { servicesVersion } from 'typescript'
 import { ReactComponent as CaldleAndFlower } from '../../assets/icons/candleFlower.svg'
 import { ReactComponent as Wave } from '../../assets/icons/wave.svg'
 import { useNavigate } from 'react-router-dom'
-import { TRANSLATING__BOOK__NOW } from '../../data/services';
+import { 
+    TRANSLATING__BOOK__NOW,
+    TRANSLATIN_POPULAR_PACKAGE,
+    TRANSLATEING_OUR,
+    TRANSLATING_MIN_PER_PERSON, 
+} from '../../data/services';
 
 const OurServices: FC = () => {
     return (
         <div className='container -mt-[188px] md:-mt-[430px] overflow-hidden lg:overflow-visible'>
-            <h2 className='text-white text-3xl md:text-[64px] font-gotu md:leading-[74px] md:tracking-tighter mb-5 lg:mb-12 px-9 md:px-0'>Our <br className='hidden md:inline-block' /> Popular Packages</h2>
+            <h2 className='text-white text-3xl md:text-[64px] font-gotu md:leading-[74px] md:tracking-tighter mb-5 lg:mb-12 px-9 md:px-0'>{TRANSLATEING_OUR} <br className='hidden md:inline-block' /> {TRANSLATIN_POPULAR_PACKAGE}</h2>
             <div className='grid grid-cols-1 md:grid-cols-4 gap-[30px] px-9 md:px-0'>
                 {ServicesData.map(service => <ServiceCard service={service} />)}
             </div>
@@ -67,7 +72,7 @@ const ServiceCard: FC<ServiceCardProps> = (props) => {
                         </span>
                         {/* <span className='text-xs inline-block font-medium'>€</span> */}
                     </div>
-                    <p className={`flex justify-end ${isHovered ? 'text-white' : ''} text-black`}>{duration} minutes per person</p>
+                    <p className={`flex justify-end ${isHovered ? 'text-white' : ''} text-black`}>{duration} {TRANSLATING_MIN_PER_PERSON}</p>
                     <div className={`${isHovered ? 'text-white' : 'text-black'} flex space-x-4`}>
                         <span className={`flex items-center cursor-pointer font-gotu`}>{TRANSLATING__BOOK__NOW}</span>
                         <span className=''> &gt;</span>

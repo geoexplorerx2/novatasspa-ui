@@ -92,6 +92,9 @@ let REVITALIZE = 'Revitalize your body and mind with our professional massage th
 let LEARN_MORE = 'Learn More';
 let YEARS = 'Years';
 let EXPERIENCE = 'Experience';
+let POPULAR_PACKAGE = ' Popular Packages';
+let OUR = 'OUR';
+let MIN_PER_PERSON = 'minutes per person'
 switch (pathname) {
     case 'en':
         SELECT = ENGLISH;
@@ -107,6 +110,9 @@ switch (pathname) {
         LEARN_MORE = 'Learn More'
         YEARS = 'Years'
         EXPERIENCE = 'Experience'
+        POPULAR_PACKAGE = ' Popular Packages';
+        OUR = 'OUR';
+        MIN_PER_PERSON = 'minutes per person'
         break;
     case 'tr':
         SELECT = TURKISH;
@@ -121,7 +127,10 @@ switch (pathname) {
         REVITALIZE = 'Geleneksel ve modern terapötik teknikleri uygulayan profesyonel masaj terapistlerimizle bedeninizi ve zihninizi canlandırın.'
         LEARN_MORE = 'Daha Fazla Bilgi';
         YEARS = 'Yıl';
-        EXPERIENCE = 'Deneyim'
+        EXPERIENCE = 'Deneyim';
+        POPULAR_PACKAGE = ' Popüler Paketlerimiz';
+        OUR = 'Bizim';
+        MIN_PER_PERSON = 'Kişi başı dakika'
         break;
     default:
         SELECT = ENGLISH;
@@ -137,6 +146,9 @@ switch (pathname) {
         LEARN_MORE = 'Learn More'
         YEARS = 'Years'
         EXPERIENCE = 'Experience'
+        POPULAR_PACKAGE = ' Popular Packages';
+        OUR = 'OUR';
+        MIN_PER_PERSON = 'minutes per person'
         break;
 }
 export const TRANSLATING__CONTACT = CONTACT;
@@ -152,3 +164,6 @@ export const TRANSLATING_REVITALIZE = REVITALIZE;
 export const TRANSLATIN_LEARN_MORE = LEARN_MORE;
 export const TRANSLATIN_YEARS = YEARS;
 export const TRANSLATING_EXPERIENCE = EXPERIENCE;
+export const TRANSLATIN_POPULAR_PACKAGE = POPULAR_PACKAGE 
+export const TRANSLATEING_OUR = OUR;
+export const TRANSLATING_MIN_PER_PERSON = MIN_PER_PERSON
