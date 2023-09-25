@@ -94,7 +94,9 @@ let YEARS = 'Years';
 let EXPERIENCE = 'Experience';
 let POPULAR_PACKAGE = ' Popular Packages';
 let OUR = 'OUR';
-let MIN_PER_PERSON = 'minutes per person'
+let MIN_PER_PERSON = 'minutes per person';
+let LUXURY_NOVATASSPA_PACKAGE = 'Luxury Novatas Package';
+let LUXURY_NOVATASSPA_PACKAGE_DESCRIPTION = `After a 10-min rest in the steam room, which will help to loosen up tense muscles, soften the skin and open the pores, the session continues with an exfoliating body scrub, a full body foam, where you will be covered in a cloud of silky foam bubbles and a relaxing head-shoulders-back foam massage. This will be followed by a honey and milk body care treatment which will leave your body smooth and refreshed. After the honey and milk body care treatment a rejuvenating facial clay mask will be applied. The session will continue with a relaxing Foot & Hand Massage and end with our Novatas Signature Massage, which is an individualistic muscle-relaxing and stress-relieving massage that is designed specifically for you and is carried out with your choice of %100 natural aromatic oils. Our massage therapists will analyze what your body needs, and apply a combination of techniques among hot stone, reflexology, anti-stress or Thai massages, to meet those needs accordingly.`;
 switch (pathname) {
     case 'en':
         SELECT = ENGLISH;
@@ -112,7 +114,9 @@ switch (pathname) {
         EXPERIENCE = 'Experience'
         POPULAR_PACKAGE = ' Popular Packages';
         OUR = 'OUR';
-        MIN_PER_PERSON = 'minutes per person'
+        MIN_PER_PERSON = 'minutes per person';
+        LUXURY_NOVATASSPA_PACKAGE = 'Luxury Novatas Package';
+        LUXURY_NOVATASSPA_PACKAGE_DESCRIPTION = `After a 10-min rest in the steam room, which will help to loosen up tense muscles, soften the skin and open the pores, the session continues with an exfoliating body scrub, a full body foam, where you will be covered in a cloud of silky foam bubbles and a relaxing head-shoulders-back foam massage. This will be followed by a honey and milk body care treatment which will leave your body smooth and refreshed. After the honey and milk body care treatment a rejuvenating facial clay mask will be applied. The session will continue with a relaxing Foot & Hand Massage and end with our Novatas Signature Massage, which is an individualistic muscle-relaxing and stress-relieving massage that is designed specifically for you and is carried out with your choice of %100 natural aromatic oils. Our massage therapists will analyze what your body needs, and apply a combination of techniques among hot stone, reflexology, anti-stress or Thai massages, to meet those needs accordingly.`
         break;
     case 'tr':
         SELECT = TURKISH;
@@ -130,7 +134,11 @@ switch (pathname) {
         EXPERIENCE = 'Deneyim';
         POPULAR_PACKAGE = ' Popüler Paketlerimiz';
         OUR = 'Bizim';
-        MIN_PER_PERSON = 'Kişi başı dakika'
+        MIN_PER_PERSON = 'Kişi başı dakika';
+        LUXURY_NOVATASSPA_PACKAGE = 'Lüks Novatas Paketi'
+        LUXURY_NOVATASSPA_PACKAGE_DESCRIPTION = `Gergin kasları rahatlatmak, cildi tazelenmek ve kendinizi şımartmak için ideal bir seans sizi bekliyor!
+ 
+        Seansımız, buhar odasındaki 10 dakikalık bir dinlenmeyle başlıyor. Ardından, peeling vücut ovma, tüm vücudu saran ipeksi köpük bulutu ve rahatlatıcı baş-omuz-sırt köpük masajı ile devam ediyor. Ardından, pürüzsüz ve taze bir cilt bırakacak ballı ve sütlü vücut bakımı uygulanıyor. Bu işlemi takiben, gençleştirici bir yüz kil maskesi sizi bekliyor. Seans, rahatlatıcı Ayak ve El Masajı ile devam ediyor ve son olarak kişisel tercihlerinize göre seçeceğiniz %100 doğal aromatik yağlarla yapılan kişiye özel bir kas gevşetici ve stres giderici Novatas İmza Masajı ile son buluyor. Masaj terapistlerimiz, vücudunuzun ihtiyaçlarını analiz ederek sıcak taş, refleksoloji, anti-stres veya Thai masajları gibi farklı teknikleri birleştirerek size özel bir deneyim sunacaklar. Şimdi bu eşsiz deneyimin tadını çıkarın!`
         break;
     default:
         SELECT = ENGLISH;
@@ -148,7 +156,9 @@ switch (pathname) {
         EXPERIENCE = 'Experience'
         POPULAR_PACKAGE = ' Popular Packages';
         OUR = 'OUR';
-        MIN_PER_PERSON = 'minutes per person'
+        MIN_PER_PERSON = 'minutes per person';
+        LUXURY_NOVATASSPA_PACKAGE = 'Luxury Novatas Package'
+        LUXURY_NOVATASSPA_PACKAGE_DESCRIPTION = `After a 10-min rest in the steam room, which will help to loosen up tense muscles, soften the skin and open the pores, the session continues with an exfoliating body scrub, a full body foam, where you will be covered in a cloud of silky foam bubbles and a relaxing head-shoulders-back foam massage. This will be followed by a honey and milk body care treatment which will leave your body smooth and refreshed. After the honey and milk body care treatment a rejuvenating facial clay mask will be applied. The session will continue with a relaxing Foot & Hand Massage and end with our Novatas Signature Massage, which is an individualistic muscle-relaxing and stress-relieving massage that is designed specifically for you and is carried out with your choice of %100 natural aromatic oils. Our massage therapists will analyze what your body needs, and apply a combination of techniques among hot stone, reflexology, anti-stress or Thai massages, to meet those needs accordingly.`
         break;
 }
 export const TRANSLATING__CONTACT = CONTACT;
@@ -167,3 +177,5 @@ export const TRANSLATING_EXPERIENCE = EXPERIENCE;
 export const TRANSLATIN_POPULAR_PACKAGE = POPULAR_PACKAGE 
 export const TRANSLATEING_OUR = OUR;
 export const TRANSLATING_MIN_PER_PERSON = MIN_PER_PERSON
+export const TRANSLATIN_LUXURY_NOVATASSPA_PACKAGE = LUXURY_NOVATASSPA_PACKAGE
+export const TRANSLATING_LUXURY_NOVATASSPA_PACKAGE_DESCRIPTION = LUXURY_NOVATASSPA_PACKAGE_DESCRIPTION
