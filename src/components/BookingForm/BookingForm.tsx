@@ -11,7 +11,7 @@ import ChooseHamam from '../ChooseHammam/ChooseHammam';
 import ChooseMassage from '../ChooseMasssageType/ChooseMassageType';
 import exclamationMark from '../../assets/icons/exclamation.png'
 import checkMark from '../../assets/icons/checkMark.png'
-
+import { TRANSLATING__BOOK__NOW } from '../../data/services';
 
 interface BookingFormProps {
   handleChange?: any;
@@ -154,7 +154,7 @@ const BookingForm: FC<BookingFormProps> = ({ handleChange, handleSubmit, errors,
             className='w-full col-span-2 flex justify-center py-4 px-[31px] rounded-[10px] bg-[#B2A285] text-white text-[22px] -tracking-[0.02em] leading-[28px] font-gotu'
           >
             <span className=''>
-              Book Now
+              {TRANSLATING__BOOK__NOW}
             </span>
           </button>
           </div>

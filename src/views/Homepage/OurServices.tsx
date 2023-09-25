@@ -3,7 +3,7 @@ import { servicesVersion } from 'typescript'
 import { ReactComponent as CaldleAndFlower } from '../../assets/icons/candleFlower.svg'
 import { ReactComponent as Wave } from '../../assets/icons/wave.svg'
 import { useNavigate } from 'react-router-dom'
-
+import { TRANSLATING__BOOK__NOW } from '../../data/services';
 
 const OurServices: FC = () => {
     return (
@@ -69,7 +69,7 @@ const ServiceCard: FC<ServiceCardProps> = (props) => {
                     </div>
                     <p className={`flex justify-end ${isHovered ? 'text-white' : ''} text-black`}>{duration} minutes per person</p>
                     <div className={`${isHovered ? 'text-white' : 'text-black'} flex space-x-4`}>
-                        <span className={`flex items-center cursor-pointer font-gotu`}>Book Now</span>
+                        <span className={`flex items-center cursor-pointer font-gotu`}>{TRANSLATING__BOOK__NOW}</span>
                         <span className=''> &gt;</span>
                     </div>
                 </div>

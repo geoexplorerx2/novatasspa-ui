@@ -10,12 +10,13 @@ import logo_4 from '../../assets/logo/logolar-05.svg'
 import logo_5 from '../../assets/logo/logolar-06.svg'
 import logo_6 from '../../assets/logo/logolar-07.svg'
 import { Icon } from 'leaflet'
+import { TRANSLATIN__OUR__REF } from '../../data/services'
 
 
 const TrustedCompaniesSection: FC = () => {
   return (
     <div className='container mb-16'>
-      <h2 className='text-2xl md:text-[44px] md:tracking-tighter leading-[54px] font-gotu font-normal text-center my-20 md:my-32'>Our References</h2>
+      <h2 className='text-2xl md:text-[44px] md:tracking-tighter leading-[54px] font-gotu font-normal text-center my-20 md:my-32'>{TRANSLATIN__OUR__REF}</h2>
       {/* first row of the images */}
       {/* <div className='grid grid-cols-2 lg:grid-cols-4 justify-items-center w-full gap-y-[60px] mb-[60px]'>
         {

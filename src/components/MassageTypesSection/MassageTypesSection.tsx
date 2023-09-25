@@ -9,7 +9,7 @@ import message_6 from '../../assets/images/message_6.png';
 import message_7 from '../../assets/images/message_7.png';
 import message_8 from '../../assets/images/message_8.png';
 import ArrowRight from '../../assets/icons/right-arrow-black.png'
-
+import { TRANSLATING__BOOK__NOW } from '../../data/services';
 const MassageTypesSection = () => {
     const activeLang = localStorage.getItem('activeLang')
 
@@ -211,7 +211,7 @@ const MassageTypesSection = () => {
                                                         <span className='top-[-3px] text-[11px] absolute'>€</span>
                                                     </span>
                                                     <button className='text-[16px] text-[#423930] bookButton inline-flex leading-[20px] mt-[10px] font-poppins '>
-                                                        Book Now
+                                                        {TRANSLATING__BOOK__NOW}
                                                         <img src={ArrowRight} alt='' className='w-[16px] ml-[13px] translate-y-[2px]' />
                                                     </button>
                                                 </div>
@@ -230,7 +230,7 @@ const MassageTypesSection = () => {
                                                     </div>
                                                     <a href="/booking">
                                                         <button className='w-full md:w-auto text-[16px] text-[#423930] bookButton inline-flex justify-between md:justify-start leading-[20px] mt-[10px] font-poppins '>
-                                                            Book Now
+                                                            {TRANSLATING__BOOK__NOW}
                                                         <img src={ArrowRight} alt='' className='w-[16px] ml-[13px] translate-y-[2px]' />
                                                     </button>
                                                 </a>
