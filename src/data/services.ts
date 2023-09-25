@@ -85,6 +85,13 @@ let HEADER = 'Harmonize Your Body and Soul'
 let HEADER__DESCRIPTION = `Whenever you need a place to relax between your hectic schedule or to indulge in some real pampering, don't forget to reserve your spot at the Novatas Spa!`
 let BOOK__NOW = 'Book Now';
 let OURREFE = 'Our References';
+let HEADER_NOVATASSPA = `It’s Time to Find Yourself Again`;
+let BODY_NOVATASSPA = 'Take a break from your busy life & come relax at Novatas Crystal Spa! Book your session & relieve your stress today!';
+let TREAT_YOUR_SELF = 'Treat Yourself to a Blissful Escape';
+let REVITALIZE = 'Revitalize your body and mind with our professional massage therapists practicing traditional as well as modern therapeutic techniques.';
+let LEARN_MORE = 'Learn More';
+let YEARS = 'Years';
+let EXPERIENCE = 'Experience';
 switch (pathname) {
     case 'en':
         SELECT = ENGLISH;
@@ -93,6 +100,13 @@ switch (pathname) {
         HEADER__DESCRIPTION = `Whenever you need a place to relax between your hectic schedule or to indulge in some real pampering, don't forget to reserve your spot at the Novatas Spa!`
         BOOK__NOW = 'Book Now';
         OURREFE = 'Our References';
+        HEADER_NOVATASSPA = `It’s Time to Find Yourself Again`
+        BODY_NOVATASSPA = 'Take a break from your busy life & come relax at Novatas Crystal Spa! Book your session & relieve your stress today!';
+        TREAT_YOUR_SELF = 'Treat Yourself to a Blissful Escape';
+        REVITALIZE = 'Revitalize your body and mind with our professional massage therapists practicing traditional as well as modern therapeutic techniques.'
+        LEARN_MORE = 'Learn More'
+        YEARS = 'Years'
+        EXPERIENCE = 'Experience'
         break;
     case 'tr':
         SELECT = TURKISH;
@@ -101,6 +115,13 @@ switch (pathname) {
         HEADER__DESCRIPTION = `Yoğun programınız arasında dinlenmek veya kendinizi şımartmak için bir yere ihtiyacınız olduğunda Novatas Spa'da yerinizi ayırtmayı unutmayın!`
         BOOK__NOW = 'Şimdi Yer Ayırtın';
         OURREFE = 'Referanslarımız';
+        HEADER_NOVATASSPA = `Kendinizi Yeniden Bulma Zamanı`
+        BODY_NOVATASSPA = `Yoğun yaşam temposuna ara verin ve Novatas Crystal Spa'da kendinize özel bir rahatlama anı yaşayın! Şimdi seansınızı ayırtın ve stresi geride bırakın!`;
+        TREAT_YOUR_SELF = 'Kendinizi Keyifli Bir Mola İle Şımartın';
+        REVITALIZE = 'Geleneksel ve modern terapötik teknikleri uygulayan profesyonel masaj terapistlerimizle bedeninizi ve zihninizi canlandırın.'
+        LEARN_MORE = 'Daha Fazla Bilgi';
+        YEARS = 'Yıl';
+        EXPERIENCE = 'Deneyim'
         break;
     default:
         SELECT = ENGLISH;
@@ -109,11 +130,25 @@ switch (pathname) {
         HEADER__DESCRIPTION = `Whenever you need a place to relax between your hectic schedule or to indulge in some real pampering, don't forget to reserve your spot at the Novatas Spa!`;
         BOOK__NOW = 'Book Now';
         OURREFE = 'Our References';
+        HEADER_NOVATASSPA = `It’s Time to Find Yourself Again`;
+        BODY_NOVATASSPA = 'Take a break from your busy life & come relax at Novatas Crystal Spa! Book your session & relieve your stress today!';
+        TREAT_YOUR_SELF = 'Treat Yourself to a Blissful Escape';
+        REVITALIZE = 'Revitalize your body and mind with our professional massage therapists practicing traditional as well as modern therapeutic techniques.'
+        LEARN_MORE = 'Learn More'
+        YEARS = 'Years'
+        EXPERIENCE = 'Experience'
         break;
 }
 export const TRANSLATING__CONTACT = CONTACT;
-export const SERVICES_DATA = SELECT; 
+export const SERVICES_DATA = SELECT;
 export const TRANSLATING__HEADER = HEADER;
 export const TRANSLATING__HEADER__DESCRIPTION = HEADER__DESCRIPTION;
 export const TRANSLATING__BOOK__NOW = BOOK__NOW;
 export const TRANSLATIN__OUR__REF = OURREFE;
+export const TRANSLATEING__HEADER_NOVATASSPA = HEADER_NOVATASSPA;
+export const TRANSLATING__BODY__NOVATASSPA = BODY_NOVATASSPA;
+export const TRANSLATING_TREAT_YOUR_SELF = TREAT_YOUR_SELF;
+export const TRANSLATING_REVITALIZE = REVITALIZE;
+export const TRANSLATIN_LEARN_MORE = LEARN_MORE;
+export const TRANSLATIN_YEARS = YEARS;
+export const TRANSLATING_EXPERIENCE = EXPERIENCE;

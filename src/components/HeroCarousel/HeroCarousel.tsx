@@ -8,14 +8,18 @@ import { ReactComponent as Leaf } from '../../assets/icons/leaf.svg';
 import arrow from '../../assets/icons/right-arrow-white.png';
 import ButtonPrimary from '../../lib/Button/ButtonPrimary';
 import { useNavigate } from 'react-router-dom';
-import { TRANSLATING__BOOK__NOW } from '../../data/services';
+import {
+    TRANSLATING__BOOK__NOW,
+    TRANSLATEING__HEADER_NOVATASSPA,
+    TRANSLATING__BODY__NOVATASSPA,
+} from '../../data/services';
 const HeroCarousel = () => {
     const navigate = useNavigate();
     const carouselContent = [
         {
             id: 1,
-            header: 'It’s Time to Find Yourself Again',
-            body: 'Take a break from your busy life & come relax at Novatas Crystal Spa! Book your session & relieve your stress today!',
+            header:  TRANSLATEING__HEADER_NOVATASSPA ,
+            body: TRANSLATING__BODY__NOVATASSPA,
             image: { img_2 }
         },
         // {
@@ -79,7 +83,7 @@ const HeroCarousel = () => {
         )
     })
 
-    return ( 
+    return (
         <div className='container relative overflow-hidden'>
             {/* <OwlCarousel className='owl-theme'
                 // nav

@@ -7,6 +7,7 @@ import languageIcon from "../../assets/icons/languageIcon.svg";
 import { Languages } from '../constants/Languages';
 import { pathname } from '../../data/pathname';
 import { routename } from '../../data/pathname';
+import { Link } from 'react-router-dom';
 interface LanguagePickerProps {
     bgColor?: string;
     openDropdownMenu: any,
@@ -101,10 +102,12 @@ const LanguagePicker: FC<LanguagePickerProps> = ({ bgColor, openDropdownMenu, se
                                                         handleLan(lang)
                                                         close()
                                                         if (routename.length == 4) {
+                                                            <Link to={`/`}></Link>
                                                             console.log('routename is :', `${routename[0]}/${routename[1]}/${routename[2]}/${routename[3]}`)
                                                         } else {
+                                                            <Link to={`/${lang.id}/${routename[4]}`}></Link>
                                                             console.log('routename is :', `${routename[0]}/${routename[1]}/${routename[2]}/${lang.id}/${routename[4]}`)
-                                                            window.location.href = `${routename[0]}/${routename[1]}/${routename[2]}/${lang.id}/${routename[4]}`
+                                                            // window.location.href = `${routename[0]}/${routename[1]}/${routename[2]}/${lang.id}/${routename[4]}`
                                                         }
 
 

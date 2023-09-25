@@ -6,7 +6,13 @@ import twelve from '../../assets/icons/twelve.svg'
 import { ReactComponent as Leaf } from '../../assets/icons/leaf.svg';
 import ButtonPrimary from '../../lib/Button/ButtonPrimary'
 import { useNavigate } from 'react-router-dom'
-
+import {
+    TRANSLATING_TREAT_YOUR_SELF,
+    TRANSLATING_REVITALIZE,
+    TRANSLATIN_LEARN_MORE,
+    TRANSLATIN_YEARS,
+    TRANSLATING_EXPERIENCE,
+} from '../../data/services';
 const ExperienceSection = () => {
     const navigate = useNavigate();
     let activeLang = localStorage.getItem('activeLang');
@@ -24,8 +30,8 @@ const ExperienceSection = () => {
                             <Leaf className='text-white' />
                             <Leaf className='text-white rotate-[175deg]' />
                         </div>
-                        <h2 className='text-white text-3xl lg:text-[64px] font-gotu md:leading-[74px] md:tracking-tighter'>Treat Yourself to a Blissful Escape</h2>
-                        <p className='text-white text-lg '>Revitalize your body and mind with our professional massage therapists practicing traditional as well as modern therapeutic techniques.</p>
+                        <h2 className='text-white text-3xl lg:text-[64px] font-gotu md:leading-[74px] md:tracking-tighter'>{TRANSLATING_TREAT_YOUR_SELF}</h2>
+                        <p className='text-white text-lg '>{TRANSLATING_REVITALIZE}</p>
                         {/* <button className='flex justify-between border border-white text-white px-8 py-4'>Learn More <ArrowRight className='ml-[30px]'/> </button> */}
 
                         <ButtonPrimary 
@@ -33,7 +39,7 @@ const ExperienceSection = () => {
                            onClick={() => handleLearnMore()}
                            className='w-[229px] h-[60px] mt-[30px] box-border border-2 border-[#423930] bg-[turquoise] opacity-80'
                         >
-                            <span className="font-gotu font-bold text-[22px] text-[#423930] leading-[28px] tracking-[0.02em]">Learn More</span>
+                            <span className="font-gotu font-bold text-[22px] text-[#423930] leading-[28px] tracking-[0.02em]">{TRANSLATIN_LEARN_MORE}</span>
                             <span className="text-[#fff] ml-2">
                                 {/* <svg width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M14.4301 18.819C14.3316 18.8194 14.2339 18.8001 14.1429 18.7623C14.0519 18.7245 13.9694 18.669 13.9001 18.599C13.7606 18.4579 13.6824 18.2674 13.6824 18.069C13.6824 17.8706 13.7606 17.6801 13.9001 17.539L19.4401 11.999L13.9001 6.45901C13.7703 6.31636 13.7005 6.12921 13.7051 5.93642C13.7097 5.74364 13.7884 5.56003 13.9248 5.42374C14.0612 5.28744 14.2449 5.20893 14.4377 5.20451C14.6305 5.20009 14.8175 5.27011 14.9601 5.40001L21.0301 11.47C21.1696 11.6111 21.2478 11.8016 21.2478 12C21.2478 12.1984 21.1696 12.3889 21.0301 12.53L14.9601 18.6C14.8907 18.6698 14.8081 18.7252 14.7171 18.7628C14.6261 18.8004 14.5285 18.8195 14.4301 18.819Z" fill="#fff" />
@@ -48,7 +54,7 @@ const ExperienceSection = () => {
                         <img src={massageImage} alt="massaging image" className='w-11/12  md:w-[690px] md:h-[767px]' />
                         <div className='absolute top-[-65px] md:top-auto right-0 md:right-auto  md:-left-8 md:bottom-[30px] bg-white p-7 md:py-14 md:px-12'>
                             <img src={twelve} alt='twelve' className='w-11 md:w-auto' />
-                            <span className='text-'>Years<br /> Experience</span>
+                            <span className='text-'>{TRANSLATIN_YEARS}<br /> {TRANSLATING_EXPERIENCE}</span>
                         </div>
                     </div>
                 </div>
