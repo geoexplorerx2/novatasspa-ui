@@ -12,6 +12,7 @@ import {
     TRANSLATING_OUR_PRICE_LIST,
     TRANSLATING_TURKISH_HAMMAM,
     TRANSLATING_JASMINE_HAMMAM,
+    TRANSLATING_MINUTE,
 } from '../../data/services'
 const PricesListSection = () => {
 
@@ -23,21 +24,21 @@ const PricesListSection = () => {
                 {
                     hamamid: 1,
                     name: TRANSLATING_JASMINE_HAMMAM,
-                    time: '25 min.',
+                    time: `25 ${TRANSLATING_MINUTE}`,
                     price: '40',
                     image: prices_list_1
                 },
                 {
                     hamamid: 2,
                     name: 'Tulip Hammam',
-                    time: '40 min.',
+                    time: `40 ${TRANSLATING_MINUTE}`,
                     price: '60',
                     image: prices_list_2
                 },
                 {
                     hamamid: 2,
                     name: 'Lotus Hammam',
-                    time: '50 min.',
+                    time: `50 ${TRANSLATING_MINUTE}`,
                     price: '75',
                     image: prices_list_3
                 }
@@ -50,28 +51,28 @@ const PricesListSection = () => {
                 {
                     hamamid: 1,
                     name: TRANSLATING_LILIUM_PACKAGE,
-                    time: '55 min.',
+                    time: `55 ${TRANSLATING_MINUTE}`,
                     price: '60',
                     image: prices_list_1
                 },
                 {
                     hamamid: 2,
                     name: TRANSLATIN_CRYSTAL_PACKAGE,
-                    time: '80 min.',
+                    time: `80 ${TRANSLATING_MINUTE}`,
                     price: '80',
                     image: prices_list_2
                 },
                 {
                     hamamid: 3,
                     name: 'Tulip Package',
-                    time: '100 min.',
+                    time: `100 ${TRANSLATING_MINUTE}`,
                     price: '110',
                     image: prices_list_3
                 },
                 {
                     hamamid: 4,
                     name: 'Luxury Novatas Package',
-                    time: '125 min.',
+                    time: `125 ${TRANSLATING_MINUTE}`,
                     price: '140',
                     image: prices_list_4
                 },
@@ -84,42 +85,42 @@ const PricesListSection = () => {
                 {
                     hamamid: 1,
                     name: 'Reflexology',
-                    time: '25 min.',
+                    time: `25 ${TRANSLATING_MINUTE}`,
                     price: '30',
                     image: prices_list_1
                 },
                 {
                     hamamid: 2,
                     name: 'Head & shoulders Massage',
-                    time: '25 min.',
+                    time: `25 ${TRANSLATING_MINUTE}`,
                     price: '30',
                     image: prices_list_2
                 },
                 {
                     hamamid: 3,
                     name: 'Back Massage',
-                    time: '30 min.',
+                    time: `30 ${TRANSLATING_MINUTE}`,
                     price: '35',
                     image: prices_list_3
                 },
                 {
                     hamamid: 4,
                     name: 'Classic Massage',
-                    time: '50 min.',
+                    time: `50 ${TRANSLATING_MINUTE}`,
                     price: '50',
                     image: prices_list_4
                 },
                 {
                     hamamid: 5,
                     name: 'Anti-Stress Massage',
-                    time: '50 min.',
+                    time: `50 ${TRANSLATING_MINUTE}`,
                     price: '65',
                     image: prices_list_5
                 },
                 {
                     hamamid: 6,
                     name: 'Aromatherapy Massage',
-                    time: '50 min.',
+                    time: `50 ${TRANSLATING_MINUTE}`,
                     price: '65',
                     image: prices_list_1
                 },
@@ -132,21 +133,21 @@ const PricesListSection = () => {
                 {
                     hamamid: 1,
                     name: 'Hot Stone Massage',
-                    time: '50 min.',
+                    time: `50 ${TRANSLATING_MINUTE}`,
                     price: '70',
                     image: prices_list_1
                 },
                 {
                     hamamid: 2,
                     name: 'Traditional Bali Massage',
-                    time: '50 min.',
+                    time: `50 ${TRANSLATING_MINUTE}`,
                     price: '70',
                     image: prices_list_2
                 },
                 {
                     hamamid: 3,
                     name: 'Blend Thai Massage',
-                    time: '50 min.',
+                    time: `50 ${TRANSLATING_MINUTE}`,
                     price: '80',
                     image: prices_list_3
                 },
@@ -159,28 +160,28 @@ const PricesListSection = () => {
                 {
                     hamamid: 1,
                     name: 'Medical Massage',
-                    time: '40 min.',
+                    time: `40 ${TRANSLATING_MINUTE}`,
                     price: '70',
                     image: prices_list_1
                 },
                 {
                     hamamid: 2,
                     name: 'Deep Tissue Massage',
-                    time: '50 min.',
+                    time: `50 ${TRANSLATING_MINUTE}`,
                     price: '80',
                     image: prices_list_2
                 },
                 {
                     hamamid: 3,
                     name: 'Regional Trilogy Massage',
-                    time: '60 min.',
+                    time: `60 ${TRANSLATING_MINUTE}`,
                     price: '80',
                     image: prices_list_3
                 },
                 {
                     hamamid: 4,
                     name: 'Novatas Signature Massage',
-                    time: '60 min.',
+                    time: `60 ${TRANSLATING_MINUTE}`,
                     price: '90',
                     image: prices_list_4
                 },
@@ -193,28 +194,28 @@ const PricesListSection = () => {
                 {
                     hamamid: 1,
                     name: 'Coconut Peeling',
-                    time: '25 min.',
+                    time: `25 ${TRANSLATING_MINUTE}`,
                     price: '30',
                     image: prices_list_1
                 },
                 {
                     hamamid: 2,
                     name: 'Grape Seeds Peeling',
-                    time: '25 min.',
+                    time: `25 ${TRANSLATING_MINUTE}`,
                     price: '30',
                     image: prices_list_2
                 },
                 {
                     hamamid: 3,
                     name: 'Olive Oil Peeling',
-                    time: '25 min.',
+                    time: `25 ${TRANSLATING_MINUTE}`,
                     price: '30',
                     image: prices_list_3
                 },
                 {
                     hamamid: 4,
                     name: 'Rose Peeling',
-                    time: '25 min.',
+                    time: `25 ${TRANSLATING_MINUTE}`,
                     price: '30',
                     image: prices_list_4
                 },
