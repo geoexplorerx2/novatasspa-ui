@@ -136,6 +136,8 @@ let NAME_SURNAME='Name, Surname';
 let PHONE_NUMBER='Phone Number';
 let EMAIL = 'E-Mail Address';
 let MAKE_RESERVATION ='Make Reservation';
+let MAKE_A_QUICK ='Make a Quick ';
+let RESERVATION='Reservation';
 switch (pathname) {
     case 'en':
         SELECT = ENGLISH;
@@ -195,6 +197,8 @@ switch (pathname) {
         PHONE_NUMBER='Phone Number';
         EMAIL = 'E-Mail Address';
         MAKE_RESERVATION ='Make Reservation';
+        MAKE_A_QUICK ='Make a Quick ';
+        RESERVATION='Reservation';
         break;
     case 'tr':
         SELECT = TURKISH;
@@ -254,6 +258,8 @@ switch (pathname) {
         PHONE_NUMBER='Telefon Numarası';
         EMAIL = 'E-Posta Adresi';
         MAKE_RESERVATION ='Rezervasyon Yapın';
+        MAKE_A_QUICK ='Hızlıca Yapın';
+        RESERVATION='Rezervasyon';
         break;
     default:
         SELECT = ENGLISH;
@@ -313,6 +319,8 @@ switch (pathname) {
         PHONE_NUMBER='Phone Number';
         EMAIL = 'E-Mail Address';
         MAKE_RESERVATION ='Make Reservation';
+        MAKE_A_QUICK ='Make a Quick ';
+        RESERVATION='Reservation';
         break;
 }
 export const TRANSLATING__CONTACT = CONTACT;
@@ -372,3 +380,5 @@ export const TRANSLATING_NAME_SURNAME=NAME_SURNAME;
 export const TRANSLATING_PHONE_NUMBER=PHONE_NUMBER;
 export const TRANSLATING_EMAIL = EMAIL;
 export const TRANLATIONG_MAKE_RESERVATION=MAKE_RESERVATION;
+export const TRANSLATING_MAKE_A_QUICK=MAKE_A_QUICK;
+export const TRANSLATING_RESERVATION=RESERVATION;
