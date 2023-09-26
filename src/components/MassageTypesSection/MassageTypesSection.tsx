@@ -20,6 +20,7 @@ import {
     TRANSLATING_AROM,
     TRANSLATING_FAR_EAST_MASSAGE,
     TRANSLATING_HOS_STONE_MASSAGE,
+    TRANSLATING_TRADITIONAL_BALI_MASSAGE,
 
 } from '../../data/services';
 const MassageTypesSection = () => {
@@ -81,7 +82,7 @@ const MassageTypesSection = () => {
                     messageId: 1
                 },
                 {
-                    name: 'Traditional Bali Massage',
+                    name: TRANSLATING_TRADITIONAL_BALI_MASSAGE,
                     price: 'per person 80',
                     duration: `50 ${TRANSLATING_MINUTE}`,
                     image: message_2,

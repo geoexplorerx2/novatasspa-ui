@@ -115,9 +115,11 @@ let BACK_MESSAGE = 'Back Massage';
 let CLASSICS_MASSAGE = 'Classic Massage';
 let ANTI_STRESS_MASSAGE = 'Anti-Stress Massage';
 let AROM = 'Aromatherapy Massage';
-let FAR_EAST_MASSAGE=`Far East Massage`;
-let HOS_STONE_MASSAGE=`Hot Stone Massage`;
+let FAR_EAST_MASSAGE = `Far East Massage`;
+let HOS_STONE_MASSAGE = `Hot Stone Massage`;
 let LOTUS_HAMMAM = 'Lotus Hammam';
+let HAMMAM_AND_MASSAGE_PACKEGE = 'Hammam & Massage Packages';
+let TRADITIONAL_BALI_MASSAGE = 'Traditional Bali Massage';
 switch (pathname) {
     case 'en':
         SELECT = ENGLISH;
@@ -156,9 +158,11 @@ switch (pathname) {
         CLASSICS_MASSAGE = 'Classic Massage';
         ANTI_STRESS_MASSAGE = 'Anti-Stress Massage';
         AROM = 'Aromatherapy Massage';
-        FAR_EAST_MASSAGE=`Far East Massage`;
-        HOS_STONE_MASSAGE=`Hot Stone Massage`;
+        FAR_EAST_MASSAGE = `Far East Massage`;
+        HOS_STONE_MASSAGE = `Hot Stone Massage`;
         LOTUS_HAMMAM = 'Lotus Hammam';
+        HAMMAM_AND_MASSAGE_PACKEGE = 'Hammam & Massage Packages';
+        TRADITIONAL_BALI_MASSAGE = 'Traditional Bali Massage';
         break;
     case 'tr':
         SELECT = TURKISH;
@@ -197,9 +201,11 @@ switch (pathname) {
         CLASSICS_MASSAGE = 'Klasik Masaj';
         ANTI_STRESS_MASSAGE = 'Anti-Stres Masajı';
         AROM = 'Aromaterapi Masajı';
-        FAR_EAST_MASSAGE=`Uzak Doğu Masajı`;
-        HOS_STONE_MASSAGE=`Sıcak Taş Masajı`;
+        FAR_EAST_MASSAGE = `Uzak Doğu Masajı`;
+        HOS_STONE_MASSAGE = `Sıcak Taş Masajı`;
         LOTUS_HAMMAM = 'Lotus Hamam';
+        HAMMAM_AND_MASSAGE_PACKEGE = 'Hamam & Masaj Paketleri';
+        TRADITIONAL_BALI_MASSAGE = 'Geleneksel Bali Masajı';
         break;
     default:
         SELECT = ENGLISH;
@@ -238,9 +244,11 @@ switch (pathname) {
         CLASSICS_MASSAGE = 'Classic Massage';
         ANTI_STRESS_MASSAGE = 'Anti-Stress Massage';
         AROM = 'Aromatherapy Massage';
-        FAR_EAST_MASSAGE=`Far East Massage`;
-        HOS_STONE_MASSAGE=`Hot Stone Massage`;
+        FAR_EAST_MASSAGE = `Far East Massage`;
+        HOS_STONE_MASSAGE = `Hot Stone Massage`;
         LOTUS_HAMMAM = 'Lotus Hammam';
+        HAMMAM_AND_MASSAGE_PACKEGE = 'Hammam & Massage Packages';
+        TRADITIONAL_BALI_MASSAGE = 'Traditional Bali Massage';
         break;
 }
 export const TRANSLATING__CONTACT = CONTACT;
@@ -282,3 +290,5 @@ export const TRANSLATING_AROM = AROM;
 export const TRANSLATING_FAR_EAST_MASSAGE = FAR_EAST_MASSAGE;
 export const TRANSLATING_HOS_STONE_MASSAGE = HOS_STONE_MASSAGE;
 export const TRANSLATING_LOTUS_HAMMAM = LOTUS_HAMMAM;
+export const TRANSLATING_HAMMAM_AND_MASSAGE_PACKEGE = HAMMAM_AND_MASSAGE_PACKEGE;
+export const TRANSLATING_TRADITIONAL_BALI_MASSAGE = TRADITIONAL_BALI_MASSAGE;

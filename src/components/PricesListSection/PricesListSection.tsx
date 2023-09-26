@@ -24,6 +24,8 @@ import {
     TRANSLATING_FAR_EAST_MASSAGE,
     TRANSLATING_HOS_STONE_MASSAGE,
     TRANSLATING_LOTUS_HAMMAM,
+    TRANSLATING_HAMMAM_AND_MASSAGE_PACKEGE,
+    TRANSLATING_TRADITIONAL_BALI_MASSAGE,
 } from '../../data/services'
 const PricesListSection = () => {
 
@@ -57,7 +59,7 @@ const PricesListSection = () => {
         },
         {
             id: 2,
-            serviceType: 'Hammam & Massage Packages',
+            serviceType: TRANSLATING_HAMMAM_AND_MASSAGE_PACKEGE,
             services: [
                 {
                     hamamid: 1,
@@ -150,7 +152,7 @@ const PricesListSection = () => {
                 },
                 {
                     hamamid: 2,
-                    name: 'Traditional Bali Massage',
+                    name: TRANSLATING_TRADITIONAL_BALI_MASSAGE,
                     time: `50 ${TRANSLATING_MINUTE}`,
                     price: '70',
                     image: prices_list_2
