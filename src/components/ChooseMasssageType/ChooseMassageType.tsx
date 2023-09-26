@@ -7,7 +7,9 @@ import { ReactComponent as CatmaSignatureMassageIcon } from '../../assets/icons/
 import { ReactComponent as AromatherapyMassageIcon } from '../../assets/icons/aromatherapy-massage.svg'
 import { ReactComponent as AntiStressMassageIcon } from '../../assets/icons/anti-stress-massage.svg'
 import { ReactComponent as ReflexologyMassageIcon } from '../../assets/icons/reflexology-icon.svg'
-
+import { 
+  TRANSLATING_REFLEXOLOGY, 
+} from '../../data/services'
 
 interface ChooseMassageProps {
   onChange?: Function;
@@ -108,8 +110,8 @@ const MassageTypesData = [
     id: '7'
   },
   {
-    label: 'Reflexology',
-    value: 'reflexology',
+    label: TRANSLATING_REFLEXOLOGY,
+    value: TRANSLATING_REFLEXOLOGY,
     Icon: ReflexologyMassageIcon,
     id: '8'
   },

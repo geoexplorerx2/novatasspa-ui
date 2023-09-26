@@ -15,6 +15,8 @@ import {
     TRANSLATING_MINUTE,
     TRANSLATING_TULIP_HAMMAM,
     TRANSLATION_SPA_CLASSICS,
+    TRANSLATING_REFLEXOLOGY,
+    TRANSLATING_HEAD_AND_SHOLDERS_MESSAGE,
 } from '../../data/services'
 const PricesListSection = () => {
 
@@ -86,14 +88,14 @@ const PricesListSection = () => {
             services: [
                 {
                     hamamid: 1,
-                    name: 'Reflexology',
+                    name: TRANSLATING_REFLEXOLOGY,
                     time: `25 ${TRANSLATING_MINUTE}`,
                     price: '30',
                     image: prices_list_1
                 },
                 {
                     hamamid: 2,
-                    name: 'Head & shoulders Massage',
+                    name: TRANSLATING_HEAD_AND_SHOLDERS_MESSAGE,
                     time: `25 ${TRANSLATING_MINUTE}`,
                     price: '30',
                     image: prices_list_2

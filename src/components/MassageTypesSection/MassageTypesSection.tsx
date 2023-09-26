@@ -13,6 +13,8 @@ import {
     TRANSLATING__BOOK__NOW , 
     TRANSLATING_MINUTE , 
     TRANSLATION_SPA_CLASSICS , 
+    TRANSLATING_REFLEXOLOGY ,
+    TRANSLATING_HEAD_AND_SHOLDERS_MESSAGE,
 
 } from '../../data/services';
 const MassageTypesSection = () => {
@@ -102,14 +104,14 @@ const MassageTypesSection = () => {
             sectionId: 2,
             content: [
                 {
-                    name: 'Reflexology ',
+                    name: TRANSLATING_REFLEXOLOGY,
                     price: 'per person 40',
                     duration: `30 ${TRANSLATING_MINUTE}`,
                     image: message_1,
                     messageId: 1
                 },
                 {
-                    name: 'Head & Shoulders Massage',
+                    name: TRANSLATING_HEAD_AND_SHOLDERS_MESSAGE,
                     price: 'per person 40',
                     duration: `30 ${TRANSLATING_MINUTE}`,
                     image: message_2,

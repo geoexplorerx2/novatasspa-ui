@@ -109,6 +109,8 @@ let JASMINE_HAMMAM = `Jasmine Hammam`;
 let MINUTE = 'min';
 let TULIP_HAMMAM = 'Tulip Hammam';
 let SPA_CLASSICS = 'Spa Classics';
+let REFLEXOLOGY = 'Reflexology';
+let HEAD_AND_SHOLDERS_MESSAGE = 'Head & shoulders Massage';
 switch (pathname) {
     case 'en':
         SELECT = ENGLISH;
@@ -141,6 +143,8 @@ switch (pathname) {
         MINUTE = 'min';
         TULIP_HAMMAM = 'Tulip Hammam';
         SPA_CLASSICS = 'Spa Classics';
+        REFLEXOLOGY = 'Reflexology';
+        HEAD_AND_SHOLDERS_MESSAGE = 'Head & shoulders Massage';
         break;
     case 'tr':
         SELECT = TURKISH;
@@ -173,6 +177,8 @@ switch (pathname) {
         MINUTE = 'dk';
         TULIP_HAMMAM = 'Lale Hamamı';
         SPA_CLASSICS = 'Spa Klasikleri';
+        REFLEXOLOGY = 'Refleksoloji';
+        HEAD_AND_SHOLDERS_MESSAGE = 'Baş & Omuz Masajı';
         break;
     default:
         SELECT = ENGLISH;
@@ -205,6 +211,8 @@ switch (pathname) {
         MINUTE = 'min';
         TULIP_HAMMAM = 'Tulip Hammam';
         SPA_CLASSICS = 'Spa Classics';
+        REFLEXOLOGY = 'Reflexology';
+        HEAD_AND_SHOLDERS_MESSAGE = 'Head & shoulders Massage';
         break;
 }
 export const TRANSLATING__CONTACT = CONTACT;
@@ -237,3 +245,5 @@ export const TRANSLATING_JASMINE_HAMMAM = JASMINE_HAMMAM;
 export const TRANSLATING_MINUTE = MINUTE;
 export const TRANSLATING_TULIP_HAMMAM = TULIP_HAMMAM;
 export const TRANSLATION_SPA_CLASSICS = SPA_CLASSICS;
+export const TRANSLATING_REFLEXOLOGY = REFLEXOLOGY;
+export const TRANSLATING_HEAD_AND_SHOLDERS_MESSAGE = HEAD_AND_SHOLDERS_MESSAGE;
