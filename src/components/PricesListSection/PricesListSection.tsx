@@ -23,6 +23,7 @@ import {
     TRANSLATING_AROM,
     TRANSLATING_FAR_EAST_MASSAGE,
     TRANSLATING_HOS_STONE_MASSAGE,
+    TRANSLATING_LOTUS_HAMMAM,
 } from '../../data/services'
 const PricesListSection = () => {
 
@@ -47,7 +48,7 @@ const PricesListSection = () => {
                 },
                 {
                     hamamid: 2,
-                    name: 'Lotus Hammam',
+                    name: TRANSLATING_LOTUS_HAMMAM,
                     time: `50 ${TRANSLATING_MINUTE}`,
                     price: '75',
                     image: prices_list_3
