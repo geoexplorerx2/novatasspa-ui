@@ -103,7 +103,9 @@ let CRYSTAL_PACKAGE = `Crystal Package`
 let CRYSTAL_PACKAGE_DESCRIPTION = `After a 10-min rest in the steam room, which will help to loosen up tense muscles, soften the skin and open the pores, the session continues with an exfoliating body scrub, a full body foam, where you will be covered in a cloud of silky foam bubbles and a relaxing head-shoulders-back foam massage. This will be followed by an Anti-Stress Massage which is an effective massage therapy that focuses on releasing tension from the connective muscle tissues; relaxing the muscles and especially the nervous system, by applying slow, rhythmic and light strokes as well as moderate finger pressure.`
 let LILIUM_PACKAGE = 'Lilium Package'
 let LILIUM_PACKAGE_DESCRIPTION = `After a 10-min rest in the steam room, which will help to loosen up tense muscles, soften the skin and open the pores, the session continues with an exfoliating body scrub, a full body foam, where you will be covered in a cloud of silky foam bubbles. This will be followed by a Reflexology session which is a traditional Chinese massage therapy that focuses on relieving stress in the body by working specifically on the feet. It aims to bring about a state of relaxation and to keep qi-vital energy flowing through the body, for maintaining balance and perfect health.`
-let OUR_PRICE_LIST=`Our Price List`;
+let OUR_PRICE_LIST = `Our Price List`;
+let TURKISH_HAMMAM = `Turkish Hammam`;
+let JASMINE_HAMMAM = `Jasmine Hammam`;
 switch (pathname) {
     case 'en':
         SELECT = ENGLISH;
@@ -130,7 +132,9 @@ switch (pathname) {
         CRYSTAL_PACKAGE_DESCRIPTION = `After a 10-min rest in the steam room, which will help to loosen up tense muscles, soften the skin and open the pores, the session continues with an exfoliating body scrub, a full body foam, where you will be covered in a cloud of silky foam bubbles and a relaxing head-shoulders-back foam massage. This will be followed by an Anti-Stress Massage which is an effective massage therapy that focuses on releasing tension from the connective muscle tissues; relaxing the muscles and especially the nervous system, by applying slow, rhythmic and light strokes as well as moderate finger pressure.`
         LILIUM_PACKAGE = 'Lilium Package'
         LILIUM_PACKAGE_DESCRIPTION = `After a 10-min rest in the steam room, which will help to loosen up tense muscles, soften the skin and open the pores, the session continues with an exfoliating body scrub, a full body foam, where you will be covered in a cloud of silky foam bubbles. This will be followed by a Reflexology session which is a traditional Chinese massage therapy that focuses on relieving stress in the body by working specifically on the feet. It aims to bring about a state of relaxation and to keep qi-vital energy flowing through the body, for maintaining balance and perfect health.`
-        OUR_PRICE_LIST=`Our Price List`
+        OUR_PRICE_LIST = `Our Price List`;
+        TURKISH_HAMMAM = `Turkish Hammam`;
+        JASMINE_HAMMAM = `Jasmine Hammam`;
         break;
     case 'tr':
         SELECT = TURKISH;
@@ -157,7 +161,9 @@ switch (pathname) {
         CRYSTAL_PACKAGE_DESCRIPTION = `Gergin kasların gevşemesine, cildin yumuşamasına ve gözeneklerin açılmasına yardımcı olacak buhar odasında 10 dakikalık bir dinlenmenin ardından, seans peeling, ipeksi köpük kabarcıkları bulutuyla kaplanacağınız tüm vücut köpüğü ve rahatlatıcı bir baş-omuz-sırt köpük masajı ile devam eder. Bunu, bağlayıcı kas dokularındaki gerilimi serbest bırakmaya odaklanan etkili bir masaj terapisi olan Anti-Stres Masajı izleyecek; yavaş, ritmik ve hafif vuruşların yanı sıra orta derecede parmak basıncı uygulayarak kasları ve özellikle sinir sistemini rahatlatacaktır.`
         LILIUM_PACKAGE = 'Lilyum Paketi'
         LILIUM_PACKAGE_DESCRIPTION = `Gergin kasları gevşetmeye, cildi yumuşatmaya ve gözenekleri açmaya yardımcı olacak buhar odasında 10 dakikalık bir dinlenmenin ardından seans, ipeksi köpük kabarcıkları bulutuyla kaplanacağınız tüm vücudu kaplayan bir köpük olan peeling ile devam eder. Bunu, özellikle ayaklar üzerinde çalışarak vücuttaki stresi azaltmaya odaklanan geleneksel bir Çin masaj terapisi olan Refleksoloji seansı izleyecektir. Bir rahatlama hali yaratmayı ve dengeyi ve mükemmel sağlığı korumak için qi-vital enerjinin vücutta akmasını sağlamayı amaçlar.`
-        OUR_PRICE_LIST=`Fiyat Listemiz`
+        OUR_PRICE_LIST = `Fiyat Listemiz`
+        TURKISH_HAMMAM = `Türk Hamamı`;
+        JASMINE_HAMMAM = `Yasemin Hamamı`;
         break;
     default:
         SELECT = ENGLISH;
@@ -184,7 +190,9 @@ switch (pathname) {
         CRYSTAL_PACKAGE_DESCRIPTION = `After a 10-min rest in the steam room, which will help to loosen up tense muscles, soften the skin and open the pores, the session continues with an exfoliating body scrub, a full body foam, where you will be covered in a cloud of silky foam bubbles and a relaxing head-shoulders-back foam massage. This will be followed by an Anti-Stress Massage which is an effective massage therapy that focuses on releasing tension from the connective muscle tissues; relaxing the muscles and especially the nervous system, by applying slow, rhythmic and light strokes as well as moderate finger pressure.`
         LILIUM_PACKAGE = 'Lilium Package'
         LILIUM_PACKAGE_DESCRIPTION = `After a 10-min rest in the steam room, which will help to loosen up tense muscles, soften the skin and open the pores, the session continues with an exfoliating body scrub, a full body foam, where you will be covered in a cloud of silky foam bubbles. This will be followed by a Reflexology session which is a traditional Chinese massage therapy that focuses on relieving stress in the body by working specifically on the feet. It aims to bring about a state of relaxation and to keep qi-vital energy flowing through the body, for maintaining balance and perfect health.`
-        OUR_PRICE_LIST=`Our Price List`
+        OUR_PRICE_LIST = `Our Price List`
+        TURKISH_HAMMAM = `Turkish Hammam`;
+        JASMINE_HAMMAM = `Jasmine Hammam`;
         break;
 }
 export const TRANSLATING__CONTACT = CONTACT;
@@ -212,3 +220,5 @@ export const TRANSLATING_CRYSTAL_PACKAGE_DESCRIPTION = CRYSTAL_PACKAGE_DESCRIPTI
 export const TRANSLATING_LILIUM_PACKAGE = LILIUM_PACKAGE;
 export const TRANSLATING_LILIUM_PACKAGE_DESCRIPTION = LILIUM_PACKAGE_DESCRIPTION;
 export const TRANSLATING_OUR_PRICE_LIST = OUR_PRICE_LIST;
+export const TRANSLATING_TURKISH_HAMMAM = TURKISH_HAMMAM;
+export const TRANSLATING_JASMINE_HAMMAM = JASMINE_HAMMAM;

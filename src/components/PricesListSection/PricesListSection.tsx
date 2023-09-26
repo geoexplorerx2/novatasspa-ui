@@ -10,17 +10,19 @@ import {
     TRANSLATIN_CRYSTAL_PACKAGE,
     TRANSLATING_LILIUM_PACKAGE,
     TRANSLATING_OUR_PRICE_LIST,
+    TRANSLATING_TURKISH_HAMMAM,
+    TRANSLATING_JASMINE_HAMMAM,
 } from '../../data/services'
 const PricesListSection = () => {
 
     const pricesData = [
         {
             id: 1,
-            serviceType: 'Turkish Hammam',
+            serviceType: TRANSLATING_TURKISH_HAMMAM,
             services: [
                 {
                     hamamid: 1,
-                    name: 'Jasmine Hammam',
+                    name: TRANSLATING_JASMINE_HAMMAM,
                     time: '25 min.',
                     price: '40',
                     image: prices_list_1
