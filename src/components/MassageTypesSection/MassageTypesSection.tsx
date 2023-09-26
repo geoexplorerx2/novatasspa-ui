@@ -15,6 +15,8 @@ import {
     TRANSLATION_SPA_CLASSICS , 
     TRANSLATING_REFLEXOLOGY ,
     TRANSLATING_HEAD_AND_SHOLDERS_MESSAGE,
+    TRANSLATING_BACK_MESSAGE,
+    TRANSLATING_CLASSICS_MASSAGE,
 
 } from '../../data/services';
 const MassageTypesSection = () => {
@@ -118,14 +120,14 @@ const MassageTypesSection = () => {
                     messageId: 2
                 },
                 {
-                    name: 'Back Massage',
+                    name: TRANSLATING_BACK_MESSAGE,
                     price: 'per person 50',
                     duration: `40 ${TRANSLATING_MINUTE}`,
                     image: message_3,
                     messageId: 3
                 },
                 {
-                    name: 'Classic Massage',
+                    name: TRANSLATING_CLASSICS_MASSAGE,
                     price: 'per person 65',
                     duration: `50 ${TRANSLATING_MINUTE}`,
                     image: message_4,

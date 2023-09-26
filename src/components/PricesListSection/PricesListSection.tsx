@@ -17,6 +17,9 @@ import {
     TRANSLATION_SPA_CLASSICS,
     TRANSLATING_REFLEXOLOGY,
     TRANSLATING_HEAD_AND_SHOLDERS_MESSAGE,
+    TRANSLATING_BACK_MESSAGE,
+    TRANSLATING_CLASSICS_MASSAGE,
+    TRANSLATING_ANTI_STRESS_MASSAGE,
 } from '../../data/services'
 const PricesListSection = () => {
 
@@ -102,21 +105,21 @@ const PricesListSection = () => {
                 },
                 {
                     hamamid: 3,
-                    name: 'Back Massage',
+                    name: TRANSLATING_BACK_MESSAGE,
                     time: `30 ${TRANSLATING_MINUTE}`,
                     price: '35',
                     image: prices_list_3
                 },
                 {
                     hamamid: 4,
-                    name: 'Classic Massage',
+                    name: TRANSLATING_CLASSICS_MASSAGE,
                     time: `50 ${TRANSLATING_MINUTE}`,
                     price: '50',
                     image: prices_list_4
                 },
                 {
                     hamamid: 5,
-                    name: 'Anti-Stress Massage',
+                    name: TRANSLATING_ANTI_STRESS_MASSAGE,
                     time: `50 ${TRANSLATING_MINUTE}`,
                     price: '65',
                     image: prices_list_5

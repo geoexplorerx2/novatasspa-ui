@@ -111,6 +111,9 @@ let TULIP_HAMMAM = 'Tulip Hammam';
 let SPA_CLASSICS = 'Spa Classics';
 let REFLEXOLOGY = 'Reflexology';
 let HEAD_AND_SHOLDERS_MESSAGE = 'Head & shoulders Massage';
+let BACK_MESSAGE = 'Back Massage';
+let CLASSICS_MASSAGE = 'Classic Massage';
+let ANTI_STRESS_MASSAGE = 'Anti-Stress Massage';
 switch (pathname) {
     case 'en':
         SELECT = ENGLISH;
@@ -145,6 +148,9 @@ switch (pathname) {
         SPA_CLASSICS = 'Spa Classics';
         REFLEXOLOGY = 'Reflexology';
         HEAD_AND_SHOLDERS_MESSAGE = 'Head & shoulders Massage';
+        BACK_MESSAGE = 'Back Massage';
+        CLASSICS_MASSAGE = 'Classic Massage';
+        ANTI_STRESS_MASSAGE = 'Anti-Stress Massage';
         break;
     case 'tr':
         SELECT = TURKISH;
@@ -179,6 +185,9 @@ switch (pathname) {
         SPA_CLASSICS = 'Spa Klasikleri';
         REFLEXOLOGY = 'Refleksoloji';
         HEAD_AND_SHOLDERS_MESSAGE = 'Baş & Omuz Masajı';
+        BACK_MESSAGE = 'Sırt Masajı';
+        CLASSICS_MASSAGE = 'Klasik Masaj';
+        ANTI_STRESS_MASSAGE = 'Anti-Stres Masajı'
         break;
     default:
         SELECT = ENGLISH;
@@ -213,6 +222,9 @@ switch (pathname) {
         SPA_CLASSICS = 'Spa Classics';
         REFLEXOLOGY = 'Reflexology';
         HEAD_AND_SHOLDERS_MESSAGE = 'Head & shoulders Massage';
+        BACK_MESSAGE = 'Back Massage';
+        CLASSICS_MASSAGE = 'Classic Massage';
+        ANTI_STRESS_MASSAGE = 'Anti-Stress Massage'
         break;
 }
 export const TRANSLATING__CONTACT = CONTACT;
@@ -247,3 +259,6 @@ export const TRANSLATING_TULIP_HAMMAM = TULIP_HAMMAM;
 export const TRANSLATION_SPA_CLASSICS = SPA_CLASSICS;
 export const TRANSLATING_REFLEXOLOGY = REFLEXOLOGY;
 export const TRANSLATING_HEAD_AND_SHOLDERS_MESSAGE = HEAD_AND_SHOLDERS_MESSAGE;
+export const TRANSLATING_BACK_MESSAGE = BACK_MESSAGE;
+export const TRANSLATING_CLASSICS_MASSAGE = CLASSICS_MASSAGE;
+export const TRANSLATING_ANTI_STRESS_MASSAGE = ANTI_STRESS_MASSAGE;

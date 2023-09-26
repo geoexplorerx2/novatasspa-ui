@@ -8,7 +8,8 @@ import { ReactComponent as AromatherapyMassageIcon } from '../../assets/icons/ar
 import { ReactComponent as AntiStressMassageIcon } from '../../assets/icons/anti-stress-massage.svg'
 import { ReactComponent as ReflexologyMassageIcon } from '../../assets/icons/reflexology-icon.svg'
 import { 
-  TRANSLATING_REFLEXOLOGY, 
+  TRANSLATING_REFLEXOLOGY,
+  TRANSLATING_ANTI_STRESS_MASSAGE, 
 } from '../../data/services'
 
 interface ChooseMassageProps {
@@ -104,7 +105,7 @@ const MassageTypesData = [
     id: '6'
   },
   {
-    label: 'Anti-Stress Massage',
+    label: TRANSLATING_ANTI_STRESS_MASSAGE,
     value: 'anti-stress-massage',
     Icon: AntiStressMassageIcon,
     id: '7'
