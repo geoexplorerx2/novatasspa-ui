@@ -20,6 +20,7 @@ import {
     TRANSLATING_BACK_MESSAGE,
     TRANSLATING_CLASSICS_MASSAGE,
     TRANSLATING_ANTI_STRESS_MASSAGE,
+    TRANSLATING_AROM,
 } from '../../data/services'
 const PricesListSection = () => {
 
@@ -126,7 +127,7 @@ const PricesListSection = () => {
                 },
                 {
                     hamamid: 6,
-                    name: 'Aromatherapy Massage',
+                    name: TRANSLATING_AROM,
                     time: `50 ${TRANSLATING_MINUTE}`,
                     price: '65',
                     image: prices_list_1

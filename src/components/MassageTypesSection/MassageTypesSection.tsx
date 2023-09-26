@@ -17,6 +17,7 @@ import {
     TRANSLATING_HEAD_AND_SHOLDERS_MESSAGE,
     TRANSLATING_BACK_MESSAGE,
     TRANSLATING_CLASSICS_MASSAGE,
+    TRANSLATING_AROM,
 
 } from '../../data/services';
 const MassageTypesSection = () => {
@@ -24,42 +25,42 @@ const MassageTypesSection = () => {
 
     const massageTypesContent = [
         {
-            title: 'Aromatherapy Massage',
+            title: TRANSLATING_AROM,
             price: 'Start from 38',
             image: message_1
         },
         {
-            title: 'Aromatherapy Massage',
+            title: TRANSLATING_AROM,
             price: 'Start from 38',
             image: message_2
         },
         {
-            title: 'Aromatherapy Massage',
+            title: TRANSLATING_AROM,
             price: 'Start from 38',
             image: message_3
         },
         {
-            title: 'Aromatherapy Massage',
+            title: TRANSLATING_AROM,
             price: 'Start from 38',
             image: message_4
         },
         {
-            title: 'Aromatherapy Massage',
+            title: TRANSLATING_AROM,
             price: 'Start from 38',
             image: message_5
         },
         {
-            title: 'Aromatherapy Massage',
+            title: TRANSLATING_AROM,
             price: 'Start from 38',
             image: message_6
         },
         {
-            title: 'Aromatherapy Massage',
+            title: TRANSLATING_AROM,
             price: 'Start from 38',
             image: message_7
         },
         {
-            title: 'Aromatherapy Massage',
+            title: TRANSLATING_AROM,
             price: 'Start from 38',
             image: message_8
         },
