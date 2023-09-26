@@ -12,6 +12,7 @@ import {
     TRANSLATING_LUXURY_NOVATASSPA_PACKAGE_DESCRIPTION,
     TRANSLATING_TULIP_PACKAGE,
     TRANSLATING_LUXURY_NOVATASSPA_PACKAGE_DESCRIPTION_2,
+    TRANSLATIN_LEARN_MORE,
 } from '../../data/services';
 
 const OurServices: FC = () => {
@@ -85,7 +86,7 @@ const ServiceCard: FC<ServiceCardProps> = (props) => {
             </div>
 
             <h3 className={`font-gotu text-[34px] leading-[34px] tracking-tighter w-1/2 ${isHovered ? 'text-white' : ''}`}>{title}</h3>
-            <p className={`${isHovered ? 'text-white' : ''} ${learnMore ? 'line-clamp-10' : 'line-clamp-5'}`}>{description}</p><span className={`underline z-[2] ${isHovered ? 'text-white' : ''}`} onClick={e => LearnMoreFunc(e)}>Learn More</span>
+            <p className={`${isHovered ? 'text-white' : ''} ${learnMore ? 'line-clamp-10' : 'line-clamp-5'}`}>{description}</p><span className={`underline z-[2] ${isHovered ? 'text-white' : ''}`} onClick={e => LearnMoreFunc(e)}>{TRANSLATIN_LEARN_MORE}</span>
             {
                 info.length > 0 ?
                     <ul>
