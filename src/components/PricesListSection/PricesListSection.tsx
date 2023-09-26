@@ -21,6 +21,7 @@ import {
     TRANSLATING_CLASSICS_MASSAGE,
     TRANSLATING_ANTI_STRESS_MASSAGE,
     TRANSLATING_AROM,
+    TRANSLATING_FAR_EAST_MASSAGE,
 } from '../../data/services'
 const PricesListSection = () => {
 
@@ -136,7 +137,7 @@ const PricesListSection = () => {
         },
         {
             id: 4,
-            serviceType: 'Far East Massage',
+            serviceType: TRANSLATING_FAR_EAST_MASSAGE,
             services: [
                 {
                     hamamid: 1,

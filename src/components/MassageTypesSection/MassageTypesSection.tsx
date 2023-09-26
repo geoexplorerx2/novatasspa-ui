@@ -18,6 +18,7 @@ import {
     TRANSLATING_BACK_MESSAGE,
     TRANSLATING_CLASSICS_MASSAGE,
     TRANSLATING_AROM,
+    TRANSLATING_FAR_EAST_MASSAGE,
 
 } from '../../data/services';
 const MassageTypesSection = () => {
@@ -68,7 +69,7 @@ const MassageTypesSection = () => {
 
     const messageTypesContent_2 = [
         {
-            title: 'FAR EAST MASSAGES',
+            title: TRANSLATING_FAR_EAST_MASSAGE,
             sectionId: 1,
             content: [
                 {

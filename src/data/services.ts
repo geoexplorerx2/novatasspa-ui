@@ -115,6 +115,7 @@ let BACK_MESSAGE = 'Back Massage';
 let CLASSICS_MASSAGE = 'Classic Massage';
 let ANTI_STRESS_MASSAGE = 'Anti-Stress Massage';
 let AROM = 'Aromatherapy Massage';
+let FAR_EAST_MASSAGE=`Far East Massage`;
 switch (pathname) {
     case 'en':
         SELECT = ENGLISH;
@@ -153,6 +154,7 @@ switch (pathname) {
         CLASSICS_MASSAGE = 'Classic Massage';
         ANTI_STRESS_MASSAGE = 'Anti-Stress Massage';
         AROM = 'Aromatherapy Massage';
+        FAR_EAST_MASSAGE=`Far East Massage`;
         break;
     case 'tr':
         SELECT = TURKISH;
@@ -191,6 +193,7 @@ switch (pathname) {
         CLASSICS_MASSAGE = 'Klasik Masaj';
         ANTI_STRESS_MASSAGE = 'Anti-Stres Masajı';
         AROM = 'Aromaterapi Masajı';
+        FAR_EAST_MASSAGE=`Uzak Doğu Masajı`;
         break;
     default:
         SELECT = ENGLISH;
@@ -228,7 +231,8 @@ switch (pathname) {
         BACK_MESSAGE = 'Back Massage';
         CLASSICS_MASSAGE = 'Classic Massage';
         ANTI_STRESS_MASSAGE = 'Anti-Stress Massage';
-        AROM = 'Aromatherapy Massage'
+        AROM = 'Aromatherapy Massage';
+        FAR_EAST_MASSAGE=`Far East Massage`;
         break;
 }
 export const TRANSLATING__CONTACT = CONTACT;
@@ -267,3 +271,4 @@ export const TRANSLATING_BACK_MESSAGE = BACK_MESSAGE;
 export const TRANSLATING_CLASSICS_MASSAGE = CLASSICS_MASSAGE;
 export const TRANSLATING_ANTI_STRESS_MASSAGE = ANTI_STRESS_MASSAGE;
 export const TRANSLATING_AROM = AROM;
+export const TRANSLATING_FAR_EAST_MASSAGE = FAR_EAST_MASSAGE;
