@@ -19,6 +19,7 @@ import {
     TRANSLATING_CLASSICS_MASSAGE,
     TRANSLATING_AROM,
     TRANSLATING_FAR_EAST_MASSAGE,
+    TRANSLATING_HOS_STONE_MASSAGE,
 
 } from '../../data/services';
 const MassageTypesSection = () => {
@@ -73,7 +74,7 @@ const MassageTypesSection = () => {
             sectionId: 1,
             content: [
                 {
-                    name: 'Hot Stone Massage',
+                    name: TRANSLATING_HOS_STONE_MASSAGE,
                     price: 'per person 80',
                     duration: `50 ${TRANSLATING_MINUTE}`,
                     image: message_1,

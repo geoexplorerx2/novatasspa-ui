@@ -22,6 +22,7 @@ import {
     TRANSLATING_ANTI_STRESS_MASSAGE,
     TRANSLATING_AROM,
     TRANSLATING_FAR_EAST_MASSAGE,
+    TRANSLATING_HOS_STONE_MASSAGE,
 } from '../../data/services'
 const PricesListSection = () => {
 
@@ -141,7 +142,7 @@ const PricesListSection = () => {
             services: [
                 {
                     hamamid: 1,
-                    name: 'Hot Stone Massage',
+                    name: TRANSLATING_HOS_STONE_MASSAGE,
                     time: `50 ${TRANSLATING_MINUTE}`,
                     price: '70',
                     image: prices_list_1
