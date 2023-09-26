@@ -13,6 +13,7 @@ import {
     TRANSLATING_TURKISH_HAMMAM,
     TRANSLATING_JASMINE_HAMMAM,
     TRANSLATING_MINUTE,
+    TRANSLATING_TULIP_HAMMAM,
 } from '../../data/services'
 const PricesListSection = () => {
 
@@ -30,7 +31,7 @@ const PricesListSection = () => {
                 },
                 {
                     hamamid: 2,
-                    name: 'Tulip Hammam',
+                    name: TRANSLATING_TULIP_HAMMAM,
                     time: `40 ${TRANSLATING_MINUTE}`,
                     price: '60',
                     image: prices_list_2

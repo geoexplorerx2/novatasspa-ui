@@ -1,5 +1,8 @@
 import React, { FC, useEffect, useState } from 'react';
-import { TRANSLATING_JASMINE_HAMMAM } from '../../data/services'
+import { 
+  TRANSLATING_JASMINE_HAMMAM,
+  TRANSLATING_TULIP_HAMMAM, 
+} from '../../data/services'
 interface ChooseHamamProps {
   onChange?: Function;
   errors?: any;
@@ -58,7 +61,7 @@ const HammamsData = [
     id: '1',
   },
   {
-    label: 'Tulip Hammam',
+    label: TRANSLATING_TULIP_HAMMAM,
     value: 'TulipHammam',
     id: '2',
   },

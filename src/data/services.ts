@@ -106,7 +106,8 @@ let LILIUM_PACKAGE_DESCRIPTION = `After a 10-min rest in the steam room, which w
 let OUR_PRICE_LIST = `Our Price List`;
 let TURKISH_HAMMAM = `Turkish Hammam`;
 let JASMINE_HAMMAM = `Jasmine Hammam`;
-let MINUTE = 'min'
+let MINUTE = 'min';
+let TULIP_HAMMAM = 'Tulip Hammam';
 switch (pathname) {
     case 'en':
         SELECT = ENGLISH;
@@ -136,7 +137,8 @@ switch (pathname) {
         OUR_PRICE_LIST = `Our Price List`;
         TURKISH_HAMMAM = `Turkish Hammam`;
         JASMINE_HAMMAM = `Jasmine Hammam`;
-        MINUTE = 'min'
+        MINUTE = 'min';
+        TULIP_HAMMAM = 'Tulip Hammam';
         break;
     case 'tr':
         SELECT = TURKISH;
@@ -166,7 +168,8 @@ switch (pathname) {
         OUR_PRICE_LIST = `Fiyat Listemiz`
         TURKISH_HAMMAM = `Türk Hamamı`;
         JASMINE_HAMMAM = `Yasemin Hamamı`;
-        MINUTE = 'dk'
+        MINUTE = 'dk';
+        TULIP_HAMMAM = 'Lale Hamamı';
         break;
     default:
         SELECT = ENGLISH;
@@ -196,7 +199,8 @@ switch (pathname) {
         OUR_PRICE_LIST = `Our Price List`
         TURKISH_HAMMAM = `Turkish Hammam`;
         JASMINE_HAMMAM = `Jasmine Hammam`;
-        MINUTE = 'min'
+        MINUTE = 'min';
+        TULIP_HAMMAM = 'Tulip Hammam';
         break;
 }
 export const TRANSLATING__CONTACT = CONTACT;
@@ -227,3 +231,4 @@ export const TRANSLATING_OUR_PRICE_LIST = OUR_PRICE_LIST;
 export const TRANSLATING_TURKISH_HAMMAM = TURKISH_HAMMAM;
 export const TRANSLATING_JASMINE_HAMMAM = JASMINE_HAMMAM;
 export const TRANSLATING_MINUTE = MINUTE;
+export const TRANSLATING_TULIP_HAMMAM = TULIP_HAMMAM;
