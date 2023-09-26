@@ -26,6 +26,17 @@ import {
     TRANSLATING_LOTUS_HAMMAM,
     TRANSLATING_HAMMAM_AND_MASSAGE_PACKEGE,
     TRANSLATING_TRADITIONAL_BALI_MASSAGE,
+    TRANSLATEING_BLEND_THAI_MASSAGE,
+    TRANSLATING_THERAPEUTIC_MESSAGE,
+    TRANSLATING_MEDICAL_MASSAGE,
+    TRANSLATING_DEEP_TISSUE_MASSAGE,
+    TRANSLATING_REGIONAL_TRILOGY_MASSAGE,
+    TRANSLATEING_NOVATAS_SIGNATURE_MASSAGE,
+    TRANSLATING_PEELING_TREATMENT,
+    TRANSLATING_COCONUT_PEELING,
+    TRANSLATING_GRAPE_SEEDS_PEELING,
+    TRANSLATING_OLIVE_OIL_PEELING,
+    TRANSLATIONG_ROSE_PEELING,
 } from '../../data/services'
 const PricesListSection = () => {
 
@@ -159,7 +170,7 @@ const PricesListSection = () => {
                 },
                 {
                     hamamid: 3,
-                    name: 'Blend Thai Massage',
+                    name: TRANSLATEING_BLEND_THAI_MASSAGE,
                     time: `50 ${TRANSLATING_MINUTE}`,
                     price: '80',
                     image: prices_list_3
@@ -168,32 +179,32 @@ const PricesListSection = () => {
         },
         {
             id: 5,
-            serviceType: 'Therapeutic Massage',
+            serviceType: TRANSLATING_THERAPEUTIC_MESSAGE,
             services: [
                 {
                     hamamid: 1,
-                    name: 'Medical Massage',
+                    name: TRANSLATING_MEDICAL_MASSAGE,
                     time: `40 ${TRANSLATING_MINUTE}`,
                     price: '70',
                     image: prices_list_1
                 },
                 {
                     hamamid: 2,
-                    name: 'Deep Tissue Massage',
+                    name: TRANSLATING_DEEP_TISSUE_MASSAGE,
                     time: `50 ${TRANSLATING_MINUTE}`,
                     price: '80',
                     image: prices_list_2
                 },
                 {
                     hamamid: 3,
-                    name: 'Regional Trilogy Massage',
+                    name: TRANSLATING_REGIONAL_TRILOGY_MASSAGE,
                     time: `60 ${TRANSLATING_MINUTE}`,
                     price: '80',
                     image: prices_list_3
                 },
                 {
                     hamamid: 4,
-                    name: 'Novatas Signature Massage',
+                    name: TRANSLATEING_NOVATAS_SIGNATURE_MASSAGE,
                     time: `60 ${TRANSLATING_MINUTE}`,
                     price: '90',
                     image: prices_list_4
@@ -202,32 +213,32 @@ const PricesListSection = () => {
         },
         {
             id: 6,
-            serviceType: 'Peeling Treatment',
+            serviceType: TRANSLATING_PEELING_TREATMENT,
             services: [
                 {
                     hamamid: 1,
-                    name: 'Coconut Peeling',
+                    name: TRANSLATING_COCONUT_PEELING,
                     time: `25 ${TRANSLATING_MINUTE}`,
                     price: '30',
                     image: prices_list_1
                 },
                 {
                     hamamid: 2,
-                    name: 'Grape Seeds Peeling',
+                    name: TRANSLATING_GRAPE_SEEDS_PEELING,
                     time: `25 ${TRANSLATING_MINUTE}`,
                     price: '30',
                     image: prices_list_2
                 },
                 {
                     hamamid: 3,
-                    name: 'Olive Oil Peeling',
+                    name: TRANSLATING_OLIVE_OIL_PEELING,
                     time: `25 ${TRANSLATING_MINUTE}`,
                     price: '30',
                     image: prices_list_3
                 },
                 {
                     hamamid: 4,
-                    name: 'Rose Peeling',
+                    name: TRANSLATIONG_ROSE_PEELING,
                     time: `25 ${TRANSLATING_MINUTE}`,
                     price: '30',
                     image: prices_list_4

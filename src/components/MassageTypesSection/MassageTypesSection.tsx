@@ -21,6 +21,7 @@ import {
     TRANSLATING_FAR_EAST_MASSAGE,
     TRANSLATING_HOS_STONE_MASSAGE,
     TRANSLATING_TRADITIONAL_BALI_MASSAGE,
+    TRANSLATEING_BLEND_THAI_MASSAGE,
 
 } from '../../data/services';
 const MassageTypesSection = () => {
@@ -96,7 +97,7 @@ const MassageTypesSection = () => {
                     messageId: 3
                 },
                 {
-                    name: 'Blend Thai Massage',
+                    name: TRANSLATEING_BLEND_THAI_MASSAGE,
                     price: 'per person 90',
                     duration: `50 ${TRANSLATING_MINUTE}`,
                     image: message_4,

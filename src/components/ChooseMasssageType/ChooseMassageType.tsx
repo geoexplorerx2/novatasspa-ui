@@ -11,7 +11,8 @@ import {
   TRANSLATING_REFLEXOLOGY,
   TRANSLATING_ANTI_STRESS_MASSAGE,
   TRANSLATING_AROM,
-  TRANSLATING_HOS_STONE_MASSAGE, 
+  TRANSLATING_HOS_STONE_MASSAGE,
+  TRANSLATEING_BLEND_THAI_MASSAGE, 
 } from '../../data/services'
 
 interface ChooseMassageProps {
@@ -77,7 +78,7 @@ const MassageTypesData = [
     id: '1'
   },
   {
-    label: 'Blend Thai Massage',
+    label: TRANSLATEING_BLEND_THAI_MASSAGE,
     value: 'blend-thai-massage',
     Icon: BlendThaiMassageIcon,
     id: '2'
