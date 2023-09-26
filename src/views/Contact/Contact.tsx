@@ -5,7 +5,7 @@ import SocialmediaIcons from '../../components/SocialMediaIcons/SocialMediaIcons
 import { ReactComponent as PhoneCallIcon } from '../../assets/icons/phoneCallIcon.svg'
 import { ReactComponent as MailIcon } from '../../assets/icons/mailIcon.svg'
 import GoogleMap from '../../components/Map/GoogleMap';
-
+import {TRANSLATING_PHONE_NUMBER} from '../../data/services'
 
 
 const Contact = () => {
@@ -22,7 +22,7 @@ const Contact = () => {
                 <PhoneCallIcon />
                 <div className='flex flex-col items-start just'>
                   <span className='text-sm font-normail text-black opacity-50'>
-                    Phone Number
+                    {TRANSLATING_PHONE_NUMBER}
                   </span>
                   <span>
                     <a href='tel:+905417600248' className='font-semibold text-[#0D0D0D] lg:text-lg text-sm'>

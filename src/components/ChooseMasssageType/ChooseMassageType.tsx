@@ -7,7 +7,13 @@ import { ReactComponent as CatmaSignatureMassageIcon } from '../../assets/icons/
 import { ReactComponent as AromatherapyMassageIcon } from '../../assets/icons/aromatherapy-massage.svg'
 import { ReactComponent as AntiStressMassageIcon } from '../../assets/icons/anti-stress-massage.svg'
 import { ReactComponent as ReflexologyMassageIcon } from '../../assets/icons/reflexology-icon.svg'
-
+import { 
+  TRANSLATING_REFLEXOLOGY,
+  TRANSLATING_ANTI_STRESS_MASSAGE,
+  TRANSLATING_AROM,
+  TRANSLATING_HOS_STONE_MASSAGE,
+  TRANSLATEING_BLEND_THAI_MASSAGE, 
+} from '../../data/services'
 
 interface ChooseMassageProps {
   onChange?: Function;
@@ -72,7 +78,7 @@ const MassageTypesData = [
     id: '1'
   },
   {
-    label: 'Blend Thai Massage',
+    label: TRANSLATEING_BLEND_THAI_MASSAGE,
     value: 'blend-thai-massage',
     Icon: BlendThaiMassageIcon,
     id: '2'
@@ -84,7 +90,7 @@ const MassageTypesData = [
     id: '3'
   },
   {
-    label: 'Hot Stone Massage',
+    label: TRANSLATING_HOS_STONE_MASSAGE,
     value: 'hot-stone-massage',
     Icon: HotStoneMassageIcon,
     id: '4'
@@ -96,20 +102,20 @@ const MassageTypesData = [
     id: '5'
   },
   {
-    label: 'Aromatherapy Massage',
+    label: TRANSLATING_AROM,
     value: 'aromatherapy-massage',
     Icon: AromatherapyMassageIcon,
     id: '6'
   },
   {
-    label: 'Anti-Stress Massage',
+    label: TRANSLATING_ANTI_STRESS_MASSAGE,
     value: 'anti-stress-massage',
     Icon: AntiStressMassageIcon,
     id: '7'
   },
   {
-    label: 'Reflexology',
-    value: 'reflexology',
+    label: TRANSLATING_REFLEXOLOGY,
+    value: TRANSLATING_REFLEXOLOGY,
     Icon: ReflexologyMassageIcon,
     id: '8'
   },

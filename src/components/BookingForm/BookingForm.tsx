@@ -11,7 +11,12 @@ import ChooseHamam from '../ChooseHammam/ChooseHammam';
 import ChooseMassage from '../ChooseMasssageType/ChooseMassageType';
 import exclamationMark from '../../assets/icons/exclamation.png'
 import checkMark from '../../assets/icons/checkMark.png'
-
+import { 
+  TRANSLATING__BOOK__NOW,
+  TRANSLATING_NAME_SURNAME, 
+  TRANSLATING_PHONE_NUMBER,
+  TRANSLATING_EMAIL,
+} from '../../data/services';
 
 interface BookingFormProps {
   handleChange?: any;
@@ -103,7 +108,7 @@ const BookingForm: FC<BookingFormProps> = ({ handleChange, handleSubmit, errors,
           <AnimatedInput
             // value={values.nameSurname} 
             inputType='text'
-            label='Name, Surname'
+            label={TRANSLATING_NAME_SURNAME}
             name='booking_name_surname'
             handleChange={handleChange}
             // onChange={(e: any) => handleChange(e)}
@@ -124,7 +129,7 @@ const BookingForm: FC<BookingFormProps> = ({ handleChange, handleSubmit, errors,
           />
 
           <AnimatedTelInput
-            label={'Phone Number '}
+            label={TRANSLATING_PHONE_NUMBER}
             name='phone'
             onChange={(e: any) => handleChange(e, 'phone')}
             wrapperClassName={`transition-all bg-[#F7F7F7] hover:bg-white rounded-[10px] col-span-2 md:col-span-1`}
@@ -135,7 +140,7 @@ const BookingForm: FC<BookingFormProps> = ({ handleChange, handleSubmit, errors,
           <AnimatedInput
             // value={values.email} 
             inputType='text'
-            label='E-Mail Address'
+            label={TRANSLATING_EMAIL}
             name='email'
             onChange={(e: any) => handleChange(e)}
             Icon={<AtSignIcon />}
@@ -154,7 +159,7 @@ const BookingForm: FC<BookingFormProps> = ({ handleChange, handleSubmit, errors,
             className='w-full col-span-2 flex justify-center py-4 px-[31px] rounded-[10px] bg-[#B2A285] text-white text-[22px] -tracking-[0.02em] leading-[28px] font-gotu'
           >
             <span className=''>
-              Book Now
+              {TRANSLATING__BOOK__NOW}
             </span>
           </button>
           </div>

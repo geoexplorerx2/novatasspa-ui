@@ -9,7 +9,7 @@ import { ReactComponent as MessageIcon } from '../../assets/icons/messageIcon.sv
 import { useForm, useLocation, useValidate } from '../../hooks';
 import services from '../../api/services';
 import { useNavigate } from 'react-router-dom';
-
+import {TRANSLATING_NAME_SURNAME} from '../../data/services'
 
 const ContactForm: FC = () => {
   // const [values, setValues] = useState({
@@ -84,7 +84,7 @@ const ContactForm: FC = () => {
         <AnimatedInput
           // value={values.nameSurname}
           inputType='text'
-          label='Name, Surname'
+          label={TRANSLATING_NAME_SURNAME}
           name='namesurname'
           onChange={handleChange}
           Icon={<HumanAvatar />}

@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import ArrowRight from '../../assets/icons/right-arrow-black.png'
 import { useNavigate } from 'react-router-dom';
-
+import { TRANSLATING__BOOK__NOW } from '../../data/services';
 interface PriceListCard_Props {
     service?: any,
 }
@@ -37,7 +37,7 @@ const PriceListCard: FC<PriceListCard_Props> = (props) => {
                     {/* <span className='absolute top-0 lg:text-[24px] sm:text-[18px] text-[12px]'>€</span> */}
                 </h1>
                 <button className='sm:text-[13px] text-[10px] font-medium text-[#423930] bookButton inline-flex w-[200px] xl:justify-start md:justify-center'>
-                    Book Now 
+                    {TRANSLATING__BOOK__NOW} 
                     <img src={ArrowRight} alt='' className='w-[16px] ml-[13px] translate-y-[1px]' />
                 </button>
             </div>

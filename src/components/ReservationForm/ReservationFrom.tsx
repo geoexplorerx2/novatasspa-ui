@@ -7,7 +7,13 @@ import AnimatedTelInput from '../AnimatedTelInput/AnimatedTelInput';
 import { useForm, useLocation, useValidate } from '../../hooks';
 import services from '../../api/services';
 import { useNavigate } from "react-router-dom";
-
+import {
+  TRANSLATING_ONLINE_RESERVATION_FORM,
+  TRANSLATING_NAME_SURNAME,
+  TRANSLATING_PHONE_NUMBER,
+  TRANSLATING_EMAIL,
+  TRANLATIONG_MAKE_RESERVATION,
+} from '../../data/services'
 const ReservationForm = () => {
   const {
     values,
@@ -16,11 +22,11 @@ const ReservationForm = () => {
     handleSubmit
   } = useForm(_handleQuickReservation, useValidate, 'quickreservation');
   const { countryName } = useLocation();
-  
+
   const [servermessage, setServerMessage] = useState<any>();
   const server = services;
 
-  const navigate= useNavigate()
+  const navigate = useNavigate()
   const activeLang = localStorage.getItem('activeLang');
 
 
@@ -68,7 +74,7 @@ const ReservationForm = () => {
 
   return (
     <div className='md:w-[450px] p-[30px] bg-white space-y-4 md:space-y-[30px]'>
-      <h3 className=' text-xl md:text-2xl font-gotu '>Online Reservation Form</h3>
+      <h3 className=' text-xl md:text-2xl font-gotu '>{TRANSLATING_ONLINE_RESERVATION_FORM}</h3>
       <div className='flex flex-col'>
         {/* <span>{servermessage && servermessage.data}</span>
         <span>{errors.namesurname}</span>
@@ -79,24 +85,24 @@ const ReservationForm = () => {
         <AnimatedInput
           value={values}
           inputType='text'
-          label='Name, Surname'
+          label={TRANSLATING_NAME_SURNAME}
           name='namesurname'
           onChange={handleChange}
           Icon={<HumanAvatar />}
           errors={errors}
         />
         <AnimatedTelInput
-          value={values} 
+          value={values}
           inputType='telephone'
-          label={'Phone Number'}
+          label={TRANSLATING_PHONE_NUMBER}
           name='phone'
           onChange={handleChange}
           errors={errors}
         />
         <AnimatedInput
-          value={values} 
+          value={values}
           inputType='text'
-          label='E-Mail Address'
+          label={TRANSLATING_EMAIL}
           name='quickreservation_email'
           onChange={handleChange}
           Icon={<MailIcon />}
@@ -108,7 +114,7 @@ const ReservationForm = () => {
           className='w-full flex justify-between py-4 px-[31px] bg-[#423930] text-white text-[22px] -tracking-[0.02em] leading-[28px] font-gotu'
         >
           <span>
-            Make Reservation
+            {TRANLATIONG_MAKE_RESERVATION}
           </span>
           <Arrow className='text-white' />
         </button>

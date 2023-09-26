@@ -1,5 +1,9 @@
 import React, { FC, useEffect, useState } from 'react';
-
+import { 
+  TRANSLATING_JASMINE_HAMMAM,
+  TRANSLATING_TULIP_HAMMAM,
+  TRANSLATING_LOTUS_HAMMAM, 
+} from '../../data/services'
 interface ChooseHamamProps {
   onChange?: Function;
   errors?: any;
@@ -29,7 +33,7 @@ const ChooseHamam: FC<ChooseHamamProps> = ({ onChange, errors, name }) => {
 
   return (
     <div className={`w-full col-span-2`}>
-      
+
       <h3 className={`mb-3 font-medium border-2 border-white w-fit p-2 rounded-lg ${errorsKeys?.includes(name ?? "") ? 'border-2 !border-red-700' : ''} `}>Choose Hammam</h3>
       <div className='grid grid-cols-1 md:grid-cols-3 w-full gap-4 relative'>
         {errors && errors?.[name as string]?.length > 0 && <span className='absolute right-[0px] top-[-50px] bg-red-600 rounded-lg text-white p-2'>{errors[name as string]}</span>}
@@ -53,17 +57,17 @@ const ChooseHamam: FC<ChooseHamamProps> = ({ onChange, errors, name }) => {
 
 const HammamsData = [
   {
-    label: 'Jasmine Hammam',
+    label: TRANSLATING_JASMINE_HAMMAM,
     value: 'JasmineHammam',
     id: '1',
   },
   {
-    label: 'Tulip Hammam',
+    label: TRANSLATING_TULIP_HAMMAM,
     value: 'TulipHammam',
     id: '2',
   },
   {
-    label: 'Lotus Hammam',
+    label: TRANSLATING_LOTUS_HAMMAM,
     value: 'LotusHammam',
     id: '3',
   },

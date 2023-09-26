@@ -9,48 +9,62 @@ import message_6 from '../../assets/images/message_6.png';
 import message_7 from '../../assets/images/message_7.png';
 import message_8 from '../../assets/images/message_8.png';
 import ArrowRight from '../../assets/icons/right-arrow-black.png'
+import { 
+    TRANSLATING__BOOK__NOW , 
+    TRANSLATING_MINUTE , 
+    TRANSLATION_SPA_CLASSICS , 
+    TRANSLATING_REFLEXOLOGY ,
+    TRANSLATING_HEAD_AND_SHOLDERS_MESSAGE,
+    TRANSLATING_BACK_MESSAGE,
+    TRANSLATING_CLASSICS_MASSAGE,
+    TRANSLATING_AROM,
+    TRANSLATING_FAR_EAST_MASSAGE,
+    TRANSLATING_HOS_STONE_MASSAGE,
+    TRANSLATING_TRADITIONAL_BALI_MASSAGE,
+    TRANSLATEING_BLEND_THAI_MASSAGE,
 
+} from '../../data/services';
 const MassageTypesSection = () => {
     const activeLang = localStorage.getItem('activeLang')
 
     const massageTypesContent = [
         {
-            title: 'Aromatherapy Massage',
+            title: TRANSLATING_AROM,
             price: 'Start from 38',
             image: message_1
         },
         {
-            title: 'Aromatherapy Massage',
+            title: TRANSLATING_AROM,
             price: 'Start from 38',
             image: message_2
         },
         {
-            title: 'Aromatherapy Massage',
+            title: TRANSLATING_AROM,
             price: 'Start from 38',
             image: message_3
         },
         {
-            title: 'Aromatherapy Massage',
+            title: TRANSLATING_AROM,
             price: 'Start from 38',
             image: message_4
         },
         {
-            title: 'Aromatherapy Massage',
+            title: TRANSLATING_AROM,
             price: 'Start from 38',
             image: message_5
         },
         {
-            title: 'Aromatherapy Massage',
+            title: TRANSLATING_AROM,
             price: 'Start from 38',
             image: message_6
         },
         {
-            title: 'Aromatherapy Massage',
+            title: TRANSLATING_AROM,
             price: 'Start from 38',
             image: message_7
         },
         {
-            title: 'Aromatherapy Massage',
+            title: TRANSLATING_AROM,
             price: 'Start from 38',
             image: message_8
         },
@@ -58,34 +72,34 @@ const MassageTypesSection = () => {
 
     const messageTypesContent_2 = [
         {
-            title: 'FAR EAST MASSAGES',
+            title: TRANSLATING_FAR_EAST_MASSAGE,
             sectionId: 1,
             content: [
                 {
-                    name: 'Hot Stone Massage',
+                    name: TRANSLATING_HOS_STONE_MASSAGE,
                     price: 'per person 80',
-                    duration: '50 minutes',
+                    duration: `50 ${TRANSLATING_MINUTE}`,
                     image: message_1,
                     messageId: 1
                 },
                 {
-                    name: 'Traditional Bali Massage',
+                    name: TRANSLATING_TRADITIONAL_BALI_MASSAGE,
                     price: 'per person 80',
-                    duration: '50 minutes',
+                    duration: `50 ${TRANSLATING_MINUTE}`,
                     image: message_2,
                     messageId: 2
                 },
                 {
                     name: 'Thai Massage',
                     price: 'per person 90',
-                    duration: '50 minutes',
+                    duration: `50 ${TRANSLATING_MINUTE}`,
                     image: message_3,
                     messageId: 3
                 },
                 {
-                    name: 'Blend Thai Massage',
+                    name: TRANSLATEING_BLEND_THAI_MASSAGE,
                     price: 'per person 90',
-                    duration: '50 minutes',
+                    duration: `50 ${TRANSLATING_MINUTE}`,
                     image: message_4,
                     messageId: 4
                 }
@@ -93,34 +107,34 @@ const MassageTypesSection = () => {
 
         },
         {
-            title: 'SPA CLASSICS',
+            title: TRANSLATION_SPA_CLASSICS,
             sectionId: 2,
             content: [
                 {
-                    name: 'Reflexology ',
+                    name: TRANSLATING_REFLEXOLOGY,
                     price: 'per person 40',
-                    duration: '30 minutes',
+                    duration: `30 ${TRANSLATING_MINUTE}`,
                     image: message_1,
                     messageId: 1
                 },
                 {
-                    name: 'Head & Shoulders Massage',
+                    name: TRANSLATING_HEAD_AND_SHOLDERS_MESSAGE,
                     price: 'per person 40',
-                    duration: '30 minutes',
+                    duration: `30 ${TRANSLATING_MINUTE}`,
                     image: message_2,
                     messageId: 2
                 },
                 {
-                    name: 'Back Massage',
+                    name: TRANSLATING_BACK_MESSAGE,
                     price: 'per person 50',
-                    duration: '40 minutes',
+                    duration: `40 ${TRANSLATING_MINUTE}`,
                     image: message_3,
                     messageId: 3
                 },
                 {
-                    name: 'Classic Massage',
+                    name: TRANSLATING_CLASSICS_MASSAGE,
                     price: 'per person 65',
-                    duration: '50 minutes',
+                    duration: `50 ${TRANSLATING_MINUTE}`,
                     image: message_4,
                     messageId: 4
                 },
@@ -211,7 +225,7 @@ const MassageTypesSection = () => {
                                                         <span className='top-[-3px] text-[11px] absolute'>€</span>
                                                     </span>
                                                     <button className='text-[16px] text-[#423930] bookButton inline-flex leading-[20px] mt-[10px] font-poppins '>
-                                                        Book Now
+                                                        {TRANSLATING__BOOK__NOW}
                                                         <img src={ArrowRight} alt='' className='w-[16px] ml-[13px] translate-y-[2px]' />
                                                     </button>
                                                 </div>
@@ -230,7 +244,7 @@ const MassageTypesSection = () => {
                                                     </div>
                                                     <a href="/booking">
                                                         <button className='w-full md:w-auto text-[16px] text-[#423930] bookButton inline-flex justify-between md:justify-start leading-[20px] mt-[10px] font-poppins '>
-                                                            Book Now
+                                                            {TRANSLATING__BOOK__NOW}
                                                         <img src={ArrowRight} alt='' className='w-[16px] ml-[13px] translate-y-[2px]' />
                                                     </button>
                                                 </a>
