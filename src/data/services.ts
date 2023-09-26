@@ -108,6 +108,7 @@ let TURKISH_HAMMAM = `Turkish Hammam`;
 let JASMINE_HAMMAM = `Jasmine Hammam`;
 let MINUTE = 'min';
 let TULIP_HAMMAM = 'Tulip Hammam';
+let SPA_CLASSICS = 'Spa Classics';
 switch (pathname) {
     case 'en':
         SELECT = ENGLISH;
@@ -139,6 +140,7 @@ switch (pathname) {
         JASMINE_HAMMAM = `Jasmine Hammam`;
         MINUTE = 'min';
         TULIP_HAMMAM = 'Tulip Hammam';
+        SPA_CLASSICS = 'Spa Classics';
         break;
     case 'tr':
         SELECT = TURKISH;
@@ -170,6 +172,7 @@ switch (pathname) {
         JASMINE_HAMMAM = `Yasemin Hamamı`;
         MINUTE = 'dk';
         TULIP_HAMMAM = 'Lale Hamamı';
+        SPA_CLASSICS = 'Spa Klasikleri';
         break;
     default:
         SELECT = ENGLISH;
@@ -201,6 +204,7 @@ switch (pathname) {
         JASMINE_HAMMAM = `Jasmine Hammam`;
         MINUTE = 'min';
         TULIP_HAMMAM = 'Tulip Hammam';
+        SPA_CLASSICS = 'Spa Classics';
         break;
 }
 export const TRANSLATING__CONTACT = CONTACT;
@@ -232,3 +236,4 @@ export const TRANSLATING_TURKISH_HAMMAM = TURKISH_HAMMAM;
 export const TRANSLATING_JASMINE_HAMMAM = JASMINE_HAMMAM;
 export const TRANSLATING_MINUTE = MINUTE;
 export const TRANSLATING_TULIP_HAMMAM = TULIP_HAMMAM;
+export const TRANSLATION_SPA_CLASSICS = SPA_CLASSICS;

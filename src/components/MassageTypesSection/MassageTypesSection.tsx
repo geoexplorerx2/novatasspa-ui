@@ -12,6 +12,8 @@ import ArrowRight from '../../assets/icons/right-arrow-black.png'
 import { 
     TRANSLATING__BOOK__NOW , 
     TRANSLATING_MINUTE , 
+    TRANSLATION_SPA_CLASSICS , 
+
 } from '../../data/services';
 const MassageTypesSection = () => {
     const activeLang = localStorage.getItem('activeLang')
@@ -96,7 +98,7 @@ const MassageTypesSection = () => {
 
         },
         {
-            title: 'SPA CLASSICS',
+            title: TRANSLATION_SPA_CLASSICS,
             sectionId: 2,
             content: [
                 {

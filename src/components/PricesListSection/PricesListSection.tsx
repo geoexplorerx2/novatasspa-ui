@@ -14,6 +14,7 @@ import {
     TRANSLATING_JASMINE_HAMMAM,
     TRANSLATING_MINUTE,
     TRANSLATING_TULIP_HAMMAM,
+    TRANSLATION_SPA_CLASSICS,
 } from '../../data/services'
 const PricesListSection = () => {
 
@@ -81,7 +82,7 @@ const PricesListSection = () => {
         },
         {
             id: 3,
-            serviceType: 'Spa Classics',
+            serviceType: TRANSLATION_SPA_CLASSICS,
             services: [
                 {
                     hamamid: 1,
