@@ -96,7 +96,9 @@ let POPULAR_PACKAGE = ' Popular Packages';
 let OUR = 'OUR';
 let MIN_PER_PERSON = 'minutes per person';
 let LUXURY_NOVATASSPA_PACKAGE = 'Luxury Novatas Package';
+let TULIP_PACKAGE = 'Tulip Package';
 let LUXURY_NOVATASSPA_PACKAGE_DESCRIPTION = `After a 10-min rest in the steam room, which will help to loosen up tense muscles, soften the skin and open the pores, the session continues with an exfoliating body scrub, a full body foam, where you will be covered in a cloud of silky foam bubbles and a relaxing head-shoulders-back foam massage. This will be followed by a honey and milk body care treatment which will leave your body smooth and refreshed. After the honey and milk body care treatment a rejuvenating facial clay mask will be applied. The session will continue with a relaxing Foot & Hand Massage and end with our Novatas Signature Massage, which is an individualistic muscle-relaxing and stress-relieving massage that is designed specifically for you and is carried out with your choice of %100 natural aromatic oils. Our massage therapists will analyze what your body needs, and apply a combination of techniques among hot stone, reflexology, anti-stress or Thai massages, to meet those needs accordingly.`;
+let LUXURY_NOVATASSPA_PACKAGE_DESCRIPTION_2 = `After a 10-min rest in the steam room, which will help to loosen up tense muscles, soften the skin and open the pores, the session continues with an exfoliating body scrub, a full body foam, where you will be covered in a cloud of silky foam bubbles and a relaxing head-shoulders-back foam massage. This will be followed by a Peeling Treatment, which you can choose among grape seed extract, olive oil, coconut or rose peeling. After the peeling treatment, an Aromatherapy Massage, which is a delicate massage technique that uses 100% organic and natural essential oils prepared from aromatic Mediterranean herbs will be carried out by our professional massage therapists.`
 switch (pathname) {
     case 'en':
         SELECT = ENGLISH;
@@ -117,13 +119,15 @@ switch (pathname) {
         MIN_PER_PERSON = 'minutes per person';
         LUXURY_NOVATASSPA_PACKAGE = 'Luxury Novatas Package';
         LUXURY_NOVATASSPA_PACKAGE_DESCRIPTION = `After a 10-min rest in the steam room, which will help to loosen up tense muscles, soften the skin and open the pores, the session continues with an exfoliating body scrub, a full body foam, where you will be covered in a cloud of silky foam bubbles and a relaxing head-shoulders-back foam massage. This will be followed by a honey and milk body care treatment which will leave your body smooth and refreshed. After the honey and milk body care treatment a rejuvenating facial clay mask will be applied. The session will continue with a relaxing Foot & Hand Massage and end with our Novatas Signature Massage, which is an individualistic muscle-relaxing and stress-relieving massage that is designed specifically for you and is carried out with your choice of %100 natural aromatic oils. Our massage therapists will analyze what your body needs, and apply a combination of techniques among hot stone, reflexology, anti-stress or Thai massages, to meet those needs accordingly.`
+        TULIP_PACKAGE = 'Tulip Package'
+        LUXURY_NOVATASSPA_PACKAGE_DESCRIPTION_2 = `After a 10-min rest in the steam room, which will help to loosen up tense muscles, soften the skin and open the pores, the session continues with an exfoliating body scrub, a full body foam, where you will be covered in a cloud of silky foam bubbles and a relaxing head-shoulders-back foam massage. This will be followed by a Peeling Treatment, which you can choose among grape seed extract, olive oil, coconut or rose peeling. After the peeling treatment, an Aromatherapy Massage, which is a delicate massage technique that uses 100% organic and natural essential oils prepared from aromatic Mediterranean herbs will be carried out by our professional massage therapists.`
         break;
     case 'tr':
         SELECT = TURKISH;
         CONTACT = 'Hemen İletişime Geç';
         HEADER = 'Beden ve Ruh Uyumunu Yakalayın'
         HEADER__DESCRIPTION = `Yoğun programınız arasında dinlenmek veya kendinizi şımartmak için bir yere ihtiyacınız olduğunda Novatas Spa'da yerinizi ayırtmayı unutmayın!`
-        BOOK__NOW = 'Şimdi Yer Ayırtın';
+        BOOK__NOW = 'Şimdi Rezervasyon Yapın';
         OURREFE = 'Referanslarımız';
         HEADER_NOVATASSPA = `Kendinizi Yeniden Bulma Zamanı`
         BODY_NOVATASSPA = `Yoğun yaşam temposuna ara verin ve Novatas Crystal Spa'da kendinize özel bir rahatlama anı yaşayın! Şimdi seansınızı ayırtın ve stresi geride bırakın!`;
@@ -136,9 +140,9 @@ switch (pathname) {
         OUR = 'Bizim';
         MIN_PER_PERSON = 'Kişi başı dakika';
         LUXURY_NOVATASSPA_PACKAGE = 'Lüks Novatas Paketi'
-        LUXURY_NOVATASSPA_PACKAGE_DESCRIPTION = `Gergin kasları rahatlatmak, cildi tazelenmek ve kendinizi şımartmak için ideal bir seans sizi bekliyor!
- 
-        Seansımız, buhar odasındaki 10 dakikalık bir dinlenmeyle başlıyor. Ardından, peeling vücut ovma, tüm vücudu saran ipeksi köpük bulutu ve rahatlatıcı baş-omuz-sırt köpük masajı ile devam ediyor. Ardından, pürüzsüz ve taze bir cilt bırakacak ballı ve sütlü vücut bakımı uygulanıyor. Bu işlemi takiben, gençleştirici bir yüz kil maskesi sizi bekliyor. Seans, rahatlatıcı Ayak ve El Masajı ile devam ediyor ve son olarak kişisel tercihlerinize göre seçeceğiniz %100 doğal aromatik yağlarla yapılan kişiye özel bir kas gevşetici ve stres giderici Novatas İmza Masajı ile son buluyor. Masaj terapistlerimiz, vücudunuzun ihtiyaçlarını analiz ederek sıcak taş, refleksoloji, anti-stres veya Thai masajları gibi farklı teknikleri birleştirerek size özel bir deneyim sunacaklar. Şimdi bu eşsiz deneyimin tadını çıkarın!`
+        LUXURY_NOVATASSPA_PACKAGE_DESCRIPTION = `Gergin kasları rahatlatmak, cildi tazelenmek ve kendinizi şımartmak için ideal bir seans sizi bekliyor! Seansımız, buhar odasındaki 10 dakikalık bir dinlenmeyle başlıyor. Ardından, peeling vücut ovma, tüm vücudu saran ipeksi köpük bulutu ve rahatlatıcı baş-omuz-sırt köpük masajı ile devam ediyor. Ardından, pürüzsüz ve taze bir cilt bırakacak ballı ve sütlü vücut bakımı uygulanıyor. Bu işlemi takiben, gençleştirici bir yüz kil maskesi sizi bekliyor. Seans, rahatlatıcı Ayak ve El Masajı ile devam ediyor ve son olarak kişisel tercihlerinize göre seçeceğiniz %100 doğal aromatik yağlarla yapılan kişiye özel bir kas gevşetici ve stres giderici Novatas İmza Masajı ile son buluyor. Masaj terapistlerimiz, vücudunuzun ihtiyaçlarını analiz ederek sıcak taş, refleksoloji, anti-stres veya Thai masajları gibi farklı teknikleri birleştirerek size özel bir deneyim sunacaklar. Şimdi bu eşsiz deneyimin tadını çıkarın!`
+        TULIP_PACKAGE = 'Lale Paketi'
+        LUXURY_NOVATASSPA_PACKAGE_DESCRIPTION_2 = `Stresten arınmak, cildi yenilemek ve rahatlamak için muhteşem bir fırsat sizi bekliyor! Deneyim, buhar odasındaki 10 dakikalık huzurlu mola ile başlıyor. Sonrasında, tüm vücudu saran ipeksi köpük bulutu ve rahatlatıcı baş-omuz-sırt köpük masajı ile devam ediyor. Ardından, üzüm çekirdeği özü, zeytinyağı, hindistancevizi veya gül peelingi gibi tercih edebileceğiniz özel bir Peeling Bakımı ile kendinizi şımartacaksınız.Peeling uygulamasının ardından, profesyonel masaj terapistlerimiz tarafından gerçekleştirilen hassas Aromaterapi Masajı sizi bekliyor. Bu masajda, Akdeniz bitkilerinden elde edilen %100 organik ve doğal esansiyel yağlar kullanılıyor. Şimdi bu eşsiz deneyimin tadını çıkarın ve kendinizi şımartın!`
         break;
     default:
         SELECT = ENGLISH;
@@ -159,6 +163,8 @@ switch (pathname) {
         MIN_PER_PERSON = 'minutes per person';
         LUXURY_NOVATASSPA_PACKAGE = 'Luxury Novatas Package'
         LUXURY_NOVATASSPA_PACKAGE_DESCRIPTION = `After a 10-min rest in the steam room, which will help to loosen up tense muscles, soften the skin and open the pores, the session continues with an exfoliating body scrub, a full body foam, where you will be covered in a cloud of silky foam bubbles and a relaxing head-shoulders-back foam massage. This will be followed by a honey and milk body care treatment which will leave your body smooth and refreshed. After the honey and milk body care treatment a rejuvenating facial clay mask will be applied. The session will continue with a relaxing Foot & Hand Massage and end with our Novatas Signature Massage, which is an individualistic muscle-relaxing and stress-relieving massage that is designed specifically for you and is carried out with your choice of %100 natural aromatic oils. Our massage therapists will analyze what your body needs, and apply a combination of techniques among hot stone, reflexology, anti-stress or Thai massages, to meet those needs accordingly.`
+        TULIP_PACKAGE = 'Tulip Package'
+        LUXURY_NOVATASSPA_PACKAGE_DESCRIPTION_2 = `After a 10-min rest in the steam room, which will help to loosen up tense muscles, soften the skin and open the pores, the session continues with an exfoliating body scrub, a full body foam, where you will be covered in a cloud of silky foam bubbles and a relaxing head-shoulders-back foam massage. This will be followed by a Peeling Treatment, which you can choose among grape seed extract, olive oil, coconut or rose peeling. After the peeling treatment, an Aromatherapy Massage, which is a delicate massage technique that uses 100% organic and natural essential oils prepared from aromatic Mediterranean herbs will be carried out by our professional massage therapists.`
         break;
 }
 export const TRANSLATING__CONTACT = CONTACT;
@@ -174,8 +180,10 @@ export const TRANSLATING_REVITALIZE = REVITALIZE;
 export const TRANSLATIN_LEARN_MORE = LEARN_MORE;
 export const TRANSLATIN_YEARS = YEARS;
 export const TRANSLATING_EXPERIENCE = EXPERIENCE;
-export const TRANSLATIN_POPULAR_PACKAGE = POPULAR_PACKAGE 
+export const TRANSLATIN_POPULAR_PACKAGE = POPULAR_PACKAGE
 export const TRANSLATEING_OUR = OUR;
 export const TRANSLATING_MIN_PER_PERSON = MIN_PER_PERSON
 export const TRANSLATIN_LUXURY_NOVATASSPA_PACKAGE = LUXURY_NOVATASSPA_PACKAGE
 export const TRANSLATING_LUXURY_NOVATASSPA_PACKAGE_DESCRIPTION = LUXURY_NOVATASSPA_PACKAGE_DESCRIPTION
+export const TRANSLATING_TULIP_PACKAGE = TULIP_PACKAGE
+export const TRANSLATING_LUXURY_NOVATASSPA_PACKAGE_DESCRIPTION_2 = LUXURY_NOVATASSPA_PACKAGE_DESCRIPTION_2

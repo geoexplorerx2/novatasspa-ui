@@ -3,13 +3,15 @@ import { servicesVersion } from 'typescript'
 import { ReactComponent as CaldleAndFlower } from '../../assets/icons/candleFlower.svg'
 import { ReactComponent as Wave } from '../../assets/icons/wave.svg'
 import { useNavigate } from 'react-router-dom'
-import { 
+import {
     TRANSLATING__BOOK__NOW,
     TRANSLATIN_POPULAR_PACKAGE,
     TRANSLATEING_OUR,
     TRANSLATING_MIN_PER_PERSON,
     TRANSLATIN_LUXURY_NOVATASSPA_PACKAGE,
-    TRANSLATING_LUXURY_NOVATASSPA_PACKAGE_DESCRIPTION, 
+    TRANSLATING_LUXURY_NOVATASSPA_PACKAGE_DESCRIPTION,
+    TRANSLATING_TULIP_PACKAGE,
+    TRANSLATING_LUXURY_NOVATASSPA_PACKAGE_DESCRIPTION_2,
 } from '../../data/services';
 
 const OurServices: FC = () => {
@@ -38,14 +40,14 @@ interface ServiceCardProps {
 }
 
 const ServiceCard: FC<ServiceCardProps> = (props) => {
-    const { 
-        service: { 
-            description, 
-            info, 
-            duration, 
-            Icon, 
-            id, 
-            price, 
+    const {
+        service: {
+            description,
+            info,
+            duration,
+            Icon,
+            id,
+            price,
             title } } = props;
 
     const [isHovered, setIsHovered] = useState(false);
@@ -159,8 +161,8 @@ const ServicesData: ServiceType[] = [
         id: '5'
     },
     {
-        title: 'Tulip Package',
-        description: 'After a 10-min rest in the steam room, which will help to loosen up tense muscles, soften the skin and open the pores, the session continues with an exfoliating body scrub, a full body foam, where you will be covered in a cloud of silky foam bubbles and a relaxing head-shoulders-back foam massage. This will be followed by a Peeling Treatment, which you can choose among grape seed extract, olive oil, coconut or rose peeling. After the peeling treatment, an Aromatherapy Massage, which is a delicate massage technique that uses 100% organic and natural essential oils prepared from aromatic Mediterranean herbs will be carried out by our professional massage therapists.',
+        title: TRANSLATING_TULIP_PACKAGE,
+        description: TRANSLATING_LUXURY_NOVATASSPA_PACKAGE_DESCRIPTION_2,
         info: [
         ],
         duration: '100',
