@@ -13,6 +13,9 @@ import {
     TRANSLATING_TULIP_PACKAGE,
     TRANSLATING_LUXURY_NOVATASSPA_PACKAGE_DESCRIPTION_2,
     TRANSLATIN_LEARN_MORE,
+    TRANSLATIN_CRYSTAL_PACKAGE,
+    TRANSLATING_CRYSTAL_PACKAGE_DESCRIPTION,
+    TRANSLATING_LILIUM_PACKAGE,
 } from '../../data/services';
 
 const OurServices: FC = () => {
@@ -172,8 +175,8 @@ const ServicesData: ServiceType[] = [
         id: '6'
     },
     {
-        title: 'Crystal Package',
-        description: 'After a 10-min rest in the steam room, which will help to loosen up tense muscles, soften the skin and open the pores, the session continues with an exfoliating body scrub, a full body foam, where you will be covered in a cloud of silky foam bubbles and a relaxing head-shoulders-back foam massage. This will be followed by an Anti-Stress Massage which is an effective massage therapy that focuses on releasing tension from the connective muscle tissues; relaxing the muscles and especially the nervous system, by applying slow, rhythmic and light strokes as well as moderate finger pressure.',
+        title: TRANSLATIN_CRYSTAL_PACKAGE,
+        description: TRANSLATING_CRYSTAL_PACKAGE_DESCRIPTION,
         info: [
         ],
         duration: '80',
@@ -182,7 +185,7 @@ const ServicesData: ServiceType[] = [
         id: '7'
     },
     {
-        title: 'Lilium Package',
+        title: TRANSLATING_LILIUM_PACKAGE,
         description: 'After a 10-min rest in the steam room, which will help to loosen up tense muscles, soften the skin and open the pores, the session continues with an exfoliating body scrub, a full body foam, where you will be covered in a cloud of silky foam bubbles. This will be followed by a Reflexology session which is a traditional Chinese massage therapy that focuses on relieving stress in the body by working specifically on the feet. It aims to bring about a state of relaxation and to keep qi-vital energy flowing through the body, for maintaining balance and perfect health.',
         info: [
         ],

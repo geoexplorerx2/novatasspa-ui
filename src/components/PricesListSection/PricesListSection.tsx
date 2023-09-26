@@ -6,7 +6,10 @@ import prices_list_2 from '../../assets/images/prices_list_2.png';
 import prices_list_3 from '../../assets/images/prices_list_3.png';
 import prices_list_4 from '../../assets/images/prices_list_4.png';
 import prices_list_5 from '../../assets/images/prices_list_5.png';
-
+import {
+    TRANSLATIN_CRYSTAL_PACKAGE,
+    TRANSLATING_LILIUM_PACKAGE,
+} from '../../data/services'
 const PricesListSection = () => {
 
     const pricesData = [
@@ -43,14 +46,14 @@ const PricesListSection = () => {
             services: [
                 {
                     hamamid: 1,
-                    name: 'Lilium Package',
+                    name: TRANSLATING_LILIUM_PACKAGE,
                     time: '55 min.',
                     price: '60',
                     image: prices_list_1
                 },
                 {
                     hamamid: 2,
-                    name: 'Crystal Package',
+                    name: TRANSLATIN_CRYSTAL_PACKAGE,
                     time: '80 min.',
                     price: '80',
                     image: prices_list_2
